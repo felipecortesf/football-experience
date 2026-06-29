@@ -217,12 +217,10 @@
 <div class="tabs">
   <div class="tabs-in" id="tabs">
     <a class="tab on" href="#programacion">Programación</a>
-    <a class="tab" href="#resultados">Resultados</a>
-    <a class="tab" href="#estadisticas">Estadísticas</a>
+    <a class="tab" href="#tabla">Tabla de posiciones</a>
     <a class="tab" href="#plantel">Plantel</a>
     <a class="tab" href="#historia">Historia</a>
     <a class="tab" href="#noticias">Noticias</a>
-    <a class="tab" href="#hinchada">Hinchada</a>
   </div>
 </div>
 
@@ -230,7 +228,12 @@
   <div class="wrap">
     <div class="sec-h"><div class="eyebrow">En el Maracanã</div><h2 class="display">Programación</h2></div>
     <div class="matches" id="matches"></div>
-    <div class="sec-h" style="margin-top:48px"><div class="eyebrow">En vivo</div><h2 class="display">Tabla de posiciones · Brasileirão</h2></div>
+  </div>
+</section>
+
+<section class="blk" id="tabla" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">En vivo</div><h2 class="display">Tabla de posiciones · Brasileirão</h2></div>
     <div id="standingsWrap" class="standings-wrap">
       <div class="standings-status" id="standingsStatus">Cargando clasificación…</div>
     </div>
@@ -336,21 +339,6 @@
   }
 </style>
 
-<section class="blk" id="resultados" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">Últimos partidos</div><h2 class="display">Resultados</h2></div>
-    <div class="results" id="results"></div>
-    <div class="form-row" id="formRow"></div>
-  </div>
-</section>
-
-<section class="blk" id="estadisticas" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">Temporada 2026</div><h2 class="display">Estadísticas</h2></div>
-    <div class="stats-grid" id="stats"></div>
-  </div>
-</section>
-
 <section class="blk" id="plantel" style="padding-top:0">
   <div class="wrap">
     <div class="sec-h"><div class="eyebrow">Figuras del equipo</div><h2 class="display" id="squadTitle">Plantel</h2></div>
@@ -370,13 +358,6 @@
   <div class="wrap">
     <div class="sec-h"><div class="eyebrow">Semana a semana</div><h2 class="display">Noticias</h2></div>
     <div class="news" id="news"></div>
-  </div>
-</section>
-
-<section class="blk" id="hinchada" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-h"><div class="eyebrow">Qué dicen los fans</div><h2 class="display">La hinchada</h2></div>
-    <div class="fans" id="fans"></div>
   </div>
 </section>
 
@@ -1775,21 +1756,6 @@ window.MRC_TEAM = {
     mc.appendChild(row);
   });
 
-  // results
-  const rc=document.getElementById('results');
-  d.recent.forEach(r=>{
-    const col=r.r==='W'?'#46e08a':r.r==='L'?'#ff8080':'var(--ink-dim)';
-    const el=document.createElement('div'); el.className='rc';
-    el.innerHTML=`<div class="sc" style="color:${col}">${r.us}–${r.them}</div><div class="vs">vs ${r.opp}</div><div class="cmp">${r.cmp}</div>`;
-    rc.appendChild(el);
-  });
-  const fr=document.getElementById('formRow');
-  fr.innerHTML='<span class="fl">Forma reciente</span>'+d.form.map(f=>`<span class="fp ${f}">${f}</span>`).join('');
-
-  // stats
-  const sc=document.getElementById('stats');
-  d.stats.forEach(s=>{ const el=document.createElement('div'); el.className='scard'; el.innerHTML=`<div class="v">${s.v}</div><div class="l">${s.l}</div>`; sc.appendChild(el); });
-
   // squad
   document.getElementById('squadTitle').textContent='Plantel '+t.nickname;
   const sq=document.getElementById('squad');
@@ -1827,14 +1793,6 @@ window.MRC_TEAM = {
       <div class="nb"><div class="ntag">${n.tag}</div><div class="nt">${n.t}</div>
       <div class="nm">${n.time}</div></div>`;
     nc.appendChild(el);
-  });
-
-  // fans
-  const fc=document.getElementById('fans');
-  const star=(k)=>{let s='';for(let j=0;j<5;j++)s+=`<svg width="14" height="14" viewBox="0 0 24 24" fill="${j<k?accent:'rgba(255,255,255,.15)'}"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>`;return s;};
-  d.fans.forEach(f=>{ const el=document.createElement('div'); el.className='fan';
-    el.innerHTML=`<div class="stars">${star(f.s)}</div><div class="q">“${f.t}”</div><div class="who"><div class="av" style="background:${crestBg}">${f.n[0]}</div><div class="n">${f.n}</div></div>`;
-    fc.appendChild(el);
   });
 
   // tab scrollspy
