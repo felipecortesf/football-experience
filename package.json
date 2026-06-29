@@ -1,0 +1,12 @@
+{
+  "name": "football-experience",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio Football Experience - Maracana Rio",
+  "scripts": {
+    "update-tabla": "node scripts/update-tabla.js"
+  },
+  "dependencies": {
+    "campeonato-brasileiro-api": "^2.0.1"
+  }
+}

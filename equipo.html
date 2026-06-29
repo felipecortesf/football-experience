@@ -175,17 +175,8 @@
   @media(max-width:900px){ .foot2{ grid-template-columns:1fr 1fr; padding:36px 28px; } }
   @media(max-width:560px){ .foot2{ grid-template-columns:1fr; padding:30px 22px; gap:28px; } .foot-legal{ flex-direction:column; align-items:flex-start; } }
 </style>
-<script type="module" src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
 </head>
 <body>
-
-<api-sports-widget data-type="config"
-  data-key="116d13cff1eec1bc7b8a0e627d89c919"
-  data-sport="football"
-  data-lang="es"
-  data-theme="white"
-  data-show-logos="true"
-></api-sports-widget>
 
 <nav class="main">
   <div class="nav-in">
@@ -240,12 +231,110 @@
     <div class="sec-h"><div class="eyebrow">En el Maracanã</div><h2 class="display">Programación</h2></div>
     <div class="matches" id="matches"></div>
     <div class="sec-h" style="margin-top:48px"><div class="eyebrow">En vivo</div><h2 class="display">Tabla de posiciones · Brasileirão</h2></div>
-    <api-sports-widget data-type="standings"
-      data-league="71"
-      data-season="2025"
-    ></api-sports-widget>
+    <div id="standingsWrap" class="standings-wrap">
+      <div class="standings-status" id="standingsStatus">Cargando clasificación…</div>
+    </div>
   </div>
 </section>
+
+<script>
+(function(){
+  var wrap = document.getElementById('standingsWrap');
+  var status = document.getElementById('standingsStatus');
+
+  function escapeHtml(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+    });
+  }
+
+  function formaTag(r){
+    var map = { V:'st-v', E:'st-e', D:'st-d', W:'st-v', L:'st-d' };
+    var cls = map[r] || 'st-e';
+    return '<span class="st-form ' + cls + '">' + escapeHtml(r) + '</span>';
+  }
+
+  function render(data){
+    var equipos = (data && data.equipos) || [];
+    if (!equipos.length){
+      status.textContent = 'No hay clasificación disponible por ahora.';
+      return;
+    }
+
+    var rodadaTxt = data.rodada ? (' · Rodada ' + data.rodada + (data.rodadaTotal ? '/' + data.rodadaTotal : '')) : '';
+    var actualizado = data.actualizadoEn ? new Date(data.actualizadoEn).toLocaleString('es-CO', { dateStyle:'medium', timeStyle:'short' }) : '';
+
+    var rows = equipos.map(function(e){
+      var forma = (e.forma || []).map(formaTag).join('');
+      return '' +
+        '<div class="st-row">' +
+          '<div class="st-pos">' + e.posicion + '</div>' +
+          '<div class="st-team">' +
+            (e.escudo ? '<img src="' + escapeHtml(e.escudo) + '" alt="" loading="lazy">' : '') +
+            '<span>' + escapeHtml(e.equipo) + '</span>' +
+          '</div>' +
+          '<div class="st-num">' + e.jugados + '</div>' +
+          '<div class="st-num">' + e.ganados + '</div>' +
+          '<div class="st-num">' + e.empatados + '</div>' +
+          '<div class="st-num">' + e.perdidos + '</div>' +
+          '<div class="st-num">' + e.golesFavor + ':' + e.golesContra + '</div>' +
+          '<div class="st-num">' + (e.diferencia > 0 ? '+' : '') + e.diferencia + '</div>' +
+          '<div class="st-pts">' + e.puntos + '</div>' +
+          '<div class="st-forma">' + forma + '</div>' +
+        '</div>';
+    }).join('');
+
+    wrap.innerHTML = '' +
+      '<div class="st-table">' +
+        '<div class="st-row st-head">' +
+          '<div class="st-pos">#</div>' +
+          '<div class="st-team">Equipo</div>' +
+          '<div class="st-num">PJ</div>' +
+          '<div class="st-num">V</div>' +
+          '<div class="st-num">E</div>' +
+          '<div class="st-num">D</div>' +
+          '<div class="st-num">G</div>' +
+          '<div class="st-num">+/-</div>' +
+          '<div class="st-pts">P</div>' +
+          '<div class="st-forma">Forma</div>' +
+        '</div>' +
+        rows +
+      '</div>' +
+      '<div class="st-meta">' + escapeHtml(data.competencia || 'Brasileirão Série A') + rodadaTxt + (actualizado ? ' · Actualizado: ' + escapeHtml(actualizado) : '') + '</div>';
+  }
+
+  fetch('data/tabla.json', { cache: 'no-store' })
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(render)
+    .catch(function(err){
+      status.textContent = 'No se pudo cargar la clasificación en este momento.';
+      console.warn('tabla.json:', err.message);
+    });
+})();
+</script>
+
+<style>
+  .standings-wrap{ margin-top:20px; }
+  .standings-status{ padding:24px; text-align:center; color:var(--ink-mute); font-family:'JetBrains Mono',monospace; font-size:13px; border:1px solid var(--line); border-radius:14px; background:var(--card); }
+  .st-table{ border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); }
+  .st-row{ display:grid; grid-template-columns:34px 1fr 36px 32px 32px 32px 56px 44px 44px 110px; align-items:center; gap:8px; padding:10px 14px; border-bottom:1px solid var(--line); font-size:13px; }
+  .st-row:last-child{ border-bottom:none; }
+  .st-head{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mute); background:rgba(244,244,240,.03); }
+  .st-pos{ color:var(--ink-mute); font-weight:700; text-align:center; }
+  .st-team{ display:flex; align-items:center; gap:10px; min-width:0; }
+  .st-team img{ width:20px; height:20px; object-fit:contain; flex:none; }
+  .st-team span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .st-num{ text-align:center; color:var(--ink-dim); font-family:'JetBrains Mono',monospace; font-size:12px; }
+  .st-pts{ text-align:center; font-weight:800; color:var(--ink); }
+  .st-forma{ display:flex; gap:3px; justify-content:flex-end; }
+  .st-form{ width:18px; height:18px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; color:#fff; }
+  .st-v{ background:#2c9a4a; } .st-e{ background:#8a8a8a; } .st-d{ background:var(--accent); }
+  .st-meta{ margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); text-align:right; }
+  @media (max-width:680px){
+    .st-row{ grid-template-columns:26px 1fr 44px 70px; }
+    .st-row .st-num{ display:none; }
+  }
+</style>
 
 <section class="blk" id="resultados" style="padding-top:0">
   <div class="wrap">
