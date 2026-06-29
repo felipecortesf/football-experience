@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equipo · Football Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  :root{
+    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.42);
+    --line:rgba(244,244,240,.1); --line-2:rgba(244,244,240,.18); --card:#121215;
+    --accent:#d11a2a; --accent-ink:#fff; --navy:#0a0e1a; --gold:#e8c275;
+    --maxw:min(1320px, 92vw); --ease:cubic-bezier(.22,1,.36,1);
+  }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; } button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .display{ font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; }
+  .mono{ font-family:'JetBrains Mono',monospace; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  .eyebrow{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.22em; color:var(--ink-mute); text-transform:uppercase; }
+
+  /* NAV (compact, shared look) */
+  nav.main{ position:sticky; top:0; z-index:100; background:rgba(7,7,8,.9); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+  .nav-in{ max-width:var(--maxw); margin:0 auto; padding:13px 28px; display:flex; align-items:center; gap:30px; }
+  .brand{ display:flex; align-items:center; gap:11px; }
+  .brand .stripes{ display:flex; gap:3px; } .brand .stripes span{ width:4px; height:24px; border-radius:1px; }
+  .brand b{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; line-height:.92; }
+  .brand small{ display:block; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.2em; color:var(--ink-mute); font-style:normal; }
+  .nav-menu{ display:flex; gap:24px; }
+  .nav-menu a{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-dim); }
+  .nav-menu a:hover,.nav-menu a.on{ color:var(--ink); }
+  .nav-right{ margin-left:auto; display:flex; gap:12px; align-items:center; }
+  .btn-buy{ background:var(--accent); color:var(--accent-ink); padding:9px 16px; border-radius:8px; font-weight:700; font-size:13px; }
+  @media(max-width:920px){ .nav-menu{ display:none; } }
+
+  /* HERO club */
+  .club-hero{ position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
+  .club-hero .ch-bg{ position:absolute; inset:0; z-index:0; opacity:.2; }
+  .club-hero image-slot{ position:absolute; inset:0; width:100%; height:100%; z-index:0; opacity:.5; }
+  .club-hero .ch-scrim{ position:absolute; inset:0; z-index:1; background:linear-gradient(to top, var(--bg) 6%, transparent 70%), linear-gradient(90deg, var(--bg) 8%, transparent 60%); }
+  .club-hero .ch-in{ position:relative; z-index:2; padding:54px 0 40px; display:flex; align-items:flex-end; gap:28px; flex-wrap:wrap; }
+  .club-crest{ width:118px; height:118px; border-radius:24px; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:54px; color:#fff; border:3px solid rgba(255,255,255,.3); box-shadow:0 20px 50px rgba(0,0,0,.5); flex-shrink:0; }
+  .club-meta .cn{ font-size:clamp(48px,8vw,104px); }
+  .club-meta .cd{ font-size:14px; color:var(--ink-dim); margin-top:8px; max-width:560px; line-height:1.5; }
+  .club-quick{ display:flex; gap:26px; margin-top:18px; flex-wrap:wrap; }
+  .club-quick .q .n{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; line-height:1; }
+  .club-quick .q .l{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:var(--ink-mute); margin-top:5px; }
+
+  /* TABS */
+  .tabs{ position:sticky; top:50px; z-index:90; background:rgba(7,7,8,.9); backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+  .tabs-in{ max-width:var(--maxw); margin:0 auto; padding:0 28px; display:flex; gap:6px; overflow-x:auto; }
+  .tab{ padding:16px 16px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-mute); border-bottom:3px solid transparent; white-space:nowrap; }
+  .tab.on{ color:var(--ink); border-color:var(--accent); }
+
+  section.blk{ padding:64px 0; }
+  .sec-h{ margin-bottom:30px; }
+  .sec-h h2{ font-size:clamp(30px,5vw,52px); margin:6px 0 0; }
+
+  /* PROGRAMACIÓN */
+  .matches{ display:flex; flex-direction:column; gap:10px; }
+  .mrow{ display:grid; grid-template-columns:96px 1fr auto auto; align-items:center; gap:18px; padding:16px 20px; border-radius:14px; border:1px solid var(--line); background:var(--card); transition:border-color .2s, transform .2s var(--ease); }
+  .mrow:hover{ border-color:var(--line-2); transform:translateX(4px); }
+  .mrow .md{ text-align:center; } .mrow .md .d{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:16px; } .mrow .md .t{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); margin-top:3px; }
+  .mrow .mt .vs{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; text-transform:uppercase; }
+  .mrow .mt .cmp{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--ink-mute); margin-top:3px; }
+  .mrow .mcrests{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .mrow .mcrest{ width:32px; height:32px; border-radius:9px; display:flex; align-items:center; justify-content:center; background:#15151a; border:1px solid var(--line); overflow:hidden; flex-shrink:0; }
+  .mrow .mcrest img{ width:78%; height:78%; object-fit:contain; }
+  .mrow .mcrest svg{ width:88%; height:88%; }
+  .mrow .mcrest.opp{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:10.5px; color:var(--ink-dim); }
+  .mrow .mvs{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.06em; color:var(--ink-mute); }
+  .mrow .mfrom{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-mute); text-align:right; }
+  .mrow .mbuy{ background:var(--ink); color:#0a0a0a; padding:10px 18px; border-radius:10px; font-weight:700; font-size:13px; white-space:nowrap; transition:transform .2s var(--ease); }
+  .mrow .mbuy:hover{ transform:scale(1.05); }
+  @media(max-width:720px){ .mrow{ grid-template-columns:78px 1fr; } .mrow .mfrom,.mrow .mbuy{ grid-column:2; justify-self:start; } }
+
+  /* RESULTADOS */
+  .results{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media(max-width:760px){ .results{ grid-template-columns:repeat(2,1fr); } }
+  .rc{ border:1px solid var(--line); border-radius:14px; background:var(--card); padding:18px; }
+  .rc .sc{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:34px; }
+  .rc .vs{ font-size:13px; color:var(--ink-dim); margin-top:4px; }
+  .rc .cmp{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; color:var(--ink-mute); margin-top:8px; }
+  .form-row{ display:flex; gap:6px; margin-top:18px; align-items:center; }
+  .form-row .fl{ font-size:12px; color:var(--ink-dim); margin-right:6px; }
+  .fp{ width:28px; height:28px; border-radius:7px; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; }
+  .fp.W{ background:rgba(41,196,107,.18); color:#46e08a; } .fp.D{ background:rgba(255,255,255,.08); color:var(--ink-dim); } .fp.L{ background:rgba(255,106,106,.16); color:#ff8080; }
+
+  /* STATS */
+  .stats-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media(max-width:760px){ .stats-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:480px){ .stats-grid{ grid-template-columns:1fr; } }
+  .scard{ border:1px solid var(--line); border-radius:16px; background:var(--card); padding:22px; }
+  .scard .v{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:44px; line-height:1; }
+  .scard .l{ font-size:13px; color:var(--ink-dim); margin-top:8px; }
+
+  /* PLANTEL (player cards — reference style) */
+  .squad{ display:grid; grid-template-columns:repeat(auto-fill,minmax(186px,1fr)); gap:16px; }
+  .pcard{ position:relative; border-radius:18px; overflow:hidden; background:var(--card); border:1px solid var(--line); transition:transform .3s var(--ease), border-color .3s; }
+  .pcard:hover{ transform:translateY(-6px); border-color:var(--line-2); }
+  .pcard .ph{ height:200px; position:relative; overflow:hidden; display:flex; align-items:flex-end; justify-content:center; }
+  .pcard .ph .num{ position:absolute; top:-6px; right:8px; font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:96px; line-height:1; color:rgba(255,255,255,.1); }
+  .pcard image-slot{ position:absolute; inset:0; width:100%; height:100%; }
+  .pcard .silhouette{ width:120px; height:150px; border-radius:60px 60px 12px 12px / 75% 75% 12px 12px; background:linear-gradient(180deg,#3a3a40,#16161a); position:relative; z-index:1; }
+  .pcard .pinfo{ padding:14px 16px 18px; position:relative; }
+  .pcard .pos{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.14em; color:var(--accent); }
+  .pcard .pn{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; text-transform:uppercase; line-height:.95; margin-top:4px; }
+  .pcard .pr{ display:flex; gap:14px; margin-top:12px; padding-top:12px; border-top:1px solid var(--line); }
+  .pcard .pr .st .sv{ font-family:'JetBrains Mono',monospace; font-weight:600; font-size:15px; }
+  .pcard .pr .st .sk{ font-size:9px; color:var(--ink-mute); letter-spacing:.06em; }
+
+  /* HISTORIA timeline */
+  .timeline{ position:relative; padding-left:30px; }
+  .timeline::before{ content:''; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:var(--line-2); }
+  .tl-item{ position:relative; padding-bottom:28px; }
+  .tl-item::before{ content:''; position:absolute; left:-30px; top:4px; width:16px; height:16px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px rgba(209,26,42,.18); }
+  .tl-item .yr{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; color:var(--accent); }
+  .tl-item .tt{ font-weight:700; font-size:16px; margin-top:2px; }
+  .tl-item .tx{ font-size:13px; color:var(--ink-dim); margin-top:4px; max-width:560px; line-height:1.5; }
+  .titles-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:36px; }
+  @media(max-width:680px){ .titles-row{ grid-template-columns:repeat(2,1fr); } }
+  .tt-card{ border:1px solid var(--line); border-radius:14px; background:var(--card); padding:18px; text-align:center; }
+  .tt-card .tn{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:38px; color:var(--accent); line-height:1; }
+  .tt-card .tl{ font-size:11px; color:var(--ink-dim); margin-top:6px; }
+
+  /* NEWS */
+  .news{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; }
+  @media(max-width:900px){ .news{ grid-template-columns:1fr; } }
+  .ncard{ border-radius:16px; overflow:hidden; background:var(--card); border:1px solid var(--line); transition:transform .3s var(--ease), border-color .3s; display:flex; flex-direction:column; }
+  .ncard:hover{ transform:translateY(-5px); border-color:var(--line-2); }
+  .ncard.big{ grid-row:span 2; }
+  .ncard image-slot{ display:block; width:100%; height:170px; }
+  .ncard.big image-slot{ height:300px; }
+  .ncard .nb{ padding:16px 18px 20px; flex:1; display:flex; flex-direction:column; }
+  .ncard .ntag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:var(--accent); }
+  .ncard .nt{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:21px; text-transform:uppercase; line-height:1; margin-top:8px; }
+  .ncard.big .nt{ font-size:30px; }
+  .ncard .nm{ font-size:11px; color:var(--ink-mute); margin-top:auto; padding-top:12px; }
+
+  /* FANS */
+  .fans{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media(max-width:760px){ .fans{ grid-template-columns:1fr; } }
+  .fan{ border:1px solid var(--line); border-radius:16px; background:var(--card); padding:24px; }
+  .fan .stars{ display:flex; gap:3px; margin-bottom:12px; }
+  .fan .q{ font-size:16px; line-height:1.5; font-weight:500; }
+  .fan .who{ display:flex; align-items:center; gap:10px; margin-top:16px; }
+  .fan .who .av{ width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; color:#fff; }
+  .fan .who .n{ font-weight:600; font-size:13px; }
+
+  footer{ border-top:1px solid var(--line); padding:40px 0; margin-top:40px; }
+  .foot{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .foot .mono{ font-size:11px; color:var(--ink-mute); letter-spacing:.1em; }
+  .legal{ text-align:right; } .legal-l{ font-size:10.5px; color:var(--ink-mute); margin-top:6px; line-height:1.5; }
+  @media(max-width:680px){ .legal{ text-align:left; } }
+  .foot2{ display:grid; grid-template-columns:300px 1fr 1fr 1fr; gap:36px; align-items:start; background:#0d0d10; border:1px solid var(--line); border-radius:22px; padding:44px 40px; margin-top:20px; }
+  .foot-col{ display:flex; flex-direction:column; gap:17px; }
+  .foot-desc{ font-size:13px; line-height:1.65; color:var(--ink-dim); max-width:300px; margin:8px 0 2px; }
+  .foot-social{ width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,.06); display:flex; align-items:center; justify-content:center; color:#fff; transition:background .2s; }
+  .foot-social:hover{ background:#25D366; }
+  .foot-h{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:23px; color:#fff; margin:0 0 6px; }
+  .foot-link{ font-size:16px; color:var(--ink-dim); text-decoration:none; transition:color .2s; }
+  .foot-link:hover{ color:#fff; }
+  .foot-contact{ display:flex; align-items:flex-start; gap:10px; text-decoration:none; color:var(--ink-mute); }
+  .foot-contact svg{ flex:none; margin-top:2px; }
+  .foot-contact-text{ display:flex; flex-direction:column; gap:2px; }
+  .foot-contact-text b{ font-size:13.5px; color:#fff; font-weight:600; }
+  .foot-contact-text small{ font-size:11px; color:var(--ink-mute); }
+  .foot-legal{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:22px 4px 36px; }
+  .foot-legal .mono{ font-size:11px; color:var(--ink-mute); letter-spacing:.1em; }
+  .foot-legal .legal-l{ font-size:10.5px; color:var(--ink-mute); line-height:1.6; }
+  @media(max-width:900px){ .foot2{ grid-template-columns:1fr 1fr; padding:36px 28px; } }
+  @media(max-width:560px){ .foot2{ grid-template-columns:1fr; padding:30px 22px; gap:28px; } .foot-legal{ flex-direction:column; align-items:flex-start; } }
+</style>
+<script type="module" src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
+</head>
+<body>
+
+<api-sports-widget data-type="config"
+  data-key="116d13cff1eec1bc7b8a0e627d89c919"
+  data-sport="football"
+  data-lang="es"
+  data-theme="white"
+  data-show-logos="true"
+></api-sports-widget>
+
+<nav class="main">
+  <div class="nav-in">
+    <a class="brand" href="inicio.html">
+      <span class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></span>
+      <b>Football<br>Experience<small>MARACANÃ · RIO</small></b>
+    </a>
+    <div class="nav-menu">
+      <a href="inicio.html">Inicio</a>
+      <a href="equipo.html?team=flamengo" id="lnk-flamengo">Flamengo</a>
+      <a href="equipo.html?team=fluminense" id="lnk-fluminense">Fluminense</a>
+      <a href="equipo.html?team=botafogo" id="lnk-botafogo">Botafogo</a>
+      <a href="equipo.html?team=vasco" id="lnk-vasco">Vasco da Gama</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn-buy" href="#programacion">Comprar entradas</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO CLUB -->
+<header class="club-hero">
+  <div class="ch-bg" id="chBg"></div>
+  <image-slot id="club-hero-img" placeholder="Foto del equipo / estadio" fit="cover"></image-slot>
+  <div class="ch-scrim"></div>
+  <div class="wrap ch-in">
+    <div class="club-crest" id="clubCrest"></div>
+    <div class="club-meta">
+      <div class="eyebrow" id="clubKicker"></div>
+      <h1 class="display cn" id="clubName"></h1>
+      <p class="cd" id="clubBio"></p>
+      <div class="club-quick" id="clubQuick"></div>
+    </div>
+  </div>
+</header>
+
+<!-- TABS -->
+<div class="tabs">
+  <div class="tabs-in" id="tabs">
+    <a class="tab on" href="#programacion">Programación</a>
+    <a class="tab" href="#resultados">Resultados</a>
+    <a class="tab" href="#estadisticas">Estadísticas</a>
+    <a class="tab" href="#plantel">Plantel</a>
+    <a class="tab" href="#historia">Historia</a>
+    <a class="tab" href="#noticias">Noticias</a>
+    <a class="tab" href="#hinchada">Hinchada</a>
+  </div>
+</div>
+
+<section class="blk" id="programacion">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">En el Maracanã</div><h2 class="display">Programación</h2></div>
+    <div class="matches" id="matches"></div>
+    <div class="sec-h" style="margin-top:48px"><div class="eyebrow">En vivo</div><h2 class="display">Tabla de posiciones · Brasileirão</h2></div>
+    <api-sports-widget data-type="standings"
+      data-league="71"
+      data-season="2025"
+    ></api-sports-widget>
+  </div>
+</section>
+
+<section class="blk" id="resultados" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Últimos partidos</div><h2 class="display">Resultados</h2></div>
+    <div class="results" id="results"></div>
+    <div class="form-row" id="formRow"></div>
+  </div>
+</section>
+
+<section class="blk" id="estadisticas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Temporada 2026</div><h2 class="display">Estadísticas</h2></div>
+    <div class="stats-grid" id="stats"></div>
+  </div>
+</section>
+
+<section class="blk" id="plantel" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Figuras del equipo</div><h2 class="display" id="squadTitle">Plantel</h2></div>
+    <div class="squad" id="squad"></div>
+  </div>
+</section>
+
+<section class="blk" id="historia" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Palmarés & legado</div><h2 class="display">Historia del club</h2></div>
+    <div class="titles-row" id="titles"></div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<section class="blk" id="noticias" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Semana a semana</div><h2 class="display">Noticias</h2></div>
+    <div class="news" id="news"></div>
+  </div>
+</section>
+
+<section class="blk" id="hinchada" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div class="eyebrow">Qué dicen los fans</div><h2 class="display">La hinchada</h2></div>
+    <div class="fans" id="fans"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot foot2">
+    <div class="foot-col">
+      <a class="brand" href="inicio.html">
+        <span class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></span>
+        <b>Football<br>Experience<small>MARACANÃ · RIO</small></b>
+      </a>
+      <p class="foot-desc">Tu acceso oficial a partidos de Flamengo, Fluminense, Botafogo y Vasco da Gama en el Maracanã. Reservas 100% por WhatsApp: depósito del 50% ahora y el resto el día del partido.</p>
+      <a class="foot-social" href="https://wa.me/5521999990000" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+      </a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-h">Football Experience</div>
+      <a class="foot-link" href="inicio.html">Inicio</a>
+      <a class="foot-link" href="inicio.html#equipos">Equipos</a>
+      <a class="foot-link" href="inicio.html#partidos">Partidos</a>
+      <a class="foot-link" href="experiencia.html">Experiencia</a>
+      <a class="foot-link" href="maracana-estadio.html">Maracanã</a>
+      <a class="foot-link" href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-h">Entradas por club</div>
+      <a class="foot-link" href="equipo.html?team=flamengo">Flamengo</a>
+      <a class="foot-link" href="equipo.html?team=fluminense">Fluminense</a>
+      <a class="foot-link" href="equipo.html?team=botafogo">Botafogo</a>
+      <a class="foot-link" href="equipo.html?team=vasco">Vasco da Gama</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-h">Contacto</div>
+      <a class="foot-contact" href="mailto:riolatintour@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="foot-contact-text"><b>riolatintour@gmail.com</b><small>Consultas y reservas</small></span>
+      </a>
+      <a class="foot-contact" href="https://wa.me/5521999990000" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+        <span class="foot-contact-text"><b>+56 9 7109 2149</b><small>WhatsApp directo</small></span>
+      </a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <div class="mono">MARACANÃ · RIO DE JANEIRO · © 2026 · PROTOTIPO</div>
+    <div class="legal-l">Operado por Rio Latin Tour LTDA · CNPJ 32.259.468/0001-91</div>
+  </div>
+</footer>
+
+<script>
+/* inlined: mrc/store.js */
+// ════════════════════════════════════════════════════════════
+// FOOTBALL EXPERIENCE · MARACANÃ — Data Store (localStorage)
+// Gestiona equipos, partidos (con sectores/precios editables),
+// reservas y FAQ. Persiste en localStorage para administración.
+// ════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════
+// FOOTBALL EXPERIENCE · MARACANÃ — Data Store (localStorage)
+// Gestiona equipos, partidos (con sectores/precios editables),
+// reservas y FAQ. Persiste en localStorage para administración.
+// ════════════════════════════════════════════════════════════
+window.MRC = (function () {
+  const KEY_MATCHES = 'mrc.matches.v4';
+  const KEY_BOOKINGS = 'mrc.bookings.v2';
+
+  // ── EQUIPOS ──────────────────────────────────────────────
+  const TEAMS = {
+    flamengo: {
+      id:'flamengo', name:'Flamengo', full:'Clube de Regatas do Flamengo',
+      short:'FLA', nickname:'Mengão', founded:1895, fans:'42M',
+      primary:'#C52613', secondary:'#000000', ink:'#000',
+      pattern:'hoops', stadium:'Maracanã', position:2,
+      record:{ pts:34, pj:17, g:10, e:4, p:3 },
+      coach:'Leonardo Jardim',
+      colors:['#C52613','#000000','#FFFFFF'],
+      crest:'assets/equipos/flamengo.png',
+      banner:'assets/banners/flamengo.png',
+      bio:'El club más popular de Brasil. Campeón del mundo en 1981 y tetracampeón de la Libertadores. La Nación Rubro-Negra llena el Maracanã como nadie.',
+      titles:[
+        { n:'1', l:'Mundial de Clubes 1981' }, { n:'4', l:'Libertadores' },
+        { n:'8', l:'Brasileirão' }, { n:'5', l:'Copa do Brasil' },
+        { n:'38', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1895', t:'Fundación', x:'Nace como club de remo en la zona sur de Rio.' },
+        { year:'1981', t:'Campeón del mundo', x:'Conquista el Mundial de Clubes con Zico de figura.' },
+        { year:'2019', t:'Gloria en Lima', x:'Gabigol da vuelta la final de Libertadores ante River.' },
+        { year:'2022', t:'Doblete', x:'Libertadores y Copa do Brasil en una misma temporada.' },
+        { year:'2025', t:'Tetracampeón continental', x:'Cuarta Libertadores de la historia del club.' },
+      ],
+    },
+    fluminense: {
+      id:'fluminense', name:'Fluminense', full:'Fluminense Football Club',
+      short:'FLU', nickname:'Tricolor', founded:1902, fans:'5M',
+      primary:'#870A28', secondary:'#00613C', ink:'#00613C',
+      pattern:'tricolor', stadium:'Maracanã', position:3,
+      record:{ pts:31, pj:18, g:9, e:4, p:5 },
+      coach:'Luis Zubeldía',
+      colors:['#870A28','#00613C','#FFFFFF'],
+      crest:'assets/equipos/fluminense.png',
+      banner:'assets/banners/fluminense.jpg',
+      bio:'Pionero del fútbol carioca y dueño de un juego elegante. Campeón de la Libertadores 2023 en casa, en el corazón del Maracanã.',
+      titles:[
+        { n:'1', l:'Libertadores 2023' }, { n:'1', l:'Recopa Sudamericana 2024' },
+        { n:'1', l:'Copa Rio Internacional 1952' }, { n:'4', l:'Brasileirão' },
+        { n:'1', l:'Copa do Brasil' }, { n:'33', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1902', t:'Fundación', x:'Primer gran club de fútbol de Rio de Janeiro.' },
+        { year:'1970', t:'Era dorada', x:'La "Máquina Tricolor" domina el fútbol carioca.' },
+        { year:'2012', t:'Brasileirão', x:'Conquista el título nacional con autoridad.' },
+        { year:'2023', t:'Gloria continental', x:'Primera Libertadores, en el Maracanã, con Cano y Ganso.' },
+        { year:'2024', t:'Recopa Sudamericana', x:'Suma un título continental más a su palmarés.' },
+      ],
+    },
+    botafogo: {
+      id:'botafogo', name:'Botafogo', full:'Botafogo de Futebol e Regatas',
+      short:'BOT', nickname:'Fogão', founded:1904, fans:'4M',
+      primary:'#000000', secondary:'#FFFFFF', ink:'#fff',
+      pattern:'star', stadium:'Nilton Santos / Maracanã', position:12,
+      record:{ pts:22, pj:17, g:6, e:4, p:7 },
+      coach:'Franclim Carvalho',
+      colors:['#000000','#FFFFFF'],
+      crest:'assets/equipos/botafogo.png',
+      banner:'assets/banners/botafogo.png',
+      bio:'La estrella solitaria. Cuna de Garrincha y campeón de la Libertadores 2024. Vive una era de renacimiento absoluto.',
+      titles:[
+        { n:'1', l:'Libertadores 2024' }, { n:'1', l:'Copa CONMEBOL 1993' },
+        { n:'3', l:'Brasileirão (incl. 2024)' }, { n:'4', l:'Torneo Rio-São Paulo' },
+        { n:'21', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1904', t:'Fundación', x:'Nace el club de la estrella solitaria.' },
+        { year:'1962', t:'Garrincha mundial', x:'El Mané brilla en el bicampeonato de Brasil.' },
+        { year:'1995', t:'Brasileirão', x:'Túlio Maravilha lidera el título nacional.' },
+        { year:'2024', t:'Gloria sudamericana', x:'Conquista la Libertadores y el Brasileirão.' },
+      ],
+    },
+    vasco: {
+      id:'vasco', name:'Vasco da Gama', full:'Club de Regatas Vasco da Gama',
+      short:'VAS', nickname:'Gigante da Colina', founded:1898, fans:'8M',
+      primary:'#000000', secondary:'#FFFFFF', ink:'#fff',
+      pattern:'hoops', stadium:'São Januário / Maracanã', position:17,
+      record:{ pts:20, pj:18, g:5, e:5, p:8 },
+      coach:'Renato Gaúcho',
+      colors:['#E2231A','#000000','#FFFFFF','#FFA400'],
+      crest:'assets/equipos/vasco-da-gama.png',
+      banner:'assets/banners/vasco-da-gama.png',
+      bio:'El gigante que abrió el fútbol brasileño a todas las razas y clases sociales. Campeón de la Libertadores 1998 y pionero sudamericano desde 1948.',
+      titles:[
+        { n:'1', l:'Libertadores 1998' }, { n:'1', l:'Campeonato Sudamericano de Campeones 1948' },
+        { n:'1', l:'Copa Mercosur 2000' }, { n:'4', l:'Brasileirão' },
+        { n:'1', l:'Copa do Brasil 2011' }, { n:'24', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1898', t:'Fundación', x:'Nace el Club de Regatas Vasco da Gama.' },
+        { year:'1948', t:'Pionero sudamericano', x:'Campeón Sudamericano de Campeones, precursor reconocido de la Libertadores.' },
+        { year:'1998', t:'Gloria continental', x:'Conquista la Copa Libertadores de América.' },
+        { year:'2000', t:'Copa Mercosur', x:'Suma otro título internacional a su palmarés.' },
+        { year:'2011', t:'Copa do Brasil', x:'Levanta el título nacional una vez más.' },
+      ],
+    },
+  };
+
+  // ── SECTORES DEL MARACANÃ (según mapa oficial) ───────────
+  // color = referencia visual del mapa entregado
+  const SECTOR_DEFS = [
+    { id:'leste-inferior', name:'Leste Inferior',  side:'oeste', color:'#b81d2c', defaultPrice:320, desc:'Lateral bajo, cerca del campo. La mejor relación vista-precio.' },
+    { id:'leste-superior', name:'Leste Superior',  side:'oeste', color:'#7c1420', defaultPrice:300, desc:'Lateral alto con vista panorámica del juego.' },
+    { id:'norte',          name:'Norte',           side:'norte', color:'#1f8a44', defaultPrice:280, desc:'La curva del aliento. Banderas, cantos y la barra.' },
+    { id:'sul',            name:'Sul',             side:'sul',   color:'#d6a72e', defaultPrice:280, desc:'Curva sur, ambiente familiar y vibrante.' },
+    { id:'oeste',          name:'Maracanã Mais (Oeste)', side:'este', color:'#3a3a42', defaultPrice:520, desc:'Sector premium: asientos centrales, lounge y servicio.' },
+    { id:'visitante',      name:'Visitante',       side:'norte-este', color:'#6a6a72', defaultPrice:260, desc:'Sector reservado a la hinchada visitante.' },
+  ];
+
+  function sectorDef(id) { return SECTOR_DEFS.find(s => s.id === id); }
+
+  // ── PARTIDOS SEMILLA ─────────────────────────────────────
+  function seedMatches() {
+    const slug = (s) => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    // Deterministic id (date+team+rival), NOT random: every page seeds its own
+    // copy of this array independently, so a random id here would make
+    // comprar.html?match=ID resolve to a different match than the one that
+    // generated the link whenever the two pages don't share localStorage
+    // (e.g. file:// origins, or a fresh/incognito tab) — Comprar would look
+    // like it silently does nothing.
+    const mk = (over) => Object.assign({
+      id: 'm-' + slug(over.date) + '-' + slug(over.teamId) + '-' + slug(over.oppShort || over.opp),
+      status: 'on-sale', // on-sale | sold-out | past
+      includes: ['Entrada', 'Guiamiento en 3 idiomas', 'Transporte ida y vuelta'],
+      sectors: SECTOR_DEFS.map(s => ({ id: s.id, price: s.defaultPrice, available: true })),
+    }, over);
+
+    const classA = (extra) => SECTOR_DEFS.map(s => ({ id: s.id, price: s.defaultPrice + extra, available: true }));
+
+    // Calendario oficial Maracanã · Julio y Agosto 2026 (entregado por el cliente)
+    return [
+      mk({ teamId:'fluminense', opp:'Bragantino', oppShort:'RBB', comp:'Brasileirão',
+        date:'2026-07-22T21:30', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'São Paulo', oppShort:'SAO', comp:'Brasileirão',
+        date:'2026-07-26T16:00', venue:'Maracanã', sectors: classA(60) }),
+      mk({ teamId:'fluminense', opp:'Bahía', oppShort:'BAH', comp:'Brasileirão',
+        date:'2026-07-29T19:00', venue:'Maracanã' }),
+      mk({ teamId:'vasco', opp:'Fluminense', oppShort:'FLU', comp:'Copa do Brasil',
+        date:'2026-08-01T18:30', venue:'Maracanã', sectors: classA(80) }),
+      mk({ teamId:'fluminense', opp:'Vasco da Gama', oppShort:'VAS', comp:'Copa do Brasil',
+        date:'2026-08-05T21:30', venue:'Maracanã', sectors: classA(80) }),
+      mk({ teamId:'flamengo', opp:'Vitória', oppShort:'VIT', comp:'Brasileirão',
+        date:'2026-08-09T16:00', venue:'Maracanã' }),
+      mk({ teamId:'fluminense', opp:'Ind. Rivadavia', oppShort:'IRI', comp:'Libertadores',
+        date:'2026-08-11T21:30', venue:'Maracanã', sectors: classA(70) }),
+      mk({ teamId:'fluminense', opp:'Palmeiras', oppShort:'PAL', comp:'Brasileirão',
+        date:'2026-08-16T16:00', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'Cruzeiro', oppShort:'CRU', comp:'Libertadores',
+        date:'2026-08-19T21:30', venue:'Maracanã', sectors: classA(60) }),
+      mk({ teamId:'fluminense', opp:'Remo', oppShort:'REM', comp:'Copa do Brasil',
+        date:'2026-08-23T16:00', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'Botafogo', oppShort:'BOT', comp:'Brasileirão',
+        date:'2026-08-30T16:00', venue:'Maracanã', sectors: classA(100) }),
+    ];
+  }
+
+  // ── PERSISTENCIA ─────────────────────────────────────────
+  function load(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  }
+  function save(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+
+  let matches = load(KEY_MATCHES, null);
+  if (!matches) { matches = seedMatches(); save(KEY_MATCHES, matches); }
+
+  let bookings = load(KEY_BOOKINGS, []);
+
+  // ── API ──────────────────────────────────────────────────
+  function allMatches() { return matches.slice().sort((a,b)=> new Date(a.date)-new Date(b.date)); }
+  function matchesByTeam(teamId) { return allMatches().filter(m => m.teamId === teamId); }
+  function upcomingByTeam(teamId) { return matchesByTeam(teamId).filter(m => !isPast(m)); }
+  function getMatch(id) { return matches.find(m => m.id === id); }
+  function isPast(m) { return new Date(m.date).getTime() < Date.now(); }
+
+  function saveMatch(m) {
+    const i = matches.findIndex(x => x.id === m.id);
+    if (i >= 0) matches[i] = m; else matches.push(m);
+    save(KEY_MATCHES, matches);
+  }
+  function deleteMatch(id) { matches = matches.filter(m => m.id !== id); save(KEY_MATCHES, matches); }
+  function newMatchTemplate(teamId) {
+    return {
+      id: 'm_' + Math.random().toString(36).slice(2, 9),
+      teamId: teamId || 'flamengo', opp:'', oppShort:'', comp:'Brasileirão',
+      date: new Date(Date.now()+7*864e5).toISOString().slice(0,16), venue:'Maracanã',
+      status:'on-sale', includes:['Entrada','Guiamiento en 3 idiomas','Transporte ida y vuelta'],
+      sectors: SECTOR_DEFS.map(s => ({ id:s.id, price:s.defaultPrice, available:true })),
+    };
+  }
+
+  // ── RESERVAS / COMPRA ────────────────────────────────────
+  // Política: pago 100% del valor. Cancelación hasta 7 días antes.
+  function createBooking({ matchId, sectorId, qty, name, email }) {
+    const m = getMatch(matchId);
+    const sec = m.sectors.find(s => s.id === sectorId);
+    const unit = sec.price;
+    const total = unit * qty;
+    const b = {
+      id: 'FE-' + Math.random().toString(36).slice(2, 8).toUpperCase(),
+      matchId, sectorId, qty, name, email,
+      unit, total, paid: total, // 100%
+      createdAt: Date.now(),
+      matchDate: m.date,
+      status: 'confirmed',
+    };
+    bookings.unshift(b);
+    save(KEY_BOOKINGS, bookings);
+    return b;
+  }
+  function getBookings() { return bookings.slice(); }
+  function canCancel(b) {
+    const matchTime = new Date(b.matchDate).getTime();
+    return b.status === 'confirmed' && (matchTime - Date.now()) >= 7 * 864e5;
+  }
+  function cancelBooking(id) {
+    const b = bookings.find(x => x.id === id);
+    if (b && canCancel(b)) { b.status = 'cancelled'; save(KEY_BOOKINGS, bookings); return true; }
+    return false;
+  }
+  function resetData() { matches = seedMatches(); save(KEY_MATCHES, matches); bookings = []; save(KEY_BOOKINGS, bookings); }
+
+  // ── FAQ (chatbot) ────────────────────────────────────────
+  const FAQ = [
+    { q:'¿Qué incluye la entrada?', a:'Todas nuestras entradas son servicio completo: incluyen el acceso al estadio, guiamiento en 3 idiomas (español, inglés y portugués) y transporte ida y vuelta.' },
+    { q:'¿Cómo es el acceso al estadio?', a:'El acceso es biométrico: tu rostro es tu entrada. Te registras una vez vía Bepass y entras sin filas ni ticket de papel.' },
+    { q:'¿Puedo cancelar mi compra?', a:'Sí. Puedes cancelar hasta 7 días (1 semana) antes del partido y se te reembolsa el 100%. Pasado ese plazo la compra no es reembolsable.' },
+    { q:'¿Cuánto cuesta y cómo pago?', a:'El precio varía por sector y por partido. Tu anfitrión te confirma el precio final por WhatsApp y ahí coordinan el pago (los precios de referencia pueden cambiar de un partido a otro).' },
+    { q:'¿Qué sectores hay en el Maracanã?', a:'Leste Inferior, Leste Superior, Norte, Sul, Maracanã Mais (Oeste, premium) y Visitante. Los precios cambian según el partido.' },
+    { q:'¿El transporte de dónde sale?', a:'Coordinamos un punto de embarque y un anfitrión te acompaña ida y vuelta. La hora exacta se confirma por WhatsApp.' },
+    { q:'¿Atienden por WhatsApp?', a:'Sí, tienes un anfitrión por WhatsApp para coordinar tu embarque y resolver cualquier duda antes, durante y después del partido.' },
+  ];
+
+  const WHATSAPP = '5521999990000'; // número de contacto (placeholder)
+
+  return {
+    TEAMS, SECTOR_DEFS, sectorDef, FAQ, WHATSAPP,
+    allMatches, matchesByTeam, upcomingByTeam, getMatch, isPast,
+    saveMatch, deleteMatch, newMatchTemplate,
+    createBooking, getBookings, canCancel, cancelBooking, resetData,
+    fmt: (n) => 'R$ ' + Number(n).toLocaleString('pt-BR'),
+  };
+})();
+
+</script>
+<script>
+/* inlined: mrc/team-data.js */
+// Datos extendidos por equipo: plantel, resultados, stats, noticias, fans
+window.MRC_TEAM = {
+  flamengo: {
+    squad: [
+        { name:'Agustín Rossi', pos:'Portero', num:1, nat:'ARG', photo:'assets/jugadores/flamengo/agustin-rossi.png' },
+        { name:'Andrew', pos:'Portero', num:42, nat:'BRA', photo:'assets/jugadores/flamengo/andrew.png' },
+        { name:'Dyogo Alves', pos:'Portero', num:49, nat:'BRA', photo:'assets/jugadores/flamengo/dyogo-alves.png' },
+        { name:'Léo Ortiz', pos:'Central', num:3, nat:'BRA', photo:'assets/jugadores/flamengo/leo-ortiz.png' },
+        { name:'Léo Pereira', pos:'Central', num:4, nat:'BRA', photo:'assets/jugadores/flamengo/leo-pereira.png' },
+        { name:'Danilo', pos:'Central/Lateral', num:13, nat:'BRA', photo:'assets/jugadores/flamengo/danilo.png' },
+        { name:'Vitão', pos:'Central', num:44, nat:'BRA', photo:'assets/jugadores/flamengo/vitao.png' },
+        { name:'Guillermo Varela', pos:'Lateral Derecho', num:2, nat:'URU', photo:'assets/jugadores/flamengo/guillermo-varela.png' },
+        { name:'Emerson Royal', pos:'Lateral Derecho', num:22, nat:'BRA', photo:'assets/jugadores/flamengo/emerson-royal.png' },
+        { name:'Ayrton Lucas', pos:'Lateral Izquierdo', num:6, nat:'BRA', photo:'assets/jugadores/flamengo/ayrton-lucas.png' },
+        { name:'Alex Sandro', pos:'Lateral Izquierdo', num:26, nat:'BRA', photo:'assets/jugadores/flamengo/alex-sandro.png' },
+        { name:'Erick Pulgar', pos:'Pivote/Central', num:5, nat:'CHI', photo:'assets/jugadores/flamengo/erick-pulgar.png' },
+        { name:'Jorginho', pos:'Mediocentro', num:21, nat:'ITA', photo:'assets/jugadores/flamengo/jorginho.png' },
+        { name:'Saúl Ñíguez', pos:'Mediocentro', num:8, nat:'ESP', photo:'assets/jugadores/flamengo/saul-niguez.png' },
+        { name:'Nicolás de la Cruz', pos:'Mediocentro mixto', num:18, nat:'URU', photo:'assets/jugadores/flamengo/nicolas-de-la-cruz.png' },
+        { name:'Evertton Araújo', pos:'Mediocentro', num:52, nat:'BRA', photo:'assets/jugadores/flamengo/evertton-araujo.png' },
+        { name:'Giorgian de Arrascaeta', pos:'Volante Ofensivo', num:10, nat:'URU', photo:'assets/jugadores/flamengo/giorgian-de-arrascaeta.png' },
+        { name:'Jorge Carrascal', pos:'Volante Ofensivo', num:15, nat:'COL', photo:'assets/jugadores/flamengo/jorge-carrascal.png' },
+        { name:'Lucas Paquetá', pos:'Volante Ofensivo', num:20, nat:'BRA', photo:'assets/jugadores/flamengo/lucas-paqueta.png' },
+        { name:'Pedro', pos:'Centrodelantero', num:9, nat:'BRA', photo:'assets/jugadores/flamengo/pedro.png' },
+        { name:'Luiz Araújo', pos:'Extremo', num:7, nat:'BRA', photo:'assets/jugadores/flamengo/luiz-araujo.png' },
+        { name:'Everton Soares', pos:'Extremo', num:11, nat:'BRA', photo:'assets/jugadores/flamengo/everton-soares.png' },
+        { name:'Samuel Lino', pos:'Extremo/Carrilero', num:16, nat:'BRA', photo:'assets/jugadores/flamengo/samuel-lino.png' },
+        { name:'Gonzalo Plata', pos:'Extremo', num:19, nat:'ECU', photo:'assets/jugadores/flamengo/gonzalo-plata.png' },
+        { name:'Bruno Henrique', pos:'Segundo Delantero/Extremo', num:27, nat:'BRA', photo:'assets/jugadores/flamengo/bruno-henrique.png' },
+    ],
+    recent: [
+      { opp:'Bahia', us:3, them:1, r:'W', cmp:'Brasileirão' },
+      { opp:'Peñarol', us:2, them:0, r:'W', cmp:'Libertadores' },
+      { opp:'São Paulo', us:1, them:1, r:'D', cmp:'Brasileirão' },
+      { opp:'Grêmio', us:2, them:1, r:'W', cmp:'Brasileirão' },
+    ],
+    form: ['W','W','D','W','L'],
+    stats: [
+      { l:'Goles a favor', v:42 }, { l:'Posesión media', v:'58%' },
+      { l:'Victorias en casa', v:'9/10' }, { l:'Valla invicta', v:11 },
+      { l:'Asistencia media', v:'58.400' }, { l:'Disparos/partido', v:16.2 },
+    ],
+    news: [
+      { tag:'PLANTEL', t:'Pedro alcanza los 18 goles y lidera la tabla de artilleros del Brasileirão', time:'hace 2 h', big:true },
+      { tag:'LIBERTADORES', t:'Semifinal confirmada en el Maracanã ante Racing', time:'hace 5 h' },
+      { tag:'AFICIÓN', t:'Récord histórico: el Mengão supera 175 mil socios', time:'ayer' },
+      { tag:'ENTRENAMIENTO', t:'Arrascaeta vuelve a las prácticas y entra en convocatoria', time:'hace 2 días' },
+    ],
+    fans: [
+      { n:'Mariana R.', t:'La Nación llena el Maracanã como nadie. Cada partido es una final.', s:5 },
+      { n:'Diego M.', t:'Acceso facial brutal, sin filas. Entré directo a la Norte.', s:5 },
+      { n:'Caio F.', t:'Mengão é uma religião. El ambiente no se compara a nada.', s:5 },
+    ],
+  },
+  fluminense: {
+    squad: [
+        { name:'Fábio', pos:'Portero', num:1, nat:'BRA', photo:'assets/jugadores/fluminense/fabio.png' },
+        { name:'Marcelo Pitaluga', pos:'Portero', num:27, nat:'BRA', photo:'assets/jugadores/fluminense/marcelo-pitaluga.png' },
+        { name:'Vitor Eudes', pos:'Portero', num:98, nat:'BRA', photo:'assets/jugadores/fluminense/vitor-eudes.png' },
+        { name:'Gustavo Ramalho', pos:'Portero', num:50, nat:'BRA', photo:'assets/jugadores/fluminense/gustavo-ramalho.png' },
+        { name:'Jemmes', pos:'Central', num:3, nat:'BRA', photo:'assets/jugadores/fluminense/jemmes.png' },
+        { name:'Ignácio', pos:'Central', num:4, nat:'BRA', photo:'assets/jugadores/fluminense/ignacio.png' },
+        { name:'Igor Rabello', pos:'Central', num:21, nat:'BRA', photo:'assets/jugadores/fluminense/igor-rabello.png' },
+        { name:'Juan Pablo Freytes', pos:'Central/Lateral', num:22, nat:'ARG', photo:'assets/jugadores/fluminense/juan-pablo-freytes.png' },
+        { name:'Samuel Xavier', pos:'Lateral Derecho', num:2, nat:'BRA', photo:'assets/jugadores/fluminense/samuel-xavier.png' },
+        { name:'Guga', pos:'Lateral Derecho', num:23, nat:'BRA', photo:'assets/jugadores/fluminense/guga.png' },
+        { name:'Renê', pos:'Lateral Izquierdo', num:6, nat:'BRA', photo:'assets/jugadores/fluminense/rene.png' },
+        { name:'Guilherme Arana', pos:'Lateral Izquierdo', num:13, nat:'BRA', photo:'assets/jugadores/fluminense/guilherme-arana.png' },
+        { name:'Gabriel Fuentes', pos:'Lateral Izquierdo', num:12, nat:'COL', photo:'assets/jugadores/fluminense/gabriel-fuentes.png' },
+        { name:'Facundo Bernal', pos:'Pivote', num:5, nat:'URU', photo:'assets/jugadores/fluminense/facundo-bernal.png' },
+        { name:'Matheus Martinelli', pos:'Mediocentro', num:8, nat:'BRA', photo:'assets/jugadores/fluminense/matheus-martinelli.png' },
+        { name:'Nonato', pos:'Mediocentro', num:16, nat:'BRA', photo:'assets/jugadores/fluminense/nonato.png' },
+        { name:'Alisson', pos:'Mediocentro', num:25, nat:'BRA', photo:'assets/jugadores/fluminense/alisson.png' },
+        { name:'Hércules', pos:'Mediocentro', num:35, nat:'BRA', photo:'assets/jugadores/fluminense/hercules.png' },
+        { name:'Paulo Henrique Ganso', pos:'Volante Ofensivo', num:10, nat:'BRA', photo:'assets/jugadores/fluminense/paulo-henrique-ganso.png' },
+        { name:'Luciano Acosta', pos:'Volante Ofensivo', num:32, nat:'ARG', photo:'assets/jugadores/fluminense/luciano-acosta.png' },
+        { name:'David Terans', pos:'Volante Ofensivo', num:80, nat:'URU', photo:'assets/jugadores/fluminense/david-terans.png' },
+        { name:'Rubén Lezcano', pos:'Mediocampista', num:18, nat:'PAR', photo:'assets/jugadores/fluminense/ruben-lezcano.png' },
+        { name:'Vinícius Lima', pos:'Mediocampista', num:45, nat:'BRA', photo:'assets/jugadores/fluminense/vinicius-lima.png' },
+        { name:'Yeferson Soteldo', pos:'Extremo/Volante', num:7, nat:'VEN', photo:'assets/jugadores/fluminense/yeferson-soteldo.png' },
+        { name:'Jefferson Savarino', pos:'Extremo/Volante', num:11, nat:'VEN', photo:'assets/jugadores/fluminense/jefferson-savarino.png' },
+        { name:'Germán Cano', pos:'Centrodelantero', num:14, nat:'ARG', photo:'assets/jugadores/fluminense/german-cano.png' },
+        { name:'Hulk', pos:'Centrodelantero/Extremo', num:7, nat:'BRA', photo:'assets/jugadores/fluminense/hulk.png' },
+        { name:'John Kennedy', pos:'Centrodelantero', num:9, nat:'BRA', photo:'assets/jugadores/fluminense/john-kennedy.png' },
+        { name:'Keno', pos:'Extremo', num:11, nat:'BRA', photo:'assets/jugadores/fluminense/keno.png' },
+        { name:'Agustín Canobbio', pos:'Extremo', num:17, nat:'URU', photo:'assets/jugadores/fluminense/agustin-canobbio.png' },
+        { name:'Kevin Serna', pos:'Extremo', num:90, nat:'COL', photo:'assets/jugadores/fluminense/kevin-serna.png' },
+        { name:'Santiago Moreno', pos:'Extremo', num:30, nat:'COL', photo:'assets/jugadores/fluminense/santiago-moreno.png' },
+        { name:'Rodrigo Castillo', pos:'Delantero', num:19, nat:'ARG', photo:'assets/jugadores/fluminense/rodrigo-castillo.png' },
+        { name:'Joaquín Lavega', pos:'Delantero', num:19, nat:'URU', photo:'assets/jugadores/fluminense/joaquin-lavega.png' },
+    ],
+    recent: [
+      { opp:'Cruzeiro', us:2, them:1, r:'W', cmp:'Brasileirão' },
+      { opp:'Cerro', us:1, them:1, r:'D', cmp:'Sudamericana' },
+      { opp:'Atlético-MG', us:2, them:0, r:'W', cmp:'Brasileirão' },
+      { opp:'Vasco', us:1, them:1, r:'D', cmp:'Brasileirão' },
+    ],
+    form: ['D','W','W','D','W'],
+    stats: [
+      { l:'Goles a favor', v:31 }, { l:'Posesión media', v:'56%' },
+      { l:'Victorias en casa', v:'7/10' }, { l:'Valla invicta', v:8 },
+      { l:'Asistencia media', v:'41.200' }, { l:'Disparos/partido', v:13.8 },
+    ],
+    news: [
+      { tag:'PLANTEL', t:'Cano renueva hasta 2027 y será el capitán de la temporada', time:'hace 3 h', big:true },
+      { tag:'SUDAMERICANA', t:'Fluminense define la serie ante LDU en el Maracanã', time:'hace 6 h' },
+      { tag:'CANTERA', t:'Tres juveniles de Xerém suben al primer equipo', time:'ayer' },
+      { tag:'CLUB', t:'Thiago Silva lidera campaña social en la zona portuaria', time:'hace 3 días' },
+    ],
+    fans: [
+      { n:'Lucas A.', t:'El Tricolor de 2023 nos dio la gloria continental en casa. Inolvidable.', s:5 },
+      { n:'Patrícia V.', t:'Ganso y Arias son pura magia. Da gusto venir al Maracanã.', s:5 },
+      { n:'Rafael S.', t:'El anfitrión me esperaba en el embarque. Llegué como un VIP.', s:5 },
+    ],
+  },
+  botafogo: {
+    squad: [
+        { name:'Neto', pos:'Portero', num:22, nat:'BRA/ITA', photo:'assets/jugadores/botafogo/neto.png' },
+        { name:'Léo Linck', pos:'Portero', num:24, nat:'BRA', photo:'assets/jugadores/botafogo/leo-linck.png' },
+        { name:'Raul Steffens', pos:'Portero', num:1, nat:'BRA', photo:'assets/jugadores/botafogo/raul-steffens.png' },
+        { name:'Cristhian Loor', pos:'Portero', num:40, nat:'ECU', photo:null },
+        { name:'Alexander Barboza', pos:'Central', num:20, nat:'ARG', photo:'assets/jugadores/botafogo/alexander-barboza.png' },
+        { name:'Nahuel Ferraresi', pos:'Central', num:5, nat:'VEN', photo:'assets/jugadores/botafogo/nahuel-ferraresi.png' },
+        { name:'Bastos', pos:'Central', num:15, nat:'ANG', photo:'assets/jugadores/botafogo/bastos.png' },
+        { name:'Ythallo', pos:'Central', num:3, nat:'BRA', photo:'assets/jugadores/botafogo/ythallo.png' },
+        { name:'Kaio Pantaleão', pos:'Central', num:31, nat:'BRA', photo:'assets/jugadores/botafogo/kaio-pantaleao.png' },
+        { name:'Vitinho', pos:'Lateral Derecho', num:2, nat:'BRA', photo:'assets/jugadores/botafogo/vitinho.png' },
+        { name:'Mateo Ponte', pos:'Lateral Derecho', num:4, nat:'URU', photo:'assets/jugadores/botafogo/mateo-ponte.png' },
+        { name:'Alex Telles', pos:'Lateral Izquierdo', num:13, nat:'BRA', photo:'assets/jugadores/botafogo/alex-telles.png' },
+        { name:'Fernando Marçal', pos:'Lateral Izquierdo', num:21, nat:'BRA', photo:'assets/jugadores/botafogo/fernando-marca.png' },
+        { name:'Jhoan Hernández', pos:'Lateral Izquierdo', num:67, nat:'COL', photo:'assets/jugadores/botafogo/jhoan-hernandez.png' },
+        { name:'Danilo', pos:'Pivote', num:8, nat:'BRA', photo:'assets/jugadores/botafogo/danilo.png' },
+        { name:'Cristian Medina', pos:'Mediocentro mixto', num:6, nat:'ARG', photo:'assets/jugadores/botafogo/cristian-medina.png' },
+        { name:'Allan', pos:'Mediocentro', num:25, nat:'BRA', photo:'assets/jugadores/botafogo/allan.png' },
+        { name:'Newton', pos:'Pivote', num:28, nat:'BRA', photo:'assets/jugadores/botafogo/newton.png' },
+        { name:'Edenilson', pos:'Mediocentro', num:88, nat:'BRA', photo:'assets/jugadores/botafogo/edenilson.png' },
+        { name:'Santiago Rodríguez', pos:'Volante Ofensivo', num:23, nat:'URU', photo:'assets/jugadores/botafogo/santiago-rodriguez.png' },
+        { name:'Álvaro Montoro', pos:'Volante Ofensivo', num:10, nat:'ARG', photo:'assets/jugadores/botafogo/alvaro-montoro.png' },
+        { name:'Jordan Barrera', pos:'Volante Ofensivo', num:14, nat:'COL', photo:'assets/jugadores/botafogo/jordan-barrera.png' },
+        { name:'Arthur Cabral', pos:'Centrodelantero', num:19, nat:'BRA', photo:'assets/jugadores/botafogo/arthur-cabral.png' },
+        { name:'Chris Ramos', pos:'Centrodelantero', num:9, nat:'ESP', photo:'assets/jugadores/botafogo/chris-ramos.png' },
+        { name:'Júnior Santos', pos:'Extremo/Delantero', num:7, nat:'BRA', photo:'assets/jugadores/botafogo/junior-santos.png' },
+        { name:'Joaquín "Tucu" Correa', pos:'Segundo Delantero/Extremo', num:30, nat:'ARG', photo:'assets/jugadores/botafogo/joaquin-tucu-correa.png' },
+        { name:'Matheus Martins', pos:'Extremo', num:11, nat:'BRA', photo:'assets/jugadores/botafogo/matheus-martins.png' },
+        { name:'Jeffinho', pos:'Extremo', num:47, nat:'BRA', photo:'assets/jugadores/botafogo/jeffinho.png' },
+        { name:'Nathan Fernandes', pos:'Extremo', num:16, nat:'BRA', photo:'assets/jugadores/botafogo/nathan-fernandes.png' },
+    ],
+    recent: [
+      { opp:'Juventude', us:2, them:0, r:'W', cmp:'Brasileirão' },
+      { opp:'Vitória', us:0, them:1, r:'L', cmp:'Brasileirão' },
+      { opp:'Bragantino', us:3, them:2, r:'W', cmp:'Brasileirão' },
+      { opp:'Palmeiras', us:1, them:0, r:'W', cmp:'Brasileirão' },
+    ],
+    form: ['W','L','W','W','D'],
+    stats: [
+      { l:'Goles a favor', v:35 }, { l:'Posesión media', v:'53%' },
+      { l:'Victorias en casa', v:'8/10' }, { l:'Valla invicta', v:9 },
+      { l:'Asistencia media', v:'33.800' }, { l:'Disparos/partido', v:14.5 },
+    ],
+    news: [
+      { tag:'PLANTEL', t:'Luiz Henrique, elegido jugador del mes del Brasileirão', time:'hace 1 h', big:true },
+      { tag:'LIBERTADORES', t:'El Fogão recibe a la U de Chile en los octavos de final', time:'hace 4 h' },
+      { tag:'ESTADIO', t:'Nueva iluminación LED en el Nilton Santos para las noches continentales', time:'ayer' },
+      { tag:'HISTORIA', t:'Homenaje a Garrincha en el aniversario del club', time:'hace 4 días' },
+    ],
+    fans: [
+      { n:'Patrícia V.', t:'La estrella solitaria volvió a brillar. La Libertadores 2024 fue épica.', s:5 },
+      { n:'André L.', t:'Glorioso! Luiz Henrique es un espectáculo cada fin de semana.', s:5 },
+      { n:'Bruno T.', t:'Viajé solo y me sentí 100% seguro con el transporte y el host.', s:5 },
+    ],
+  },
+  vasco: {
+    squad: [
+        { name:'Léo Jardim', pos:'Portero', num:1, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/leo-jardim.png' },
+        { name:'Daniel Fuzato', pos:'Portero', num:13, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/daniel-fuzato.png' },
+        { name:'Carlos Cuesta', pos:'Central', num:46, nat:'COL', photo:null },
+        { name:'Robert Renan', pos:'Central', num:30, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/robert-renan.png' },
+        { name:'Alan Saldivia', pos:'Central', num:4, nat:'URU', photo:'assets/jugadores/vasco-da-gama/alan-saldivia.png' },
+        { name:'Lucas Freitas', pos:'Central', num:43, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/lucas-freitas.png' },
+        { name:'Paulo Henrique', pos:'Lateral Derecho', num:96, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/paulo-henrique.png' },
+        { name:'José Luis Rodríguez "Puma"', pos:'Lateral Derecho', num:2, nat:'URU', photo:'assets/jugadores/vasco-da-gama/jose-luis-rodriguez-puma.png' },
+        { name:'Lucas Piton', pos:'Lateral Izquierdo', num:6, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/lucas-piton.png' },
+        { name:'Cuiabano', pos:'Lateral Izquierdo', num:66, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/cuiabano.png' },
+        { name:'Thiago Mendes', pos:'Pivote/Mediocentro', num:23, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/thiago-mendes.png' },
+        { name:'Hugo Moura', pos:'Pivote/Volante', num:25, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/hugo-moura.png' },
+        { name:'Jair', pos:'Pivote', num:8, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/jair.png' },
+        { name:'Mateus Carvalho', pos:'Mediocentro', num:85, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/mateus-carvalho.png' },
+        { name:'Tchê Tchê', pos:'Mediocentro mixto', num:3, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/tche-tche.png' },
+        { name:'JP', pos:'Volante Mixto', num:98, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/jp.png' },
+        { name:'Johan Rojas', pos:'Volante Ofensivo', num:10, nat:'COL', photo:'assets/jugadores/vasco-da-gama/johan-rojas.png' },
+        { name:'Matheus França', pos:'Volante Ofensivo/Extremo', num:9, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/matheus-franca.png' },
+        { name:'Brenner', pos:'Centrodelantero', num:20, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/brenner.png' },
+        { name:'Claudio Spinelli', pos:'Centrodelantero', num:77, nat:'ARG', photo:'assets/jugadores/vasco-da-gama/claudio-spinelli.png' },
+        { name:'David', pos:'Extremo Izquierdo', num:7, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/david.png' },
+        { name:'Andrés Gómez', pos:'Extremo Izquierdo', num:11, nat:'COL', photo:'assets/jugadores/vasco-da-gama/andres-gomez.png' },
+        { name:'Nuno Moreira', pos:'Extremo Derecho', num:17, nat:'POR', photo:'assets/jugadores/vasco-da-gama/nuno-moreira.png' },
+        { name:'Adson', pos:'Extremo Derecho', num:28, nat:'BRA', photo:'assets/jugadores/vasco-da-gama/adson.png' },
+        { name:'Marino Hinestroza', pos:'Extremo Derecho', num:18, nat:'COL', photo:'assets/jugadores/vasco-da-gama/marino-hinestroza.png' },
+    ],
+    recent: [
+      { opp:'Fluminense', us:1, them:1, r:'D', cmp:'Brasileirão' },
+      { opp:'Internacional', us:2, them:1, r:'W', cmp:'Brasileirão' },
+      { opp:'Corinthians', us:0, them:2, r:'L', cmp:'Brasileirão' },
+      { opp:'Mirassol', us:1, them:0, r:'W', cmp:'Brasileirão' },
+    ],
+    form: ['D','W','L','W','D'],
+    stats: [
+      { l:'Goles a favor', v:24 }, { l:'Posesión media', v:'49%' },
+      { l:'Victorias en casa', v:'5/10' }, { l:'Valla invicta', v:5 },
+      { l:'Asistencia media', v:'28.600' }, { l:'Disparos/partido', v:11.4 },
+    ],
+    news: [
+      { tag:'PLANTEL', t:'Vasco busca reforzar el mediocampo en la ventana de pases', time:'hace 4 h', big:true },
+      { tag:'CLUB', t:'São Januário recibe mejoras de infraestructura para la temporada', time:'hace 1 día' },
+      { tag:'CANTERA', t:'La base de Vasco vuelve a destacar en el Brasileiro Sub-20', time:'hace 2 días' },
+      { tag:'HISTORIA', t:'Vasco recuerda el título de la Libertadores 1998', time:'hace 5 días' },
+    ],
+    fans: [
+      { n:'Felipe N.', t:'São Januário tiene una energía única, distinta a cualquier otro estadio de Río.', s:5 },
+      { n:'Renata M.', t:'La Colina Histórica es un sentimiento. Vibrar ahí con la hinchada no tiene precio.', s:5 },
+      { n:'Igor B.', t:'Cruzmaltino de toda la vida, llevé a mi familia y la organización fue excelente.', s:5 },
+    ],
+  },
+};
+
+</script>
+<script>
+/* inlined: mrc/image-slot.js */
+/* BEGIN USAGE */
+/**
+ * <image-slot> — user-fillable image placeholder.
+ *
+ * Drop this into a deck, mockup, or page wherever you want the user to
+ * supply an image. You control the slot's shape and size; the user fills it
+ * by dragging an image file onto it (or clicking to browse). The dropped
+ * image persists across reloads via a .image-slots.state.json sidecar —
+ * same read-via-fetch / write-via-window.omelette pattern as
+ * design_canvas.jsx, so the filled slot shows on share links, downloaded
+ * zips, and PPTX export. Outside the omelette runtime the slot is read-only.
+ *
+ * The host bridge only allows sidecar writes at the project root, so the
+ * HTML that uses this component is assumed to live at the project root too
+ * (same constraint as design_canvas.jsx).
+ *
+ * Attributes:
+ *   id           Persistence key. REQUIRED for the drop to survive reload —
+ *                every slot on the page needs a distinct id.
+ *   shape        'rect' | 'rounded' | 'circle' | 'pill'   (default 'rounded')
+ *                'circle' applies 50% border-radius; on a non-square slot
+ *                that's an ellipse — set equal width and height for a true
+ *                circle.
+ *   radius       Corner radius in px for 'rounded'.       (default 12)
+ *   mask         Any CSS clip-path value. Overrides `shape` — use this for
+ *                hexagons, blobs, arbitrary polygons.
+ *   fit          object-fit: cover | contain | fill.       (default 'cover')
+ *                With cover (the default) double-clicking the filled slot
+ *                enters a reframe mode: the whole image spills past the mask
+ *                (translucent outside, opaque inside), drag to reposition,
+ *                corner-drag to scale. The crop persists alongside the image
+ *                in the sidecar. contain/fill stay static.
+ *   position     object-position for fit=contain|fill.     (default '50% 50%')
+ *   placeholder  Empty-state caption.                      (default 'Drop an image')
+ *   src          Optional initial/fallback image URL. A user drop overrides
+ *                it; clearing the drop reveals src again.
+ *
+ * Size and layout come from ordinary CSS on the element — width/height
+ * inline or from a parent grid — so it composes with any layout.
+ *
+ * Usage:
+ *   <image-slot id="hero"   style="width:800px;height:450px" shape="rounded" radius="20"
+ *               placeholder="Drop a hero image"></image-slot>
+ *   <image-slot id="avatar" style="width:120px;height:120px" shape="circle"></image-slot>
+ *   <image-slot id="kite"   style="width:300px;height:300px"
+ *               mask="polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"></image-slot>
+ */
+/* END USAGE */
+
+(() => {
+  const STATE_FILE = '.image-slots.state.json';
+  // 2× a ~600px slot in a 1920-wide deck — retina-sharp without making the
+  // sidecar enormous. A 1200px WebP at q=0.85 is ~150-300KB.
+  const MAX_DIM = 1200;
+  // Raster formats only. SVG is excluded (can carry script; createImageBitmap
+  // on SVG blobs is inconsistent). GIF is excluded because the canvas
+  // re-encode keeps only the first frame, so an animated GIF would silently
+  // go still — better to reject than surprise.
+  const ACCEPT = ['image/png', 'image/jpeg', 'image/webp', 'image/avif'];
+
+  // ── Shared sidecar store ────────────────────────────────────────────────
+  // One fetch + immediate write-on-change for every <image-slot> on the
+  // page. Reads via fetch() so viewing works anywhere the HTML and sidecar
+  // are served together; writes go through window.omelette.writeFile, which
+  // the host allowlists to *.state.json basenames only.
+  const subs = new Set();
+  let slots = {};
+  // ids explicitly cleared before the sidecar fetch resolved — otherwise
+  // the merge below can't tell "never set" from "just deleted" and would
+  // resurrect the sidecar's stale value.
+  const tombstones = new Set();
+  let loaded = false;
+  let loadP = null;
+
+  function load() {
+    if (loadP) return loadP;
+    loadP = fetch(STATE_FILE)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => {
+        // Merge: sidecar loses to any in-memory change that raced ahead of
+        // the fetch (drop or clear) so neither is clobbered by hydration.
+        if (j && typeof j === 'object') {
+          const merged = Object.assign({}, j, slots);
+          // A framing-only write that raced ahead of hydration must not
+          // drop a user image that's only on disk — inherit u from the
+          // sidecar for any in-memory entry that lacks one.
+          for (const k in slots) {
+            if (merged[k] && !merged[k].u && j[k]) {
+              merged[k].u = typeof j[k] === 'string' ? j[k] : j[k].u;
+            }
+          }
+          for (const id of tombstones) delete merged[id];
+          slots = merged;
+        }
+        tombstones.clear();
+      })
+      .catch(() => {})
+      .then(() => { loaded = true; subs.forEach((fn) => fn()); });
+    return loadP;
+  }
+
+  // Serialize writes so two near-simultaneous drops on different slots
+  // can't reorder at the backend and leave the sidecar with only the
+  // first. A save requested mid-flight just marks dirty and re-fires on
+  // completion with the then-current slots.
+  let saving = false;
+  let saveDirty = false;
+  function save() {
+    if (saving) { saveDirty = true; return; }
+    const w = window.omelette && window.omelette.writeFile;
+    if (!w) return;
+    saving = true;
+    Promise.resolve(w(STATE_FILE, JSON.stringify(slots)))
+      .catch(() => {})
+      .then(() => { saving = false; if (saveDirty) { saveDirty = false; save(); } });
+  }
+
+  const S_MAX = 5;
+  const clampS = (s) => Math.max(1, Math.min(S_MAX, s));
+
+  // Normalize a stored slot value. Pre-reframe sidecars stored a bare
+  // data-URL string; newer ones store {u, s, x, y}. Either shape is valid.
+  function getSlot(id) {
+    const v = slots[id];
+    if (!v) return null;
+    return typeof v === 'string' ? { u: v, s: 1, x: 0, y: 0 } : v;
+  }
+
+  function setSlot(id, val) {
+    if (!id) return;
+    if (val) { slots[id] = val; tombstones.delete(id); }
+    else { delete slots[id]; if (!loaded) tombstones.add(id); }
+    subs.forEach((fn) => fn());
+    // A drop is rare + high-value — write immediately so nav-away can't lose
+    // it. Gate on the initial read so we don't overwrite a sidecar we haven't
+    // merged yet; the merge in load() keeps this change once the read lands.
+    if (loaded) save(); else load().then(save);
+  }
+
+  // ── Image downscale ─────────────────────────────────────────────────────
+  // Encode through a canvas so the sidecar carries resized bytes, not the
+  // raw upload. Longest side is capped at 2× the slot's rendered width
+  // (retina) and at MAX_DIM. WebP keeps alpha and is ~10× smaller than PNG
+  // for photos, so there's no need for per-image format picking.
+  async function toDataUrl(file, targetW) {
+    const bitmap = await createImageBitmap(file);
+    try {
+      const cap = Math.min(MAX_DIM, Math.max(1, Math.round(targetW * 2)) || MAX_DIM);
+      const scale = Math.min(1, cap / Math.max(bitmap.width, bitmap.height));
+      const w = Math.max(1, Math.round(bitmap.width * scale));
+      const h = Math.max(1, Math.round(bitmap.height * scale));
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(bitmap, 0, 0, w, h);
+      return canvas.toDataURL('image/webp', 0.85);
+    } finally {
+      bitmap.close && bitmap.close();
+    }
+  }
+
+  // ── Custom element ──────────────────────────────────────────────────────
+  const stylesheet =
+    ':host{display:inline-block;position:relative;vertical-align:top;' +
+    '  font:13px/1.3 system-ui,-apple-system,sans-serif;color:rgba(0,0,0,.55);width:240px;height:160px}' +
+    '.frame{position:absolute;inset:0;overflow:hidden;background:rgba(0,0,0,.04)}' +
+    // .frame img (clipped) and .spill (unclipped ghost + handles) share the
+    // same left/top/width/height in frame-%, computed by _applyView(), so the
+    // inside-mask crop and the outside-mask spill stay pixel-aligned.
+    '.frame img{position:absolute;max-width:none;transform:translate(-50%,-50%);' +
+    '  -webkit-user-drag:none;user-select:none;touch-action:none}' +
+    // Reframe mode (double-click): the full image spills past the mask. The
+    // spill layer is sized to the IMAGE bounds so its corners are where the
+    // resize handles belong. The ghost <img> inside is translucent; the real
+    // clipped <img> underneath shows the opaque in-mask crop.
+    '.spill{position:absolute;transform:translate(-50%,-50%);display:none;z-index:1;' +
+    '  cursor:grab;touch-action:none}' +
+    ':host([data-panning]) .spill{cursor:grabbing}' +
+    '.spill .ghost{position:absolute;inset:0;width:100%;height:100%;opacity:.35;' +
+    '  pointer-events:none;-webkit-user-drag:none;user-select:none;' +
+    '  box-shadow:0 0 0 1px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.2)}' +
+    '.spill .handle{position:absolute;width:12px;height:12px;border-radius:50%;' +
+    '  background:#fff;box-shadow:0 0 0 1.5px #c96442,0 1px 3px rgba(0,0,0,.3);' +
+    '  transform:translate(-50%,-50%)}' +
+    '.spill .handle[data-c=nw]{left:0;top:0;cursor:nwse-resize}' +
+    '.spill .handle[data-c=ne]{left:100%;top:0;cursor:nesw-resize}' +
+    '.spill .handle[data-c=sw]{left:0;top:100%;cursor:nesw-resize}' +
+    '.spill .handle[data-c=se]{left:100%;top:100%;cursor:nwse-resize}' +
+    ':host([data-reframe]){z-index:10}' +
+    ':host([data-reframe]) .spill{display:block}' +
+    ':host([data-reframe]) .frame{box-shadow:0 0 0 2px #c96442}' +
+    '.empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;' +
+    '  justify-content:center;gap:6px;text-align:center;padding:12px;box-sizing:border-box;' +
+    '  cursor:pointer;user-select:none}' +
+    '.empty svg{opacity:.45}' +
+    '.empty .cap{max-width:90%;font-weight:500;letter-spacing:.01em}' +
+    '.empty .sub{font-size:11px}' +
+    '.empty .sub u{text-underline-offset:2px;text-decoration-color:rgba(0,0,0,.25)}' +
+    '.empty:hover .sub u{color:rgba(0,0,0,.75);text-decoration-color:currentColor}' +
+    ':host([data-over]) .frame{outline:2px solid #c96442;outline-offset:-2px;' +
+    '  background:rgba(201,100,66,.10)}' +
+    '.ring{position:absolute;inset:0;pointer-events:none;border:1.5px dashed rgba(0,0,0,.25);' +
+    '  transition:border-color .12s}' +
+    ':host([data-over]) .ring{border-color:#c96442}' +
+    ':host([data-filled]) .ring{display:none}' +
+    // Controls sit BELOW the mask (top:100%), absolutely positioned so the
+    // author-declared slot height is unaffected. The gap is padding, not a
+    // top offset, so the hover target stays contiguous with the frame.
+    '.ctl{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:8px;' +
+    '  display:flex;gap:6px;opacity:0;pointer-events:none;transition:opacity .12s;z-index:2;' +
+    '  white-space:nowrap}' +
+    ':host([data-filled][data-editable]:hover) .ctl,:host([data-reframe]) .ctl' +
+    '  {opacity:1;pointer-events:auto}' +
+    '.ctl button{appearance:none;border:0;border-radius:6px;padding:5px 10px;cursor:pointer;' +
+    '  background:rgba(0,0,0,.65);color:#fff;font:11px/1 system-ui,-apple-system,sans-serif;' +
+    '  backdrop-filter:blur(6px)}' +
+    '.ctl button:hover{background:rgba(0,0,0,.8)}' +
+    '.err{position:absolute;left:8px;bottom:8px;right:8px;color:#b3261e;font-size:11px;' +
+    '  background:rgba(255,255,255,.85);padding:4px 6px;border-radius:5px;pointer-events:none}';
+
+  const icon =
+    '<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">' +
+    '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>' +
+    '<path d="m21 15-5-5L5 21"/></svg>';
+
+  class ImageSlot extends HTMLElement {
+    static get observedAttributes() {
+      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id'];
+    }
+
+    constructor() {
+      super();
+      const root = this.attachShadow({ mode: 'open' });
+      // .spill and .ctl sit OUTSIDE .frame so overflow:hidden + border-radius
+      // on the frame (circle, pill, rounded) can't clip them.
+      root.innerHTML =
+        '<style>' + stylesheet + '</style>' +
+        '<div class="frame" part="frame">' +
+        '  <img part="image" alt="" draggable="false" style="display:none">' +
+        '  <div class="empty" part="empty">' + icon +
+        '    <div class="cap"></div>' +
+        '    <div class="sub">or <u>browse files</u></div></div>' +
+        '  <div class="ring" part="ring"></div>' +
+        '</div>' +
+        '<div class="spill">' +
+        '  <img class="ghost" alt="" draggable="false">' +
+        '  <div class="handle" data-c="nw"></div><div class="handle" data-c="ne"></div>' +
+        '  <div class="handle" data-c="sw"></div><div class="handle" data-c="se"></div>' +
+        '</div>' +
+        '<div class="ctl"><button data-act="replace" title="Replace image">Replace</button>' +
+        '  <button data-act="clear" title="Remove image">Remove</button></div>' +
+        '<input type="file" accept="' + ACCEPT.join(',') + '" hidden>';
+      this._frame = root.querySelector('.frame');
+      this._ring = root.querySelector('.ring');
+      this._img = root.querySelector('.frame img');
+      this._empty = root.querySelector('.empty');
+      this._cap = root.querySelector('.cap');
+      this._sub = root.querySelector('.sub');
+      this._spill = root.querySelector('.spill');
+      this._ghost = root.querySelector('.ghost');
+      this._err = null;
+      this._input = root.querySelector('input');
+      this._depth = 0;
+      this._gen = 0;
+      this._view = { s: 1, x: 0, y: 0 };
+      this._subFn = () => this._render();
+      // Shadow-DOM listeners live with the shadow DOM — bound once here so
+      // disconnect/reconnect (e.g. React remount) doesn't stack handlers.
+      this._empty.addEventListener('click', () => this._input.click());
+      root.addEventListener('click', (e) => {
+        const act = e.target && e.target.getAttribute && e.target.getAttribute('data-act');
+        if (act === 'replace') { this._exitReframe(true); this._input.click(); }
+        if (act === 'clear') {
+          this._exitReframe(false);
+          this._gen++;
+          this._local = null;
+          if (this.id) setSlot(this.id, null); else this._render();
+        }
+      });
+      this._input.addEventListener('change', () => {
+        const f = this._input.files && this._input.files[0];
+        if (f) this._ingest(f);
+        this._input.value = '';
+      });
+      // naturalWidth/Height aren't known until load — re-apply so the cover
+      // baseline is computed from real dimensions, not the 100%×100% fallback.
+      this._img.addEventListener('load', () => this._applyView());
+      // A broken/missing src must never leave the browser's default broken-
+      // image glyph on screen. Fall back to the empty placeholder instead.
+      this._img.addEventListener('error', () => {
+        if (!this._img.getAttribute('src')) return;
+        this._img.removeAttribute('src');
+        this._img.style.display = 'none';
+        this._empty.style.display = 'flex';
+        this.removeAttribute('data-filled');
+      });
+      // Gated on editable + fit=cover so share links and contain/fill slots
+      // stay static.
+      this.addEventListener('dblclick', (e) => {
+        if (!this.hasAttribute('data-editable') || !this._reframes()) return;
+        e.preventDefault();
+        if (this.hasAttribute('data-reframe')) this._exitReframe(true);
+        else this._enterReframe();
+      });
+      // Pan + resize both originate on the spill layer. A handle pointerdown
+      // drives an aspect-locked resize anchored at the opposite corner; any
+      // other pointerdown on the spill pans. Offsets are frame-% so a
+      // reframed slot survives responsive resize / PPTX export.
+      this._spill.addEventListener('pointerdown', (e) => {
+        if (e.button !== 0 || !this.hasAttribute('data-reframe')) return;
+        e.preventDefault();
+        e.stopPropagation();
+        this._spill.setPointerCapture(e.pointerId);
+        const rect = this.getBoundingClientRect();
+        const fw = rect.width || 1, fh = rect.height || 1;
+        const corner = e.target.getAttribute && e.target.getAttribute('data-c');
+        let move;
+        if (corner) {
+          // Resize about the OPPOSITE corner. Viewport-px throughout (rect
+          // fw/fh, not clientWidth) so the math survives a transform:scale()
+          // ancestor — deck_stage renders slides scaled-to-fit.
+          const iw = this._img.naturalWidth || 1, ih = this._img.naturalHeight || 1;
+          const base = Math.max(fw / iw, fh / ih);
+          const sx = corner.includes('e') ? 1 : -1;
+          const sy = corner.includes('s') ? 1 : -1;
+          const s0 = this._view.s;
+          const w0 = iw * base * s0, h0 = ih * base * s0;
+          const cx0 = (50 + this._view.x) / 100 * fw;
+          const cy0 = (50 + this._view.y) / 100 * fh;
+          const ox = cx0 - sx * w0 / 2, oy = cy0 - sy * h0 / 2;
+          const diag0 = Math.hypot(w0, h0);
+          const ux = sx * w0 / diag0, uy = sy * h0 / diag0;
+          move = (ev) => {
+            const proj = (ev.clientX - rect.left - ox) * ux +
+                         (ev.clientY - rect.top - oy) * uy;
+            const s = clampS(s0 * proj / diag0);
+            const d = diag0 * s / s0;
+            this._view.s = s;
+            this._view.x = (ox + ux * d / 2) / fw * 100 - 50;
+            this._view.y = (oy + uy * d / 2) / fh * 100 - 50;
+            this._clampView();
+            this._applyView();
+          };
+        } else {
+          this.setAttribute('data-panning', '');
+          const start = { px: e.clientX, py: e.clientY, x: this._view.x, y: this._view.y };
+          move = (ev) => {
+            this._view.x = start.x + (ev.clientX - start.px) / fw * 100;
+            this._view.y = start.y + (ev.clientY - start.py) / fh * 100;
+            this._clampView();
+            this._applyView();
+          };
+        }
+        const up = () => {
+          try { this._spill.releasePointerCapture(e.pointerId); } catch {}
+          this._spill.removeEventListener('pointermove', move);
+          this._spill.removeEventListener('pointerup', up);
+          this._spill.removeEventListener('pointercancel', up);
+          this.removeAttribute('data-panning');
+          this._dragUp = null;
+        };
+        // Stashed so _exitReframe (Escape / outside-click mid-drag) can
+        // tear the capture + listeners down synchronously.
+        this._dragUp = up;
+        this._spill.addEventListener('pointermove', move);
+        this._spill.addEventListener('pointerup', up);
+        this._spill.addEventListener('pointercancel', up);
+      });
+      // Wheel zoom stays available inside reframe mode as a trackpad nicety —
+      // zooms toward the cursor (offset' = cursor·(1-k) + offset·k).
+      this.addEventListener('wheel', (e) => {
+        if (!this.hasAttribute('data-reframe')) return;
+        e.preventDefault();
+        const r = this.getBoundingClientRect();
+        const cx = (e.clientX - r.left) / r.width * 100 - 50;
+        const cy = (e.clientY - r.top) / r.height * 100 - 50;
+        const prev = this._view.s;
+        const next = clampS(prev * Math.pow(1.0015, -e.deltaY));
+        if (next === prev) return;
+        const k = next / prev;
+        this._view.s = next;
+        this._view.x = cx * (1 - k) + this._view.x * k;
+        this._view.y = cy * (1 - k) + this._view.y * k;
+        this._clampView();
+        this._applyView();
+      }, { passive: false });
+    }
+
+    connectedCallback() {
+      // Warn once per page — an id-less slot works for the session but
+      // cannot persist, and two id-less slots would share nothing.
+      if (!this.id && !ImageSlot._warned) {
+        ImageSlot._warned = true;
+        console.warn('<image-slot> without an id will not persist its dropped image.');
+      }
+      this.addEventListener('dragenter', this);
+      this.addEventListener('dragover', this);
+      this.addEventListener('dragleave', this);
+      this.addEventListener('drop', this);
+      subs.add(this._subFn);
+      // width%/height% in _applyView encode the frame aspect at call time —
+      // a host resize (responsive grid, pane divider) would stretch the
+      // image until the next _render. Re-render on size change: _render()
+      // re-seeds _view from stored before clamp/apply, so a shrink→grow
+      // cycle round-trips instead of ratcheting x/y toward the narrower
+      // frame's clamp range.
+      this._ro = new ResizeObserver(() => this._render());
+      this._ro.observe(this);
+      load();
+      this._render();
+    }
+
+    disconnectedCallback() {
+      subs.delete(this._subFn);
+      this.removeEventListener('dragenter', this);
+      this.removeEventListener('dragover', this);
+      this.removeEventListener('dragleave', this);
+      this.removeEventListener('drop', this);
+      if (this._ro) { this._ro.disconnect(); this._ro = null; }
+      this._exitReframe(false);
+    }
+
+    _enterReframe() {
+      if (this.hasAttribute('data-reframe')) return;
+      this.setAttribute('data-reframe', '');
+      this._applyView();
+      // Close on click outside (the spill handler stopPropagation()s so
+      // in-image drags don't reach this) and on Escape. Listeners are held
+      // on the instance so _exitReframe / disconnectedCallback can detach
+      // exactly what was attached.
+      this._outside = (e) => {
+        if (e.composedPath && e.composedPath().includes(this)) return;
+        this._exitReframe(true);
+      };
+      this._esc = (e) => { if (e.key === 'Escape') this._exitReframe(true); };
+      document.addEventListener('pointerdown', this._outside, true);
+      document.addEventListener('keydown', this._esc, true);
+    }
+
+    _exitReframe(commit) {
+      if (!this.hasAttribute('data-reframe')) return;
+      if (this._dragUp) this._dragUp();
+      this.removeAttribute('data-reframe');
+      this.removeAttribute('data-panning');
+      if (this._outside) document.removeEventListener('pointerdown', this._outside, true);
+      if (this._esc) document.removeEventListener('keydown', this._esc, true);
+      this._outside = this._esc = null;
+      if (commit) this._commitView();
+    }
+
+    attributeChangedCallback() { if (this.shadowRoot) this._render(); }
+
+    // handleEvent — one listener object for all four drag events keeps the
+    // add/remove symmetric and the depth counter correct.
+    handleEvent(e) {
+      if (e.type === 'dragenter' || e.type === 'dragover') {
+        // Without preventDefault the browser never fires 'drop'.
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.dataTransfer) e.dataTransfer.dropEffect = 'copy';
+        if (e.type === 'dragenter') this._depth++;
+        this.setAttribute('data-over', '');
+      } else if (e.type === 'dragleave') {
+        // dragenter/leave fire for every descendant crossing — count depth
+        // so hovering the icon inside the empty state doesn't flicker.
+        if (--this._depth <= 0) { this._depth = 0; this.removeAttribute('data-over'); }
+      } else if (e.type === 'drop') {
+        e.preventDefault();
+        e.stopPropagation();
+        this._depth = 0;
+        this.removeAttribute('data-over');
+        const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (f) this._ingest(f);
+      }
+    }
+
+    async _ingest(file) {
+      this._setError(null);
+      if (!file || ACCEPT.indexOf(file.type) < 0) {
+        this._setError('Drop a PNG, JPEG, WebP, or AVIF image.');
+        return;
+      }
+      // toDataUrl can take hundreds of ms on a large photo. A Clear or a
+      // newer drop during that window would be clobbered when this await
+      // resumes — bump + capture a generation so stale encodes bail.
+      const gen = ++this._gen;
+      try {
+        const w = this.clientWidth || this.offsetWidth || MAX_DIM;
+        const url = await toDataUrl(file, w);
+        if (gen !== this._gen) return;
+        // Only exit reframe once the new image is in hand — a rejected type
+        // or decode failure leaves the in-progress crop untouched.
+        this._exitReframe(false);
+        const val = { u: url, s: 1, x: 0, y: 0 };
+        setSlot(this.id || '', val);
+        // Keep a session-local copy for id-less slots so the drop still
+        // shows, even though it cannot persist.
+        if (!this.id) { this._local = val; this._render(); }
+      } catch (err) {
+        if (gen !== this._gen) return;
+        this._setError('Could not read that image.');
+        console.warn('<image-slot> ingest failed:', err);
+      }
+    }
+
+    _setError(msg) {
+      if (this._err) { this._err.remove(); this._err = null; }
+      if (!msg) return;
+      const d = document.createElement('div');
+      d.className = 'err'; d.textContent = msg;
+      this.shadowRoot.appendChild(d);
+      this._err = d;
+      setTimeout(() => { if (this._err === d) { d.remove(); this._err = null; } }, 3000);
+    }
+
+    // Reframing (pan/resize) is only meaningful for fit=cover — contain/fill
+    // keep the old object-fit path and double-click is a no-op.
+    _reframes() {
+      return this.hasAttribute('data-filled') &&
+        (this.getAttribute('fit') || 'cover') === 'cover';
+    }
+
+    // Cover-baseline geometry, shared by clamp/apply/resize. Null until the
+    // img has loaded (naturalWidth is 0 before that) or when the slot has no
+    // layout box — ResizeObserver fires with a 0×0 rect under display:none,
+    // and clamping against a degenerate 1×1 frame would silently pull the
+    // stored pan toward zero.
+    _geom() {
+      const iw = this._img.naturalWidth, ih = this._img.naturalHeight;
+      const fw = this.clientWidth, fh = this.clientHeight;
+      if (!iw || !ih || !fw || !fh) return null;
+      return { iw, ih, fw, fh, base: Math.max(fw / iw, fh / ih) };
+    }
+
+    _clampView() {
+      // Pan range on each axis is half the overflow past the frame edge.
+      const g = this._geom();
+      if (!g) return;
+      const mx = Math.max(0, (g.iw * g.base * this._view.s / g.fw - 1) * 50);
+      const my = Math.max(0, (g.ih * g.base * this._view.s / g.fh - 1) * 50);
+      this._view.x = Math.max(-mx, Math.min(mx, this._view.x));
+      this._view.y = Math.max(-my, Math.min(my, this._view.y));
+    }
+
+    _applyView() {
+      const g = this._geom();
+      const fit = this.getAttribute('fit') || 'cover';
+      if (fit !== 'cover' || !g) {
+        // Non-cover, or dimensions not known yet (before img load).
+        this._img.style.width = '100%';
+        this._img.style.height = '100%';
+        this._img.style.left = '50%';
+        this._img.style.top = '50%';
+        this._img.style.objectFit = fit;
+        this._img.style.objectPosition = this.getAttribute('position') || '50% 50%';
+        return;
+      }
+      // Cover baseline: img fills the frame on its tighter axis at s=1, so
+      // pan works immediately on the overflowing axis without zooming first.
+      // Width/height and left/top are all frame-% — depends only on the
+      // frame aspect ratio, so a responsive resize keeps the same crop. The
+      // spill layer mirrors the same box so its corners = image corners.
+      const k = g.base * this._view.s;
+      const w = (g.iw * k / g.fw * 100) + '%';
+      const h = (g.ih * k / g.fh * 100) + '%';
+      const l = (50 + this._view.x) + '%';
+      const t = (50 + this._view.y) + '%';
+      this._img.style.width = w; this._img.style.height = h;
+      this._img.style.left = l; this._img.style.top = t;
+      this._img.style.objectFit = '';
+      this._spill.style.width = w; this._spill.style.height = h;
+      this._spill.style.left = l; this._spill.style.top = t;
+    }
+
+    _commitView() {
+      const v = { s: this._view.s, x: this._view.x, y: this._view.y };
+      if (this._userUrl) v.u = this._userUrl;
+      // Framing-only (no u) persists too so an author-src slot remembers its
+      // crop; clearing the sidecar still falls through to src=.
+      if (this.id) setSlot(this.id, v);
+      else { this._local = v; }
+    }
+
+    _render() {
+      // Shape / mask. Presets use border-radius so the dashed ring can
+      // follow the rounded outline; clip-path is only applied for an
+      // explicit `mask` (the ring is hidden there since a rectangle
+      // dashed border chopped by an arbitrary polygon looks broken).
+      const mask = this.getAttribute('mask');
+      const shape = (this.getAttribute('shape') || 'rounded').toLowerCase();
+      let radius = '';
+      if (shape === 'circle') radius = '50%';
+      else if (shape === 'pill') radius = '9999px';
+      else if (shape === 'rounded') {
+        const n = parseFloat(this.getAttribute('radius'));
+        radius = (Number.isFinite(n) ? n : 12) + 'px';
+      }
+      this._frame.style.borderRadius = mask ? '' : radius;
+      this._frame.style.clipPath = mask || '';
+      this._ring.style.borderRadius = mask ? '' : radius;
+      this._ring.style.display = mask ? 'none' : '';
+
+      // Controls and reframe entry gate on this so share links stay read-only.
+      const editable = !!(window.omelette && window.omelette.writeFile);
+      this.toggleAttribute('data-editable', editable);
+      this._sub.style.display = editable ? '' : 'none';
+
+      // Content. The sidecar is also writable by the agent's write_file
+      // tool, so its value isn't guaranteed canvas-originated — only accept
+      // data:image/ URLs from it. The `src` attribute is author-controlled
+      // (Claude wrote it into the HTML) so it passes through unchanged.
+      let stored = this.id ? getSlot(this.id) : this._local;
+      if (stored && stored.u && !/^data:image\//i.test(stored.u)) stored = null;
+      const srcAttr = this.getAttribute('src') || '';
+      this._userUrl = (stored && stored.u) || null;
+      const url = this._userUrl || srcAttr;
+      // Don't clobber an in-flight reframe with a store-triggered re-render.
+      if (!this.hasAttribute('data-reframe')) {
+        this._view = {
+          s: stored && Number.isFinite(stored.s) ? clampS(stored.s) : 1,
+          x: stored && Number.isFinite(stored.x) ? stored.x : 0,
+          y: stored && Number.isFinite(stored.y) ? stored.y : 0,
+        };
+      }
+      this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
+      // Toggle via style.display — the [hidden] attribute alone loses to
+      // the display:flex / display:block rules in the stylesheet above.
+      if (url) {
+        if (this._img.getAttribute('src') !== url) {
+          this._img.src = url;
+          this._ghost.src = url;
+        }
+        this._img.style.display = 'block';
+        this._empty.style.display = 'none';
+        this.setAttribute('data-filled', '');
+        this._clampView();
+        this._applyView();
+      } else {
+        this._img.style.display = 'none';
+        this._img.removeAttribute('src');
+        this._ghost.removeAttribute('src');
+        this._empty.style.display = 'flex';
+        this.removeAttribute('data-filled');
+      }
+    }
+  }
+
+  if (!customElements.get('image-slot')) {
+    customElements.define('image-slot', ImageSlot);
+  }
+})();
+
+</script>
+<script>
+/* inlined: mrc/widgets.js */
+// ════════════════════════════════════════════════════════════
+// MRC Widgets — Botón flotante de WhatsApp + Chatbot FAQ
+// Se auto-inyecta. Incluir como script externo
+// después de mrc/store.js en cualquier página.
+// ════════════════════════════════════════════════════════════
+(function () {
+  const FAQ = (window.MRC && window.MRC.FAQ) || [];
+  const PHONE = (window.MRC && window.MRC.WHATSAPP) || '5521999990000';
+
+  const css = `
+  .mrc-fab-wrap { position: fixed; right: 22px; bottom: 22px; z-index: 9000; display:flex; flex-direction:column; align-items:flex-end; gap: 14px; font-family: Inter, system-ui, sans-serif; }
+  .mrc-fab { width: 58px; height: 58px; border-radius: 50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); transition: transform .2s cubic-bezier(.22,1,.36,1); position:relative; }
+  .mrc-fab:hover { transform: translateY(-3px) scale(1.05); }
+  .mrc-fab.wa { background: #25D366; }
+  .mrc-fab.bot { background: #fff; }
+  .mrc-fab .mrc-badge { position:absolute; top:-3px; right:-3px; width:18px; height:18px; border-radius:50%; background:#d11a2a; color:#fff; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; border:2px solid #070708; }
+  .mrc-fab .mrc-tip { position:absolute; right: 70px; white-space:nowrap; background:#111; color:#f4f4f0; font-size:12px; padding:8px 12px; border-radius:10px; opacity:0; pointer-events:none; transform: translateX(6px); transition: all .2s; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+  .mrc-fab:hover .mrc-tip { opacity:1; transform:none; }
+
+  .mrc-chat { position: fixed; right: 22px; bottom: 92px; z-index: 9001; width: 360px; max-width: calc(100vw - 44px); height: 520px; max-height: calc(100vh - 130px); background:#0f0f12; border:1px solid rgba(255,255,255,0.12); border-radius: 20px; box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:none; flex-direction:column; overflow:hidden; font-family: Inter, system-ui, sans-serif; }
+  .mrc-chat.open { display:flex; animation: mrcUp .3s cubic-bezier(.22,1,.36,1); }
+  @keyframes mrcUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:none} }
+  .mrc-chat-head { background: linear-gradient(135deg,#1a1a1f,#0f0f12); padding: 16px 18px; display:flex; align-items:center; gap:12px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .mrc-chat-head .av { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#d11a2a,#0e5c2f); display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; color:#fff; font-size:16px; }
+  .mrc-chat-head .t { flex:1; }
+  .mrc-chat-head .t b { color:#f4f4f0; font-size:14px; display:block; }
+  .mrc-chat-head .t span { color:#8a8a92; font-size:11px; display:flex; align-items:center; gap:5px; }
+  .mrc-chat-head .t span i { width:6px; height:6px; border-radius:50%; background:#46e08a; display:inline-block; }
+  .mrc-chat-head button { background:none; border:none; color:#8a8a92; cursor:pointer; padding:4px; }
+  .mrc-chat-body { flex:1; overflow-y:auto; padding: 16px; display:flex; flex-direction:column; gap:10px; background:#0b0b0e; }
+  .mrc-msg { max-width:85%; padding:10px 13px; border-radius:14px; font-size:13px; line-height:1.45; }
+  .mrc-msg.bot { align-self:flex-start; background:#1c1c22; color:#f4f4f0; border-bottom-left-radius:4px; }
+  .mrc-msg.user { align-self:flex-end; background:#d11a2a; color:#fff; border-bottom-right-radius:4px; }
+  .mrc-chips { display:flex; flex-wrap:wrap; gap:8px; padding: 12px 16px; border-top:1px solid rgba(255,255,255,0.08); background:#0f0f12; }
+  .mrc-chip { padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.18); background:transparent; color:#cfcfd4; font-size:12px; cursor:pointer; transition: all .2s; font-family:inherit; }
+  .mrc-chip:hover { background:#fff; color:#111; border-color:#fff; }
+  .mrc-chat-foot { padding:10px 16px; border-top:1px solid rgba(255,255,255,0.08); background:#0f0f12; }
+  .mrc-chat-foot a { display:flex; align-items:center; justify-content:center; gap:8px; background:#25D366; color:#fff; text-decoration:none; padding:11px; border-radius:12px; font-size:13px; font-weight:600; }
+  `;
+  const style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  const waHref = (txt) => `https://wa.me/${PHONE}?text=${encodeURIComponent(txt || 'Hola, quiero información sobre las entradas para el Maracanã')}`;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'mrc-fab-wrap';
+  wrap.innerHTML = `
+    <div class="mrc-chat" id="mrcChat">
+      <div class="mrc-chat-head">
+        <div class="av">FE</div>
+        <div class="t"><b>Asistente Football Experience</b><span><i></i> en línea · responde al instante</span></div>
+        <button id="mrcChatClose" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div class="mrc-chat-body" id="mrcChatBody"></div>
+      <div class="mrc-chips" id="mrcChips"></div>
+      <div class="mrc-chat-foot">
+        <a href="${waHref()}" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+          Hablar con un anfitrión por WhatsApp
+        </a>
+      </div>
+    </div>
+    <button class="mrc-fab bot" id="mrcBotFab" aria-label="Preguntas frecuentes">
+      <span class="mrc-tip">¿Dudas? Pregúntame</span>
+      <span class="mrc-badge">?</span>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.1" fill="#111"/><circle cx="13" cy="10" r="1.1" fill="#111"/></svg>
+    </button>
+    <a class="mrc-fab wa" href="${waHref()}" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <span class="mrc-tip">Escríbenos por WhatsApp</span>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+    </a>
+  `;
+  document.body.appendChild(wrap);
+
+  const chat = wrap.querySelector('#mrcChat');
+  const body = wrap.querySelector('#mrcChatBody');
+  const chips = wrap.querySelector('#mrcChips');
+
+  function addMsg(text, who) {
+    const m = document.createElement('div');
+    m.className = 'mrc-msg ' + who;
+    m.innerHTML = text;
+    body.appendChild(m);
+    body.scrollTop = body.scrollHeight;
+  }
+  function renderChips() {
+    chips.innerHTML = '';
+    FAQ.forEach(f => {
+      const c = document.createElement('button');
+      c.className = 'mrc-chip';
+      c.textContent = f.q;
+      c.addEventListener('click', () => {
+        addMsg(f.q, 'user');
+        setTimeout(() => addMsg(f.a, 'bot'), 350);
+      });
+      chips.appendChild(c);
+    });
+  }
+  let greeted = false;
+  function openChat() {
+    chat.classList.add('open');
+    if (!greeted) {
+      greeted = true;
+      addMsg('¡Hola! 👋 Soy el asistente de <b>Football Experience</b>. Toca una pregunta o escríbenos por WhatsApp.', 'bot');
+      renderChips();
+    }
+  }
+  wrap.querySelector('#mrcBotFab').addEventListener('click', () => {
+    chat.classList.contains('open') ? chat.classList.remove('open') : openChat();
+  });
+  wrap.querySelector('#mrcChatClose').addEventListener('click', () => chat.classList.remove('open'));
+})();
+
+</script>
+<script>
+(function(){
+  const { TEAMS, upcomingByTeam, fmt } = MRC;
+  const TD = window.MRC_TEAM;
+  const params = new URLSearchParams(location.search);
+  const id = TEAMS[params.get('team')] ? params.get('team') : 'flamengo';
+  const t = TEAMS[id];
+  const d = TD[id];
+
+  // accent
+  const accent = t.primary === '#111111' ? '#f4f4f0' : t.primary;
+  const accentInk = t.primary === '#111111' ? '#0a0a0a' : '#fff';
+  document.documentElement.style.setProperty('--accent', accent);
+  document.documentElement.style.setProperty('--accent-ink', accentInk);
+
+  const patt = (t)=> t.pattern==='hoops'
+      ? `repeating-linear-gradient(180deg, ${t.primary} 0 20px, ${t.secondary||'#000'} 20px 40px)`
+      : t.pattern==='tricolor'
+      ? `repeating-linear-gradient(90deg, #7a1420 0 20px, #0e5c2f 20px 40px, #fff 40px 50px)`
+      : `radial-gradient(circle at 50% 42%, #fff 0 12%, transparent 13%), #000`;
+  const crestBg = `linear-gradient(135deg, ${t.primary}, ${t.secondary||'#111'})`;
+
+  document.title = t.name + ' · Football Experience';
+  document.getElementById('lnk-'+id).classList.add('on');
+  document.getElementById('chBg').style.background = patt(t);
+  const crest = document.getElementById('clubCrest');
+  if (t.crest) {
+    crest.style.background = '#0a0a0a';
+    crest.innerHTML = `<img src="${t.crest}" alt="${t.name}" style="width:78%;height:78%;object-fit:contain">`;
+  } else {
+    crest.style.background = crestBg; crest.textContent = t.short;
+  }
+  document.getElementById('clubKicker').textContent = t.full.toUpperCase();
+  document.getElementById('clubName').textContent = t.name;
+  document.getElementById('clubBio').textContent = t.bio;
+  if (t.banner) document.getElementById('club-hero-img').setAttribute('src', t.banner);
+
+  const quick = document.getElementById('clubQuick');
+  [['#'+t.position,'BRASILEIRÃO'],[t.founded,'FUNDADO'],[t.fans,'HINCHAS'],[t.titles[0].n,t.titles[0].l.toUpperCase()]]
+    .forEach(([n,l])=>{ const q=document.createElement('div'); q.className='q'; q.innerHTML=`<div class="n">${n}</div><div class="l">${l}</div>`; quick.appendChild(q); });
+
+  // matches
+  // Escudos reales de próximos rivales.
+  const RIVALS = {
+    RBB:{ name:'Bragantino', crest:'assets/equipos/bragantino.png' },
+    SAO:{ name:'São Paulo', crest:'assets/equipos/sao-paulo.png' },
+    BAH:{ name:'Bahía', crest:'assets/equipos/bahia.png' },
+    VIT:{ name:'Vitória', crest:'assets/equipos/vitoria.png' },
+    REM:{ name:'Remo', crest:'assets/equipos/remo.png' },
+    CRU:{ name:'Cruzeiro', crest:'assets/equipos/cruzeiro.png' },
+    IRI:{ name:'Ind. Rivadavia', crest:'assets/equipos/independiente-rivadavia.png' },
+    PAL:{ name:'Palmeiras', crest:'assets/equipos/palmeiras.png' },
+    FLA:{ name:'Flamengo', crest:'assets/equipos/flamengo.png' },
+    FLU:{ name:'Fluminense', crest:'assets/equipos/fluminense.png' },
+    BOT:{ name:'Botafogo', crest:'assets/equipos/botafogo.png' },
+    VAS:{ name:'Vasco da Gama', crest:'assets/equipos/vasco-da-gama.png' },
+  };
+  function rivalCrest(oppShort, opp){
+    const r = RIVALS[oppShort];
+    if (r) return `<div class="mcrest opp"><img src="${r.crest}" alt="${r.name}" title="${r.name}"></div>`;
+    return `<div class="mcrest opp">${(oppShort||opp||'').slice(0,3).toUpperCase()}</div>`;
+  }
+
+  const mc = document.getElementById('matches');
+  const ms = upcomingByTeam(id);
+  if(!ms.length) mc.innerHTML = '<div style="color:var(--ink-mute);padding:20px">No hay partidos programados.</div>';
+  ms.forEach(m=>{
+    const dt=new Date(m.date);
+    const day=dt.toLocaleDateString('es',{weekday:'short',day:'2-digit',month:'short'}).toUpperCase();
+    const time=dt.toLocaleTimeString('es',{hour:'2-digit',minute:'2-digit'});
+    const from=Math.min(...m.sectors.filter(s=>s.available).map(s=>s.price));
+    const row=document.createElement('div'); row.className='mrow';
+    row.innerHTML=`<div class="md"><div class="d">${day}</div><div class="t">${time}</div></div>
+      <div class="mt">
+        <div class="mcrests">
+          <div class="mcrest"><img src="${t.crest}" alt="${t.name}"></div>
+          <span class="mvs">VS</span>
+          ${rivalCrest(m.oppShort, m.opp)}
+        </div>
+        <div class="vs">${t.short} × ${m.oppShort||m.opp}</div><div class="cmp">${m.comp} · ${m.venue}</div>
+      </div>
+      <div class="mfrom">DESDE<br>${fmt(from)}</div>
+      <a class="mbuy" href="comprar.html?match=${m.id}">Comprar</a>`;
+    mc.appendChild(row);
+  });
+
+  // results
+  const rc=document.getElementById('results');
+  d.recent.forEach(r=>{
+    const col=r.r==='W'?'#46e08a':r.r==='L'?'#ff8080':'var(--ink-dim)';
+    const el=document.createElement('div'); el.className='rc';
+    el.innerHTML=`<div class="sc" style="color:${col}">${r.us}–${r.them}</div><div class="vs">vs ${r.opp}</div><div class="cmp">${r.cmp}</div>`;
+    rc.appendChild(el);
+  });
+  const fr=document.getElementById('formRow');
+  fr.innerHTML='<span class="fl">Forma reciente</span>'+d.form.map(f=>`<span class="fp ${f}">${f}</span>`).join('');
+
+  // stats
+  const sc=document.getElementById('stats');
+  d.stats.forEach(s=>{ const el=document.createElement('div'); el.className='scard'; el.innerHTML=`<div class="v">${s.v}</div><div class="l">${s.l}</div>`; sc.appendChild(el); });
+
+  // squad
+  document.getElementById('squadTitle').textContent='Plantel '+t.nickname;
+  const sq=document.getElementById('squad');
+  d.squad.forEach((p,i)=>{
+    const el=document.createElement('div'); el.className='pcard';
+    const srcAttr = p.photo ? ` src="${p.photo}"` : '';
+    el.innerHTML=`
+      <div class="ph" style="background:linear-gradient(165deg, ${t.primary}40, #0a0a0a 78%)">
+        <div class="num">${p.num}</div>
+        <image-slot id="${id}-pl-${i}" placeholder="Foto"${srcAttr} fit="cover"></image-slot>
+        ${p.photo ? '' : '<div class="silhouette"></div>'}
+      </div>
+      <div class="pinfo">
+        <div class="pos">${p.pos.toUpperCase()}</div>
+        <div class="pn">${p.name}</div>
+        <div class="pr">
+          <div class="st"><div class="sv">#${p.num}</div><div class="sk">DORSAL</div></div>
+          <div class="st"><div class="sv">${p.nat||'—'}</div><div class="sk">PAÍS</div></div>
+        </div>
+      </div>`;
+    sq.appendChild(el);
+  });
+
+  // historia
+  const tr=document.getElementById('titles');
+  t.titles.forEach(x=>{ const el=document.createElement('div'); el.className='tt-card'; el.innerHTML=`<div class="tn">${x.n}</div><div class="tl">${x.l}</div>`; tr.appendChild(el); });
+  const tl=document.getElementById('timeline');
+  t.history.forEach(h=>{ const el=document.createElement('div'); el.className='tl-item'; el.innerHTML=`<div class="yr">${h.year}</div><div class="tt">${h.t}</div><div class="tx">${h.x}</div>`; tl.appendChild(el); });
+
+  // noticias
+  const nc=document.getElementById('news');
+  d.news.forEach((n,i)=>{
+    const el=document.createElement('article'); el.className='ncard'+(n.big?' big':'');
+    el.innerHTML=`<image-slot id="${id}-news-${i}" placeholder="Foto noticia" fit="cover"></image-slot>
+      <div class="nb"><div class="ntag">${n.tag}</div><div class="nt">${n.t}</div>
+      <div class="nm">${n.time}</div></div>`;
+    nc.appendChild(el);
+  });
+
+  // fans
+  const fc=document.getElementById('fans');
+  const star=(k)=>{let s='';for(let j=0;j<5;j++)s+=`<svg width="14" height="14" viewBox="0 0 24 24" fill="${j<k?accent:'rgba(255,255,255,.15)'}"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>`;return s;};
+  d.fans.forEach(f=>{ const el=document.createElement('div'); el.className='fan';
+    el.innerHTML=`<div class="stars">${star(f.s)}</div><div class="q">“${f.t}”</div><div class="who"><div class="av" style="background:${crestBg}">${f.n[0]}</div><div class="n">${f.n}</div></div>`;
+    fc.appendChild(el);
+  });
+
+  // tab scrollspy
+  const tabs=[...document.querySelectorAll('.tab')];
+  const secs=tabs.map(a=>document.querySelector(a.getAttribute('href')));
+  const spy=()=>{ let cur=0; secs.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top<140) cur=i; }); tabs.forEach((t,i)=>t.classList.toggle('on',i===cur)); };
+  window.addEventListener('scroll',spy,{passive:true}); spy();
+})();
+</script>
+</body>
+</html>

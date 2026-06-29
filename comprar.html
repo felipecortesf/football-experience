@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprar entradas · Football Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  :root{
+    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.42);
+    --line:rgba(244,244,240,.1); --line-2:rgba(244,244,240,.18); --card:#121215;
+    --accent:#d11a2a; --accent-ink:#fff; --navy:#0a0e1a; --green:#29c46b; --gold:#e8c275;
+    --maxw:min(1200px, 92vw); --ease:cubic-bezier(.22,1,.36,1);
+  }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; } button{ font-family:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+  .display{ font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; }
+  .mono{ font-family:'JetBrains Mono',monospace; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+  .eyebrow{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.22em; color:var(--ink-mute); text-transform:uppercase; }
+
+  /* ── TOP UTILITY BAR ── */
+  .util{ background:var(--navy); border-bottom:1px solid rgba(255,255,255,.06); }
+  .util-in{ max-width:var(--maxw); margin:0 auto; padding:10px 28px; display:flex; align-items:center; gap:18px; }
+  .util .ann{ flex:1; display:flex; align-items:center; gap:12px; font-size:13px; color:var(--ink-dim); }
+  .util .ann .pill{ background:rgba(255,255,255,.06); border:1px solid var(--line); padding:6px 12px; border-radius:999px; display:flex; gap:10px; align-items:center; text-decoration:none; color:inherit; transition:border-color .2s, background .2s; }
+  .util .ann .pill:hover{ border-color:var(--line-2); background:rgba(255,255,255,.1); }
+  .util .ann b{ color:var(--ink); font-weight:600; }
+  .util .ann .shop{ color:var(--gold); font-weight:700; font-size:11px; letter-spacing:.08em; }
+  .util .right{ display:flex; align-items:center; gap:14px; }
+  .util .login{ display:flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-dim); }
+  .util .login:hover{ color:var(--ink); }
+  .util .plans{ background:var(--accent); color:#fff; padding:9px 16px; border-radius:8px; font-weight:700; font-size:13px; display:flex; align-items:center; gap:8px; }
+  .util .lang{ font-size:12px; color:var(--ink-dim); border:1px solid var(--line-2); padding:6px 9px; border-radius:6px; }
+  @media(max-width:860px){ .util .ann{ display:none; } }
+
+  nav.main{ position:sticky; top:0; z-index:100; background:rgba(7,7,8,.9); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+  .nav-in{ max-width:var(--maxw); margin:0 auto; padding:13px 28px; display:flex; align-items:center; gap:16px; }
+  .brand{ display:flex; align-items:center; gap:11px; }
+  .brand .stripes{ display:flex; gap:3px; } .brand .stripes span{ width:4px; height:24px; border-radius:1px; }
+  .brand b{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; line-height:.92; }
+  .brand small{ display:block; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.2em; color:var(--ink-mute); font-style:normal; }
+  .back{ margin-left:auto; display:flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-dim); }
+  .back:hover{ color:var(--ink); }
+
+  .nav-menu{ display:flex; align-items:center; gap:28px; margin-left:8px; }
+  .nav-menu a{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-dim); transition:color .2s; display:flex; align-items:center; gap:5px; min-height:44px; padding:10px 12px; border-radius:8px; }
+  .nav-menu a:hover{ color:var(--ink); }
+  .has-drop{ position:relative; }
+  .drop{ position:absolute; top:130%; left:-10px; background:#101015; border:1px solid var(--line-2); border-radius:14px; padding:8px; min-width:230px; opacity:0; visibility:hidden; transform:translateY(8px); transition:all .22s var(--ease); box-shadow:0 24px 60px rgba(0,0,0,.5); z-index:50; }
+  .has-drop:hover .drop{ opacity:1; visibility:visible; transform:none; }
+  .drop a{ display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:10px; font-family:Inter; text-transform:none; font-size:14px; font-weight:500; color:var(--ink-dim); min-height:0; }
+  .drop a:hover{ background:rgba(255,255,255,.05); color:var(--ink); }
+  .drop a .dc{ width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; color:#fff; font-size:13px; flex:none; }
+  .drop a .dc img{ width:78%; height:78%; object-fit:contain; }
+  @media(max-width:920px){ .nav-menu{ display:none; } }
+
+  .layout{ display:grid; grid-template-columns:1.25fr .9fr; gap:28px; padding:34px 0 80px; align-items:start; }
+  @media(max-width:920px){ .layout{ grid-template-columns:1fr; } }
+
+  /* match header — hero banner */
+  .mhead{ position:relative; border-radius:18px; overflow:hidden; margin-bottom:20px; background:var(--card) center top/cover no-repeat; min-height:300px; display:flex; align-items:center; justify-content:center; padding:36px 22px; isolation:isolate; }
+  .mhead::before{ content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(7,7,8,.5) 0%, rgba(7,7,8,.66) 55%, rgba(7,7,8,.9) 100%); z-index:0; }
+  .mh-card{ position:relative; z-index:1; width:100%; max-width:740px; background:rgba(15,15,18,.55); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.14); border-radius:18px; padding:26px 24px 24px; display:flex; flex-direction:column; align-items:center; gap:20px; }
+  .mh-comp{ display:inline-flex; align-items:center; gap:8px; padding:8px 18px; border:1px solid rgba(255,255,255,.28); border-radius:999px; background:rgba(255,255,255,.07); font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:#fff; }
+  .mh-row{ display:flex; align-items:center; justify-content:center; gap:28px; width:100%; }
+  .mh-team{ display:flex; flex-direction:column; align-items:center; gap:10px; flex:1; min-width:0; }
+  .mh-crest{ width:78px; height:78px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; color:#fff; border:2px solid rgba(255,255,255,.3); flex-shrink:0; overflow:hidden; background:rgba(255,255,255,.06); }
+  .mh-crest img{ width:78%; height:78%; object-fit:contain; }
+  .mh-tname{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; text-align:center; color:#fff; line-height:1.08; }
+  .mh-mid{ display:flex; flex-direction:column; align-items:center; gap:14px; flex-shrink:0; }
+  .mh-vs{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; line-height:1; }
+  .mh-pills{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+  .mh-pill{ display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#fff; padding:7px 13px; border:1px solid rgba(255,255,255,.26); border-radius:999px; background:rgba(255,255,255,.05); white-space:nowrap; }
+  @media(max-width:560px){
+    .mhead{ min-height:0; padding:22px 14px; }
+    .mh-card{ padding:20px 16px 18px; gap:16px; }
+    .mh-row{ gap:12px; }
+    .mh-crest{ width:56px; height:56px; border-radius:12px; }
+    .mh-tname{ font-size:14px; }
+    .mh-vs{ font-size:22px; }
+    .mh-pill{ font-size:10.5px; padding:6px 10px; }
+  }
+
+  /* map panel */
+  .panel{ border:1px solid var(--line); border-radius:18px; background:var(--card); padding:22px; margin-bottom:20px; }
+  .panel h3{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:22px; text-transform:uppercase; margin:0 0 4px; }
+  .panel .ph-sub{ font-size:12px; color:var(--ink-dim); margin-bottom:16px; }
+  .map-box{ max-width:520px; margin:0 auto; }
+
+  /* filters bar */
+  .filters-bar{ display:flex; flex-wrap:wrap; align-items:flex-end; gap:14px; padding:16px; margin:4px 0 18px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.02); }
+  .filters-bar .filt{ display:flex; flex-direction:column; gap:8px; }
+  .filters-bar .filt label{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--ink-mute); text-transform:uppercase; }
+  .filt-price{ min-width:230px; flex:1.4; }
+  .price-vals{ display:flex; justify-content:space-between; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:15px; color:var(--ink); }
+  .range-wrap{ position:relative; height:30px; display:flex; align-items:center; }
+  .range-wrap .rtrack{ position:absolute; left:0; right:0; height:4px; border-radius:4px; background:var(--line-2); }
+  .range-wrap .rfill{ position:absolute; height:4px; border-radius:4px; background:var(--accent); }
+  .range-wrap input[type=range]{ position:absolute; left:0; right:0; width:100%; margin:0; appearance:none; -webkit-appearance:none; background:transparent; pointer-events:none; }
+  .range-wrap input[type=range]::-webkit-slider-thumb{ appearance:none; -webkit-appearance:none; pointer-events:auto; width:18px; height:18px; border-radius:50%; background:#fff; border:3px solid var(--accent); cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,.4); }
+  .range-wrap input[type=range]::-moz-range-thumb{ pointer-events:auto; width:18px; height:18px; border-radius:50%; background:#fff; border:3px solid var(--accent); cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,.4); }
+  .range-wrap input[type=range]::-webkit-slider-runnable-track{ background:transparent; }
+  .filt-select select{ padding:11px 14px; border-radius:10px; background:rgba(255,255,255,.04); border:1px solid var(--line); color:var(--ink); font-size:13px; font-family:inherit; min-width:190px; }
+  .filt-select select:focus{ outline:none; border-color:var(--accent); }
+  .filt-reset{ padding:11px 16px; border-radius:10px; border:1px solid var(--line-2); color:var(--ink-dim); font-size:13px; font-weight:600; transition:border-color .2s,color .2s; }
+  .filt-reset:hover{ border-color:var(--ink); color:var(--ink); }
+
+  /* legend / sector list */
+  #legend{ display:flex; flex-direction:column; gap:10px; margin-top:18px; }
+  .mrc-leg-row{ display:flex; align-items:center; gap:13px; padding:14px 16px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.02); text-align:left; width:100%; transition:border-color .2s, background .2s, opacity .2s; }
+  .mrc-leg-row:hover{ border-color:var(--line-2); }
+  .mrc-leg-row.sel{ border-color:var(--accent); background:rgba(209,26,42,.08); }
+  .mrc-leg-row.off{ opacity:.45; cursor:not-allowed; }
+  .mrc-leg-row.hidden-filt{ display:none; }
+  .mrc-leg-row .sw{ width:22px; height:22px; border-radius:7px; flex-shrink:0; }
+  .mrc-leg-row .info{ flex:1; display:flex; align-items:center; gap:8px; } .mrc-leg-row .info .txt b{ display:block; font-size:14px; } .mrc-leg-row .info .txt small{ font-size:11px; color:var(--ink-mute); }
+  .mrc-leg-row .infoicon{ width:18px; height:18px; border-radius:50%; border:1px solid var(--line-2); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-mute); flex-shrink:0; cursor:help; }
+  .mrc-leg-row .infoicon:hover{ border-color:var(--ink-dim); color:var(--ink-dim); }
+  .mrc-leg-row .pr-box{ text-align:right; }
+  .mrc-leg-row .pr{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; display:block; }
+  .mrc-leg-row .pr-sub{ font-size:10px; color:var(--ink-mute); font-family:'JetBrains Mono',monospace; letter-spacing:.05em; }
+  .mrc-leg-row .badge{ display:inline-flex; align-items:center; gap:4px; font-size:10px; color:var(--green); font-family:'JetBrains Mono',monospace; letter-spacing:.04em; margin-top:2px; }
+
+  /* checkout column */
+  .checkout{ position:sticky; top:80px; border:1px solid var(--line-2); border-radius:18px; background:var(--card); overflow:hidden; }
+  .checkout .co-head{ padding:20px 22px; border-bottom:1px solid var(--line); }
+  .checkout .co-head .eyebrow{ margin-bottom:6px; }
+  .checkout .co-head h3{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; text-transform:uppercase; margin:0; }
+  .co-body{ padding:20px 22px; display:flex; flex-direction:column; gap:16px; }
+  .field label{ display:block; font-size:11px; color:var(--ink-mute); font-family:'JetBrains Mono',monospace; letter-spacing:.08em; margin-bottom:6px; }
+  .field input{ width:100%; padding:12px 14px; border-radius:10px; background:rgba(255,255,255,.04); border:1px solid var(--line); color:var(--ink); font-size:14px; font-family:inherit; }
+  .field input:focus{ outline:none; border-color:var(--accent); }
+  .qty{ display:flex; align-items:center; gap:14px; }
+  .qty button{ width:40px; height:40px; border-radius:50%; border:1px solid var(--line-2); display:flex; align-items:center; justify-content:center; font-size:20px; }
+  .qty button:hover{ border-color:var(--ink); }
+  .qty .qn{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:28px; min-width:30px; text-align:center; }
+  .sumrow{ display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--ink-dim); }
+  .sumrow.tot{ padding-top:14px; border-top:1px solid var(--line); }
+  .sumrow.tot .tv{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:32px; color:var(--ink); }
+  .sel-sector{ display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:10px; background:rgba(255,255,255,.03); border:1px solid var(--line); }
+  .sel-sector .sw{ width:18px; height:18px; border-radius:5px; }
+  .sel-sector .nm{ font-weight:600; font-size:14px; flex:1; }
+  .sel-sector .none{ color:var(--ink-mute); font-size:13px; }
+  .pay-btn{ width:100%; padding:16px; border-radius:13px; background:var(--accent); color:var(--accent-ink); font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; letter-spacing:.04em; display:flex; align-items:center; justify-content:center; gap:10px; transition:transform .2s var(--ease), opacity .2s; }
+  .pay-btn:hover{ transform:translateY(-2px); }
+  .pay-btn:disabled{ opacity:.4; cursor:not-allowed; transform:none; }
+  .policy{ font-size:11px; color:var(--ink-mute); line-height:1.5; display:flex; gap:8px; align-items:flex-start; padding:0 22px 20px; }
+  .policy svg{ color:var(--green); flex-shrink:0; margin-top:1px; }
+  .includes{ display:flex; flex-direction:column; gap:7px; }
+  .includes .inc{ display:flex; align-items:center; gap:9px; font-size:12px; color:var(--ink-dim); }
+  .includes .inc svg{ color:var(--green); }
+
+  /* cart */
+  .add-cart-btn{ width:100%; padding:12px; border-radius:11px; border:1px dashed var(--line-2); color:var(--ink-dim); font-size:13px; font-weight:600; transition:border-color .2s,color .2s; }
+  .add-cart-btn:hover:not(:disabled){ border-color:var(--accent); color:var(--ink); }
+  .add-cart-btn:disabled{ opacity:.4; cursor:not-allowed; }
+  .cart-box{ display:flex; flex-direction:column; gap:8px; }
+  .cart-empty{ font-size:12px; color:var(--ink-mute); padding:10px 0; text-align:center; }
+  .cart-item{ display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; background:rgba(255,255,255,.03); border:1px solid var(--line); }
+  .cart-item .sw{ width:14px; height:14px; border-radius:4px; flex-shrink:0; }
+  .cart-item .nm{ flex:1; font-size:13px; font-weight:600; }
+  .cart-item .pv{ font-size:12px; color:var(--ink-dim); }
+  .cart-item .rm{ width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--ink-mute); font-size:16px; flex-shrink:0; }
+  .cart-item .rm:hover{ color:var(--accent); background:rgba(255,255,255,.06); }
+
+  /* success modal */
+  .modal-bg{ position:fixed; inset:0; background:rgba(0,0,0,.7); backdrop-filter:blur(6px); z-index:500; display:none; align-items:center; justify-content:center; padding:24px; }
+  .modal-bg.open{ display:flex; }
+  .modal{ width:440px; max-width:100%; background:var(--card); border:1px solid var(--line-2); border-radius:20px; overflow:hidden; }
+  .modal .mtop{ background:linear-gradient(135deg, var(--accent), #7a0f1d); padding:26px; text-align:center; }
+  .modal .check{ width:64px; height:64px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; }
+  .modal .mtop h3{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; text-transform:uppercase; color:#fff; margin:0; }
+  .modal .mbody{ padding:22px; }
+  .modal .mrow2{ display:flex; justify-content:space-between; padding:8px 0; font-size:13px; border-bottom:1px solid var(--line); }
+  .modal .mrow2 b{ font-family:'JetBrains Mono',monospace; }
+  .modal .mact{ display:flex; gap:10px; margin-top:18px; }
+  .modal .mact a{ flex:1; text-align:center; padding:13px; border-radius:11px; font-weight:600; font-size:14px; }
+  .modal .mact .pri{ background:var(--ink); color:#0a0a0a; }
+  .modal .mact .sec{ border:1px solid var(--line-2); color:var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="util-in">
+    <div class="ann" id="annBar">
+      <a class="pill" id="annPill" href="#"><b id="annMatch">Cargando…</b> <span class="shop">COMPRAR ›</span></a>
+      <span id="annMeta"></span>
+    </div>
+    <div class="right">
+      <a class="login" href="https://wa.me/5521999990000" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg> WhatsApp</a>
+      <a class="plans" href="#cart"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H5a2 2 0 0 1-2-2 2 2 0 0 0 0-4z" stroke="currentColor" stroke-width="1.7"/></svg> Comprar entradas</a>
+      <span class="lang">ES</span>
+    </div>
+  </div>
+</div>
+
+<nav class="main">
+  <div class="nav-in">
+    <a class="brand" href="inicio.html">
+      <span class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></span>
+      <b>Football<br>Experience<small>MARACANÃ · RIO</small></b>
+    </a>
+    <div class="nav-menu">
+      <div class="has-drop">
+        <a href="inicio.html#equipos">Equipos
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="drop">
+          <a href="equipo.html?team=flamengo"><span class="dc" style="background:#0a0a0a"><img src="assets/equipos/flamengo.png" alt="Flamengo"></span> Flamengo</a>
+          <a href="equipo.html?team=fluminense"><span class="dc" style="background:#0a0a0a"><img src="assets/equipos/fluminense.png" alt="Fluminense"></span> Fluminense</a>
+          <a href="equipo.html?team=botafogo"><span class="dc" style="background:#0a0a0a"><img src="assets/equipos/botafogo.png" alt="Botafogo"></span> Botafogo</a>
+          <a href="equipo.html?team=vasco"><span class="dc" style="background:#0a0a0a"><img src="assets/equipos/vasco-da-gama.png" alt="Vasco da Gama"></span> Vasco da Gama</a>
+        </div>
+      </div>
+      <a href="inicio.html#partidos">Partidos</a>
+      <a href="maracana-estadio.html">Maracanã</a>
+      <a href="experiencia.html">Experiencia</a>
+      <a href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
+    </div>
+    <a class="back" id="backLink" href="inicio.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Volver</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="layout">
+    <!-- LEFT: match + map -->
+    <div>
+      <div class="mhead" id="mhead"></div>
+      <div class="panel">
+        <h3>Elige tu sector</h3>
+        <div class="ph-sub">Toca un sector en el mapa del Maracanã o en la lista. Los precios varían por partido.</div>
+
+        <div class="filters-bar" id="filtersBar">
+          <div class="filt filt-price">
+            <label>Precio por entrada</label>
+            <div class="price-vals"><span id="priceMinLbl">R$ 0</span><span id="priceMaxLbl">R$ 0</span></div>
+            <div class="range-wrap">
+              <div class="rtrack"></div>
+              <div class="rfill" id="rangeFill"></div>
+              <input type="range" id="rangeMin">
+              <input type="range" id="rangeMax">
+            </div>
+          </div>
+          <div class="filt filt-select">
+            <label>Sector</label>
+            <select id="sectorFilter"><option value="all">Todos los sectores</option></select>
+          </div>
+          <button class="filt-reset" id="resetFilters" type="button">Reset</button>
+        </div>
+
+        <div class="map-box" id="map"></div>
+        <div id="legend"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: checkout -->
+    <div>
+      <div class="checkout">
+        <div class="co-head">
+          <div class="eyebrow">Reserva tu lugar</div>
+          <h3 id="coTitle">Tu entrada</h3>
+        </div>
+        <div class="co-body">
+          <div class="sel-sector" id="selSector"><span class="none">Selecciona un sector en el mapa</span></div>
+
+          <div>
+            <label class="mono" style="display:block;font-size:11px;color:var(--ink-mute);letter-spacing:.08em;margin-bottom:8px">CANTIDAD DE ENTRADAS</label>
+            <div class="qty">
+              <button id="qMinus" aria-label="Menos">−</button>
+              <span class="qn" id="qNum">1</span>
+              <button id="qPlus" aria-label="Más">+</button>
+              <span style="font-size:11px;color:var(--ink-mute);margin-left:auto">Máx. 8</span>
+            </div>
+          </div>
+
+          <button class="add-cart-btn" id="addCartBtn" disabled type="button">+ Agregar sector al carrito</button>
+
+          <div class="includes" id="includes"></div>
+
+          <div>
+            <label class="mono" style="display:block;font-size:11px;color:var(--ink-mute);letter-spacing:.08em;margin-bottom:8px">TU CARRITO</label>
+            <div class="cart-box" id="cartBox"></div>
+          </div>
+
+          <div class="sumrow tot"><span>Total carrito</span><span class="tv" id="totVal">R$ 0</span></div>
+
+          <button class="pay-btn" id="payBtn" disabled style="background:#25D366;color:#fff">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+            Reservar por WhatsApp
+          </button>
+          <div style="font-size:11px;color:var(--ink-mute);text-align:center;line-height:1.5">Un anfitrión confirma disponibilidad, precio final y coordina tu pago y embarque.</div>
+        </div>
+        <div class="policy">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span><b style="color:var(--ink-dim)">Cancelación flexible:</b> puedes cancelar hasta <b style="color:var(--ink-dim)">1 semana (7 días) antes</b> del partido. Tu anfitrión gestiona el reembolso.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <div class="mtop">
+      <div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#d11a2a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>¡Te conectamos!</h3>
+    </div>
+    <div class="mbody" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+/* inlined: mrc/store.js */
+// ════════════════════════════════════════════════════════════
+// FOOTBALL EXPERIENCE · MARACANÃ — Data Store (localStorage)
+// Gestiona equipos, partidos (con sectores/precios editables),
+// reservas y FAQ. Persiste en localStorage para administración.
+// ════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════
+// FOOTBALL EXPERIENCE · MARACANÃ — Data Store (localStorage)
+// Gestiona equipos, partidos (con sectores/precios editables),
+// reservas y FAQ. Persiste en localStorage para administración.
+// ════════════════════════════════════════════════════════════
+window.MRC = (function () {
+  const KEY_MATCHES = 'mrc.matches.v4';
+  const KEY_BOOKINGS = 'mrc.bookings.v2';
+
+  // ── EQUIPOS ──────────────────────────────────────────────
+  const TEAMS = {
+    flamengo: {
+      id:'flamengo', name:'Flamengo', full:'Clube de Regatas do Flamengo',
+      short:'FLA', nickname:'Mengão', founded:1895, fans:'42M',
+      primary:'#C52613', secondary:'#000000', ink:'#000',
+      pattern:'hoops', stadium:'Maracanã', position:2,
+      record:{ pts:34, pj:17, g:10, e:4, p:3 },
+      coach:'Leonardo Jardim',
+      colors:['#C52613','#000000','#FFFFFF'],
+      crest:'assets/equipos/flamengo.png',
+      banner:'assets/banners/flamengo.png',
+      bio:'El club más popular de Brasil. Campeón del mundo en 1981 y tetracampeón de la Libertadores. La Nación Rubro-Negra llena el Maracanã como nadie.',
+      titles:[
+        { n:'1', l:'Mundial de Clubes 1981' }, { n:'4', l:'Libertadores' },
+        { n:'8', l:'Brasileirão' }, { n:'5', l:'Copa do Brasil' },
+        { n:'38', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1895', t:'Fundación', x:'Nace como club de remo en la zona sur de Rio.' },
+        { year:'1981', t:'Campeón del mundo', x:'Conquista el Mundial de Clubes con Zico de figura.' },
+        { year:'2019', t:'Gloria en Lima', x:'Gabigol da vuelta la final de Libertadores ante River.' },
+        { year:'2022', t:'Doblete', x:'Libertadores y Copa do Brasil en una misma temporada.' },
+        { year:'2025', t:'Tetracampeón continental', x:'Cuarta Libertadores de la historia del club.' },
+      ],
+    },
+    fluminense: {
+      id:'fluminense', name:'Fluminense', full:'Fluminense Football Club',
+      short:'FLU', nickname:'Tricolor', founded:1902, fans:'5M',
+      primary:'#870A28', secondary:'#00613C', ink:'#00613C',
+      pattern:'tricolor', stadium:'Maracanã', position:3,
+      record:{ pts:31, pj:18, g:9, e:4, p:5 },
+      coach:'Luis Zubeldía',
+      colors:['#870A28','#00613C','#FFFFFF'],
+      crest:'assets/equipos/fluminense.png',
+      banner:'assets/banners/fluminense.jpg',
+      bio:'Pionero del fútbol carioca y dueño de un juego elegante. Campeón de la Libertadores 2023 en casa, en el corazón del Maracanã.',
+      titles:[
+        { n:'1', l:'Libertadores 2023' }, { n:'1', l:'Recopa Sudamericana 2024' },
+        { n:'1', l:'Copa Rio Internacional 1952' }, { n:'4', l:'Brasileirão' },
+        { n:'1', l:'Copa do Brasil' }, { n:'33', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1902', t:'Fundación', x:'Primer gran club de fútbol de Rio de Janeiro.' },
+        { year:'1970', t:'Era dorada', x:'La "Máquina Tricolor" domina el fútbol carioca.' },
+        { year:'2012', t:'Brasileirão', x:'Conquista el título nacional con autoridad.' },
+        { year:'2023', t:'Gloria continental', x:'Primera Libertadores, en el Maracanã, con Cano y Ganso.' },
+        { year:'2024', t:'Recopa Sudamericana', x:'Suma un título continental más a su palmarés.' },
+      ],
+    },
+    botafogo: {
+      id:'botafogo', name:'Botafogo', full:'Botafogo de Futebol e Regatas',
+      short:'BOT', nickname:'Fogão', founded:1904, fans:'4M',
+      primary:'#000000', secondary:'#FFFFFF', ink:'#fff',
+      pattern:'star', stadium:'Nilton Santos / Maracanã', position:12,
+      record:{ pts:22, pj:17, g:6, e:4, p:7 },
+      coach:'Franclim Carvalho',
+      colors:['#000000','#FFFFFF'],
+      crest:'assets/equipos/botafogo.png',
+      banner:'assets/banners/botafogo.png',
+      bio:'La estrella solitaria. Cuna de Garrincha y campeón de la Libertadores 2024. Vive una era de renacimiento absoluto.',
+      titles:[
+        { n:'1', l:'Libertadores 2024' }, { n:'1', l:'Copa CONMEBOL 1993' },
+        { n:'3', l:'Brasileirão (incl. 2024)' }, { n:'4', l:'Torneo Rio-São Paulo' },
+        { n:'21', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1904', t:'Fundación', x:'Nace el club de la estrella solitaria.' },
+        { year:'1962', t:'Garrincha mundial', x:'El Mané brilla en el bicampeonato de Brasil.' },
+        { year:'1995', t:'Brasileirão', x:'Túlio Maravilha lidera el título nacional.' },
+        { year:'2024', t:'Gloria sudamericana', x:'Conquista la Libertadores y el Brasileirão.' },
+      ],
+    },
+    vasco: {
+      id:'vasco', name:'Vasco da Gama', full:'Club de Regatas Vasco da Gama',
+      short:'VAS', nickname:'Gigante da Colina', founded:1898, fans:'8M',
+      primary:'#000000', secondary:'#FFFFFF', ink:'#fff',
+      pattern:'hoops', stadium:'São Januário / Maracanã', position:17,
+      record:{ pts:20, pj:18, g:5, e:5, p:8 },
+      coach:'Renato Gaúcho',
+      colors:['#E2231A','#000000','#FFFFFF','#FFA400'],
+      crest:'assets/equipos/vasco-da-gama.png',
+      banner:'assets/banners/vasco-da-gama.png',
+      bio:'El gigante que abrió el fútbol brasileño a todas las razas y clases sociales. Campeón de la Libertadores 1998 y pionero sudamericano desde 1948.',
+      titles:[
+        { n:'1', l:'Libertadores 1998' }, { n:'1', l:'Campeonato Sudamericano de Campeones 1948' },
+        { n:'1', l:'Copa Mercosur 2000' }, { n:'4', l:'Brasileirão' },
+        { n:'1', l:'Copa do Brasil 2011' }, { n:'24', l:'Campeonato Carioca' },
+      ],
+      history:[
+        { year:'1898', t:'Fundación', x:'Nace el Club de Regatas Vasco da Gama.' },
+        { year:'1948', t:'Pionero sudamericano', x:'Campeón Sudamericano de Campeones, precursor reconocido de la Libertadores.' },
+        { year:'1998', t:'Gloria continental', x:'Conquista la Copa Libertadores de América.' },
+        { year:'2000', t:'Copa Mercosur', x:'Suma otro título internacional a su palmarés.' },
+        { year:'2011', t:'Copa do Brasil', x:'Levanta el título nacional una vez más.' },
+      ],
+    },
+  };
+
+  // ── SECTORES DEL MARACANÃ (según mapa oficial) ───────────
+  // color = referencia visual del mapa entregado
+  const SECTOR_DEFS = [
+    { id:'leste-inferior', name:'Leste Inferior',  side:'oeste', color:'#b81d2c', defaultPrice:320, desc:'Lateral bajo, cerca del campo. La mejor relación vista-precio.' },
+    { id:'leste-superior', name:'Leste Superior',  side:'oeste', color:'#7c1420', defaultPrice:300, desc:'Lateral alto con vista panorámica del juego.' },
+    { id:'norte',          name:'Norte',           side:'norte', color:'#1f8a44', defaultPrice:280, desc:'La curva del aliento. Banderas, cantos y la barra.' },
+    { id:'sul',            name:'Sul',             side:'sul',   color:'#d6a72e', defaultPrice:280, desc:'Curva sur, ambiente familiar y vibrante.' },
+    { id:'oeste',          name:'Maracanã Mais (Oeste)', side:'este', color:'#3a3a42', defaultPrice:520, desc:'Sector premium: asientos centrales, lounge y servicio.' },
+    { id:'visitante',      name:'Visitante',       side:'norte-este', color:'#6a6a72', defaultPrice:260, desc:'Sector reservado a la hinchada visitante.' },
+  ];
+
+  function sectorDef(id) { return SECTOR_DEFS.find(s => s.id === id); }
+
+  // ── PARTIDOS SEMILLA ─────────────────────────────────────
+  function seedMatches() {
+    const slug = (s) => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    // Deterministic id (date+team+rival), NOT random: every page seeds its own
+    // copy of this array independently, so a random id here would make
+    // comprar.html?match=ID resolve to a different match than the one that
+    // generated the link whenever the two pages don't share localStorage
+    // (e.g. file:// origins, or a fresh/incognito tab) — Comprar would look
+    // like it silently does nothing.
+    const mk = (over) => Object.assign({
+      id: 'm-' + slug(over.date) + '-' + slug(over.teamId) + '-' + slug(over.oppShort || over.opp),
+      status: 'on-sale', // on-sale | sold-out | past
+      includes: ['Entrada', 'Guiamiento en 3 idiomas', 'Transporte ida y vuelta'],
+      sectors: SECTOR_DEFS.map(s => ({ id: s.id, price: s.defaultPrice, available: true })),
+    }, over);
+
+    const classA = (extra) => SECTOR_DEFS.map(s => ({ id: s.id, price: s.defaultPrice + extra, available: true }));
+
+    // Calendario oficial Maracanã · Julio y Agosto 2026 (entregado por el cliente)
+    return [
+      mk({ teamId:'fluminense', opp:'Bragantino', oppShort:'RBB', comp:'Brasileirão',
+        date:'2026-07-22T21:30', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'São Paulo', oppShort:'SAO', comp:'Brasileirão',
+        date:'2026-07-26T16:00', venue:'Maracanã', sectors: classA(60) }),
+      mk({ teamId:'fluminense', opp:'Bahía', oppShort:'BAH', comp:'Brasileirão',
+        date:'2026-07-29T19:00', venue:'Maracanã' }),
+      mk({ teamId:'vasco', opp:'Fluminense', oppShort:'FLU', comp:'Copa do Brasil',
+        date:'2026-08-01T18:30', venue:'Maracanã', sectors: classA(80) }),
+      mk({ teamId:'fluminense', opp:'Vasco da Gama', oppShort:'VAS', comp:'Copa do Brasil',
+        date:'2026-08-05T21:30', venue:'Maracanã', sectors: classA(80) }),
+      mk({ teamId:'flamengo', opp:'Vitória', oppShort:'VIT', comp:'Brasileirão',
+        date:'2026-08-09T16:00', venue:'Maracanã' }),
+      mk({ teamId:'fluminense', opp:'Ind. Rivadavia', oppShort:'IRI', comp:'Libertadores',
+        date:'2026-08-11T21:30', venue:'Maracanã', sectors: classA(70) }),
+      mk({ teamId:'fluminense', opp:'Palmeiras', oppShort:'PAL', comp:'Brasileirão',
+        date:'2026-08-16T16:00', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'Cruzeiro', oppShort:'CRU', comp:'Libertadores',
+        date:'2026-08-19T21:30', venue:'Maracanã', sectors: classA(60) }),
+      mk({ teamId:'fluminense', opp:'Remo', oppShort:'REM', comp:'Copa do Brasil',
+        date:'2026-08-23T16:00', venue:'Maracanã' }),
+      mk({ teamId:'flamengo', opp:'Botafogo', oppShort:'BOT', comp:'Brasileirão',
+        date:'2026-08-30T16:00', venue:'Maracanã', sectors: classA(100) }),
+    ];
+  }
+
+  // ── PERSISTENCIA ─────────────────────────────────────────
+  function load(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  }
+  function save(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+
+  let matches = load(KEY_MATCHES, null);
+  if (!matches) { matches = seedMatches(); save(KEY_MATCHES, matches); }
+
+  let bookings = load(KEY_BOOKINGS, []);
+
+  // ── API ──────────────────────────────────────────────────
+  function allMatches() { return matches.slice().sort((a,b)=> new Date(a.date)-new Date(b.date)); }
+  function matchesByTeam(teamId) { return allMatches().filter(m => m.teamId === teamId); }
+  function upcomingByTeam(teamId) { return matchesByTeam(teamId).filter(m => !isPast(m)); }
+  function getMatch(id) { return matches.find(m => m.id === id); }
+  function isPast(m) { return new Date(m.date).getTime() < Date.now(); }
+
+  function saveMatch(m) {
+    const i = matches.findIndex(x => x.id === m.id);
+    if (i >= 0) matches[i] = m; else matches.push(m);
+    save(KEY_MATCHES, matches);
+  }
+  function deleteMatch(id) { matches = matches.filter(m => m.id !== id); save(KEY_MATCHES, matches); }
+  function newMatchTemplate(teamId) {
+    return {
+      id: 'm_' + Math.random().toString(36).slice(2, 9),
+      teamId: teamId || 'flamengo', opp:'', oppShort:'', comp:'Brasileirão',
+      date: new Date(Date.now()+7*864e5).toISOString().slice(0,16), venue:'Maracanã',
+      status:'on-sale', includes:['Entrada','Guiamiento en 3 idiomas','Transporte ida y vuelta'],
+      sectors: SECTOR_DEFS.map(s => ({ id:s.id, price:s.defaultPrice, available:true })),
+    };
+  }
+
+  // ── RESERVAS / COMPRA ────────────────────────────────────
+  // Política: pago 100% del valor. Cancelación hasta 7 días antes.
+  function createBooking({ matchId, sectorId, qty, name, email }) {
+    const m = getMatch(matchId);
+    const sec = m.sectors.find(s => s.id === sectorId);
+    const unit = sec.price;
+    const total = unit * qty;
+    const b = {
+      id: 'FE-' + Math.random().toString(36).slice(2, 8).toUpperCase(),
+      matchId, sectorId, qty, name, email,
+      unit, total, paid: total, // 100%
+      createdAt: Date.now(),
+      matchDate: m.date,
+      status: 'confirmed',
+    };
+    bookings.unshift(b);
+    save(KEY_BOOKINGS, bookings);
+    return b;
+  }
+  function getBookings() { return bookings.slice(); }
+  function canCancel(b) {
+    const matchTime = new Date(b.matchDate).getTime();
+    return b.status === 'confirmed' && (matchTime - Date.now()) >= 7 * 864e5;
+  }
+  function cancelBooking(id) {
+    const b = bookings.find(x => x.id === id);
+    if (b && canCancel(b)) { b.status = 'cancelled'; save(KEY_BOOKINGS, bookings); return true; }
+    return false;
+  }
+  function resetData() { matches = seedMatches(); save(KEY_MATCHES, matches); bookings = []; save(KEY_BOOKINGS, bookings); }
+
+  // ── FAQ (chatbot) ────────────────────────────────────────
+  const FAQ = [
+    { q:'¿Qué incluye la entrada?', a:'Todas nuestras entradas son servicio completo: incluyen el acceso al estadio, guiamiento en 3 idiomas (español, inglés y portugués) y transporte ida y vuelta.' },
+    { q:'¿Cómo es el acceso al estadio?', a:'El acceso es biométrico: tu rostro es tu entrada. Te registras una vez vía Bepass y entras sin filas ni ticket de papel.' },
+    { q:'¿Puedo cancelar mi compra?', a:'Sí. Puedes cancelar hasta 7 días (1 semana) antes del partido y se te reembolsa el 100%. Pasado ese plazo la compra no es reembolsable.' },
+    { q:'¿Cuánto cuesta y cómo pago?', a:'El precio varía por sector y por partido. Tu anfitrión te confirma el precio final por WhatsApp y ahí coordinan el pago (los precios de referencia pueden cambiar de un partido a otro).' },
+    { q:'¿Qué sectores hay en el Maracanã?', a:'Leste Inferior, Leste Superior, Norte, Sul, Maracanã Mais (Oeste, premium) y Visitante. Los precios cambian según el partido.' },
+    { q:'¿El transporte de dónde sale?', a:'Coordinamos un punto de embarque y un anfitrión te acompaña ida y vuelta. La hora exacta se confirma por WhatsApp.' },
+    { q:'¿Atienden por WhatsApp?', a:'Sí, tienes un anfitrión por WhatsApp para coordinar tu embarque y resolver cualquier duda antes, durante y después del partido.' },
+  ];
+
+  const WHATSAPP = '5521999990000'; // número de contacto (placeholder)
+
+  return {
+    TEAMS, SECTOR_DEFS, sectorDef, FAQ, WHATSAPP,
+    allMatches, matchesByTeam, upcomingByTeam, getMatch, isPast,
+    saveMatch, deleteMatch, newMatchTemplate,
+    createBooking, getBookings, canCancel, cancelBooking, resetData,
+    fmt: (n) => 'R$ ' + Number(n).toLocaleString('pt-BR'),
+  };
+})();
+
+</script>
+<script>
+/* inlined: mrc/maracana-map.js */
+// ════════════════════════════════════════════════════════════
+// MRC Maracanã — Mapa SVG de sectores reutilizable (vista aérea)
+// Uso:
+//   MRCMap.render(container, {
+//     match,                 // opcional: objeto partido con sectors[]
+//     selected: 'norte',     // sector id seleccionado
+//     onSelect: (id)=>{},    // callback al click
+//     showPrices: true       // muestra precio en el tooltip/leyenda
+//   });
+// Anillo elíptico de 4 tribunas (Leste, Oeste, Norte, Sul) + premium.
+// ════════════════════════════════════════════════════════════
+window.MRCMap = (function () {
+  const { SECTOR_DEFS, sectorDef, fmt } = window.MRC;
+
+  // geometría de cada sector como path SVG sobre un viewBox 0 0 400 480
+  // estadio: elipse exterior rx190 ry230, interior (campo) rx70 ry110
+  const PATHS = {
+    'leste-inferior': 'M 200 40 A 175 215 0 0 1 372 235 L 285 235 A 90 130 0 0 0 200 120 Z',
+    'leste-superior': 'M 200 14 A 200 240 0 0 1 398 235 L 372 235 A 175 215 0 0 0 200 40 Z',
+    'oeste':          'M 200 440 A 175 215 0 0 1 28 245 L 115 245 A 90 130 0 0 0 200 360 Z',
+    'norte':          'M 372 235 A 175 215 0 0 1 200 440 L 200 360 A 90 130 0 0 0 285 245 Z M 285 235 L 372 235 A 175 215 0 0 0 200 40 Z',
+    // simplified: build per-quadrant below instead
+  };
+
+  // Quadrant-based ring (cleaner): 4 arcs of the elliptical ring
+  function ringSector(startDeg, endDeg, rOut, rIn, cx = 200, cy = 240, rxO = 184, ryO = 222, rxI = 92, ryI = 130) {
+    const pt = (deg, rx, ry) => {
+      const a = (deg - 90) * Math.PI / 180;
+      return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)];
+    };
+    const [x1, y1] = pt(startDeg, rxO, ryO);
+    const [x2, y2] = pt(endDeg, rxO, ryO);
+    const [x3, y3] = pt(endDeg, rxI, ryI);
+    const [x4, y4] = pt(startDeg, rxI, ryI);
+    const large = (endDeg - startDeg) > 180 ? 1 : 0;
+    return `M ${x1.toFixed(1)} ${y1.toFixed(1)} A ${rxO} ${ryO} 0 ${large} 1 ${x2.toFixed(1)} ${y2.toFixed(1)} L ${x3.toFixed(1)} ${y3.toFixed(1)} A ${rxI} ${ryI} 0 ${large} 0 ${x4.toFixed(1)} ${y4.toFixed(1)} Z`;
+  }
+
+  // sector angular ranges (deg, clockwise from top)
+  const RANGES = {
+    'leste-superior': [38, 142],   // right side outer (split inf/sup by radius — we approximate as one band each side)
+    'leste-inferior': [38, 142],
+    'norte':          [142, 218],  // bottom
+    'oeste':          [218, 322],  // left side
+    'sul':            [-38, 38],   // top  (322..38)
+  };
+
+  function labelPos(startDeg, endDeg, cx = 200, cy = 240, rx = 150, ry = 182) {
+    const mid = (startDeg + endDeg) / 2;
+    const a = (mid - 90) * Math.PI / 180;
+    return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)];
+  }
+
+  function render(container, opts = {}) {
+    const { match, selected, onSelect, showPrices = true } = opts;
+    const priceFor = (id) => {
+      if (!match) { const d = sectorDef(id); return d ? d.defaultPrice : null; }
+      const s = match.sectors.find(x => x.id === id);
+      return s ? s.price : null;
+    };
+    const availFor = (id) => {
+      if (!match) return true;
+      const s = match.sectors.find(x => x.id === id);
+      return s ? s.available : false;
+    };
+
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 1536 1024');
+    svg.setAttribute('class', 'mrc-map-svg');
+    svg.style.width = '100%';
+    svg.style.height = 'auto';
+    svg.style.display = 'block';
+
+    // foto real del mapa de sectores del Maracanã
+    const img = document.createElementNS(svgNS, 'image');
+    img.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'assets/mapa/sectores-maracana-transp.png');
+    img.setAttribute('href', 'assets/mapa/sectores-maracana-transp.png');
+    img.setAttribute('x', '0'); img.setAttribute('y', '0');
+    img.setAttribute('width', '1536'); img.setAttribute('height', '1024');
+    svg.appendChild(img);
+
+    // geometría calibrada sobre la imagen real (elipse exterior del anillo de tribunas
+    // y elipse interior del campo), ángulos medidos en sentido horario desde arriba.
+    const cx = 766, cy = 512;
+    const rxO = 582, ryO = 478;   // borde exterior del anillo
+    const rxI = 190, ryI = 190;   // borde interior (campo)
+    const rxM = 386, ryM = 334;   // radio medio (separa leste superior/inferior)
+
+    const SECTORS = [
+      { id:'sul',            d: ringSector(-40, 40,  0,0, cx,cy, rxO,ryO, rxI,ryI) },
+      { id:'oeste',          d: ringSector(40,  130, 0,0, cx,cy, rxO,ryO, rxI,ryI) },
+      { id:'norte',          d: ringSector(130, 250, 0,0, cx,cy, rxO,ryO, rxI,ryI) },
+      { id:'leste-superior', d: ringSector(250, 320, 0,0, cx,cy, rxO,ryO, rxM,ryM) }, // banda externa
+      { id:'leste-inferior', d: ringSector(250, 320, 0,0, cx,cy, rxM,ryM, rxI,ryI) }, // banda interna
+    ];
+
+    const tip = document.createElement('div');
+    tip.className = 'mrc-map-tip';
+    tip.style.cssText = 'position:absolute;pointer-events:none;opacity:0;transition:opacity .15s;background:#111;border:1px solid rgba(255,255,255,.18);color:#f4f4f0;font-family:Inter,sans-serif;font-size:12px;padding:8px 11px;border-radius:9px;white-space:nowrap;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.5);';
+    if (getComputedStyle(container).position === 'static') container.style.position = 'relative';
+
+    const fillFor = (avail, isSel, hover) => {
+      if (isSel) return 'rgba(255,255,255,.32)';
+      if (!avail) return 'rgba(15,15,17,.55)';
+      return hover ? 'rgba(255,255,255,.18)' : 'rgba(255,255,255,0)';
+    };
+
+    SECTORS.forEach(sc => {
+      const def = sectorDef(sc.id);
+      const avail = availFor(sc.id);
+      const isSel = selected === sc.id;
+      const path = document.createElementNS(svgNS, 'path');
+      path.setAttribute('d', sc.d);
+      path.setAttribute('fill', fillFor(avail, isSel, false));
+      path.setAttribute('stroke', isSel ? '#fff' : 'rgba(255,255,255,0)');
+      path.setAttribute('stroke-width', isSel ? '4' : '0');
+      path.style.cursor = avail ? 'pointer' : 'not-allowed';
+      path.style.transition = 'fill .2s, stroke-width .2s';
+      path.dataset.id = sc.id;
+
+      path.addEventListener('mouseenter', () => {
+        if (!isSel) path.setAttribute('fill', fillFor(avail, isSel, true));
+        const p = priceFor(sc.id);
+        tip.innerHTML = `<b>${def.name}</b>${showPrices && p ? ` · ${fmt(p)}` : ''}${!avail ? ' · agotado' : ''}`;
+        tip.style.opacity = '1';
+      });
+      path.addEventListener('mousemove', (e) => {
+        const r = container.getBoundingClientRect();
+        tip.style.left = (e.clientX - r.left + 12) + 'px';
+        tip.style.top = (e.clientY - r.top + 12) + 'px';
+      });
+      path.addEventListener('mouseleave', () => {
+        if (!isSel) path.setAttribute('fill', fillFor(avail, isSel, false));
+        tip.style.opacity = '0';
+      });
+      if (avail && onSelect) path.addEventListener('click', () => onSelect(sc.id));
+      svg.appendChild(path);
+    });
+
+    container.innerHTML = '';
+    container.appendChild(svg);
+    container.appendChild(tip);
+    return svg;
+  }
+
+  // Legend list (sector swatches + price + availability)
+  function legend(container, opts = {}) {
+    const { match, selected, onSelect, showPrices = true } = opts;
+    container.innerHTML = '';
+    SECTOR_DEFS.forEach(def => {
+      const s = match ? match.sectors.find(x => x.id === def.id) : { price: def.defaultPrice, available: true };
+      if (!s) return;
+      const row = document.createElement('button');
+      row.className = 'mrc-leg-row' + (selected === def.id ? ' sel' : '') + (!s.available ? ' off' : '');
+      row.dataset.id = def.id;
+      row.dataset.price = s.price;
+      row.innerHTML = `
+        <span class="sw" style="background:${def.color}"></span>
+        <span class="info">
+          <span class="txt"><b>${def.name}</b><small>${s.available ? 'Cupo garantizado' : 'Agotado'}</small></span>
+          <span class="infoicon" title="${def.desc}">i</span>
+        </span>
+        <span class="pr-box">
+          <span class="pr">${s.available ? (showPrices ? fmt(s.price) : '') : 'Agotado'}</span>
+          ${s.available ? '<span class="pr-sub">por entrada</span>' : ''}
+        </span>`;
+      if (s.available && onSelect) row.addEventListener('click', () => onSelect(def.id));
+      container.appendChild(row);
+    });
+  }
+
+  return { render, legend };
+})();
+
+</script>
+<script>
+/* inlined: mrc/widgets.js */
+// ════════════════════════════════════════════════════════════
+// MRC Widgets — Botón flotante de WhatsApp + Chatbot FAQ
+// Se auto-inyecta. Incluir como script externo
+// después de mrc/store.js en cualquier página.
+// ════════════════════════════════════════════════════════════
+(function () {
+  const FAQ = (window.MRC && window.MRC.FAQ) || [];
+  const PHONE = (window.MRC && window.MRC.WHATSAPP) || '5521999990000';
+
+  const css = `
+  .mrc-fab-wrap { position: fixed; right: 22px; bottom: 22px; z-index: 9000; display:flex; flex-direction:column; align-items:flex-end; gap: 14px; font-family: Inter, system-ui, sans-serif; }
+  .mrc-fab { width: 58px; height: 58px; border-radius: 50%; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 10px 30px rgba(0,0,0,0.4); transition: transform .2s cubic-bezier(.22,1,.36,1); position:relative; }
+  .mrc-fab:hover { transform: translateY(-3px) scale(1.05); }
+  .mrc-fab.wa { background: #25D366; }
+  .mrc-fab.bot { background: #fff; }
+  .mrc-fab .mrc-badge { position:absolute; top:-3px; right:-3px; width:18px; height:18px; border-radius:50%; background:#d11a2a; color:#fff; font-size:10px; font-weight:700; display:flex; align-items:center; justify-content:center; border:2px solid #070708; }
+  .mrc-fab .mrc-tip { position:absolute; right: 70px; white-space:nowrap; background:#111; color:#f4f4f0; font-size:12px; padding:8px 12px; border-radius:10px; opacity:0; pointer-events:none; transform: translateX(6px); transition: all .2s; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+  .mrc-fab:hover .mrc-tip { opacity:1; transform:none; }
+
+  .mrc-chat { position: fixed; right: 22px; bottom: 92px; z-index: 9001; width: 360px; max-width: calc(100vw - 44px); height: 520px; max-height: calc(100vh - 130px); background:#0f0f12; border:1px solid rgba(255,255,255,0.12); border-radius: 20px; box-shadow: 0 30px 70px rgba(0,0,0,0.6); display:none; flex-direction:column; overflow:hidden; font-family: Inter, system-ui, sans-serif; }
+  .mrc-chat.open { display:flex; animation: mrcUp .3s cubic-bezier(.22,1,.36,1); }
+  @keyframes mrcUp { from{opacity:0; transform:translateY(20px)} to{opacity:1; transform:none} }
+  .mrc-chat-head { background: linear-gradient(135deg,#1a1a1f,#0f0f12); padding: 16px 18px; display:flex; align-items:center; gap:12px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .mrc-chat-head .av { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,#d11a2a,#0e5c2f); display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; color:#fff; font-size:16px; }
+  .mrc-chat-head .t { flex:1; }
+  .mrc-chat-head .t b { color:#f4f4f0; font-size:14px; display:block; }
+  .mrc-chat-head .t span { color:#8a8a92; font-size:11px; display:flex; align-items:center; gap:5px; }
+  .mrc-chat-head .t span i { width:6px; height:6px; border-radius:50%; background:#46e08a; display:inline-block; }
+  .mrc-chat-head button { background:none; border:none; color:#8a8a92; cursor:pointer; padding:4px; }
+  .mrc-chat-body { flex:1; overflow-y:auto; padding: 16px; display:flex; flex-direction:column; gap:10px; background:#0b0b0e; }
+  .mrc-msg { max-width:85%; padding:10px 13px; border-radius:14px; font-size:13px; line-height:1.45; }
+  .mrc-msg.bot { align-self:flex-start; background:#1c1c22; color:#f4f4f0; border-bottom-left-radius:4px; }
+  .mrc-msg.user { align-self:flex-end; background:#d11a2a; color:#fff; border-bottom-right-radius:4px; }
+  .mrc-chips { display:flex; flex-wrap:wrap; gap:8px; padding: 12px 16px; border-top:1px solid rgba(255,255,255,0.08); background:#0f0f12; }
+  .mrc-chip { padding:8px 12px; border-radius:999px; border:1px solid rgba(255,255,255,0.18); background:transparent; color:#cfcfd4; font-size:12px; cursor:pointer; transition: all .2s; font-family:inherit; }
+  .mrc-chip:hover { background:#fff; color:#111; border-color:#fff; }
+  .mrc-chat-foot { padding:10px 16px; border-top:1px solid rgba(255,255,255,0.08); background:#0f0f12; }
+  .mrc-chat-foot a { display:flex; align-items:center; justify-content:center; gap:8px; background:#25D366; color:#fff; text-decoration:none; padding:11px; border-radius:12px; font-size:13px; font-weight:600; }
+  `;
+  const style = document.createElement('style');
+  style.textContent = css;
+  document.head.appendChild(style);
+
+  const waHref = (txt) => `https://wa.me/${PHONE}?text=${encodeURIComponent(txt || 'Hola, quiero información sobre las entradas para el Maracanã')}`;
+
+  const wrap = document.createElement('div');
+  wrap.className = 'mrc-fab-wrap';
+  wrap.innerHTML = `
+    <div class="mrc-chat" id="mrcChat">
+      <div class="mrc-chat-head">
+        <div class="av">FE</div>
+        <div class="t"><b>Asistente Football Experience</b><span><i></i> en línea · responde al instante</span></div>
+        <button id="mrcChatClose" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      </div>
+      <div class="mrc-chat-body" id="mrcChatBody"></div>
+      <div class="mrc-chips" id="mrcChips"></div>
+      <div class="mrc-chat-foot">
+        <a href="${waHref()}" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+          Hablar con un anfitrión por WhatsApp
+        </a>
+      </div>
+    </div>
+    <button class="mrc-fab bot" id="mrcBotFab" aria-label="Preguntas frecuentes">
+      <span class="mrc-tip">¿Dudas? Pregúntame</span>
+      <span class="mrc-badge">?</span>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" stroke="#111" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.1" fill="#111"/><circle cx="13" cy="10" r="1.1" fill="#111"/></svg>
+    </button>
+    <a class="mrc-fab wa" href="${waHref()}" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <span class="mrc-tip">Escríbenos por WhatsApp</span>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+    </a>
+  `;
+  document.body.appendChild(wrap);
+
+  const chat = wrap.querySelector('#mrcChat');
+  const body = wrap.querySelector('#mrcChatBody');
+  const chips = wrap.querySelector('#mrcChips');
+
+  function addMsg(text, who) {
+    const m = document.createElement('div');
+    m.className = 'mrc-msg ' + who;
+    m.innerHTML = text;
+    body.appendChild(m);
+    body.scrollTop = body.scrollHeight;
+  }
+  function renderChips() {
+    chips.innerHTML = '';
+    FAQ.forEach(f => {
+      const c = document.createElement('button');
+      c.className = 'mrc-chip';
+      c.textContent = f.q;
+      c.addEventListener('click', () => {
+        addMsg(f.q, 'user');
+        setTimeout(() => addMsg(f.a, 'bot'), 350);
+      });
+      chips.appendChild(c);
+    });
+  }
+  let greeted = false;
+  function openChat() {
+    chat.classList.add('open');
+    if (!greeted) {
+      greeted = true;
+      addMsg('¡Hola! 👋 Soy el asistente de <b>Football Experience</b>. Toca una pregunta o escríbenos por WhatsApp.', 'bot');
+      renderChips();
+    }
+  }
+  wrap.querySelector('#mrcBotFab').addEventListener('click', () => {
+    chat.classList.contains('open') ? chat.classList.remove('open') : openChat();
+  });
+  wrap.querySelector('#mrcChatClose').addEventListener('click', () => chat.classList.remove('open'));
+})();
+
+</script>
+<script>
+(function(){
+  const { TEAMS, getMatch, fmt, createBooking } = MRC;
+  const params = new URLSearchParams(location.search);
+  let match = getMatch(params.get('match'));
+  if(!match){ match = MRC.allMatches()[0]; }
+  const team = TEAMS[match.teamId];
+  const accent = (team.primary==='#111111'||team.primary==='#000000') ? '#f4f4f0' : team.primary;
+  document.documentElement.style.setProperty('--accent', accent);
+  document.documentElement.style.setProperty('--accent-ink', (team.primary==='#111111'||team.primary==='#000000')?'#0a0a0a':'#fff');
+  document.getElementById('backLink').href = 'equipo.html?team='+team.id;
+
+  let selected = null, qty = 1, cart = []; // cart: [{id,name,color,qty,price}]
+
+  // Escudos reales de próximos rivales.
+  const RIVALS = {
+    RBB:{ name:'Bragantino', crest:'assets/equipos/bragantino.png' },
+    SAO:{ name:'São Paulo', crest:'assets/equipos/sao-paulo.png' },
+    BAH:{ name:'Bahía', crest:'assets/equipos/bahia.png' },
+    VIT:{ name:'Vitória', crest:'assets/equipos/vitoria.png' },
+    REM:{ name:'Remo', crest:'assets/equipos/remo.png' },
+    CRU:{ name:'Cruzeiro', crest:'assets/equipos/cruzeiro.png' },
+    IRI:{ name:'Ind. Rivadavia', crest:'assets/equipos/independiente-rivadavia.png' },
+    PAL:{ name:'Palmeiras', crest:'assets/equipos/palmeiras.png' },
+    FLA:{ name:'Flamengo', crest:'assets/equipos/flamengo.png' },
+    FLU:{ name:'Fluminense', crest:'assets/equipos/fluminense.png' },
+    BOT:{ name:'Botafogo', crest:'assets/equipos/botafogo.png' },
+    VAS:{ name:'Vasco da Gama', crest:'assets/equipos/vasco-da-gama.png' },
+  };
+  function oppCrestHtml(oppShort, opp){
+    const r = RIVALS[oppShort];
+    if (r) return `<img src="${r.crest}" alt="${r.name}" title="${r.name}">`;
+    return (oppShort||opp||'').slice(0,3).toUpperCase();
+  }
+
+  // header — hero banner with home team's banner image
+  const dt=new Date(match.date);
+  const dateShort=dt.toLocaleDateString('es',{day:'2-digit',month:'short',year:'numeric'}).replace(/^(\d+) (\w)/,(m,d,c)=>d+' '+c.toUpperCase());
+  const time=dt.toLocaleTimeString('es',{hour:'2-digit',minute:'2-digit'});
+  const mheadEl = document.getElementById('mhead');
+  if (team.banner) mheadEl.style.backgroundImage = `url('${team.banner}')`;
+  mheadEl.innerHTML=`
+    <div class="mh-card">
+      <div class="mh-comp">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M5 4h14v3a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M5 6H3a2 2 0 0 0 0 4M19 6h2a2 2 0 0 1 0 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        ${match.comp}
+      </div>
+      <div class="mh-row">
+        <div class="mh-team">
+          <div class="mh-crest"><img src="${team.crest}" alt="${team.name}"></div>
+          <div class="mh-tname">${team.name}</div>
+        </div>
+        <div class="mh-mid">
+          <div class="mh-vs">VS</div>
+          <div class="mh-pills">
+            <span class="mh-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg> ${match.venue}</span>
+            <span class="mh-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> ${dateShort}, ${time}</span>
+          </div>
+        </div>
+        <div class="mh-team">
+          <div class="mh-crest">${oppCrestHtml(match.oppShort, match.opp)}</div>
+          <div class="mh-tname">${match.opp}</div>
+        </div>
+      </div>
+    </div>`;
+  document.getElementById('coTitle').textContent = team.short+' × '+(match.oppShort||match.opp);
+
+  // top utility bar — same match being purchased
+  const adateShort=dt.toLocaleDateString('es',{day:'2-digit',month:'2-digit'});
+  document.getElementById('annPill').href = 'comprar.html?match='+match.id;
+  document.getElementById('annMatch').textContent = `${adateShort} · ${team.short} × ${match.oppShort||match.opp}`;
+  document.getElementById('annMeta').textContent = `${match.venue} · ${time} · entradas con servicio completo`;
+
+  // includes
+  document.getElementById('includes').innerHTML = (match.includes||[]).map(i=>`
+    <div class="inc"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> ${i}</div>`).join('');
+
+  function renderAll(){
+    MRCMap.render(document.getElementById('map'), { match, selected, onSelect:pick, showPrices:true });
+    MRCMap.legend(document.getElementById('legend'), { match, selected, onSelect:pick, showPrices:true });
+    updateCheckout();
+    applyFilters();
+  }
+  function pick(id){ selected=id; qty=1; renderAll(); }
+
+  // ── Filtros: precio + sector ─────────────────────────────
+  const availSectors = match.sectors.filter(s=>s.available);
+  const priceLo0 = Math.min(...availSectors.map(s=>s.price));
+  const priceHi0 = Math.max(...availSectors.map(s=>s.price));
+  const rangeMinEl = document.getElementById('rangeMin');
+  const rangeMaxEl = document.getElementById('rangeMax');
+  const rangeFillEl = document.getElementById('rangeFill');
+  const sectorFilterEl = document.getElementById('sectorFilter');
+  const STEP = 10;
+
+  function setupFilters(){
+    const span = Math.max(STEP, priceHi0 - priceLo0);
+    [rangeMinEl, rangeMaxEl].forEach(el=>{
+      el.min = priceLo0; el.max = priceLo0 + span; el.step = STEP;
+    });
+    rangeMinEl.value = priceLo0;
+    rangeMaxEl.value = priceLo0 + span;
+
+    MRC.SECTOR_DEFS.forEach(def=>{
+      const s = match.sectors.find(x=>x.id===def.id);
+      if(!s) return;
+      const opt = document.createElement('option');
+      opt.value = def.id;
+      opt.textContent = def.name + (s.available ? '' : ' (agotado)');
+      if(!s.available) opt.disabled = true;
+      sectorFilterEl.appendChild(opt);
+    });
+
+    rangeMinEl.addEventListener('input', onRangeInput);
+    rangeMaxEl.addEventListener('input', onRangeInput);
+    sectorFilterEl.addEventListener('change', applyFilters);
+    document.getElementById('resetFilters').addEventListener('click', ()=>{
+      rangeMinEl.value = priceLo0; rangeMaxEl.value = priceLo0 + span; sectorFilterEl.value = 'all';
+      updateRangeUI(); applyFilters();
+    });
+    updateRangeUI();
+  }
+
+  function onRangeInput(e){
+    let lo = +rangeMinEl.value, hi = +rangeMaxEl.value;
+    if(lo > hi - STEP){
+      if(e.target === rangeMinEl){ lo = hi - STEP; rangeMinEl.value = lo; }
+      else { hi = lo + STEP; rangeMaxEl.value = hi; }
+    }
+    updateRangeUI();
+    applyFilters();
+  }
+
+  function updateRangeUI(){
+    const lo = +rangeMinEl.value, hi = +rangeMaxEl.value;
+    document.getElementById('priceMinLbl').textContent = fmt(lo);
+    document.getElementById('priceMaxLbl').textContent = fmt(hi);
+    const span = (+rangeMinEl.max) - (+rangeMinEl.min) || 1;
+    const pct = v => ((v - rangeMinEl.min) / span) * 100;
+    rangeFillEl.style.left = pct(lo) + '%';
+    rangeFillEl.style.right = (100 - pct(hi)) + '%';
+  }
+
+  function applyFilters(){
+    if(!rangeMinEl) return;
+    const lo = +rangeMinEl.value, hi = +rangeMaxEl.value, sec = sectorFilterEl.value;
+    document.querySelectorAll('#legend .mrc-leg-row').forEach(row=>{
+      const id = row.dataset.id, price = +row.dataset.price;
+      const ok = (sec === 'all' || sec === id) && price >= lo && price <= hi;
+      row.classList.toggle('hidden-filt', !ok);
+    });
+    document.querySelectorAll('#map svg path[data-id]').forEach(path=>{
+      const row = document.querySelector('#legend .mrc-leg-row[data-id="'+path.dataset.id+'"]');
+      const visible = row && !row.classList.contains('hidden-filt');
+      path.style.opacity = visible ? '' : '.18';
+    });
+  }
+
+  function updateCheckout(){
+    const ss=document.getElementById('selSector');
+    const def = selected ? MRC.sectorDef(selected) : null;
+    const sec = selected ? match.sectors.find(s=>s.id===selected) : null;
+    if(def && sec){
+      ss.innerHTML=`<span class="sw" style="background:${def.color}"></span><span class="nm">${def.name}</span><span class="mono" style="font-size:12px;color:var(--ink-dim)">${fmt(sec.price)} c/u</span>`;
+      document.getElementById('addCartBtn').disabled=false;
+    } else {
+      ss.innerHTML='<span class="none">Selecciona un sector en el mapa</span>';
+      document.getElementById('addCartBtn').disabled=true;
+    }
+    document.getElementById('qNum').textContent=qty;
+    renderCart();
+  }
+
+  function renderCart(){
+    const box=document.getElementById('cartBox');
+    if(cart.length===0){
+      box.innerHTML='<div class="cart-empty">Tu carrito está vacío. Elige un sector y una cantidad, y agrégalo.</div>';
+    } else {
+      box.innerHTML = cart.map((it,i)=>`
+        <div class="cart-item">
+          <span class="sw" style="background:${it.color}"></span>
+          <span class="nm">${it.name} × ${it.qty}</span>
+          <span class="mono pv">${fmt(it.price*it.qty)}</span>
+          <button class="rm" data-i="${i}" type="button" aria-label="Quitar">×</button>
+        </div>`).join('');
+      box.querySelectorAll('.rm').forEach(btn=>{
+        btn.addEventListener('click', ()=>{ cart.splice(+btn.dataset.i,1); renderCart(); });
+      });
+    }
+    const totalPrice = cart.reduce((a,it)=>a+it.price*it.qty,0);
+    document.getElementById('totVal').textContent = fmt(totalPrice);
+    document.getElementById('payBtn').disabled = cart.length===0;
+  }
+
+  document.getElementById('qMinus').addEventListener('click',()=>{ qty=Math.max(1,qty-1); document.getElementById('qNum').textContent=qty; });
+  document.getElementById('qPlus').addEventListener('click',()=>{ qty=Math.min(8,qty+1); document.getElementById('qNum').textContent=qty; });
+
+  document.getElementById('addCartBtn').addEventListener('click',()=>{
+    if(!selected) return;
+    const def=MRC.sectorDef(selected);
+    const sec=match.sectors.find(s=>s.id===selected);
+    const existing = cart.find(it=>it.id===selected);
+    if(existing){ existing.qty = Math.min(32, existing.qty+qty); }
+    else { cart.push({ id:selected, name:def.name, color:def.color, qty, price:sec.price }); }
+    selected=null; qty=1;
+    renderAll();
+  });
+
+  document.getElementById('payBtn').addEventListener('click',()=>{
+    if(cart.length===0) return;
+    const seller='FE-WEB'; // código de vendedor para atribución de comisión
+    const totalQty = cart.reduce((a,it)=>a+it.qty,0);
+    const totalPrice = cart.reduce((a,it)=>a+it.price*it.qty,0);
+    const lines=[
+      'Hola! Quiero reservar entradas con Football Experience 🎟️',
+      '',
+      '⚽ Partido: '+team.name+' x '+match.opp,
+      '📅 Fecha: '+day.charAt(0).toUpperCase()+day.slice(1)+' · '+time,
+      '🏟️ '+match.venue,
+      '',
+      ...cart.map(it=>'🎫 '+it.name+': '+it.qty+' entrada'+(it.qty>1?'s':'')+' ('+fmt(it.price)+' c/u)'),
+      '',
+      '👥 Total de entradas: '+totalQty,
+      '💰 Referencia total: ~'+fmt(totalPrice),
+      '',
+      'Ref: '+seller+'-'+match.id
+    ];
+    const url='https://wa.me/'+MRC.WHATSAPP+'?text='+encodeURIComponent(lines.join('\n'));
+    window.open(url,'_blank');
+    document.getElementById('modalBody').innerHTML=`
+      <div class="mrow2"><span>Partido</span><b>${team.short} × ${match.oppShort||match.opp}</b></div>
+      <div class="mrow2"><span>Fecha</span><b>${day.charAt(0).toUpperCase()+day.slice(1)} · ${time}</b></div>
+      ${cart.map(it=>`<div class="mrow2"><span>${it.name}</span><b>${it.qty} entrada${it.qty>1?'s':''}</b></div>`).join('')}
+      <div class="mrow2"><span>Total de entradas</span><b>${totalQty}</b></div>
+      <div class="mrow2"><span>Referencia</span><b style="color:var(--ink-dim)">${fmt(totalPrice)}</b></div>
+      <div style="font-size:12px;color:var(--ink-mute);margin-top:14px;line-height:1.5">Abrimos WhatsApp con tu solicitud lista. Un anfitrión confirmará disponibilidad, precio final y coordinará el pago y tu embarque. Si no se abrió, toca el botón de abajo.</div>
+      <div class="mact">
+        <a class="pri" href="${url}" target="_blank" rel="noopener">Abrir WhatsApp</a>
+        <a class="sec" href="inicio.html#partidos">Ver otros partidos</a>
+      </div>`;
+    document.getElementById('modal').classList.add('open');
+  });
+  document.getElementById('modal').addEventListener('click',(e)=>{ if(e.target.id==='modal') e.currentTarget.classList.remove('open'); });
+
+  setupFilters();
+  renderAll();
+})();
+</script>
+</body>
+</html>

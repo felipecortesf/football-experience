@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Experience · Handoff a Desarrollo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  :root{
+    --bg:#070708; --paper:#fff; --ink:#15161a; --ink-dim:#4a4d57; --ink-mute:#868a96;
+    --line:#e4e6ea; --accent:#d11a2a; --green:#1f8a44; --navy:#0a0e1a;
+  }
+  body{ margin:0; background:#22242b; color:var(--ink); font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  .mono{ font-family:'JetBrains Mono',monospace; }
+  .display{ font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; line-height:.92; letter-spacing:-.01em; }
+
+  .page{ width:210mm; min-height:297mm; background:var(--paper); margin:18px auto; padding:22mm 20mm; box-shadow:0 10px 40px rgba(0,0,0,.4); position:relative; }
+  .page + .page{ margin-top:24px; }
+
+  /* cover */
+  .cover{ background:var(--bg); color:#f4f4f0; display:flex; flex-direction:column; }
+  .cover .stripes{ display:flex; gap:5px; margin-bottom:26px; }
+  .cover .stripes span{ width:34px; height:8px; border-radius:2px; }
+  .cover .kick{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.24em; color:rgba(244,244,240,.6); }
+  .cover h1{ font-size:74px; margin:14px 0 0; color:#f4f4f0; }
+  .cover .accent{ color:#ff3346; }
+  .cover .lead{ font-size:16px; color:rgba(244,244,240,.7); max-width:130mm; line-height:1.6; margin-top:22px; }
+  .cover .metabox{ margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:14px; border-top:1px solid rgba(255,255,255,.14); padding-top:22px; }
+  .cover .metabox .m .l{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.16em; color:rgba(244,244,240,.45); }
+  .cover .metabox .m .v{ font-size:15px; color:#f4f4f0; margin-top:4px; font-weight:600; }
+
+  h2.sec{ font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; font-size:34px; color:var(--ink); margin:0 0 4px; letter-spacing:-.01em; }
+  .sec-kick{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; }
+  .rule{ height:3px; width:54px; background:var(--accent); margin:14px 0 22px; border-radius:2px; }
+  p{ font-size:13.5px; line-height:1.62; color:var(--ink-dim); }
+  strong{ color:var(--ink); }
+  .lead-p{ font-size:15px; color:var(--ink); line-height:1.6; }
+
+  .callout{ border-left:4px solid var(--accent); background:#fbf3f4; padding:16px 18px; border-radius:0 10px 10px 0; margin:18px 0; }
+  .callout p{ margin:0; color:var(--ink); font-size:13px; }
+
+  ol.steps{ counter-reset:s; list-style:none; padding:0; margin:0; }
+  ol.steps li{ counter-increment:s; position:relative; padding:14px 0 14px 52px; border-bottom:1px solid var(--line); }
+  ol.steps li::before{ content:counter(s,decimal-leading-zero); position:absolute; left:0; top:13px; width:36px; height:36px; border-radius:9px; background:var(--bg); color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:17px; display:flex; align-items:center; justify-content:center; }
+  ol.steps li b{ display:block; font-size:14.5px; color:var(--ink); }
+  ol.steps li span{ font-size:12.5px; color:var(--ink-mute); }
+
+  .twocol{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .box{ border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .box h4{ font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; font-size:18px; margin:0 0 10px; }
+  .box ul{ margin:0; padding-left:18px; } .box li{ font-size:12.5px; color:var(--ink-dim); line-height:1.7; }
+  .tag{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; padding:3px 7px; border-radius:5px; margin-bottom:8px; }
+  .tag.sim{ background:#fdeaec; color:var(--accent); } .tag.real{ background:#e7f5ec; color:var(--green); }
+
+  table{ width:100%; border-collapse:collapse; margin-top:10px; }
+  th,td{ text-align:left; padding:11px 12px; font-size:12.5px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.12em; color:var(--ink-mute); text-transform:uppercase; }
+  td .sp{ font-family:'Barlow Condensed',sans-serif; font-weight:800; color:var(--accent); font-size:16px; }
+  td b{ color:var(--ink); }
+  tr.mvp td{ background:#fbf3f4; }
+
+  .shots{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px; }
+  .shot{ border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .shot img{ width:100%; display:block; }
+  .shot .cap{ font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.08em; color:var(--ink-mute); padding:8px 10px; border-top:1px solid var(--line); }
+
+  .pill-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .pill{ font-size:11px; padding:6px 11px; border-radius:999px; border:1px solid var(--line); color:var(--ink-dim); }
+
+  .foot{ position:absolute; bottom:12mm; left:20mm; right:20mm; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--ink-mute); letter-spacing:.1em; border-top:1px solid var(--line); padding-top:8px; }
+
+  @media print{
+    body{ background:#fff; } .page{ box-shadow:none; margin:0; width:auto; min-height:auto; page-break-after:always; }
+    .page:last-child{ page-break-after:auto; }
+    @page{ size:A4; margin:0; }
+  }
+  .printbar{ position:fixed; top:14px; right:14px; z-index:50; }
+  .printbar button{ background:var(--accent); color:#fff; border:none; padding:11px 18px; border-radius:10px; font-family:Inter; font-weight:600; font-size:13px; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,.3); }
+  @media print{ .printbar{ display:none; } }
+</style>
+</head>
+<body>
+
+<div class="printbar"><button onclick="window.print()">⇩ Guardar como PDF</button></div>
+
+<!-- COVER -->
+<section class="page cover">
+  <div class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></div>
+  <div class="kick">DOCUMENTO DE HANDOFF · DISEÑO → DESARROLLO</div>
+  <h1 class="display">Football<br>Experience<span class="accent">.</span></h1>
+  <p class="lead">Maqueta funcional de alta fidelidad para la venta de entradas a partidos en el Maracanã (Flamengo · Fluminense · Botafogo). Este documento explica qué es la maqueta, qué hay que construir y un plan ágil con sprints para llevarlo a producción.</p>
+  <div class="metabox">
+    <div class="m"><div class="l">PROYECTO</div><div class="v">Football Experience · Maracanã</div></div>
+    <div class="m"><div class="l">VERSIÓN</div><div class="v">Maqueta v2 · Junio 2026</div></div>
+    <div class="m"><div class="l">ENTREGABLE</div><div class="v">Sitio HTML/CSS/JS navegable</div></div>
+    <div class="m"><div class="l">METODOLOGÍA</div><div class="v">Scrum · sprints de 2 semanas</div></div>
+  </div>
+</section>
+
+<!-- QUÉ ES -->
+<section class="page">
+  <div class="sec-kick">01 · Contexto</div>
+  <h2 class="sec">Qué es esta maqueta</h2>
+  <div class="rule"></div>
+  <p class="lead-p">Es un <strong>prototipo de alta fidelidad</strong> navegable (HTML/CSS/JS puro) que define con precisión cómo debe verse y comportarse el producto: layout, flujos, copy, interacciones y reglas de negocio.</p>
+  <div class="callout"><p><strong>Importante:</strong> NO es código de producción. Los datos viven en el navegador (<span class="mono">localStorage</span>), y el pago, el registro facial y WhatsApp están simulados. Sirve como <strong>especificación visual y funcional</strong>, no como base de código a extender.</p></div>
+
+  <h2 class="sec" style="font-size:22px;margin-top:24px">Páginas incluidas</h2>
+  <div class="rule" style="margin:10px 0 16px"></div>
+  <table>
+    <tr><th>Archivo</th><th>Descripción</th></tr>
+    <tr><td><b>index.html</b> / inicio</td><td>Home de marca, enfocada en comprar entradas</td></tr>
+    <tr><td><b>equipo.html</b></td><td>Página por club: programación, plantel, stats, historia, noticias, hinchada</td></tr>
+    <tr><td><b>comprar.html</b></td><td>Mapa interactivo del Maracanã, selección de sector, pago 100%, política de cancelación</td></tr>
+    <tr><td><b>mis-reservas.html</b></td><td>Entradas del usuario, QR, cancelación hasta 7 días antes</td></tr>
+    <tr><td><b>admin.html</b></td><td>Panel para crear/editar/borrar partidos y precios por sector</td></tr>
+    <tr><td><b>maracana-estadio.html</b></td><td>El estadio: fotos e historia</td></tr>
+    <tr><td><b>experiencia.html</b></td><td>Videos, fotos, blog y reseñas</td></tr>
+  </table>
+
+  <div class="shots">
+    <div class="shot"><img src="handoff/shot-inicio.png" alt="Inicio"><div class="cap">INICIO · HOME</div></div>
+    <div class="shot"><img src="handoff/shot-comprar.png" alt="Comprar"><div class="cap">COMPRA · MAPA MARACANÃ</div></div>
+    <div class="shot"><img src="handoff/shot-equipo.png" alt="Equipo"><div class="cap">PÁGINA DE EQUIPO</div></div>
+    <div class="shot"><img src="handoff/shot-admin.png" alt="Admin"><div class="cap">PANEL ADMIN</div></div>
+  </div>
+  <div class="foot"><span>FOOTBALL EXPERIENCE · HANDOFF</span><span>01</span></div>
+</section>
+
+<!-- SIMULADO VS REAL -->
+<section class="page">
+  <div class="sec-kick">02 · Estado actual</div>
+  <h2 class="sec">Qué está simulado y qué hay que construir</h2>
+  <div class="rule"></div>
+  <div class="twocol">
+    <div class="box">
+      <span class="tag sim">HOY · SIMULADO</span>
+      <h4>En la maqueta</h4>
+      <ul>
+        <li>Datos en <span class="mono">localStorage</span> (se pierden al cambiar de equipo)</li>
+        <li>Pago simulado (sin cobro real)</li>
+        <li>Registro facial Bepass: solo visual</li>
+        <li>WhatsApp: abre un enlace <span class="mono">wa.me</span></li>
+        <li>Sin login ni cuentas reales</li>
+        <li>Escudos/colores estilizados (sin marcas oficiales)</li>
+        <li>Fotos y videos: espacios vacíos</li>
+      </ul>
+    </div>
+    <div class="box">
+      <span class="tag real">META · PRODUCCIÓN</span>
+      <h4>A construir</h4>
+      <ul>
+        <li>Backend + base de datos central</li>
+        <li>Pasarela de pago real (Stripe / Mercado Pago / Pix)</li>
+        <li>SDK biométrico real de cada club (Bepass)</li>
+        <li>WhatsApp Business API automatizado</li>
+        <li>Autenticación y cuentas de usuario</li>
+        <li>Inventario/cupos por sector (anti-doble-venta)</li>
+        <li>Emails, notificaciones, reembolsos automáticos</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="sec" style="font-size:22px;margin-top:26px">Lista de trabajo en orden</h2>
+  <div class="rule" style="margin:10px 0 14px"></div>
+  <ol class="steps">
+    <li><b>Reunir contenido real</b><span>Fotos/videos, escudos con licencia, calendario, precios, stats, textos legales</span></li>
+    <li><b>Definir alcance del MVP</b><span>Mínimo: ver partidos → elegir sector → pagar → recibir entrada</span></li>
+    <li><b>Diseño técnico</b><span>Modelo de datos, arquitectura, stack</span></li>
+    <li><b>Backend + base de datos</b><span>Mover todo del navegador a un servidor</span></li>
+    <li><b>Login / cuentas de usuario</b><span>"Mis reservas" por persona y seguro</span></li>
+    <li><b>Pasarela de pago real</b><span>Cobro 100%, comprobantes, conciliación</span></li>
+    <li><b>Inventario y cupos</b><span>Disponibilidad real por sector</span></li>
+    <li><b>Panel admin con roles</b><span>Permisos para editar partidos/precios</span></li>
+    <li><b>Bepass + WhatsApp Business API</b><span>Biometría y anfitrión reales</span></li>
+    <li><b>Emails, notificaciones y cancelación automatizada</b><span>Reembolsos hasta 7 días antes</span></li>
+    <li><b>QA, accesibilidad, seguridad y analítica</b><span>WCAG, métricas de conversión</span></li>
+    <li><b>Deploy productivo + piloto</b><span>Dominio, hosting con BD, monitoreo, lanzamiento controlado</span></li>
+  </ol>
+  <div class="foot"><span>FOOTBALL EXPERIENCE · HANDOFF</span><span>02</span></div>
+</section>
+
+<!-- PLAN ÁGIL -->
+<section class="page">
+  <div class="sec-kick">03 · Plan de trabajo</div>
+  <h2 class="sec">Metodología ágil · Scrum</h2>
+  <div class="rule"></div>
+  <p class="lead-p">Sprints de <strong>2 semanas</strong>. <strong>MVP demo-able al cierre del Sprint 3</strong> y <strong>piloto en el Sprint 6</strong>. Las estimaciones son orientativas; el equipo las ajusta en el planning.</p>
+
+  <table>
+    <tr><th style="width:64px">Sprint</th><th>Foco</th><th>Entregables clave</th></tr>
+    <tr><td><span class="sp">S0</span><br>Discovery</td><td><b>Setup</b></td><td>Backlog, modelo de datos, stack, repos y entornos, diseño técnico aprobado</td></tr>
+    <tr><td><span class="sp">S1</span></td><td><b>Fundaciones</b></td><td>API + BD (partidos, sectores, precios), admin CRUD real, staging</td></tr>
+    <tr><td><span class="sp">S2</span></td><td><b>Catálogo + Auth</b></td><td>Páginas públicas con datos reales, login/registro, "Mis reservas" por usuario</td></tr>
+    <tr class="mvp"><td><span class="sp">S3</span></td><td><b>Compra + Pago → MVP</b></td><td>Flujo de compra real, pasarela de pago, inventario/cupos, emails. <b>MVP demo-able</b></td></tr>
+    <tr><td><span class="sp">S4</span></td><td><b>Biometría + WhatsApp</b></td><td>Integración Bepass, WhatsApp Business API, cancelación automatizada con reembolsos</td></tr>
+    <tr><td><span class="sp">S5</span></td><td><b>Pulido + QA</b></td><td>Accesibilidad WCAG, seguridad, analítica, contenido real, pruebas E2E, performance</td></tr>
+    <tr><td><span class="sp">S6</span></td><td><b>Piloto</b></td><td>Deploy productivo, monitoreo, lanzamiento a grupo reducido, feedback</td></tr>
+  </table>
+
+  <div class="twocol" style="margin-top:22px">
+    <div class="box">
+      <h4>Ceremonias</h4>
+      <ul>
+        <li><b>Planning</b> al inicio de cada sprint</li>
+        <li><b>Daily</b> de 15 min</li>
+        <li><b>Review + demo</b> al cierre</li>
+        <li><b>Retro</b> de mejora continua</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Roles</h4>
+      <ul>
+        <li><b>Product Owner</b> — cliente (prioriza backlog)</li>
+        <li><b>Scrum Master</b> — facilita el proceso</li>
+        <li><b>Devs</b> front-end / back-end</li>
+        <li><b>QA</b> — calidad y pruebas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:20px"><p><strong>Definición de "Hecho":</strong> código revisado (PR aprobado), pruebas pasando, desplegado en staging y validado por el Product Owner.</p></div>
+
+  <div class="pill-row">
+    <span class="pill">Stack sugerido: a definir por el equipo</span>
+    <span class="pill">Pagos: Stripe / Mercado Pago / Pix</span>
+    <span class="pill">Biometría: Bepass</span>
+    <span class="pill">Mensajería: WhatsApp Business API</span>
+  </div>
+  <div class="foot"><span>FOOTBALL EXPERIENCE · HANDOFF</span><span>03</span></div>
+</section>
+
+</body>
+</html>

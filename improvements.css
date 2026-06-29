@@ -1,0 +1,87 @@
+/* ============================================================
+   MEJORADO: improvements.css
+   Capa adicional de accesibilidad y UX para Football Experience.
+   No reemplaza los estilos del <style> inline de cada página —
+   los complementa (skip link, foco visible, targets táctiles,
+   modo de movimiento reducido, dark/light, estados de carga).
+   ============================================================ */
+
+/* Skip link — oculto hasta foco por teclado */
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:0;
+  z-index:9999;
+  background:var(--accent,#2563EB);
+  color:#fff;
+  padding:12px 20px;
+  border-radius:0 0 10px 0;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+  font-size:14px;
+}
+.skip-link:focus{
+  left:0;
+}
+
+/* Foco visible consistente en toda la página para cualquier
+   elemento interactivo que no tenga ya su propio :focus-visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible{
+  outline:3px solid var(--accent,#2563EB);
+  outline-offset:2px;
+}
+
+/* Targets táctiles mínimos (44x44) para cualquier botón/link
+   pequeño que no haya sido ajustado individualmente */
+a, button{
+  min-height:44px;
+}
+a.mono, a.see-all, a.login, a.plans, .lang{
+  min-height:auto; /* elementos puramente informativos, no son botones reales */
+}
+
+/* Movimiento reducido — refuerzo a nivel de hoja externa */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+/* Soporte de color-scheme para controles nativos del navegador
+   (scrollbars, inputs) en modo oscuro/claro */
+:root{
+  color-scheme: light dark;
+}
+
+/* Estados de carga / disabled consistentes */
+[disabled], .is-disabled{
+  opacity:.5;
+  cursor:not-allowed !important;
+  pointer-events:none;
+}
+
+/* Texto seleccionable con buen contraste sobre el fondo oscuro */
+::selection{
+  background:var(--accent,#2563EB);
+  color:#fff;
+}
+
+/* Indicador de "saltar imagen rota" ya gestionado por JS en
+   image-slot.js — aquí solo aseguramos que el placeholder vacío
+   nunca quede con un tamaño ilegible en pantallas muy chicas */
+@media (max-width:380px){
+  .h-cta, .h-cta2{
+    font-size:15px;
+    padding:13px 20px;
+  }
+}

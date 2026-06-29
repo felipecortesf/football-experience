@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Experience — Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #050505; color: #F4F4F0; font-family: Inter, system-ui, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { box-sizing: border-box; }
+  :root {
+    --ink: #F4F4F0;
+    --ink-dim: rgba(244,244,240,0.72);
+    --ink-mute: rgba(244,244,240,0.5);
+    --line: rgba(244,244,240,0.08);
+    --line-2: rgba(244,244,240,0.18);
+    --green-bright: #29c46b;
+    --bg-card: #111;
+  }
+  @keyframes fePulse { 0%,100% { opacity:1 } 50% { opacity:0.4 } }
+  @keyframes feSpin { to { transform: rotate(360deg); } }
+
+  .page {
+    width: 297mm; height: 210mm;
+    background: #050505;
+    page-break-after: always;
+    break-after: page;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    display: flex; flex-direction: column;
+    padding: 10mm 12mm;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  .page-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid rgba(244,244,240,0.12);
+    padding-bottom: 6mm; margin-bottom: 6mm;
+  }
+  .page-title {
+    font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 700;
+    font-size: 28pt; line-height: 0.95; text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .page-meta {
+    font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: var(--ink-dim);
+    letter-spacing: 0.12em; text-align: right;
+  }
+  .page-body { flex: 1; display: flex; gap: 14mm; align-items: center; justify-content: center; }
+  .phone-card { display: flex; flex-direction: column; align-items: center; gap: 4mm; }
+  .phone-label {
+    font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 700;
+    font-size: 10pt; letter-spacing: 0.18em; color: var(--ink-dim);
+    text-transform: uppercase;
+  }
+  .phone-scaler {
+    transform: scale(0.62);
+    transform-origin: top center;
+    /* IOSDevice is roughly 412×872 px; scaled = ~256×540 px */
+    height: 540px;
+  }
+
+  /* Cover page */
+  .cover {
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 18mm 20mm;
+  }
+  .cover-top { font-family: 'JetBrains Mono', monospace; font-size: 9pt; letter-spacing: 0.16em; color: var(--ink-dim); }
+  .cover-title {
+    font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 700;
+    font-size: 96pt; line-height: 0.85; text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+  .cover-sub { font-size: 13pt; color: var(--ink-dim); margin-top: 6mm; max-width: 160mm; line-height: 1.5; }
+  .cover-stripes { display: flex; gap: 4mm; margin-top: 8mm; }
+  .cover-stripes span { display: block; width: 30mm; height: 6mm; }
+  .cover-bottom {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    font-family: 'JetBrains Mono', monospace; font-size: 9pt; color: var(--ink-mute);
+    letter-spacing: 0.12em;
+  }
+
+  @page { size: 297mm 210mm; margin: 0; }
+  @media print {
+    html, body { background: #050505 !important; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <div>
+    <div class="cover-top">FOOTBALL EXPERIENCE · UX PROTOTYPE · v2.0</div>
+    <div class="cover-stripes">
+      <span style="background:#29c46b"></span>
+      <span style="background:#c8102e"></span>
+      <span style="background:#000;border:1px solid rgba(255,255,255,0.3)"></span>
+      <span style="background:#e6c275"></span>
+    </div>
+  </div>
+  <div>
+    <div class="cover-title">Football<br>Experience</div>
+    <div class="cover-sub">Rediseño del flujo de reserva centrado exclusivamente en partidos en el estadio. Flujo biométrico (Bepass) + handoff a anfitrión por WhatsApp. 13 pantallas de alta fidelidad — Rio de Janeiro · 2026.</div>
+  </div>
+  <div class="cover-bottom">
+    <span>MENOS PASOS · MÁS PASIÓN</span>
+    <span>PROTOTIPO IOS · 390 × 844</span>
+  </div>
+</section>
+
+<!-- One page per phone — captured live from the actual prototype -->
+<div id="pages"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="src/data.jsx"></script>
+<script type="text/babel" src="src/ui.jsx"></script>
+<script type="text/babel" src="src/screens-home.jsx"></script>
+<script type="text/babel" src="src/screens-flow.jsx"></script>
+<script type="text/babel" src="src/screens-extras.jsx"></script>
+<script type="text/babel" src="src/screens-extra2.jsx"></script>
+<script type="text/babel" src="src/screens-newflow.jsx"></script>
+
+<script type="text/babel">
+function PrintPages() {
+  const flowMatch = MATCHES[0];
+  const flowExp = EXPERIENCES[1];
+  const flowTeam = TEAMS[1];
+  const flowAttendees = [
+    { name:'Rafael Andrade', doc:'12.345.678-9' },
+    { name:'Camila Rocha', doc:'18.221.998-K' },
+  ];
+  const flowBooking = {
+    experience: flowExp, slot: '17:30', count: 2,
+    attendees: flowAttendees, method: 'apple', total: 290,
+    reservaId:'FE-A2X9C8'
+  };
+
+  const screens = [
+    { label:'01', title:'Elegir equipo', subtitle:'Punto de entrada — selección del club a seguir', node: <TeamSelectScreen onSelect={()=>{}} /> },
+    { label:'02', title:'Partidos del equipo', subtitle:'Calendario filtrable por competición', node: <TeamMatchesScreen teamId="fluminense" navigate={()=>{}} back={()=>{}} /> },
+    { label:'03', title:'Detalle del partido', subtitle:'Ficha · estadio · experiencias disponibles', node: <MatchDetailScreen match={flowMatch} navigate={()=>{}} back={()=>{}} /> },
+    { label:'04', title:'Experiencia · 1/5', subtitle:'Tribuna o palco · horario de embarque', node: <StepExperience booking={{ experience: flowExp, slot:'17:30' }} setBooking={()=>{}} next={()=>{}} back={()=>{}} match={flowMatch} /> },
+    { label:'05', title:'Asistentes · 2/5', subtitle:'Datos para registro nominativo', node: <StepAttendees booking={{ experience: flowExp, count:2, attendees: flowAttendees }} setBooking={()=>{}} next={()=>{}} back={()=>{}} match={flowMatch} /> },
+    { label:'06', title:'Resumen · 3/5', subtitle:'Precio referencial — se confirma por WhatsApp', node: <StepPayment booking={flowBooking} setBooking={()=>{}} next={()=>{}} back={()=>{}} match={flowMatch} /> },
+    { label:'07', title:'Registro biométrico · 4/5', subtitle:'Redirección a portal Bepass del equipo', node: <FacialOnboardingScreen team={flowTeam} next={()=>{}} back={()=>{}} /> },
+    { label:'08', title:'Confirmación · 5/5', subtitle:'Comprobante + envío a anfitrión', node: <StepConfirmationV2 booking={flowBooking} match={flowMatch} navigate={()=>{}} /> },
+    { label:'09', title:'WhatsApp · Anfitrión', subtitle:'Solicita documento usado en registro', node: <WhatsAppHandoffScreen booking={flowBooking} match={flowMatch} team={flowTeam} navigate={()=>{}} back={()=>{}} /> },
+    { label:'10', title:'Estado de embarque', subtitle:'Cuenta regresiva · punto de encuentro', node: <BoardingStatusScreen match={flowMatch} team={flowTeam} navigate={()=>{}} back={()=>{}} /> },
+    { label:'11', title:'Check-in facial', subtitle:'Acceso al estadio sin ticket físico', node: <FacialCheckinScreen match={flowMatch} team={flowTeam} back={()=>{}} /> },
+    { label:'12', title:'Mis embarques', subtitle:'Histórico de reservas', node: <ReservasScreen back={()=>{}} /> },
+    { label:'13', title:'Perfil', subtitle:'Cuenta · biometría · preferencias', node: <ProfileScreen back={()=>{}} /> },
+  ];
+
+  return (
+    <>
+      {screens.map((s, i) => (
+        <section key={i} className="page">
+          <div className="page-header">
+            <div>
+              <div style={{ fontFamily:'JetBrains Mono', fontSize:9, letterSpacing:'0.12em', color:'var(--ink-mute)', marginBottom:4 }}>
+                PANTALLA {s.label} / 13
+              </div>
+              <div className="page-title">{s.title}</div>
+              <div style={{ fontSize: 10, color:'var(--ink-dim)', marginTop: 4 }}>{s.subtitle}</div>
+            </div>
+            <div className="page-meta">
+              FOOTBALL EXPERIENCE<br/>
+              UX PROTOTYPE · v2.0
+            </div>
+          </div>
+          <div className="page-body">
+            <div className="phone-card">
+              <div className="phone-scaler">
+                <IOSDevice dark={true} width={390} height={844}>
+                  <div style={{ background:'#0A0A0A', height:'100%', overflow:'hidden', position:'relative', borderRadius: '47px' }}>
+                    <div style={{ height:'100%', overflow:'hidden', position:'relative' }}>{s.node}</div>
+                  </div>
+                </IOSDevice>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('pages')).render(<PrintPages />);
+
+// Auto-print after fonts + Babel + render settle
+(async () => {
+  try { await document.fonts.ready; } catch (e) {}
+  setTimeout(() => window.print(), 1200);
+})();
+</script>
+
+</body>
+</html>
