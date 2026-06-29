@@ -1,0 +1,429 @@
+{
+  "competencia": "Brasileirao Serie A",
+  "rodada": 19,
+  "rodadaTotal": 38,
+  "actualizadoEn": "2026-06-29T14:04:59.970Z",
+  "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
+  "equipos": [
+    {
+      "posicion": 1,
+      "equipo": "Palmeiras",
+      "sigla": "PAL",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
+      "puntos": 41,
+      "jugados": 18,
+      "ganados": 12,
+      "empatados": 5,
+      "perdidos": 1,
+      "golesFavor": 30,
+      "golesContra": 13,
+      "diferencia": 17,
+      "forma": [
+        "D",
+        "D",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 2,
+      "equipo": "Flamengo",
+      "sigla": "FLA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
+      "puntos": 34,
+      "jugados": 17,
+      "ganados": 10,
+      "empatados": 4,
+      "perdidos": 3,
+      "golesFavor": 31,
+      "golesContra": 16,
+      "diferencia": 15,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 3,
+      "equipo": "Fluminense",
+      "sigla": "FLU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
+      "puntos": 31,
+      "jugados": 18,
+      "ganados": 9,
+      "empatados": 4,
+      "perdidos": 5,
+      "golesFavor": 28,
+      "golesContra": 23,
+      "diferencia": 5,
+      "forma": [
+        "L",
+        "D",
+        "W",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 4,
+      "equipo": "Athletico-PR",
+      "sigla": "CAP",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
+      "puntos": 30,
+      "jugados": 18,
+      "ganados": 9,
+      "empatados": 3,
+      "perdidos": 6,
+      "golesFavor": 24,
+      "golesContra": 18,
+      "diferencia": 6,
+      "forma": [
+        "D",
+        "L",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 5,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 29,
+      "jugados": 18,
+      "ganados": 9,
+      "empatados": 2,
+      "perdidos": 7,
+      "golesFavor": 25,
+      "golesContra": 19,
+      "diferencia": 6,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 6,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 26,
+      "jugados": 17,
+      "ganados": 7,
+      "empatados": 5,
+      "perdidos": 5,
+      "golesFavor": 25,
+      "golesContra": 23,
+      "diferencia": 2,
+      "forma": [
+        "D",
+        "L",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 7,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 26,
+      "jugados": 18,
+      "ganados": 7,
+      "empatados": 5,
+      "perdidos": 6,
+      "golesFavor": 24,
+      "golesContra": 24,
+      "diferencia": 0,
+      "forma": [
+        "L",
+        "D",
+        "W",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "posicion": 8,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 25,
+      "jugados": 18,
+      "ganados": 7,
+      "empatados": 4,
+      "perdidos": 7,
+      "golesFavor": 23,
+      "golesContra": 20,
+      "diferencia": 3,
+      "forma": [
+        "D",
+        "L",
+        "L",
+        "D",
+        "L"
+      ]
+    },
+    {
+      "posicion": 9,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 24,
+      "jugados": 18,
+      "ganados": 7,
+      "empatados": 3,
+      "perdidos": 8,
+      "golesFavor": 22,
+      "golesContra": 23,
+      "diferencia": -1,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 24,
+      "jugados": 18,
+      "ganados": 6,
+      "empatados": 6,
+      "perdidos": 6,
+      "golesFavor": 18,
+      "golesContra": 19,
+      "diferencia": -1,
+      "forma": [
+        "L",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 11,
+      "equipo": "Cruzeiro",
+      "sigla": "CRU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+      "puntos": 24,
+      "jugados": 18,
+      "ganados": 6,
+      "empatados": 6,
+      "perdidos": 6,
+      "golesFavor": 24,
+      "golesContra": 28,
+      "diferencia": -4,
+      "forma": [
+        "L",
+        "W",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 12,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 22,
+      "jugados": 17,
+      "ganados": 6,
+      "empatados": 4,
+      "perdidos": 7,
+      "golesFavor": 31,
+      "golesContra": 31,
+      "diferencia": 0,
+      "forma": [
+        "L",
+        "D",
+        "W",
+        "D",
+        "L"
+      ]
+    },
+    {
+      "posicion": 13,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 22,
+      "jugados": 17,
+      "ganados": 6,
+      "empatados": 4,
+      "perdidos": 7,
+      "golesFavor": 21,
+      "golesContra": 25,
+      "diferencia": -4,
+      "forma": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "posicion": 14,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 21,
+      "jugados": 18,
+      "ganados": 5,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 21,
+      "golesContra": 22,
+      "diferencia": -1,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "posicion": 15,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "puntos": 21,
+      "jugados": 18,
+      "ganados": 5,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 26,
+      "golesContra": 29,
+      "diferencia": -3,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 16,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 21,
+      "jugados": 18,
+      "ganados": 5,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 20,
+      "golesContra": 23,
+      "diferencia": -3,
+      "forma": [
+        "D",
+        "L",
+        "D",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "posicion": 17,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 20,
+      "jugados": 18,
+      "ganados": 5,
+      "empatados": 5,
+      "perdidos": 8,
+      "golesFavor": 22,
+      "golesContra": 29,
+      "diferencia": -7,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "L"
+      ]
+    },
+    {
+      "posicion": 18,
+      "equipo": "Remo",
+      "sigla": "REM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
+      "puntos": 18,
+      "jugados": 18,
+      "ganados": 4,
+      "empatados": 6,
+      "perdidos": 8,
+      "golesFavor": 21,
+      "golesContra": 29,
+      "diferencia": -8,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 19,
+      "equipo": "Mirassol",
+      "sigla": "MIR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/08/20/mirassol-novo-svg-71690.svg",
+      "puntos": 16,
+      "jugados": 17,
+      "ganados": 4,
+      "empatados": 4,
+      "perdidos": 9,
+      "golesFavor": 18,
+      "golesContra": 24,
+      "diferencia": -6,
+      "forma": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "posicion": 20,
+      "equipo": "Chapecoense",
+      "sigla": "CHA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
+      "puntos": 9,
+      "jugados": 17,
+      "ganados": 1,
+      "empatados": 6,
+      "perdidos": 10,
+      "golesFavor": 17,
+      "golesContra": 33,
+      "diferencia": -16,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "L",
+        "L"
+      ]
+    }
+  ]
+}
