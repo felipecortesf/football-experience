@@ -10,7 +10,7 @@
 <style>
   *,*::before,*::after{ box-sizing:border-box; }
   :root{
-    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.42);
+    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.60);
     --line:rgba(244,244,240,.1); --line-2:rgba(244,244,240,.18); --card:#121215;
     --accent:#d11a2a; --green:#29c46b; --gold:#e8c275; --maxw:min(1280px, 92vw); --ease:cubic-bezier(.22,1,.36,1);
   }
@@ -32,7 +32,13 @@
   .nav-menu a{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-dim); }
   .nav-menu a:hover,.nav-menu a.on{ color:var(--ink); }
   .nav-right{ margin-left:auto; } .btn-buy{ background:var(--accent); color:#fff; padding:9px 16px; border-radius:8px; font-weight:700; font-size:13px; }
-  @media(max-width:920px){ .nav-menu{ display:none; } }
+  .nav-hamburger{ display:none; flex-direction:column; gap:5px; padding:8px; background:none; border:none; cursor:pointer; }
+  .nav-hamburger span{ display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; transition:transform .2s, opacity .2s; }
+  @media(max-width:920px){
+    .nav-menu{ display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(7,7,8,.97); border-bottom:1px solid var(--line); padding:16px 28px 20px; gap:14px; }
+    .nav-menu.open{ display:flex; }
+    .nav-hamburger{ display:flex; }
+  }
 
   /* HERO video */
   .hero{ position:relative; height:74vh; min-height:540px; overflow:hidden; border-bottom:1px solid var(--line); }
@@ -65,7 +71,7 @@
   .videos{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; }
   @media(max-width:900px){ .videos{ grid-template-columns:1fr 1fr; } }
   @media(max-width:560px){ .videos{ grid-template-columns:1fr; } }
-  .vid{ position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10; }
+  .vid{ position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10; padding:0; text-align:left; cursor:pointer; }
   .vid.big{ grid-row:span 2; aspect-ratio:auto; }
   .vid image-slot{ position:absolute; inset:0; width:100%; height:100%; }
   .vid .play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:3; width:54px; height:54px; border-radius:50%; background:rgba(255,255,255,.9); display:flex; align-items:center; justify-content:center; transition:transform .2s var(--ease); }
@@ -84,7 +90,7 @@
   /* blogs */
   .blogs{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
   @media(max-width:900px){ .blogs{ grid-template-columns:1fr; } }
-  .blog{ border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--card); display:flex; flex-direction:column; transition:transform .3s var(--ease), border-color .3s; }
+  .blog{ border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--card); display:flex; flex-direction:column; transition:transform .3s var(--ease), border-color .3s; text-decoration:none; color:inherit; }
   .blog:hover{ transform:translateY(-5px); border-color:var(--line-2); }
   .blog image-slot{ width:100%; height:190px; display:block; }
   .blog .bb{ padding:20px; flex:1; display:flex; flex-direction:column; }
@@ -161,9 +167,16 @@
   .lb .box .vb{ padding:20px; } .lb .box .vb h3{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; text-transform:uppercase; margin:0 0 6px; }
   .lb .box .vb p{ color:var(--ink-dim); font-size:14px; margin:0; }
   .lb .close{ position:absolute; top:20px; right:20px; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; }
+  /* skip link */
+  .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+  .skip-link:focus{ position:fixed; top:12px; left:50%; transform:translateX(-50%); width:auto; height:auto; overflow:visible; background:var(--accent); color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; font-size:14px; z-index:9999; text-decoration:none; }
+  /* focus visible */
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
 </style>
 </head>
 <body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
 <nav class="main">
   <div class="nav-in">
@@ -178,9 +191,20 @@
       <a href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
     </div>
     <div class="nav-right"><a class="btn-buy" href="inicio.html#partidos">Comprar entradas</a></div>
+    <button class="nav-hamburger" id="navHamburger" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<script>
+(function(){
+  var btn=document.getElementById('navHamburger');
+  var menu=document.querySelector('.nav-menu');
+  if(btn&&menu){ menu.id='navMenu'; btn.addEventListener('click',function(){ var open=menu.classList.toggle('open'); btn.setAttribute('aria-expanded',open); }); }
+})();
+</script>
 
+<main id="contenido-principal">
 <!-- HERO -->
 <header class="hero">
   <image-slot id="exp-hero" placeholder="Video/foto: hincha llegando al estadio" src="assets/experiencia/hinchas.jpg" fit="cover"></image-slot>
@@ -253,10 +277,11 @@
     <h2 class="display">Vive tu propia historia</h2>
     <p>Elige tu partido en el Maracanã y súmate a miles de hinchas que ya lo vivieron.</p>
     <a href="inicio.html#partidos">Comprar entradas
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
 </div>
+</main>
 
 <footer>
   <div class="wrap foot foot2">
@@ -289,11 +314,11 @@
     <div class="foot-col">
       <div class="foot-h">Contacto</div>
       <a class="foot-contact" href="mailto:riolatintour@gmail.com">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="foot-contact-text"><b>riolatintour@gmail.com</b><small>Consultas y reservas</small></span>
       </a>
       <a class="foot-contact" href="https://wa.me/5521999990000" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
         <span class="foot-contact-text"><b>+56 9 7109 2149</b><small>WhatsApp directo</small></span>
       </a>
     </div>
@@ -305,10 +330,10 @@
 </footer>
 
 <!-- LIGHTBOX -->
-<div class="lb" id="lb">
-  <button class="close" id="lbClose"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <button class="close" id="lbClose" aria-label="Cerrar video"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
   <div class="box">
-    <div class="vh"><svg width="44" height="44" viewBox="0 0 24 24" fill="rgba(255,255,255,.5)"><path d="M8 5v14l11-7z"/></svg><span id="lbName">Reproductor de video</span><span style="font-size:11px;opacity:.6">(demo · conecta tu video real aquí)</span></div>
+    <div class="vh"><svg width="44" height="44" viewBox="0 0 24 24" fill="rgba(255,255,255,.5)" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span id="lbName">Reproductor de video</span><span style="font-size:11px;opacity:.6">(demo · conecta tu video real aquí)</span></div>
     <div class="vb"><h3 id="lbTitle">Video</h3><p>Espacio para tu video. En producción, aquí se incrusta el clip real (YouTube/Vimeo o archivo).</p></div>
   </div>
 </div>
@@ -1203,6 +1228,7 @@ window.MRC = (function () {
         };
       }
       this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
+      this._img.alt = this.getAttribute('placeholder') || '';
       // Toggle via style.display — the [hidden] attribute alone loses to
       // the display:flex / display:block rules in the stylesheet above.
       if (url) {
@@ -1291,7 +1317,7 @@ window.MRC = (function () {
       <div class="mrc-chips" id="mrcChips"></div>
       <div class="mrc-chat-foot">
         <a href="${waHref()}" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
           Hablar con un anfitrión por WhatsApp
         </a>
       </div>
@@ -1356,7 +1382,7 @@ window.MRC = (function () {
     {n:'03',t:'Transporte + anfitrión',x:'Te recogemos y un host te acompaña ida y vuelta.',i:'<rect x="4" y="4" width="16" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M4 11h16M7 21v-2M17 21v-2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>'},
     {n:'04',t:'Vives el Maracanã',x:'Acceso prioritario y tu lugar listo para el gol.',i:'<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8 6.8 19.2l1-5.8L3.5 9.2l5.9-.9z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>'},
   ];
-  document.getElementById('steps').innerHTML=STEPS.map(s=>`<div class="step"><div class="en">PASO ${s.n}</div><div class="eic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none">${s.i}</svg></div><h4>${s.t}</h4><p>${s.x}</p></div>`).join('');
+  document.getElementById('steps').innerHTML=STEPS.map(s=>`<div class="step"><div class="en">PASO ${s.n}</div><div class="eic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">${s.i}</svg></div><h4>${s.t}</h4><p>${s.x}</p></div>`).join('');
 
   const VIDS=[
     {id:'v1',big:true,t:'Una noche en la Norte',d:'3:24 · Flamengo x Racing'},
@@ -1366,11 +1392,11 @@ window.MRC = (function () {
     {id:'v5',t:'Reacción al gol',d:'0:32'},
   ];
   document.getElementById('videos').innerHTML=VIDS.map(v=>`
-    <div class="vid ${v.big?'big':''}" data-video="${v.t}">
-      <image-slot id="${v.id}" placeholder="Portada de video" fit="cover"></image-slot>
-      <div class="play"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0a0a"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta"><div class="vt">${v.t}</div><div class="vd">${v.d}</div></div>
-    </div>`).join('');
+    <button class="vid ${v.big?'big':''}" data-video="${v.t}" aria-label="Reproducir: ${v.t}">
+      <image-slot id="${v.id}" placeholder="Portada de video: ${v.t}" fit="cover"></image-slot>
+      <div class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0a0a" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="meta" aria-hidden="true"><div class="vt">${v.t}</div><div class="vd">${v.d}</div></div>
+    </button>`).join('');
 
   const BLOGS=[
     {id:'b1',tag:'GUÍA',t:'Cómo llegar al Maracanã sin estrés',x:'Todo lo que necesitas saber sobre accesos, horarios y el mejor momento para llegar.',m:'5 min de lectura'},
@@ -1378,11 +1404,11 @@ window.MRC = (function () {
     {id:'b3',tag:'EXPERIENCIA',t:'Qué llevar a tu primer partido',x:'Consejos de hinchas veteranos para vivir el estadio al máximo.',m:'4 min de lectura'},
   ];
   document.getElementById('blogs').innerHTML=BLOGS.map(b=>`
-    <article class="blog">
-      <image-slot id="${b.id}" placeholder="Portada del artículo" fit="cover"></image-slot>
-      <div class="bb"><div class="btag">${b.tag}</div><div class="bt">${b.t}</div><div class="bx">${b.x}</div>
-      <div class="bm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> ${b.m} <span class="read">Leer →</span></div></div>
-    </article>`).join('');
+    <a class="blog" href="#" aria-label="Leer artículo: ${b.t}">
+      <image-slot id="${b.id}" placeholder="Portada: ${b.t}" fit="cover"></image-slot>
+      <div class="bb"><div class="btag" aria-hidden="true">${b.tag}</div><div class="bt">${b.t}</div><div class="bx">${b.x}</div>
+      <div class="bm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> ${b.m} <span class="read" aria-hidden="true">Leer →</span></div></div>
+    </a>`).join('');
 
   // equipo de guías (Rio Latin Tour LTDA)
   const GUIDES=[
@@ -1399,10 +1425,23 @@ window.MRC = (function () {
 
   // lightbox
   const lb=document.getElementById('lb');
-  function openLb(name){ document.getElementById('lbName').textContent=name; document.getElementById('lbTitle').textContent=name; lb.classList.add('open'); }
-  document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',()=>openLb(b.dataset.video)));
-  document.getElementById('lbClose').addEventListener('click',()=>lb.classList.remove('open'));
-  lb.addEventListener('click',(e)=>{ if(e.target===lb) lb.classList.remove('open'); });
+  const lbClose=document.getElementById('lbClose');
+  let _lbTrigger=null;
+  function openLb(trigger,name){
+    _lbTrigger=trigger;
+    document.getElementById('lbName').textContent=name;
+    document.getElementById('lbTitle').textContent=name;
+    lb.classList.add('open');
+    lbClose.focus();
+  }
+  function closeLb(){
+    lb.classList.remove('open');
+    if(_lbTrigger){ _lbTrigger.focus(); _lbTrigger=null; }
+  }
+  document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',()=>openLb(b,b.dataset.video)));
+  lbClose.addEventListener('click',closeLb);
+  lb.addEventListener('click',(e)=>{ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape' && lb.classList.contains('open')) closeLb(); });
 })();
 </script>
 </body>

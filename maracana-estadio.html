@@ -10,7 +10,7 @@
 <style>
   *,*::before,*::after{ box-sizing:border-box; }
   :root{
-    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.42);
+    --bg:#070708; --ink:#F4F4F0; --ink-dim:rgba(244,244,240,.66); --ink-mute:rgba(244,244,240,.60);
     --line:rgba(244,244,240,.1); --line-2:rgba(244,244,240,.18); --card:#121215;
     --accent:#d11a2a; --gold:#e8c275; --maxw:min(1280px, 92vw); --ease:cubic-bezier(.22,1,.36,1);
   }
@@ -32,7 +32,13 @@
   .nav-menu a{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-dim); }
   .nav-menu a:hover,.nav-menu a.on{ color:var(--ink); }
   .nav-right{ margin-left:auto; } .btn-buy{ background:var(--accent); color:#fff; padding:9px 16px; border-radius:8px; font-weight:700; font-size:13px; }
-  @media(max-width:920px){ .nav-menu{ display:none; } }
+  .nav-hamburger{ display:none; flex-direction:column; gap:5px; padding:8px; background:none; border:none; cursor:pointer; }
+  .nav-hamburger span{ display:block; width:22px; height:2px; background:var(--ink); border-radius:2px; }
+  @media(max-width:920px){
+    .nav-menu{ display:none; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:rgba(7,7,8,.97); border-bottom:1px solid var(--line); padding:16px 28px 20px; gap:14px; }
+    .nav-menu.open{ display:flex; }
+    .nav-hamburger{ display:flex; }
+  }
 
   /* HERO */
   .hero{ position:relative; height:72vh; min-height:520px; overflow:hidden; border-bottom:1px solid var(--line); }
@@ -109,9 +115,15 @@
   .foot-legal .legal-l{ font-size:10.5px; color:var(--ink-mute); line-height:1.6; }
   @media(max-width:900px){ .foot2{ grid-template-columns:1fr 1fr; padding:36px 28px; } }
   @media(max-width:560px){ .foot2{ grid-template-columns:1fr; padding:30px 22px; gap:28px; } .foot-legal{ flex-direction:column; align-items:flex-start; } }
+  /* skip link */
+  .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+  .skip-link:focus{ position:fixed; top:12px; left:50%; transform:translateX(-50%); width:auto; height:auto; overflow:visible; background:var(--accent); color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; font-size:14px; z-index:9999; text-decoration:none; }
+  /* focus visible */
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
 </style>
 </head>
 <body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
 <nav class="main">
   <div class="nav-in">
@@ -126,9 +138,20 @@
       <a href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
     </div>
     <div class="nav-right"><a class="btn-buy" href="inicio.html#partidos">Comprar entradas</a></div>
+    <button class="nav-hamburger" id="navHamburger" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<script>
+(function(){
+  var btn=document.getElementById('navHamburger');
+  var menu=document.querySelector('.nav-menu');
+  if(btn&&menu){ menu.id='navMenu'; btn.addEventListener('click',function(){ var open=menu.classList.toggle('open'); btn.setAttribute('aria-expanded',open); }); }
+})();
+</script>
 
+<main id="contenido-principal">
 <!-- HERO -->
 <header class="hero">
   <image-slot id="mrc-hero" placeholder="Foto aérea del Maracanã lleno" src="assets/experiencia/hero-maracana.png" fit="cover"></image-slot>
@@ -207,10 +230,11 @@
     <h2 class="display">Tu lugar en el templo</h2>
     <p>Elige tu partido y tu sector en el mapa del Maracanã. Acceso facial, transporte y anfitrión incluidos.</p>
     <a href="inicio.html#partidos">Comprar entradas
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
 </div>
+</main>
 
 <footer>
   <div class="wrap foot foot2">
@@ -243,11 +267,11 @@
     <div class="foot-col">
       <div class="foot-h">Contacto</div>
       <a class="foot-contact" href="mailto:riolatintour@gmail.com">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="foot-contact-text"><b>riolatintour@gmail.com</b><small>Consultas y reservas</small></span>
       </a>
       <a class="foot-contact" href="https://wa.me/5521999990000" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
         <span class="foot-contact-text"><b>+56 9 7109 2149</b><small>WhatsApp directo</small></span>
       </a>
     </div>
@@ -1148,6 +1172,7 @@ window.MRC = (function () {
         };
       }
       this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
+      this._img.alt = this.getAttribute('placeholder') || '';
       // Toggle via style.display — the [hidden] attribute alone loses to
       // the display:flex / display:block rules in the stylesheet above.
       if (url) {
@@ -1236,7 +1261,7 @@ window.MRC = (function () {
       <div class="mrc-chips" id="mrcChips"></div>
       <div class="mrc-chat-foot">
         <a href="${waHref()}" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
           Hablar con un anfitrión por WhatsApp
         </a>
       </div>
