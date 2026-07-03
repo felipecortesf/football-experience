@@ -174,7 +174,6 @@
     <div class="nav-menu">
       <a href="inicio.html">Inicio</a>
       <a href="equipo.html?team=flamengo">Equipos</a>
-      <a href="maracana-estadio.html">Maracanã</a>
       <a href="experiencia.html" class="on">Experiencia</a>
       <a href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
     </div>
@@ -245,18 +244,6 @@
       <div class="sub">Conoce a las personas que te van a recibir, acompañar y guiar en el Maracanã.</div></div>
     <div class="guides" id="guides"></div>
     <div class="guides-agency">Football Experience es operado por <b>Rio Latin Tour LTDA</b> · CNPJ 32.259.468/0001-91</div>
-  </div>
-</section>
-
-<!-- RESEÑAS -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-h"><div><div class="eyebrow">Lo que dicen los hinchas</div><h2 class="display">Reseñas</h2></div></div>
-    <div class="rev-head">
-      <div class="rev-score"><span class="big">4.9</span><span class="of">/ 5 · 2.847 reseñas</span></div>
-      <div class="rev-bars" id="revBars"></div>
-    </div>
-    <div class="reviews" id="reviews"></div>
   </div>
 </section>
 
@@ -1397,10 +1384,6 @@ window.MRC = (function () {
       <div class="bm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> ${b.m} <span class="read">Leer →</span></div></div>
     </article>`).join('');
 
-  // review bars
-  const BARS=[['5★',86],['4★',10],['3★',3],['2★',1],['1★',0]];
-  document.getElementById('revBars').innerHTML=BARS.map(([l,p])=>`<div class="rev-bar"><span style="width:24px">${l}</span><div class="track"><div class="fill" style="width:${p}%"></div></div><span style="width:34px;text-align:right">${p}%</span></div>`).join('');
-
   // equipo de guías (Rio Latin Tour LTDA)
   const GUIDES=[
     {n:'Jose y Kary',r:'Anfitriones · Embarque y bienvenida',b:'Reciben a los hinchas, coordinan el punto de encuentro y acompañan el embarque ida y vuelta.',photo:'assets/guias/joseykary.jpg'},
@@ -1413,19 +1396,6 @@ window.MRC = (function () {
       <div class="gph"><image-slot id="guide-${i}" placeholder="Foto" src="${g.photo}" fit="cover" shape="circle"></image-slot></div>
       <div class="gn">${g.n}</div><div class="gr">${g.r}</div><div class="gb">${g.b}</div>
     </div>`).join('');
-
-  const REVS=[
-    {n:'Mariana R.',e:'Galería · Flamengo x Palmeiras',t:'Tres toques en la app y ya estaba en la Norte. El acceso facial fue instantáneo, sin filas.',s:5,c:'#d11a2a'},
-    {n:'Lucas A.',e:'Tribuna · Fluminense x Internacional',t:'El anfitrión me esperaba en el punto de embarque. Llegué al Maracanã como un VIP.',s:5,c:'#0e5c2f',photo:'assets/testimonios/testimonio-foto1.png'},
-    {n:'Patrícia V.',e:'Palco · Botafogo x São Paulo',t:'Viajé sola y me sentí 100% segura. El transporte y el host hicieron toda la diferencia.',s:5,c:'#111',photo:'assets/testimonios/testimonio-foto2.png'},
-    {n:'Diego M.',e:'Galería · Flamengo x Racing',t:'Sin ticket de papel, sin estrés. Mi cara fue mi entrada. Brutal la experiencia.',s:5,c:'#d11a2a',photo:'assets/testimonios/testimonio-foto3.jpg'},
-    {n:'André L.',e:'Tribuna · Botafogo x U. de Chile',t:'Glorioso! La logística fue perfecta de principio a fin. Repito sin dudarlo.',s:5,c:'#111'},
-    {n:'Camila S.',e:'Norte · Fluminense x LDU',t:'El ambiente del Maracanã + la comodidad de FE = la mejor forma de ver fútbol.',s:5,c:'#0e5c2f'},
-  ];
-  const star=(k,c)=>{let s='';for(let j=0;j<5;j++)s+=`<svg width="14" height="14" viewBox="0 0 24 24" fill="${j<k?'#e8c275':'rgba(255,255,255,.15)'}"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>`;return s;};
-  document.getElementById('reviews').innerHTML=REVS.map(r=>`
-    <div class="rev"><div class="stars">${star(r.s)}</div><div class="q">“${r.t}”</div>
-    <div class="who">${r.photo?`<div class="av" style="background-image:url('${r.photo}');background-size:cover;background-position:center"></div>`:`<div class="av" style="background:linear-gradient(135deg,${r.c},#111)">${r.n[0]}</div>`}<div><div class="n">${r.n}</div><div class="e">${r.e}</div></div></div></div>`).join('');
 
   // lightbox
   const lb=document.getElementById('lb');
