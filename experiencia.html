@@ -24,10 +24,7 @@
 
   nav.main{ position:sticky; top:0; z-index:100; background:rgba(7,7,8,.9); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
   .nav-in{ max-width:var(--maxw); margin:0 auto; padding:13px 28px; display:flex; align-items:center; gap:30px; }
-  .brand{ display:flex; align-items:center; gap:11px; }
-  .brand .stripes{ display:flex; gap:3px; } .brand .stripes span{ width:4px; height:24px; border-radius:1px; }
-  .brand b{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:18px; text-transform:uppercase; line-height:.92; }
-  .brand small{ display:block; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:.2em; color:var(--ink-mute); font-style:normal; }
+  .brand{ display:flex; align-items:center; }
   .nav-menu{ display:flex; gap:24px; }
   .nav-menu a{ font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; text-transform:uppercase; letter-spacing:.03em; color:var(--ink-dim); }
   .nav-menu a:hover,.nav-menu a.on{ color:var(--ink); }
@@ -67,25 +64,49 @@
   .step h4{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:21px; text-transform:uppercase; margin:0; }
   .step p{ font-size:13px; color:var(--ink-dim); line-height:1.5; margin:8px 0 0; }
 
-  /* video grid */
-  .videos{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:16px; }
-  @media(max-width:900px){ .videos{ grid-template-columns:1fr 1fr; } }
-  @media(max-width:560px){ .videos{ grid-template-columns:1fr; } }
-  .vid{ position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10; padding:0; text-align:left; cursor:pointer; }
-  .vid.big{ grid-row:span 2; aspect-ratio:auto; }
-  .vid image-slot{ position:absolute; inset:0; width:100%; height:100%; }
-  .vid .play{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:3; width:54px; height:54px; border-radius:50%; background:rgba(255,255,255,.9); display:flex; align-items:center; justify-content:center; transition:transform .2s var(--ease); }
-  .vid:hover .play{ transform:translate(-50%,-50%) scale(1.1); }
-  .vid .meta{ position:absolute; left:0; right:0; bottom:0; z-index:3; padding:16px; background:linear-gradient(to top, rgba(0,0,0,.85), transparent); pointer-events:none; }
-  .vid .meta .vt{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:20px; text-transform:uppercase; line-height:1; }
-  .vid .meta .vd{ font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--ink-dim); margin-top:5px; letter-spacing:.08em; }
+  /* video slider */
+  .vslider{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:14px; cursor:grab; user-select:none; }
+  .vslider:active{ cursor:grabbing; }
+  .vslider::-webkit-scrollbar{ height:4px; }
+  .vslider::-webkit-scrollbar-track{ background:rgba(255,255,255,.05); border-radius:2px; }
+  .vslider::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.22); border-radius:2px; }
+  .vcard{ flex:none; scroll-snap-align:start; position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); cursor:pointer; background:#0a0a0c; width:260px; }
+  .vcard.big{ width:380px; }
+  .vcard video{ width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+  .vcard .vthumb{ width:100%; aspect-ratio:9/16; display:block; }
+  .vcard.big .vthumb{ aspect-ratio:16/10; }
+  .vcard .vplay{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,.92); display:flex; align-items:center; justify-content:center; transition:transform .2s; pointer-events:none; }
+  .vcard:hover .vplay{ transform:translate(-50%,-50%) scale(1.1); }
+  .vcard .vmeta{ position:absolute; left:0; right:0; bottom:0; padding:14px 16px; background:linear-gradient(to top,rgba(0,0,0,.9),transparent); pointer-events:none; }
+  .vcard .vtitle{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:16px; text-transform:uppercase; line-height:1.1; color:#fff; }
+  .vcard.big .vtitle{ font-size:22px; }
+  .vcard .vbadge{ display:inline-block; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.12em; color:var(--accent); border:1px solid var(--accent); border-radius:4px; padding:2px 7px; margin-bottom:6px; }
 
-  /* photo masonry */
-  .photos{ display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:170px; gap:12px; }
-  @media(max-width:760px){ .photos{ grid-template-columns:repeat(2,1fr); } }
-  .ph{ border-radius:14px; overflow:hidden; border:1px solid var(--line); }
-  .ph image-slot{ width:100%; height:100%; display:block; }
-  .ph.tall{ grid-row:span 2; } .ph.wide{ grid-column:span 2; }
+  /* photo slider */
+  .pslider{ display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:14px; cursor:grab; user-select:none; }
+  .pslider:active{ cursor:grabbing; }
+  .pslider::-webkit-scrollbar{ height:4px; }
+  .pslider::-webkit-scrollbar-track{ background:rgba(255,255,255,.05); border-radius:2px; }
+  .pslider::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.22); border-radius:2px; }
+  .pcard{ flex:none; scroll-snap-align:start; border-radius:14px; overflow:hidden; border:1px solid var(--line); cursor:pointer; background:#0a0a0c; width:240px; aspect-ratio:3/4; position:relative; }
+  .pcard.wide{ width:340px; aspect-ratio:4/3; }
+  .pcard img{ width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; transition:transform .3s; }
+  .pcard:hover img{ transform:scale(1.04); }
+  .pcard .pover{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0); transition:background .2s; }
+  .pcard:hover .pover{ background:rgba(0,0,0,.18); }
+  .pcard .pover svg{ opacity:0; transform:scale(.8); transition:opacity .2s, transform .2s; }
+  .pcard:hover .pover svg{ opacity:1; transform:scale(1); }
+  /* photo lightbox */
+  .plb{ position:fixed; inset:0; z-index:800; background:#000; display:none; align-items:center; justify-content:center; }
+  .plb.open{ display:flex; }
+  .plb img{ max-width:100vw; max-height:100vh; object-fit:contain; }
+  .plb-close{ position:fixed; top:16px; right:16px; z-index:900; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#fff; transition:background .2s; }
+  .plb-close:hover{ background:rgba(255,255,255,.3); }
+  .plb-arr{ position:fixed; top:50%; transform:translateY(-50%); z-index:900; width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#fff; transition:background .2s; }
+  .plb-arr:hover{ background:rgba(255,255,255,.3); }
+  .plb-arr.prev{ left:14px; }
+  .plb-arr.next{ right:14px; }
+  .plb-ctr{ position:fixed; bottom:20px; left:50%; transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:12px; color:rgba(255,255,255,.6); letter-spacing:.1em; }
 
   /* blogs */
   .blogs{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
@@ -159,14 +180,17 @@
   @media(max-width:900px){ .foot2{ grid-template-columns:1fr 1fr; padding:36px 28px; } }
   @media(max-width:560px){ .foot2{ grid-template-columns:1fr; padding:30px 22px; gap:28px; } .foot-legal{ flex-direction:column; align-items:flex-start; } }
 
-  /* lightbox */
-  .lb{ position:fixed; inset:0; z-index:600; background:rgba(0,0,0,.85); backdrop-filter:blur(8px); display:none; align-items:center; justify-content:center; padding:30px; }
-  .lb.open{ display:flex; }
-  .lb .box{ max-width:760px; width:100%; background:var(--card); border:1px solid var(--line-2); border-radius:18px; overflow:hidden; }
-  .lb .box .vh{ aspect-ratio:16/9; background:#000; display:flex; align-items:center; justify-content:center; color:var(--ink-mute); font-family:'JetBrains Mono',monospace; font-size:13px; flex-direction:column; gap:10px; }
-  .lb .box .vb{ padding:20px; } .lb .box .vb h3{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; text-transform:uppercase; margin:0 0 6px; }
-  .lb .box .vb p{ color:var(--ink-dim); font-size:14px; margin:0; }
-  .lb .close{ position:absolute; top:20px; right:20px; width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; }
+  /* video lightbox fullscreen */
+  .vlb{ position:fixed; inset:0; z-index:800; background:#000; display:none; align-items:center; justify-content:center; }
+  .vlb.open{ display:flex; }
+  .vlb video{ max-width:100vw; max-height:100vh; width:100%; height:100%; object-fit:contain; }
+  .vlb-close{ position:fixed; top:16px; right:16px; z-index:900; width:46px; height:46px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#fff; transition:background .2s; }
+  .vlb-close:hover{ background:rgba(255,255,255,.3); }
+  .vlb-arr{ position:fixed; top:50%; transform:translateY(-50%); z-index:900; width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,.15); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:#fff; transition:background .2s; }
+  .vlb-arr:hover{ background:rgba(255,255,255,.3); }
+  .vlb-arr.prev{ left:14px; }
+  .vlb-arr.next{ right:14px; }
+  .vlb-bar{ position:fixed; bottom:0; left:0; right:0; padding:20px 80px; background:linear-gradient(to top,rgba(0,0,0,.75),transparent); font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:20px; text-transform:uppercase; color:#fff; letter-spacing:.04em; text-align:center; pointer-events:none; }
   /* skip link */
   .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
   .skip-link:focus{ position:fixed; top:12px; left:50%; transform:translateX(-50%); width:auto; height:auto; overflow:visible; background:var(--accent); color:#fff; padding:10px 20px; border-radius:8px; font-weight:700; font-size:14px; z-index:9999; text-decoration:none; }
@@ -181,13 +205,16 @@
 <nav class="main">
   <div class="nav-in">
     <a class="brand" href="inicio.html">
-      <span class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></span>
-      <b>Football<br>Experience<small>MARACANÃ · RIO</small></b>
+      <img src="assets/logo.jpeg" alt="Football Experience" style="height:72px;width:auto;display:block;">
     </a>
     <div class="nav-menu">
       <a href="inicio.html">Inicio</a>
       <a href="equipo.html?team=flamengo">Equipos</a>
       <a href="experiencia.html" class="on">Experiencia</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="preguntas-frecuentes.html">FAQ</a>
+      <a href="registro-facial.html">Registro Facial</a>
+      <a href="https://riolatintour.com" target="_blank" rel="noopener">Rio Latin Tour</a>
       <a href="https://wa.me/5521999990000" target="_blank" rel="noopener">Contacto</a>
     </div>
     <div class="nav-right"><a class="btn-buy" href="inicio.html#partidos">Comprar entradas</a></div>
@@ -226,36 +253,31 @@
 <!-- VIDEOS -->
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="sec-h"><div><div class="eyebrow">Mira la experiencia</div><h2 class="display">Videos</h2></div>
-      <div class="sub">Arrastra tus clips como portada. Cada tarjeta abre el reproductor.</div></div>
-    <div class="videos" id="videos"></div>
+    <div class="sec-h"><div><div class="eyebrow">Mira la experiencia</div><h2 class="display">Videos</h2></div></div>
+  </div>
+  <div style="padding:0 clamp(16px,4vw,48px)">
+    <div class="vslider" id="vslider"></div>
   </div>
 </section>
 
 <!-- FOTOS -->
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="sec-h"><div><div class="eyebrow">Galería de hinchas</div><h2 class="display">Fotos</h2></div></div>
-    <div class="photos">
-      <div class="ph tall"><image-slot id="p1" placeholder="Hincha con bufanda" src="assets/experiencia/hinchas.jpg" fit="cover"></image-slot></div>
-      <div class="ph"><image-slot id="p2" placeholder="Grupo en la tribuna" src="assets/experiencia/grupo-hinchas-guia.jpg" fit="cover"></image-slot></div>
-      <div class="ph"><image-slot id="p3" placeholder="Bus FE" fit="cover"></image-slot></div>
-      <div class="ph wide"><image-slot id="p4" placeholder="Panorámica del campo" src="assets/experiencia/panoramica.png" fit="cover"></image-slot></div>
-      <div class="ph"><image-slot id="p5" placeholder="Anfitrión y hinchas" src="assets/experiencia/grupo-hinchas-guia.jpg" fit="cover"></image-slot></div>
-      <div class="ph"><image-slot id="p6" placeholder="Celebración de gol" src="assets/experiencia/celebracion-gol.jpg" fit="cover"></image-slot></div>
-      <div class="ph wide"><image-slot id="p7" placeholder="Atardecer en el Maracanã" src="assets/experiencia/maracana-noche.jpg" fit="cover"></image-slot></div>
-    </div>
+    <div class="sec-h"><div><div class="eyebrow">Galería de hinchas</div><h2 class="display">La Hinchada</h2></div></div>
+  </div>
+  <div style="padding:0 clamp(16px,4vw,48px)">
+    <div class="pslider" id="pslider"></div>
   </div>
 </section>
 
-<!-- BLOGS -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-h"><div><div class="eyebrow">Historias & guías</div><h2 class="display">Blog</h2></div>
-      <a class="see-all mono" style="color:var(--ink-dim);font-size:13px" href="#">Ver todo →</a></div>
-    <div class="blogs" id="blogs"></div>
-  </div>
-</section>
+<!-- PHOTO LIGHTBOX -->
+<div class="plb" id="plb" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+  <button class="plb-close" id="plbClose" aria-label="Cerrar foto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  <button class="plb-arr prev" id="plbPrev" aria-label="Foto anterior"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <img id="plbImg" src="" alt="Foto de la experiencia">
+  <button class="plb-arr next" id="plbNext" aria-label="Foto siguiente"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="plb-ctr" id="plbCtr"></div>
+</div>
 
 <!-- NUESTRO EQUIPO DE GUÍAS -->
 <section style="padding-top:0">
@@ -264,6 +286,15 @@
       <div class="sub">Conoce a las personas que te van a recibir, acompañar y guiar en el Maracanã.</div></div>
     <div class="guides" id="guides"></div>
     <div class="guides-agency">Football Experience es operado por <b>Rio Latin Tour LTDA</b> · CNPJ 32.259.468/0001-91</div>
+  </div>
+</section>
+
+<!-- NOTICIAS -->
+<section id="noticias" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><div><div class="eyebrow">Noticias</div><h2 class="display">Noticias</h2></div>
+      <a class="see-all mono" style="color:var(--ink-dim);font-size:13px" href="#">Ver todo →</a></div>
+    <div class="blogs" id="blogs"></div>
   </div>
 </section>
 
@@ -283,9 +314,8 @@
   <div class="wrap foot foot2">
     <div class="foot-col">
       <a class="brand" href="inicio.html">
-        <span class="stripes"><span style="background:#d11a2a"></span><span style="background:#0e5c2f"></span><span style="background:#fff"></span></span>
-        <b>Football<br>Experience<small>MARACANÃ · RIO</small></b>
-      </a>
+      <img src="assets/logo.jpeg" alt="Football Experience" style="height:72px;width:auto;display:block;">
+    </a>
       <p class="foot-desc">Tu acceso oficial a partidos de Flamengo, Fluminense, Botafogo y Vasco da Gama en el Maracanã. Reservas 100% por WhatsApp: depósito del 50% ahora y el resto el día del partido.</p>
       <a class="foot-social" href="https://wa.me/5521999990000" target="_blank" rel="noopener" aria-label="WhatsApp">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.1-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4M12 2a10 10 0 00-8.6 15l-1 3.6 3.7-1A10 10 0 1012 2z"/></svg>
@@ -325,13 +355,13 @@
   </div>
 </footer>
 
-<!-- LIGHTBOX -->
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
-  <button class="close" id="lbClose" aria-label="Cerrar video"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
-  <div class="box">
-    <div class="vh"><svg width="44" height="44" viewBox="0 0 24 24" fill="rgba(255,255,255,.5)" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span id="lbName">Reproductor de video</span><span style="font-size:11px;opacity:.6">(demo · conecta tu video real aquí)</span></div>
-    <div class="vb"><h3 id="lbTitle">Video</h3><p>Espacio para tu video. En producción, aquí se incrusta el clip real (YouTube/Vimeo o archivo).</p></div>
-  </div>
+<!-- VIDEO LIGHTBOX -->
+<div class="vlb" id="vlb" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+  <button class="vlb-close" id="vlbClose" aria-label="Cerrar video"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+  <button class="vlb-arr prev" id="vlbPrev" aria-label="Video anterior"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <video id="vlbVideo" controls playsinline></video>
+  <button class="vlb-arr next" id="vlbNext" aria-label="Video siguiente"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="vlb-bar" id="vlbBar"></div>
 </div>
 
 <script>
@@ -1281,18 +1311,32 @@ window.MRC = (function () {
   document.getElementById('steps').innerHTML=STEPS.map(s=>`<div class="step"><div class="en">PASO ${s.n}</div><div class="eic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">${s.i}</svg></div><h4>${s.t}</h4><p>${s.x}</p></div>`).join('');
 
   const VIDS=[
-    {id:'v1',big:true,t:'Una noche en la Norte',d:'3:24 · Flamengo x Racing'},
-    {id:'v2',t:'El embarque',d:'1:10'},
-    {id:'v3',t:'Acceso facial',d:'0:48'},
-    {id:'v4',t:'Detrás de escena',d:'2:05'},
-    {id:'v5',t:'Reacción al gol',d:'0:32'},
+    {src:'assets/videos/videoprincipal.MP4',    t:'La Experiencia Football Experience', big:true, badge:'PRINCIPAL'},
+    {src:'assets/videos/ambiente_interior.MOV', t:'Ambiente en el Maracanã'},
+    {src:'assets/videos/inicio_partido.MOV',    t:'Inicio del Partido'},
+    {src:'assets/videos/hinchada_flamengo.MOV', t:'Hinchada Flamengo'},
+    {src:'assets/videos/hinchada_fluminense.mov',t:'Hinchada Fluminense'},
+    {src:'assets/videos/hinchada_botafogo.MOV', t:'Hinchada Botafogo'},
+    {src:'assets/videos/pantalla_jugadores.mov',t:'Pantalla de Jugadores'},
+    {src:'assets/videos/testimonio1.MOV',       t:'Testimonio 1'},
+    {src:'assets/videos/testimonio2.MOV',       t:'Testimonio 2'},
+    {src:'assets/videos/testimonio3.mov',       t:'Testimonio 3'},
+    {src:'assets/videos/testimonio4.MP4',       t:'Testimonio 4'},
+    {src:'assets/videos/testimonio_ingles.MOV', t:'Testimonio en Inglés'},
   ];
-  document.getElementById('videos').innerHTML=VIDS.map(v=>`
-    <button class="vid ${v.big?'big':''}" data-video="${v.t}" aria-label="Reproducir: ${v.t}">
-      <image-slot id="${v.id}" placeholder="Portada de video: ${v.t}" fit="cover"></image-slot>
-      <div class="play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0a0a" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></div>
-      <div class="meta" aria-hidden="true"><div class="vt">${v.t}</div><div class="vd">${v.d}</div></div>
+  const sliderEl=document.getElementById('vslider');
+  sliderEl.innerHTML=VIDS.map((v,i)=>`
+    <button class="vcard${v.big?' big':''}" data-vidx="${i}" aria-label="Reproducir: ${v.t}">
+      <video class="vthumb" src="${v.src}" preload="metadata" muted playsinline></video>
+      <div class="vplay" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0a0a"><path d="M8 5v14l11-7z"/></svg></div>
+      <div class="vmeta" aria-hidden="true">${v.badge?`<div class="vbadge">${v.badge}</div>`:''}<div class="vtitle">${v.t}</div></div>
     </button>`).join('');
+
+  // drag-to-scroll
+  let isDrag=false,startX,scrollL;
+  sliderEl.addEventListener('mousedown',e=>{isDrag=true;startX=e.pageX-sliderEl.offsetLeft;scrollL=sliderEl.scrollLeft;});
+  sliderEl.addEventListener('mousemove',e=>{ if(!isDrag) return; e.preventDefault(); sliderEl.scrollLeft=scrollL-(e.pageX-sliderEl.offsetLeft-startX)*1.2; });
+  ['mouseup','mouseleave'].forEach(ev=>sliderEl.addEventListener(ev,()=>isDrag=false));
 
   const BLOGS=[
     {id:'b1',tag:'GUÍA',t:'Cómo llegar al Maracanã sin estrés',x:'Todo lo que necesitas saber sobre accesos, horarios y el mejor momento para llegar.',m:'5 min de lectura'},
@@ -1309,8 +1353,8 @@ window.MRC = (function () {
   // equipo de guías (Rio Latin Tour LTDA)
   const GUIDES=[
     {n:'Jose y Kary',r:'Anfitriones · Embarque y bienvenida',b:'Reciben a los hinchas, coordinan el punto de encuentro y acompañan el embarque ida y vuelta.',photo:'assets/guias/joseykary.jpg'},
-    {n:'Felipe',r:'Guía · Coordinación general',b:'Coordina la experiencia de punta a punta y resuelve cualquier imprevisto el día del partido.',photo:'assets/guias/felipe.png'},
-    {n:'Baltazar',r:'Guía · Acompañamiento en tribuna',b:'Acompaña al grupo dentro del estadio y guía la previa y el regreso después del partido.',photo:'assets/guias/baltazar.png'},
+    {n:'Felipe',r:'Guía · Desarrollador de Software',b:'Lidera el desarrollo tecnológico de Football Experience y Rio Latin Tour.',photo:'assets/guias/felipe.png'},
+    {n:'Baltazar',r:'Guía · Área de Marketing',b:'Encargado del área de marketing de Football Experience y acompaña al grupo dentro del estadio.',photo:'assets/guias/baltazar.png'},
     {n:'Alanis',r:'Guía · Atención al hincha',b:'Atiende dudas antes y durante la experiencia para que todo fluya sin estrés.',photo:'assets/guias/alanis.jpg'},
   ];
   document.getElementById('guides').innerHTML=GUIDES.map((g,i)=>`
@@ -1319,26 +1363,111 @@ window.MRC = (function () {
       <div class="gn">${g.n}</div><div class="gr">${g.r}</div><div class="gb">${g.b}</div>
     </div>`).join('');
 
-  // lightbox
-  const lb=document.getElementById('lb');
-  const lbClose=document.getElementById('lbClose');
-  let _lbTrigger=null;
-  function openLb(trigger,name){
-    _lbTrigger=trigger;
-    document.getElementById('lbName').textContent=name;
-    document.getElementById('lbTitle').textContent=name;
-    lb.classList.add('open');
-    lbClose.focus();
+  // video lightbox
+  const vlb=document.getElementById('vlb');
+  const vlbVideo=document.getElementById('vlbVideo');
+  const vlbBar=document.getElementById('vlbBar');
+  const vlbPrev=document.getElementById('vlbPrev');
+  const vlbNext=document.getElementById('vlbNext');
+  let vlbIdx=0, _vlbTrigger=null;
+  function openVlb(idx,trigger){
+    vlbIdx=idx; if(trigger) _vlbTrigger=trigger;
+    const v=VIDS[idx];
+    vlbVideo.src=v.src; vlbBar.textContent=v.t;
+    vlb.classList.add('open'); vlbVideo.play();
+    vlbPrev.style.opacity=idx===0?'0.3':'1'; vlbPrev.disabled=idx===0;
+    vlbNext.style.opacity=idx===VIDS.length-1?'0.3':'1'; vlbNext.disabled=idx===VIDS.length-1;
+    document.getElementById('vlbClose').focus();
   }
-  function closeLb(){
-    lb.classList.remove('open');
-    if(_lbTrigger){ _lbTrigger.focus(); _lbTrigger=null; }
+  function closeVlb(){
+    vlbVideo.pause(); vlbVideo.src='';
+    vlb.classList.remove('open');
+    if(_vlbTrigger){ _vlbTrigger.focus(); _vlbTrigger=null; }
   }
-  document.querySelectorAll('[data-video]').forEach(b=>b.addEventListener('click',()=>openLb(b,b.dataset.video)));
-  lbClose.addEventListener('click',closeLb);
-  lb.addEventListener('click',(e)=>{ if(e.target===lb) closeLb(); });
-  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape' && lb.classList.contains('open')) closeLb(); });
+  document.querySelectorAll('.vcard').forEach(btn=>btn.addEventListener('click',()=>openVlb(+btn.dataset.vidx,btn)));
+  document.getElementById('vlbClose').addEventListener('click',closeVlb);
+  vlbPrev.addEventListener('click',()=>{ if(vlbIdx>0) openVlb(vlbIdx-1,null); });
+  vlbNext.addEventListener('click',()=>{ if(vlbIdx<VIDS.length-1) openVlb(vlbIdx+1,null); });
+  vlb.addEventListener('click',e=>{ if(e.target===vlb) closeVlb(); });
+  document.addEventListener('keydown',e=>{
+    if(!vlb.classList.contains('open')) return;
+    if(e.key==='Escape') closeVlb();
+    if(e.key==='ArrowLeft' && vlbIdx>0) openVlb(vlbIdx-1,null);
+    if(e.key==='ArrowRight' && vlbIdx<VIDS.length-1) openVlb(vlbIdx+1,null);
+  });
+  let _tx=null;
+  vlb.addEventListener('touchstart',e=>_tx=e.touches[0].clientX,{passive:true});
+  vlb.addEventListener('touchend',e=>{
+    if(_tx===null) return;
+    const dx=e.changedTouches[0].clientX-_tx; _tx=null;
+    if(Math.abs(dx)>50){ if(dx<0&&vlbIdx<VIDS.length-1) openVlb(vlbIdx+1,null); else if(dx>0&&vlbIdx>0) openVlb(vlbIdx-1,null); }
+  });
 })();
+
+  // photo slider
+  const PHOTOS=[
+    {src:'assets/experiencia/celebracion-gol.jpg', alt:'Celebración de gol', wide:true},
+    {src:'assets/fotos/grupal2.jpg', alt:'Grupo Football Experience', wide:true},
+    {src:'assets/fotos/IMG_6077.jpg', alt:'Hinchas en el estadio'},
+    {src:'assets/fotos/IMG_6149.jpg', alt:'Experiencia en el Maracanã'},
+    {src:'assets/fotos/IMG_3331.jpg', alt:'Hinchas en el Maracanã'},
+    {src:'assets/fotos/IMG_3332.jpg', alt:'Celebración grupal'},
+    {src:'assets/fotos/IMG_3334.jpg', alt:'Ambiente en la tribuna'},
+    {src:'assets/fotos/IMG_3335.jpg', alt:'Experiencia Football Experience', wide:true},
+    {src:'assets/experiencia/hinchas.jpg', alt:'Hincha con bufanda'},
+  ];
+  const psliderEl=document.getElementById('pslider');
+  psliderEl.innerHTML=PHOTOS.map((p,i)=>`
+    <button class="pcard${p.wide?' wide':''}" data-pidx="${i}" aria-label="Ver foto: ${p.alt}">
+      <img src="${p.src}" alt="${p.alt}" loading="lazy">
+      <div class="pover" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#fff" stroke-width="2"/><path d="M16.5 16.5l3.5 3.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+    </button>`).join('');
+
+  // drag-to-scroll photos
+  let _pdrag=false,_px,_psl;
+  psliderEl.addEventListener('mousedown',e=>{_pdrag=true;_px=e.pageX-psliderEl.offsetLeft;_psl=psliderEl.scrollLeft;});
+  psliderEl.addEventListener('mousemove',e=>{ if(!_pdrag) return; e.preventDefault(); psliderEl.scrollLeft=_psl-(e.pageX-psliderEl.offsetLeft-_px)*1.2; });
+  ['mouseup','mouseleave'].forEach(ev=>psliderEl.addEventListener(ev,()=>_pdrag=false));
+
+  // photo lightbox
+  const plb=document.getElementById('plb');
+  const plbImg=document.getElementById('plbImg');
+  const plbCtr=document.getElementById('plbCtr');
+  const plbPrev=document.getElementById('plbPrev');
+  const plbNext=document.getElementById('plbNext');
+  let plbIdx=0, _plbTrigger=null;
+  function openPlb(idx,trigger){
+    plbIdx=idx; if(trigger) _plbTrigger=trigger;
+    const p=PHOTOS[idx];
+    plbImg.src=p.src; plbImg.alt=p.alt;
+    plbCtr.textContent=(idx+1)+' / '+PHOTOS.length;
+    plb.classList.add('open');
+    plbPrev.style.opacity=idx===0?'0.3':'1'; plbPrev.disabled=idx===0;
+    plbNext.style.opacity=idx===PHOTOS.length-1?'0.3':'1'; plbNext.disabled=idx===PHOTOS.length-1;
+    document.getElementById('plbClose').focus();
+  }
+  function closePlb(){
+    plb.classList.remove('open'); plbImg.src='';
+    if(_plbTrigger){ _plbTrigger.focus(); _plbTrigger=null; }
+  }
+  document.querySelectorAll('.pcard').forEach(btn=>btn.addEventListener('click',()=>openPlb(+btn.dataset.pidx,btn)));
+  document.getElementById('plbClose').addEventListener('click',closePlb);
+  plbPrev.addEventListener('click',()=>{ if(plbIdx>0) openPlb(plbIdx-1,null); });
+  plbNext.addEventListener('click',()=>{ if(plbIdx<PHOTOS.length-1) openPlb(plbIdx+1,null); });
+  plb.addEventListener('click',e=>{ if(e.target===plb||e.target===plbImg) closePlb(); });
+  document.addEventListener('keydown',e=>{
+    if(!plb.classList.contains('open')) return;
+    if(e.key==='Escape') closePlb();
+    if(e.key==='ArrowLeft'&&plbIdx>0) openPlb(plbIdx-1,null);
+    if(e.key==='ArrowRight'&&plbIdx<PHOTOS.length-1) openPlb(plbIdx+1,null);
+  });
+  let _ptx=null;
+  plb.addEventListener('touchstart',e=>_ptx=e.touches[0].clientX,{passive:true});
+  plb.addEventListener('touchend',e=>{
+    if(_ptx===null) return;
+    const dx=e.changedTouches[0].clientX-_ptx; _ptx=null;
+    if(Math.abs(dx)>50){ if(dx<0&&plbIdx<PHOTOS.length-1) openPlb(plbIdx+1,null); else if(dx>0&&plbIdx>0) openPlb(plbIdx-1,null); }
+  });
 </script>
 </body>
 </html>
