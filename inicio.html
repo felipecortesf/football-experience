@@ -131,16 +131,17 @@
   .see-all:hover{ color:var(--ink); }
 
   /* news grid */
-  .news{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-  @media(max-width:900px){ .news{ grid-template-columns:1fr; } }
-  .ncard{ border-radius:16px; overflow:hidden; background:var(--card); border:1px solid var(--line); transition:transform var(--duration-slow) var(--ease), border-color var(--duration-slow), box-shadow var(--duration-slow); cursor:pointer; }
-  .ncard:hover{ transform:translateY(-8px); border-color:var(--line-2); box-shadow:0 24px 48px rgba(0,0,0,.4); }
+  .news{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  @media(max-width:1100px){ .news{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:560px){ .news{ grid-template-columns:1fr; } }
+  .ncard{ border-radius:16px; overflow:hidden; background:var(--card); border:1px solid var(--line); transition:transform var(--duration-slow) var(--ease), border-color var(--duration-slow), box-shadow var(--duration-slow); cursor:pointer; display:block; text-decoration:none; color:inherit; }
+  .ncard:hover{ transform:translateY(-6px); border-color:var(--line-2); box-shadow:0 24px 48px rgba(0,0,0,.4); }
   .ncard:focus-visible{ outline:3px solid var(--accent); outline-offset:2px; }
-  .ncard image-slot{ display:block; width:100%; height:210px; }
-  .ncard .nb{ padding:18px 20px 22px; }
+  .ncard .nimg{ display:block; width:100%; height:180px; object-fit:cover; }
+  .ncard .nb{ padding:16px 18px 20px; }
   .ncard .ntag{ font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; color:var(--accent); }
-  .ncard .nt{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:23px; text-transform:uppercase; line-height:1; margin-top:8px; }
-  .ncard .nm{ font-size:11px; color:var(--ink-mute); margin-top:12px; display:flex; align-items:center; gap:6px; }
+  .ncard .nt{ font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:20px; text-transform:uppercase; line-height:1.05; margin-top:8px; }
+  .ncard .nm{ font-size:11px; color:var(--ink-mute); margin-top:10px; display:flex; align-items:center; gap:6px; }
 
   /* teams */
   .teams{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
@@ -357,7 +358,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div><div class="eyebrow">Semana a semana</div><h2 class="display">Lo último</h2></div>
-      <a class="see-all" href="#">Todas las noticias <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="see-all" href="noticias.html">Todas las noticias <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
     <div class="news" id="news"></div>
   </div>
@@ -1634,17 +1635,18 @@ window.MRC = (function () {
     ec.appendChild(d);
   });
 
-  // news (image-slots + titles)
+  // news — 1 por equipo con imagen y link reales
   const NEWS=[
-    {tag:'FLAMENGO',t:'Flamengo confirma agenda: choca con Botafogo en el cierre de agosto',time:'hace 3 h'},
-    {tag:'FLUMINENSE',t:'Fluminense define llave de Copa do Brasil ante Vasco da Gama',time:'hace 6 h'},
-    {tag:'VASCO DA GAMA',t:'Vasco da Gama prepara la ida y vuelta copera frente al Fluminense',time:'ayer'},
+    { tag:'FLAMENGO', t:'Empate vibrante en Portugal: Flamengo igualó ante River Plate en amistoso de pretemporada', time:'30 jun 2026', img:'assets/noticias/flamengo-noticia1.jpg', url:'noticias/flamengo-empate-portugal.html' },
+    { tag:'FLUMINENSE', t:'"O Monstro" está en casa: Thiago Silva se presenta en el CT Carlos Castilho del Fluminense', time:'30 jun 2026', img:'assets/noticias/fluminense-noticia2.jpg', url:'noticias/fluminense-thiago-silva.html' },
+    { tag:'BOTAFOGO', t:'Alerta: Botafogo y Santos se enfrentan bajo la sombra del Transfer Ban FIFA', time:'16 jul 2026', img:'assets/noticias/botafogo-noticia1.jpg', url:'noticias/botafogo-transfer-ban.html' },
+    { tag:'VASCO DA GAMA', t:'Barracas Central cayó goleado ante Vasco da Gama y dice adiós a la Copa Sudamericana', time:'27 may 2026', img:'assets/noticias/vasco-noticia1.jpg', url:'noticias/vasco-barracas-sudamericana.html' },
   ];
   const nc=document.getElementById('news');
-  NEWS.forEach((n,i)=>{
-    const c=document.createElement('article'); c.className='ncard';
+  NEWS.forEach((n)=>{
+    const c=document.createElement('a'); c.className='ncard'; c.href=n.url;
     c.innerHTML=`
-      <image-slot id="news-${i}" placeholder="Foto noticia" fit="cover"></image-slot>
+      <img class="nimg" src="${n.img}" alt="${n.t}" loading="lazy">
       <div class="nb"><div class="ntag">${n.tag}</div><div class="nt">${n.t}</div>
       <div class="nm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> ${n.time}</div></div>`;
     nc.appendChild(c);
