@@ -1,0 +1,268 @@
+/*
+ * Football Experience — Mobile Optimizations
+ * Cross-browser compatible: Chrome, Safari, Firefox, Samsung Internet
+ * Breakpoints: 480px (phones), 768px (large phones / small tablets)
+ */
+
+/* ── GLOBAL ─────────────────────────────────────────────────── */
+html {
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ── NAV ────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-in {
+    padding: 4px 16px !important;
+    gap: 12px !important;
+  }
+  .brand img {
+    height: 56px !important;
+  }
+  /* Utility bar */
+  .util { padding: 6px 16px !important; }
+  .util .ann { display: none !important; }
+}
+
+/* ── WRAP / SECTIONS ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .wrap {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  section {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+  }
+}
+
+/* ── INICIO: HERO SLIDER ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    height: 92vh !important;
+    min-height: 520px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .hero-tabs { top: 12px !important; }
+  .htab-row {
+    gap: 12px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 4px;
+  }
+  .htab-row::-webkit-scrollbar { display: none; }
+  .htab { font-size: 10px !important; padding: 6px 12px !important; }
+  .hero h1 { font-size: clamp(32px, 8vw, 56px) !important; max-width: 100% !important; }
+  .hero .hero-sub { font-size: 14px !important; margin-top: 10px !important; }
+  .hero .h-meta { display: none !important; }
+  .hero .hero-cluster { flex-direction: column; gap: 10px !important; margin-top: 18px !important; }
+  .hero .h-cta, .hero .h-cta2 {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px !important;
+    padding: 14px 20px !important;
+  }
+  .hero .hero-trust { gap: 12px !important; margin-top: 16px !important; }
+  .hero .hero-trust span { font-size: 11px !important; }
+  .hero-panel { padding: 0 !important; }
+  .hero .wrap { padding-left: 16px !important; padding-right: 16px !important; }
+}
+
+/* ── INICIO: NOTICIAS ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .news { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .ncard .nimg { height: 140px !important; }
+  .ncard .nt { font-size: 16px !important; }
+}
+@media (max-width: 440px) {
+  .news { grid-template-columns: 1fr !important; }
+}
+
+/* ── INICIO: EQUIPOS ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .teams { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+  .tcard { padding: 18px 14px !important; }
+}
+
+/* ── INICIO: PARTIDOS ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .filters { gap: 8px !important; padding: 18px 0 !important; }
+  .mchip { font-size: 10px !important; padding: 7px 12px !important; }
+  .mrow {
+    grid-template-columns: 64px 1fr !important;
+    gap: 8px 10px !important;
+    padding: 14px 0 !important;
+  }
+  .mrow .mfrom, .mrow .mbuy { grid-column: 2 !important; justify-self: start !important; }
+  .mrow .mdate { font-size: 10px !important; }
+  .mrow .mteams { font-size: 13px !important; }
+  .btn-buy { font-size: 12px !important; padding: 8px 12px !important; }
+  .mcrest { width: 28px !important; height: 28px !important; }
+  .mcrest img { width: 20px !important; height: 20px !important; }
+}
+
+/* ── INICIO: EXPERIENCIA ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .exp { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .estep { padding: 18px 14px !important; }
+}
+@media (max-width: 440px) {
+  .exp { grid-template-columns: 1fr !important; }
+}
+
+/* ── INICIO: SEC-HEAD / CTA BAND ─────────────────────────────── */
+@media (max-width: 768px) {
+  .sec-head { flex-direction: column !important; gap: 14px !important; align-items: flex-start !important; }
+  .see-all { font-size: 12px !important; }
+  .cta-band { padding: 36px 20px !important; }
+  .cta-band h2 { font-size: clamp(28px, 7vw, 48px) !important; }
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .foot2 { grid-template-columns: 1fr 1fr !important; padding: 36px 16px !important; gap: 28px !important; }
+  .foot-legal { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; padding: 16px !important; font-size: 11px !important; }
+  .foot-h { font-size: 13px !important; margin-bottom: 10px !important; }
+}
+@media (max-width: 440px) {
+  .foot2 { grid-template-columns: 1fr !important; }
+}
+
+/* ── EQUIPO.HTML ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Quick stats */
+  .quick {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 8px !important;
+    padding-bottom: 4px;
+  }
+  .quick::-webkit-scrollbar { display: none; }
+  .quick .q { min-width: 80px !important; flex-shrink: 0 !important; padding: 14px 10px !important; }
+  .quick .n { font-size: 26px !important; }
+  .quick .l { font-size: 8px !important; }
+
+  /* Hero banner */
+  .bhero { height: 220px !important; }
+  .bhero .bh-text h1 { font-size: clamp(28px, 7vw, 48px) !important; }
+
+  /* Tabs */
+  .tabs { overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; scrollbar-width: none !important; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { font-size: 11px !important; padding: 10px 14px !important; white-space: nowrap; }
+
+  /* Squad cards */
+  .squad { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .pcard { padding: 14px 10px !important; }
+  .pcard .pname { font-size: 13px !important; }
+
+  /* Titles */
+  .titles-row { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .tt-card .tn { font-size: 28px !important; }
+
+  /* News */
+  .news { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 440px) {
+  .squad { grid-template-columns: repeat(2, 1fr) !important; }
+  .titles-row { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── NOTICIAS.HTML ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .featured {
+    grid-template-columns: 1fr !important;
+  }
+  .featured .fimg { aspect-ratio: 16/9 !important; }
+  .featured .fbody { padding: 24px 20px !important; }
+  .featured h2 { font-size: clamp(22px, 5vw, 32px) !important; }
+  .articles-grid { grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+  .page-hero h1 { font-size: clamp(42px, 10vw, 80px) !important; }
+  .filters { gap: 8px !important; }
+  .chip { font-size: 9px !important; padding: 6px 10px !important; }
+}
+@media (max-width: 480px) {
+  .articles-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── REGISTRO FACIAL ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .tutorial-main { padding: 32px 0 60px !important; }
+  .reg-links { flex-direction: column !important; gap: 12px !important; }
+  .reg-btn { min-width: 0 !important; width: 100% !important; }
+  .step-list li { padding-left: 20px !important; font-size: 15px !important; }
+}
+
+/* ── COMPRAR.HTML ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .map-wrap { position: static !important; height: auto !important; }
+  .sector-map { height: 220px !important; }
+  .legend { max-height: none !important; }
+  .mhead { padding: 24px 16px !important; min-height: 140px !important; }
+  .mhead h1 { font-size: clamp(24px, 6vw, 40px) !important; }
+  .filter-bar { flex-direction: column !important; gap: 8px !important; }
+  .filter-bar select { width: 100% !important; }
+}
+
+/* ── EXPERIENCIA.HTML ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero .h-in { top: 80px !important; }
+  .hero h1 { font-size: clamp(30px, 7vw, 72px) !important; }
+  .steps { grid-template-columns: 1fr !important; }
+  .videos-grid { grid-template-columns: 1fr !important; }
+  .photos-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ── ARTICLE PAGES (noticias/) ───────────────────────────────── */
+@media (max-width: 768px) {
+  .art-wrap { padding: 32px 16px 60px !important; }
+  .art-title { font-size: clamp(24px, 6vw, 36px) !important; }
+  .art-body { font-size: 15px !important; }
+  .art-body table { font-size: 12px !important; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cta-btns { flex-direction: column !important; }
+  .cta-btns a { justify-content: center !important; width: 100% !important; }
+}
+
+/* ── WHATSAPP FAB ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .wa-fab {
+    right: 16px !important;
+    bottom: 16px !important;
+    /* Safe area for iPhones with home bar */
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+  }
+  /* Disable hover expansion on touch — just show icon */
+  .wa-fab:hover { width: 56px !important; border-radius: 28px !important; }
+  .wa-fab:hover .text { opacity: 0 !important; max-width: 0 !important; padding-right: 0 !important; }
+}
+
+/* ── SAFARI-SPECIFIC FIXES ───────────────────────────────────── */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari: avoid zoom on input focus */
+  input, select, textarea { font-size: 16px !important; }
+  /* Full height hero fix for Safari */
+  .hero { min-height: -webkit-fill-available; }
+}
+
+/* ── SCROLLBAR POLISH (non-mobile but nice-to-have) ─────────── */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar { width: 0; height: 0; }
+}
