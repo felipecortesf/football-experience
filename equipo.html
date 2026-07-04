@@ -1610,8 +1610,9 @@ window.MRC_TEAM = {
   const d = TD[id];
 
   // accent
-  const accent = t.primary === '#111111' ? '#f4f4f0' : t.primary;
-  const accentInk = t.primary === '#111111' ? '#0a0a0a' : '#fff';
+  const _dark = ['#000000','#111111','#0a0a0a','#111'].includes(t.primary);
+  const accent = _dark ? '#f4f4f0' : t.primary;
+  const accentInk = _dark ? '#0a0a0a' : '#fff';
   document.documentElement.style.setProperty('--accent', accent);
   document.documentElement.style.setProperty('--accent-ink', accentInk);
 
