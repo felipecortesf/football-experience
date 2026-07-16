@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 19,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-16T21:08:46.967Z",
+  "actualizadoEn": "2026-07-16T22:53:31.823Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -241,20 +241,20 @@
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 22,
-      "jugados": 17,
+      "puntos": 23,
+      "jugados": 18,
       "ganados": 6,
-      "empatados": 4,
+      "empatados": 5,
       "perdidos": 7,
       "golesFavor": 31,
       "golesContra": 31,
       "diferencia": 0,
       "forma": [
-        "L",
         "D",
         "W",
         "D",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -262,24 +262,45 @@
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 22,
-      "jugados": 17,
+      "puntos": 23,
+      "jugados": 18,
       "ganados": 6,
-      "empatados": 4,
+      "empatados": 5,
       "perdidos": 7,
       "golesFavor": 21,
       "golesContra": 25,
       "diferencia": -4,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
       "posicion": 14,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "puntos": 22,
+      "jugados": 19,
+      "ganados": 5,
+      "empatados": 7,
+      "perdidos": 7,
+      "golesFavor": 26,
+      "golesContra": 29,
+      "diferencia": -3,
+      "forma": [
+        "W",
+        "L",
+        "L",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -297,27 +318,6 @@
         "W",
         "L",
         "L"
-      ]
-    },
-    {
-      "posicion": 15,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 21,
-      "jugados": 18,
-      "ganados": 5,
-      "empatados": 6,
-      "perdidos": 7,
-      "golesFavor": 26,
-      "golesContra": 29,
-      "diferencia": -3,
-      "forma": [
-        "D",
-        "W",
-        "L",
-        "L",
-        "W"
       ]
     },
     {
@@ -346,20 +346,20 @@
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 20,
-      "jugados": 18,
+      "puntos": 21,
+      "jugados": 19,
       "ganados": 5,
-      "empatados": 5,
+      "empatados": 6,
       "perdidos": 8,
       "golesFavor": 22,
       "golesContra": 29,
       "diferencia": -7,
       "forma": [
-        "D",
         "W",
         "L",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
