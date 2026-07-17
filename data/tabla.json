@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 19,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-17T21:47:29.106Z",
+  "actualizadoEn": "2026-07-17T22:43:38.635Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -387,7 +387,7 @@
       "posicion": 19,
       "equipo": "Mirassol",
       "sigla": "MIR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/08/20/mirassol-novo-svg-71690.svg",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
       "puntos": 16,
       "jugados": 17,
       "ganados": 4,
