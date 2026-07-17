@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 19,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-16T23:54:49.101Z",
+  "actualizadoEn": "2026-07-17T02:11:10.396Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -175,6 +175,48 @@
     },
     {
       "posicion": 9,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 25,
+      "jugados": 18,
+      "ganados": 7,
+      "empatados": 4,
+      "perdidos": 7,
+      "golesFavor": 33,
+      "golesContra": 32,
+      "diferencia": 1,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 25,
+      "jugados": 18,
+      "ganados": 7,
+      "empatados": 4,
+      "perdidos": 7,
+      "golesFavor": 22,
+      "golesContra": 25,
+      "diferencia": -3,
+      "forma": [
+        "D",
+        "L",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -195,7 +237,7 @@
       ]
     },
     {
-      "posicion": 10,
+      "posicion": 12,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -216,7 +258,7 @@
       ]
     },
     {
-      "posicion": 11,
+      "posicion": 13,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
@@ -237,70 +279,7 @@
       ]
     },
     {
-      "posicion": 12,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 23,
-      "jugados": 18,
-      "ganados": 6,
-      "empatados": 5,
-      "perdidos": 7,
-      "golesFavor": 32,
-      "golesContra": 32,
-      "diferencia": 0,
-      "forma": [
-        "D",
-        "W",
-        "D",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "posicion": 13,
-      "equipo": "Vitória",
-      "sigla": "VIT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 23,
-      "jugados": 18,
-      "ganados": 6,
-      "empatados": 5,
-      "perdidos": 7,
-      "golesFavor": 21,
-      "golesContra": 25,
-      "diferencia": -4,
-      "forma": [
-        "D",
-        "L",
-        "W",
-        "L",
-        "D"
-      ]
-    },
-    {
       "posicion": 14,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 22,
-      "jugados": 19,
-      "ganados": 5,
-      "empatados": 7,
-      "perdidos": 7,
-      "golesFavor": 27,
-      "golesContra": 30,
-      "diferencia": -3,
-      "forma": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 15,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -321,7 +300,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 15,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -342,24 +321,45 @@
       ]
     },
     {
-      "posicion": 17,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "posicion": 16,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
       "puntos": 21,
       "jugados": 19,
       "ganados": 5,
       "empatados": 6,
       "perdidos": 8,
+      "golesFavor": 27,
+      "golesContra": 31,
+      "diferencia": -4,
+      "forma": [
+        "W",
+        "L",
+        "L",
+        "W",
+        "L"
+      ]
+    },
+    {
+      "posicion": 17,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 20,
+      "jugados": 19,
+      "ganados": 5,
+      "empatados": 5,
+      "perdidos": 9,
       "golesFavor": 22,
-      "golesContra": 29,
-      "diferencia": -7,
+      "golesContra": 30,
+      "diferencia": -8,
       "forma": [
         "W",
         "L",
         "L",
         "L",
-        "D"
+        "L"
       ]
     },
     {
