@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 19,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-22T21:00:27.022Z",
+  "actualizadoEn": "2026-07-22T22:57:00.619Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -10,18 +10,18 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 41,
-      "jugados": 18,
-      "ganados": 12,
+      "puntos": 44,
+      "jugados": 19,
+      "ganados": 13,
       "empatados": 5,
       "perdidos": 1,
-      "golesFavor": 30,
+      "golesFavor": 32,
       "golesContra": 13,
-      "diferencia": 17,
+      "diferencia": 19,
       "forma": [
         "D",
         "D",
-        "D",
+        "W",
         "W",
         "W"
       ]
@@ -137,18 +137,18 @@
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
       "puntos": 26,
-      "jugados": 18,
+      "jugados": 19,
       "ganados": 7,
       "empatados": 5,
-      "perdidos": 6,
+      "perdidos": 7,
       "golesFavor": 24,
-      "golesContra": 24,
-      "diferencia": 0,
+      "golesContra": 26,
+      "diferencia": -2,
       "forma": [
-        "L",
         "D",
         "W",
         "W",
+        "L",
         "L"
       ]
     },
