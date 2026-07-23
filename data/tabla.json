@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 19,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-23T22:05:23.354Z",
+  "actualizadoEn": "2026-07-23T23:56:10.444Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 27,
+      "jugados": 19,
+      "ganados": 7,
+      "empatados": 6,
+      "perdidos": 6,
+      "golesFavor": 21,
+      "golesContra": 19,
+      "diferencia": 2,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
@@ -153,7 +174,28 @@
       ]
     },
     {
-      "posicion": 8,
+      "posicion": 9,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 26,
+      "jugados": 19,
+      "ganados": 7,
+      "empatados": 5,
+      "perdidos": 7,
+      "golesFavor": 33,
+      "golesContra": 32,
+      "diferencia": 1,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -174,7 +216,28 @@
       ]
     },
     {
-      "posicion": 9,
+      "posicion": 11,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 26,
+      "jugados": 19,
+      "ganados": 7,
+      "empatados": 5,
+      "perdidos": 7,
+      "golesFavor": 22,
+      "golesContra": 25,
+      "diferencia": -3,
+      "forma": [
+        "D",
+        "L",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -195,28 +258,7 @@
       ]
     },
     {
-      "posicion": 10,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 25,
-      "jugados": 18,
-      "ganados": 7,
-      "empatados": 4,
-      "perdidos": 7,
-      "golesFavor": 33,
-      "golesContra": 32,
-      "diferencia": 1,
-      "forma": [
-        "D",
-        "W",
-        "D",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 11,
+      "posicion": 13,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -234,48 +276,6 @@
         "L",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 12,
-      "equipo": "Vitória",
-      "sigla": "VIT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 25,
-      "jugados": 18,
-      "ganados": 7,
-      "empatados": 4,
-      "perdidos": 7,
-      "golesFavor": 22,
-      "golesContra": 25,
-      "diferencia": -3,
-      "forma": [
-        "D",
-        "L",
-        "W",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 13,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 24,
-      "jugados": 18,
-      "ganados": 6,
-      "empatados": 6,
-      "perdidos": 6,
-      "golesFavor": 18,
-      "golesContra": 19,
-      "diferencia": -1,
-      "forma": [
-        "L",
-        "W",
-        "L",
-        "W",
-        "W"
       ]
     },
     {
@@ -389,19 +389,19 @@
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
       "puntos": 18,
-      "jugados": 18,
+      "jugados": 19,
       "ganados": 4,
       "empatados": 6,
-      "perdidos": 8,
+      "perdidos": 9,
       "golesFavor": 21,
-      "golesContra": 29,
-      "diferencia": -8,
+      "golesContra": 32,
+      "diferencia": -11,
       "forma": [
-        "W",
         "D",
         "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
