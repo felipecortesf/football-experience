@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 20,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-25T22:50:19.324Z",
+  "actualizadoEn": "2026-07-25T23:56:00.033Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -57,9 +57,9 @@
       "ganados": 11,
       "empatados": 3,
       "perdidos": 6,
-      "golesFavor": 27,
+      "golesFavor": 28,
       "golesContra": 19,
-      "diferencia": 8,
+      "diferencia": 9,
       "forma": [
         "D",
         "W",
@@ -288,8 +288,8 @@
       "ganados": 5,
       "empatados": 7,
       "perdidos": 8,
-      "golesFavor": 28,
-      "golesContra": 32,
+      "golesFavor": 29,
+      "golesContra": 33,
       "diferencia": -4,
       "forma": [
         "L",
@@ -310,8 +310,8 @@
       "empatados": 6,
       "perdidos": 9,
       "golesFavor": 22,
-      "golesContra": 25,
-      "diferencia": -3,
+      "golesContra": 26,
+      "diferencia": -4,
       "forma": [
         "W",
         "L",
@@ -346,20 +346,20 @@
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 20,
-      "jugados": 19,
+      "puntos": 21,
+      "jugados": 20,
       "ganados": 5,
-      "empatados": 5,
+      "empatados": 6,
       "perdidos": 9,
       "golesFavor": 22,
       "golesContra": 30,
       "diferencia": -8,
       "forma": [
-        "W",
         "L",
         "L",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -367,20 +367,20 @@
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 19,
-      "jugados": 18,
+      "puntos": 20,
+      "jugados": 19,
       "ganados": 5,
-      "empatados": 4,
+      "empatados": 5,
       "perdidos": 9,
       "golesFavor": 20,
       "golesContra": 25,
       "diferencia": -5,
       "forma": [
-        "D",
         "L",
         "W",
         "L",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -414,8 +414,8 @@
       "ganados": 1,
       "empatados": 7,
       "perdidos": 12,
-      "golesFavor": 18,
-      "golesContra": 40,
+      "golesFavor": 19,
+      "golesContra": 41,
       "diferencia": -22,
       "forma": [
         "L",
