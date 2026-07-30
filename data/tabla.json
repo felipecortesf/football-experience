@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-30T21:02:48.276Z",
+  "actualizadoEn": "2026-07-30T23:00:38.121Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 36,
-      "jugados": 20,
+      "puntos": 37,
+      "jugados": 21,
       "ganados": 11,
-      "empatados": 3,
+      "empatados": 4,
       "perdidos": 6,
       "golesFavor": 28,
       "golesContra": 19,
       "diferencia": 9,
       "forma": [
-        "D",
         "W",
         "W",
         "W",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -154,6 +154,27 @@
     },
     {
       "posicion": 8,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 29,
+      "jugados": 21,
+      "ganados": 7,
+      "empatados": 8,
+      "perdidos": 6,
+      "golesFavor": 22,
+      "golesContra": 20,
+      "diferencia": 2,
+      "forma": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 9,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -171,27 +192,6 @@
         "W",
         "D",
         "W"
-      ]
-    },
-    {
-      "posicion": 9,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 28,
-      "jugados": 20,
-      "ganados": 7,
-      "empatados": 7,
-      "perdidos": 6,
-      "golesFavor": 22,
-      "golesContra": 20,
-      "diferencia": 2,
-      "forma": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "D"
       ]
     },
     {
