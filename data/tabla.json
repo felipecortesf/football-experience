@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-07-30T23:00:38.121Z",
+  "actualizadoEn": "2026-07-31T02:22:00.195Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Cruzeiro",
+      "sigla": "CRU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+      "puntos": 30,
+      "jugados": 21,
+      "ganados": 8,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 27,
+      "golesContra": 30,
+      "diferencia": -3,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -153,7 +174,7 @@
       ]
     },
     {
-      "posicion": 8,
+      "posicion": 9,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -174,7 +195,7 @@
       ]
     },
     {
-      "posicion": 9,
+      "posicion": 10,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -195,44 +216,23 @@
       ]
     },
     {
-      "posicion": 10,
+      "posicion": 11,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
       "puntos": 27,
-      "jugados": 20,
+      "jugados": 21,
       "ganados": 7,
       "empatados": 6,
-      "perdidos": 7,
+      "perdidos": 8,
       "golesFavor": 25,
-      "golesContra": 27,
-      "diferencia": -2,
+      "golesContra": 28,
+      "diferencia": -3,
       "forma": [
-        "W",
         "W",
         "L",
         "L",
-        "D"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "Cruzeiro",
-      "sigla": "CRU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 27,
-      "jugados": 20,
-      "ganados": 7,
-      "empatados": 6,
-      "perdidos": 7,
-      "golesFavor": 26,
-      "golesContra": 30,
-      "diferencia": -4,
-      "forma": [
         "D",
-        "W",
-        "D",
-        "W",
         "L"
       ]
     },
