@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-08T22:22:32.695Z",
+  "actualizadoEn": "2026-08-08T23:22:56.443Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,27 +133,6 @@
     },
     {
       "posicion": 7,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 31,
-      "jugados": 21,
-      "ganados": 9,
-      "empatados": 4,
-      "perdidos": 8,
-      "golesFavor": 27,
-      "golesContra": 26,
-      "diferencia": 1,
-      "forma": [
-        "L",
-        "W",
-        "D",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 8,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
@@ -174,7 +153,7 @@
       ]
     },
     {
-      "posicion": 9,
+      "posicion": 8,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -192,6 +171,27 @@
         "L",
         "W",
         "W"
+      ]
+    },
+    {
+      "posicion": 9,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 29,
+      "jugados": 21,
+      "ganados": 8,
+      "empatados": 5,
+      "perdidos": 8,
+      "golesFavor": 27,
+      "golesContra": 27,
+      "diferencia": 0,
+      "forma": [
+        "L",
+        "W",
+        "D",
+        "W",
+        "D"
       ]
     },
     {
@@ -364,6 +364,27 @@
     },
     {
       "posicion": 18,
+      "equipo": "Remo",
+      "sigla": "REM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
+      "puntos": 22,
+      "jugados": 22,
+      "ganados": 5,
+      "empatados": 7,
+      "perdidos": 10,
+      "golesFavor": 26,
+      "golesContra": 36,
+      "diferencia": -10,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 19,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
@@ -381,27 +402,6 @@
         "L",
         "L",
         "D"
-      ]
-    },
-    {
-      "posicion": 19,
-      "equipo": "Remo",
-      "sigla": "REM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 21,
-      "jugados": 22,
-      "ganados": 5,
-      "empatados": 6,
-      "perdidos": 11,
-      "golesFavor": 25,
-      "golesContra": 36,
-      "diferencia": -11,
-      "forma": [
-        "W",
-        "L",
-        "W",
-        "L",
-        "L"
       ]
     },
     {
