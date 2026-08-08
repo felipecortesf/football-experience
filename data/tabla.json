@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-08T18:29:51.307Z",
+  "actualizadoEn": "2026-08-08T19:24:51.457Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -217,6 +217,27 @@
     },
     {
       "posicion": 11,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 27,
+      "jugados": 21,
+      "ganados": 7,
+      "empatados": 6,
+      "perdidos": 8,
+      "golesFavor": 25,
+      "golesContra": 23,
+      "diferencia": 2,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -234,27 +255,6 @@
         "L",
         "D",
         "L"
-      ]
-    },
-    {
-      "posicion": 12,
-      "equipo": "São Paulo",
-      "sigla": "SAO",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 26,
-      "jugados": 20,
-      "ganados": 7,
-      "empatados": 5,
-      "perdidos": 8,
-      "golesFavor": 25,
-      "golesContra": 23,
-      "diferencia": 2,
-      "forma": [
-        "L",
-        "D",
-        "L",
-        "L",
-        "D"
       ]
     },
     {
@@ -301,6 +301,27 @@
     },
     {
       "posicion": 15,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 23,
+      "jugados": 21,
+      "ganados": 5,
+      "empatados": 8,
+      "perdidos": 8,
+      "golesFavor": 22,
+      "golesContra": 26,
+      "diferencia": -4,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 16,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -336,27 +357,6 @@
       "forma": [
         "L",
         "L",
-        "L",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "posicion": 17,
-      "equipo": "Grêmio",
-      "sigla": "GRE",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 22,
-      "jugados": 20,
-      "ganados": 5,
-      "empatados": 7,
-      "perdidos": 8,
-      "golesFavor": 22,
-      "golesContra": 26,
-      "diferencia": -4,
-      "forma": [
-        "D",
-        "W",
         "L",
         "L",
         "D"
