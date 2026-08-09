@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-09T19:28:37.562Z",
+  "actualizadoEn": "2026-08-09T20:25:43.942Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -115,20 +115,20 @@
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 32,
+      "puntos": 33,
       "jugados": 22,
       "ganados": 8,
-      "empatados": 8,
-      "perdidos": 6,
+      "empatados": 9,
+      "perdidos": 5,
       "golesFavor": 29,
-      "golesContra": 26,
-      "diferencia": 3,
+      "golesContra": 25,
+      "diferencia": 4,
       "forma": [
         "W",
         "D",
         "D",
         "D",
-        "L"
+        "D"
       ]
     },
     {
@@ -301,27 +301,6 @@
     },
     {
       "posicion": 15,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 24,
-      "jugados": 21,
-      "ganados": 6,
-      "empatados": 6,
-      "perdidos": 9,
-      "golesFavor": 24,
-      "golesContra": 31,
-      "diferencia": -7,
-      "forma": [
-        "L",
-        "L",
-        "L",
-        "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -342,7 +321,7 @@
       ]
     },
     {
-      "posicion": 17,
+      "posicion": 16,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -363,7 +342,7 @@
       ]
     },
     {
-      "posicion": 18,
+      "posicion": 17,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -380,6 +359,27 @@
         "L",
         "W",
         "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 18,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 22,
+      "jugados": 21,
+      "ganados": 5,
+      "empatados": 7,
+      "perdidos": 9,
+      "golesFavor": 23,
+      "golesContra": 31,
+      "diferencia": -8,
+      "forma": [
+        "L",
+        "L",
+        "L",
+        "D",
         "D"
       ]
     },
