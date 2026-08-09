@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-09T22:24:27.458Z",
+  "actualizadoEn": "2026-08-09T23:25:32.915Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -28,6 +28,27 @@
     },
     {
       "posicion": 2,
+      "equipo": "Flamengo",
+      "sigla": "FLA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
+      "puntos": 42,
+      "jugados": 21,
+      "ganados": 12,
+      "empatados": 6,
+      "perdidos": 3,
+      "golesFavor": 38,
+      "golesContra": 18,
+      "diferencia": 20,
+      "forma": [
+        "W",
+        "W",
+        "D",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 3,
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
@@ -45,27 +66,6 @@
         "W",
         "D",
         "W"
-      ]
-    },
-    {
-      "posicion": 3,
-      "equipo": "Flamengo",
-      "sigla": "FLA",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
-      "puntos": 39,
-      "jugados": 20,
-      "ganados": 11,
-      "empatados": 6,
-      "perdidos": 3,
-      "golesFavor": 37,
-      "golesContra": 18,
-      "diferencia": 19,
-      "forma": [
-        "L",
-        "W",
-        "W",
-        "D",
-        "D"
       ]
     },
     {
@@ -133,27 +133,48 @@
     },
     {
       "posicion": 7,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
       "puntos": 32,
-      "jugados": 21,
-      "ganados": 9,
-      "empatados": 5,
-      "perdidos": 7,
-      "golesFavor": 26,
+      "jugados": 22,
+      "ganados": 8,
+      "empatados": 8,
+      "perdidos": 6,
+      "golesFavor": 23,
       "golesContra": 20,
-      "diferencia": 6,
+      "diferencia": 3,
       "forma": [
         "W",
         "W",
         "D",
         "D",
-        "D"
+        "W"
       ]
     },
     {
       "posicion": 8,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 31,
+      "jugados": 21,
+      "ganados": 9,
+      "empatados": 4,
+      "perdidos": 8,
+      "golesFavor": 26,
+      "golesContra": 21,
+      "diferencia": 5,
+      "forma": [
+        "W",
+        "W",
+        "D",
+        "D",
+        "L"
+      ]
+    },
+    {
+      "posicion": 9,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -174,7 +195,7 @@
       ]
     },
     {
-      "posicion": 9,
+      "posicion": 10,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -192,27 +213,6 @@
         "D",
         "L",
         "W"
-      ]
-    },
-    {
-      "posicion": 10,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 30,
-      "jugados": 22,
-      "ganados": 7,
-      "empatados": 9,
-      "perdidos": 6,
-      "golesFavor": 22,
-      "golesContra": 20,
-      "diferencia": 2,
-      "forma": [
-        "W",
-        "W",
-        "D",
-        "D",
-        "D"
       ]
     },
     {
@@ -263,17 +263,17 @@
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
       "puntos": 26,
-      "jugados": 21,
+      "jugados": 22,
       "ganados": 7,
       "empatados": 5,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 22,
-      "golesContra": 31,
-      "diferencia": -9,
+      "golesContra": 32,
+      "diferencia": -10,
       "forma": [
-        "W",
         "L",
         "W",
+        "L",
         "L",
         "L"
       ]
