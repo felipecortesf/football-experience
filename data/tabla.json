@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-09T01:17:05.698Z",
+  "actualizadoEn": "2026-08-09T03:29:11.697Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,45 +73,24 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 34,
+      "puntos": 35,
       "jugados": 22,
       "ganados": 9,
-      "empatados": 7,
-      "perdidos": 6,
-      "golesFavor": 30,
+      "empatados": 8,
+      "perdidos": 5,
+      "golesFavor": 31,
       "golesContra": 26,
-      "diferencia": 4,
+      "diferencia": 5,
       "forma": [
         "D",
         "D",
         "D",
         "D",
-        "L"
+        "D"
       ]
     },
     {
       "posicion": 5,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 32,
-      "jugados": 21,
-      "ganados": 9,
-      "empatados": 5,
-      "perdidos": 7,
-      "golesFavor": 35,
-      "golesContra": 32,
-      "diferencia": 3,
-      "forma": [
-        "D",
-        "L",
-        "W",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 6,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -132,7 +111,7 @@
       ]
     },
     {
-      "posicion": 7,
+      "posicion": 6,
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
@@ -153,6 +132,27 @@
       ]
     },
     {
+      "posicion": 7,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 30,
+      "jugados": 21,
+      "ganados": 8,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 35,
+      "golesContra": 33,
+      "diferencia": 2,
+      "forma": [
+        "D",
+        "L",
+        "W",
+        "W",
+        "D"
+      ]
+    },
+    {
       "posicion": 8,
       "equipo": "Coritiba",
       "sigla": "CFC",
@@ -162,8 +162,8 @@
       "ganados": 8,
       "empatados": 6,
       "perdidos": 8,
-      "golesFavor": 26,
-      "golesContra": 28,
+      "golesFavor": 27,
+      "golesContra": 29,
       "diferencia": -2,
       "forma": [
         "L",
@@ -414,8 +414,8 @@
       "ganados": 1,
       "empatados": 7,
       "perdidos": 13,
-      "golesFavor": 19,
-      "golesContra": 42,
+      "golesFavor": 20,
+      "golesContra": 43,
       "diferencia": -23,
       "forma": [
         "L",
