@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-09T21:26:20.712Z",
+  "actualizadoEn": "2026-08-09T22:24:27.458Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -28,6 +28,27 @@
     },
     {
       "posicion": 2,
+      "equipo": "Athletico-PR",
+      "sigla": "CAP",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
+      "puntos": 40,
+      "jugados": 22,
+      "ganados": 12,
+      "empatados": 4,
+      "perdidos": 6,
+      "golesFavor": 30,
+      "golesContra": 19,
+      "diferencia": 11,
+      "forma": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 3,
       "equipo": "Flamengo",
       "sigla": "FLA",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
@@ -44,27 +65,6 @@
         "W",
         "W",
         "D",
-        "D"
-      ]
-    },
-    {
-      "posicion": 3,
-      "equipo": "Athletico-PR",
-      "sigla": "CAP",
-      "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 37,
-      "jugados": 21,
-      "ganados": 11,
-      "empatados": 4,
-      "perdidos": 6,
-      "golesFavor": 28,
-      "golesContra": 19,
-      "diferencia": 9,
-      "forma": [
-        "W",
-        "W",
-        "W",
-        "W",
         "D"
       ]
     },
@@ -136,10 +136,10 @@
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 31,
-      "jugados": 20,
+      "puntos": 32,
+      "jugados": 21,
       "ganados": 9,
-      "empatados": 4,
+      "empatados": 5,
       "perdidos": 7,
       "golesFavor": 26,
       "golesContra": 20,
@@ -147,7 +147,7 @@
       "forma": [
         "W",
         "W",
-        "W",
+        "D",
         "D",
         "D"
       ]
@@ -196,6 +196,27 @@
     },
     {
       "posicion": 10,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 30,
+      "jugados": 22,
+      "ganados": 7,
+      "empatados": 9,
+      "perdidos": 6,
+      "golesFavor": 22,
+      "golesContra": 20,
+      "diferencia": 2,
+      "forma": [
+        "W",
+        "W",
+        "D",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -212,27 +233,6 @@
         "W",
         "D",
         "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 29,
-      "jugados": 21,
-      "ganados": 7,
-      "empatados": 8,
-      "perdidos": 6,
-      "golesFavor": 22,
-      "golesContra": 20,
-      "diferencia": 2,
-      "forma": [
-        "W",
-        "W",
-        "W",
-        "D",
         "D"
       ]
     },
@@ -347,19 +347,19 @@
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
       "puntos": 22,
-      "jugados": 20,
+      "jugados": 21,
       "ganados": 5,
       "empatados": 7,
-      "perdidos": 8,
+      "perdidos": 9,
       "golesFavor": 29,
-      "golesContra": 33,
-      "diferencia": -4,
+      "golesContra": 35,
+      "diferencia": -6,
       "forma": [
-        "L",
         "L",
         "W",
         "L",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
