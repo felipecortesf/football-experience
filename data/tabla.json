@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 22,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-09T13:44:28.753Z",
+  "actualizadoEn": "2026-08-09T14:29:22.727Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -91,6 +91,27 @@
     },
     {
       "posicion": 5,
+      "equipo": "Cruzeiro",
+      "sigla": "CRU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+      "puntos": 33,
+      "jugados": 22,
+      "ganados": 9,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 28,
+      "golesContra": 30,
+      "diferencia": -2,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 6,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -111,7 +132,7 @@
       ]
     },
     {
-      "posicion": 6,
+      "posicion": 7,
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
@@ -132,7 +153,7 @@
       ]
     },
     {
-      "posicion": 7,
+      "posicion": 8,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -153,7 +174,7 @@
       ]
     },
     {
-      "posicion": 8,
+      "posicion": 9,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -169,27 +190,6 @@
         "L",
         "L",
         "D",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 9,
-      "equipo": "Cruzeiro",
-      "sigla": "CRU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 30,
-      "jugados": 21,
-      "ganados": 8,
-      "empatados": 6,
-      "perdidos": 7,
-      "golesFavor": 27,
-      "golesContra": 30,
-      "diferencia": -3,
-      "forma": [
-        "W",
-        "D",
-        "W",
         "L",
         "W"
       ]
@@ -305,19 +305,19 @@
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
       "puntos": 23,
-      "jugados": 20,
+      "jugados": 21,
       "ganados": 6,
       "empatados": 5,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 23,
-      "golesContra": 27,
-      "diferencia": -4,
+      "golesContra": 28,
+      "diferencia": -5,
       "forma": [
-        "W",
         "L",
         "W",
         "D",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
