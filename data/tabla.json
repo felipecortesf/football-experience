@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-15T21:16:01.132Z",
+  "actualizadoEn": "2026-08-15T22:15:19.144Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -10,20 +10,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 51,
+      "puntos": 48,
       "jugados": 23,
-      "ganados": 15,
+      "ganados": 14,
       "empatados": 6,
-      "perdidos": 2,
+      "perdidos": 3,
       "golesFavor": 40,
-      "golesContra": 17,
-      "diferencia": 23,
+      "golesContra": 19,
+      "diferencia": 21,
       "forma": [
         "W",
         "L",
         "W",
         "D",
-        "W"
+        "L"
       ]
     },
     {
@@ -52,10 +52,10 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 40,
-      "jugados": 22,
+      "puntos": 41,
+      "jugados": 23,
       "ganados": 12,
-      "empatados": 4,
+      "empatados": 5,
       "perdidos": 6,
       "golesFavor": 30,
       "golesContra": 19,
@@ -63,9 +63,9 @@
       "forma": [
         "W",
         "W",
-        "W",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 35,
+      "puntos": 38,
       "jugados": 23,
-      "ganados": 9,
+      "ganados": 10,
       "empatados": 8,
-      "perdidos": 6,
-      "golesFavor": 32,
+      "perdidos": 5,
+      "golesFavor": 34,
       "golesContra": 28,
-      "diferencia": 4,
+      "diferencia": 6,
       "forma": [
         "D",
         "D",
         "D",
         "D",
-        "L"
+        "W"
       ]
     },
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 32,
+      "jugados": 22,
+      "ganados": 9,
+      "empatados": 5,
+      "perdidos": 8,
+      "golesFavor": 26,
+      "golesContra": 22,
+      "diferencia": 4,
+      "forma": [
+        "W",
+        "D",
+        "D",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -150,27 +171,6 @@
         "D",
         "D",
         "W"
-      ]
-    },
-    {
-      "posicion": 8,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 31,
-      "jugados": 21,
-      "ganados": 9,
-      "empatados": 4,
-      "perdidos": 8,
-      "golesFavor": 26,
-      "golesContra": 22,
-      "diferencia": 4,
-      "forma": [
-        "W",
-        "W",
-        "D",
-        "D",
-        "L"
       ]
     },
     {
