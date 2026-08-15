@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-15T20:16:14.481Z",
+  "actualizadoEn": "2026-08-15T21:16:01.132Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -10,20 +10,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 49,
+      "puntos": 51,
       "jugados": 23,
-      "ganados": 14,
-      "empatados": 7,
+      "ganados": 15,
+      "empatados": 6,
       "perdidos": 2,
-      "golesFavor": 39,
+      "golesFavor": 40,
       "golesContra": 17,
-      "diferencia": 22,
+      "diferencia": 23,
       "forma": [
         "W",
         "L",
         "W",
         "D",
-        "D"
+        "W"
       ]
     },
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 36,
+      "puntos": 35,
       "jugados": 23,
       "ganados": 9,
-      "empatados": 9,
-      "perdidos": 5,
+      "empatados": 8,
+      "perdidos": 6,
       "golesFavor": 32,
-      "golesContra": 27,
-      "diferencia": 5,
+      "golesContra": 28,
+      "diferencia": 4,
       "forma": [
         "D",
         "D",
         "D",
         "D",
-        "D"
+        "L"
       ]
     },
     {
