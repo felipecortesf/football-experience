@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-16T18:20:36.313Z",
+  "actualizadoEn": "2026-08-16T19:17:53.702Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -220,19 +220,19 @@
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 29,
-      "jugados": 21,
+      "puntos": 30,
+      "jugados": 22,
       "ganados": 8,
-      "empatados": 5,
+      "empatados": 6,
       "perdidos": 8,
       "golesFavor": 27,
       "golesContra": 27,
       "diferencia": 0,
       "forma": [
-        "L",
         "W",
         "D",
         "W",
+        "D",
         "D"
       ]
     },
@@ -283,20 +283,20 @@
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 25,
-      "jugados": 21,
+      "puntos": 26,
+      "jugados": 22,
       "ganados": 6,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 8,
       "golesFavor": 24,
       "golesContra": 27,
       "diferencia": -3,
       "forma": [
-        "W",
         "L",
         "L",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -346,20 +346,20 @@
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 22,
-      "jugados": 21,
+      "puntos": 23,
+      "jugados": 22,
       "ganados": 5,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 9,
       "golesFavor": 29,
       "golesContra": 35,
       "diferencia": -6,
       "forma": [
-        "L",
         "W",
         "L",
         "D",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -367,10 +367,10 @@
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 22,
-      "jugados": 21,
+      "puntos": 23,
+      "jugados": 22,
       "ganados": 5,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 9,
       "golesFavor": 23,
       "golesContra": 31,
@@ -378,7 +378,7 @@
       "forma": [
         "L",
         "L",
-        "L",
+        "D",
         "D",
         "D"
       ]
