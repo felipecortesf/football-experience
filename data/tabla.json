@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-16T14:17:30.873Z",
+  "actualizadoEn": "2026-08-16T15:16:11.233Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -94,20 +94,20 @@
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 34,
+      "puntos": 36,
       "jugados": 23,
-      "ganados": 8,
-      "empatados": 10,
+      "ganados": 9,
+      "empatados": 9,
       "perdidos": 5,
-      "golesFavor": 29,
-      "golesContra": 25,
-      "diferencia": 4,
+      "golesFavor": 31,
+      "golesContra": 26,
+      "diferencia": 5,
       "forma": [
         "D",
         "D",
         "D",
         "D",
-        "D"
+        "W"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 11,
+      "puntos": 10,
       "jugados": 22,
       "ganados": 1,
-      "empatados": 8,
-      "perdidos": 13,
-      "golesFavor": 20,
-      "golesContra": 43,
-      "diferencia": -23,
+      "empatados": 7,
+      "perdidos": 14,
+      "golesFavor": 21,
+      "golesContra": 45,
+      "diferencia": -24,
       "forma": [
         "L",
         "L",
         "D",
         "L",
-        "D"
+        "L"
       ]
     }
   ]
