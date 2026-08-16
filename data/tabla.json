@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-16T20:15:37.532Z",
+  "actualizadoEn": "2026-08-16T21:14:45.929Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -162,9 +162,9 @@
       "ganados": 9,
       "empatados": 5,
       "perdidos": 8,
-      "golesFavor": 28,
+      "golesFavor": 30,
       "golesContra": 27,
-      "diferencia": 1,
+      "diferencia": 3,
       "forma": [
         "W",
         "D",
@@ -280,6 +280,27 @@
     },
     {
       "posicion": 14,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "puntos": 25,
+      "jugados": 22,
+      "ganados": 6,
+      "empatados": 7,
+      "perdidos": 9,
+      "golesFavor": 32,
+      "golesContra": 35,
+      "diferencia": -3,
+      "forma": [
+        "W",
+        "L",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -289,8 +310,8 @@
       "empatados": 7,
       "perdidos": 9,
       "golesFavor": 24,
-      "golesContra": 28,
-      "diferencia": -4,
+      "golesContra": 30,
+      "diferencia": -6,
       "forma": [
         "L",
         "L",
@@ -300,7 +321,7 @@
       ]
     },
     {
-      "posicion": 15,
+      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -342,49 +363,7 @@
       ]
     },
     {
-      "posicion": 17,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 23,
-      "jugados": 22,
-      "ganados": 5,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 29,
-      "golesContra": 35,
-      "diferencia": -6,
-      "forma": [
-        "W",
-        "L",
-        "D",
-        "L",
-        "D"
-      ]
-    },
-    {
       "posicion": 18,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 23,
-      "jugados": 22,
-      "ganados": 5,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 23,
-      "golesContra": 31,
-      "diferencia": -8,
-      "forma": [
-        "L",
-        "L",
-        "D",
-        "D",
-        "D"
-      ]
-    },
-    {
-      "posicion": 19,
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
@@ -402,6 +381,27 @@
         "W",
         "L",
         "D"
+      ]
+    },
+    {
+      "posicion": 19,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 22,
+      "jugados": 22,
+      "ganados": 5,
+      "empatados": 7,
+      "perdidos": 10,
+      "golesFavor": 23,
+      "golesContra": 34,
+      "diferencia": -11,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "D",
+        "L"
       ]
     },
     {
