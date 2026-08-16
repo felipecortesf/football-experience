@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-16T01:00:15.738Z",
+  "actualizadoEn": "2026-08-16T02:23:13.563Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -175,6 +175,27 @@
     },
     {
       "posicion": 9,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 31,
+      "jugados": 23,
+      "ganados": 8,
+      "empatados": 7,
+      "perdidos": 8,
+      "golesFavor": 28,
+      "golesContra": 30,
+      "diferencia": -2,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 10,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -195,49 +216,7 @@
       ]
     },
     {
-      "posicion": 10,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 30,
-      "jugados": 23,
-      "ganados": 8,
-      "empatados": 6,
-      "perdidos": 9,
-      "golesFavor": 27,
-      "golesContra": 30,
-      "diferencia": -3,
-      "forma": [
-        "L",
-        "D",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    {
       "posicion": 11,
-      "equipo": "São Paulo",
-      "sigla": "SAO",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 29,
-      "jugados": 22,
-      "ganados": 8,
-      "empatados": 5,
-      "perdidos": 9,
-      "golesFavor": 27,
-      "golesContra": 25,
-      "diferencia": 2,
-      "forma": [
-        "L",
-        "L",
-        "D",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 12,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -254,6 +233,27 @@
         "W",
         "D",
         "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 12,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 27,
+      "jugados": 22,
+      "ganados": 7,
+      "empatados": 6,
+      "perdidos": 9,
+      "golesFavor": 27,
+      "golesContra": 26,
+      "diferencia": 1,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "L",
         "D"
       ]
     },
