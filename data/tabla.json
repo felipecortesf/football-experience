@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-16T22:15:07.488Z",
+  "actualizadoEn": "2026-08-16T23:14:29.980Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -36,9 +36,9 @@
       "ganados": 13,
       "empatados": 6,
       "perdidos": 3,
-      "golesFavor": 40,
-      "golesContra": 18,
-      "diferencia": 22,
+      "golesFavor": 44,
+      "golesContra": 19,
+      "diferencia": 25,
       "forma": [
         "W",
         "D",
@@ -91,6 +91,27 @@
     },
     {
       "posicion": 5,
+      "equipo": "Cruzeiro",
+      "sigla": "CRU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+      "puntos": 36,
+      "jugados": 23,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 7,
+      "golesFavor": 31,
+      "golesContra": 31,
+      "diferencia": 0,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 6,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -108,27 +129,6 @@
         "D",
         "D",
         "D"
-      ]
-    },
-    {
-      "posicion": 6,
-      "equipo": "Cruzeiro",
-      "sigla": "CRU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 33,
-      "jugados": 22,
-      "ganados": 9,
-      "empatados": 6,
-      "perdidos": 7,
-      "golesFavor": 30,
-      "golesContra": 31,
-      "diferencia": -1,
-      "forma": [
-        "D",
-        "W",
-        "L",
-        "W",
-        "W"
       ]
     },
     {
@@ -179,19 +179,19 @@
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
       "puntos": 32,
-      "jugados": 22,
+      "jugados": 23,
       "ganados": 8,
       "empatados": 8,
-      "perdidos": 6,
+      "perdidos": 7,
       "golesFavor": 24,
-      "golesContra": 20,
-      "diferencia": 4,
+      "golesContra": 21,
+      "diferencia": 3,
       "forma": [
         "W",
+        "D",
+        "D",
         "W",
-        "D",
-        "D",
-        "W"
+        "L"
       ]
     },
     {
@@ -330,9 +330,9 @@
       "ganados": 6,
       "empatados": 5,
       "perdidos": 11,
-      "golesFavor": 24,
-      "golesContra": 31,
-      "diferencia": -7,
+      "golesFavor": 25,
+      "golesContra": 35,
+      "diferencia": -10,
       "forma": [
         "W",
         "D",
