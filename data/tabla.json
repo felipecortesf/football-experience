@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-17T22:19:54.329Z",
+  "actualizadoEn": "2026-08-17T23:17:56.396Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -280,6 +280,27 @@
     },
     {
       "posicion": 14,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 26,
+      "jugados": 23,
+      "ganados": 6,
+      "empatados": 8,
+      "perdidos": 9,
+      "golesFavor": 24,
+      "golesContra": 27,
+      "diferencia": -3,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -300,7 +321,7 @@
       ]
     },
     {
-      "posicion": 15,
+      "posicion": 16,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -342,45 +363,24 @@
       ]
     },
     {
-      "posicion": 17,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 23,
-      "jugados": 22,
-      "ganados": 5,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 23,
-      "golesContra": 27,
-      "diferencia": -4,
-      "forma": [
-        "L",
-        "L",
-        "L",
-        "D",
-        "D"
-      ]
-    },
-    {
       "posicion": 18,
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
       "puntos": 22,
-      "jugados": 22,
+      "jugados": 23,
       "ganados": 5,
       "empatados": 7,
-      "perdidos": 10,
+      "perdidos": 11,
       "golesFavor": 26,
-      "golesContra": 36,
-      "diferencia": -10,
+      "golesContra": 37,
+      "diferencia": -11,
       "forma": [
-        "W",
         "L",
         "W",
         "L",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
