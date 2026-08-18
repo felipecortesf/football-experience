@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 23,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-18T00:56:12.749Z",
+  "actualizadoEn": "2026-08-18T02:14:15.207Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -280,27 +280,6 @@
     },
     {
       "posicion": 14,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 26,
-      "jugados": 23,
-      "ganados": 6,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 24,
-      "golesContra": 27,
-      "diferencia": -3,
-      "forma": [
-        "L",
-        "L",
-        "D",
-        "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 15,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -321,7 +300,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 15,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -339,6 +318,27 @@
         "D",
         "W",
         "L"
+      ]
+    },
+    {
+      "posicion": 16,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 24,
+      "jugados": 23,
+      "ganados": 5,
+      "empatados": 9,
+      "perdidos": 9,
+      "golesFavor": 24,
+      "golesContra": 28,
+      "diferencia": -4,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "D",
+        "D"
       ]
     },
     {
@@ -367,20 +367,20 @@
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 22,
+      "puntos": 23,
       "jugados": 23,
       "ganados": 5,
-      "empatados": 7,
-      "perdidos": 11,
-      "golesFavor": 26,
+      "empatados": 8,
+      "perdidos": 10,
+      "golesFavor": 27,
       "golesContra": 37,
-      "diferencia": -11,
+      "diferencia": -10,
       "forma": [
         "L",
         "W",
         "L",
         "D",
-        "L"
+        "D"
       ]
     },
     {
