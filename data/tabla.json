@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-22T20:16:16.268Z",
+  "actualizadoEn": "2026-08-22T21:16:30.983Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 38,
+      "puntos": 41,
       "jugados": 24,
-      "ganados": 10,
+      "ganados": 11,
       "empatados": 8,
-      "perdidos": 6,
-      "golesFavor": 34,
+      "perdidos": 5,
+      "golesFavor": 36,
       "golesContra": 29,
-      "diferencia": 5,
+      "diferencia": 7,
       "forma": [
         "D",
         "D",
         "D",
         "W",
-        "L"
+        "W"
       ]
     },
     {
@@ -280,27 +280,6 @@
     },
     {
       "posicion": 14,
-      "equipo": "Remo",
-      "sigla": "REM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 26,
-      "jugados": 24,
-      "ganados": 6,
-      "empatados": 8,
-      "perdidos": 10,
-      "golesFavor": 28,
-      "golesContra": 37,
-      "diferencia": -9,
-      "forma": [
-        "W",
-        "L",
-        "D",
-        "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 15,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -321,7 +300,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 15,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -342,7 +321,7 @@
       ]
     },
     {
-      "posicion": 17,
+      "posicion": 16,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -363,7 +342,7 @@
       ]
     },
     {
-      "posicion": 18,
+      "posicion": 17,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -380,6 +359,27 @@
         "D",
         "W",
         "L",
+        "L"
+      ]
+    },
+    {
+      "posicion": 18,
+      "equipo": "Remo",
+      "sigla": "REM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
+      "puntos": 23,
+      "jugados": 24,
+      "ganados": 5,
+      "empatados": 8,
+      "perdidos": 11,
+      "golesFavor": 28,
+      "golesContra": 39,
+      "diferencia": -11,
+      "forma": [
+        "W",
+        "L",
+        "D",
+        "D",
         "L"
       ]
     },
