@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-22T21:16:30.983Z",
+  "actualizadoEn": "2026-08-22T22:16:19.619Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 33,
+      "jugados": 23,
+      "ganados": 9,
+      "empatados": 6,
+      "perdidos": 8,
+      "golesFavor": 30,
+      "golesContra": 27,
+      "diferencia": 3,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
@@ -150,27 +171,6 @@
         "D",
         "L",
         "D"
-      ]
-    },
-    {
-      "posicion": 8,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 32,
-      "jugados": 22,
-      "ganados": 9,
-      "empatados": 5,
-      "perdidos": 8,
-      "golesFavor": 30,
-      "golesContra": 27,
-      "diferencia": 3,
-      "forma": [
-        "W",
-        "D",
-        "W",
-        "D",
-        "W"
       ]
     },
     {
@@ -325,17 +325,17 @@
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 24,
-      "jugados": 23,
+      "puntos": 25,
+      "jugados": 24,
       "ganados": 5,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 9,
       "golesFavor": 24,
       "golesContra": 28,
       "diferencia": -4,
       "forma": [
         "L",
-        "L",
+        "D",
         "D",
         "D",
         "D"
