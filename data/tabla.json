@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-23T01:01:14.824Z",
+  "actualizadoEn": "2026-08-23T02:57:30.459Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -31,20 +31,20 @@
       "equipo": "Flamengo",
       "sigla": "FLA",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
-      "puntos": 46,
+      "puntos": 45,
       "jugados": 23,
       "ganados": 13,
-      "empatados": 7,
-      "perdidos": 3,
+      "empatados": 6,
+      "perdidos": 4,
       "golesFavor": 45,
-      "golesContra": 20,
-      "diferencia": 25,
+      "golesContra": 21,
+      "diferencia": 24,
       "forma": [
         "D",
         "D",
         "W",
         "W",
-        "D"
+        "L"
       ]
     },
     {
@@ -94,20 +94,20 @@
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 37,
+      "puntos": 39,
       "jugados": 24,
-      "ganados": 10,
-      "empatados": 7,
+      "ganados": 11,
+      "empatados": 6,
       "perdidos": 7,
-      "golesFavor": 33,
+      "golesFavor": 34,
       "golesContra": 33,
-      "diferencia": 0,
+      "diferencia": 1,
       "forma": [
         "L",
         "W",
         "W",
         "W",
-        "D"
+        "W"
       ]
     },
     {
