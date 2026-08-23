@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-23T19:18:47.044Z",
+  "actualizadoEn": "2026-08-23T20:15:57.970Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -10,20 +10,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 49,
+      "puntos": 51,
       "jugados": 24,
-      "ganados": 14,
-      "empatados": 7,
+      "ganados": 15,
+      "empatados": 6,
       "perdidos": 3,
-      "golesFavor": 40,
+      "golesFavor": 42,
       "golesContra": 19,
-      "diferencia": 21,
+      "diferencia": 23,
       "forma": [
         "L",
         "W",
         "D",
         "L",
-        "D"
+        "W"
       ]
     },
     {
@@ -112,27 +112,6 @@
     },
     {
       "posicion": 6,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 35,
-      "jugados": 23,
-      "ganados": 10,
-      "empatados": 5,
-      "perdidos": 8,
-      "golesFavor": 28,
-      "golesContra": 23,
-      "diferencia": 5,
-      "forma": [
-        "D",
-        "D",
-        "L",
-        "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 7,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -148,6 +127,27 @@
         "D",
         "D",
         "D",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 7,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 33,
+      "jugados": 23,
+      "ganados": 9,
+      "empatados": 6,
+      "perdidos": 8,
+      "golesFavor": 27,
+      "golesContra": 23,
+      "diferencia": 4,
+      "forma": [
+        "D",
+        "D",
+        "L",
         "D",
         "D"
       ]
@@ -280,6 +280,27 @@
     },
     {
       "posicion": 14,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 26,
+      "jugados": 23,
+      "ganados": 6,
+      "empatados": 8,
+      "perdidos": 9,
+      "golesFavor": 24,
+      "golesContra": 30,
+      "diferencia": -6,
+      "forma": [
+        "L",
+        "D",
+        "W",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -297,27 +318,6 @@
         "D",
         "L",
         "W"
-      ]
-    },
-    {
-      "posicion": 15,
-      "equipo": "Grêmio",
-      "sigla": "GRE",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 25,
-      "jugados": 23,
-      "ganados": 6,
-      "empatados": 7,
-      "perdidos": 10,
-      "golesFavor": 24,
-      "golesContra": 31,
-      "diferencia": -7,
-      "forma": [
-        "L",
-        "D",
-        "W",
-        "L",
-        "L"
       ]
     },
     {
@@ -388,20 +388,20 @@
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 23,
+      "puntos": 22,
       "jugados": 23,
       "ganados": 5,
-      "empatados": 8,
-      "perdidos": 10,
+      "empatados": 7,
+      "perdidos": 11,
       "golesFavor": 23,
-      "golesContra": 34,
-      "diferencia": -11,
+      "golesContra": 36,
+      "diferencia": -13,
       "forma": [
         "L",
         "D",
         "D",
         "L",
-        "D"
+        "L"
       ]
     },
     {
