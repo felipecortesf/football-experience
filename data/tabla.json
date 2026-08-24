@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-23T23:15:48.729Z",
+  "actualizadoEn": "2026-08-24T00:58:58.912Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -162,8 +162,8 @@
       "ganados": 9,
       "empatados": 7,
       "perdidos": 8,
-      "golesFavor": 29,
-      "golesContra": 30,
+      "golesFavor": 30,
+      "golesContra": 31,
       "diferencia": -1,
       "forma": [
         "D",
@@ -204,8 +204,8 @@
       "ganados": 8,
       "empatados": 8,
       "perdidos": 8,
-      "golesFavor": 25,
-      "golesContra": 23,
+      "golesFavor": 26,
+      "golesContra": 24,
       "diferencia": 2,
       "forma": [
         "D",
