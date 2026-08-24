@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 24,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-24T22:20:16.331Z",
+  "actualizadoEn": "2026-08-24T23:18:07.596Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 41,
-      "jugados": 23,
-      "ganados": 12,
+      "puntos": 44,
+      "jugados": 24,
+      "ganados": 13,
       "empatados": 5,
       "perdidos": 6,
-      "golesFavor": 31,
+      "golesFavor": 32,
       "golesContra": 20,
-      "diferencia": 11,
+      "diferencia": 12,
       "forma": [
-        "W",
         "W",
         "D",
         "W",
-        "D"
+        "D",
+        "W"
       ]
     },
     {
@@ -221,18 +221,18 @@
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
       "puntos": 30,
-      "jugados": 22,
+      "jugados": 23,
       "ganados": 8,
       "empatados": 6,
-      "perdidos": 8,
+      "perdidos": 9,
       "golesFavor": 35,
-      "golesContra": 34,
-      "diferencia": 1,
+      "golesContra": 35,
+      "diferencia": 0,
       "forma": [
-        "L",
         "W",
         "W",
         "D",
+        "L",
         "L"
       ]
     },
