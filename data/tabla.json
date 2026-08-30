@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 25,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-30T12:31:25.204Z",
+  "actualizadoEn": "2026-08-30T17:08:42.142Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 44,
-      "jugados": 24,
+      "puntos": 45,
+      "jugados": 25,
       "ganados": 13,
-      "empatados": 5,
+      "empatados": 6,
       "perdidos": 6,
-      "golesFavor": 34,
-      "golesContra": 22,
+      "golesFavor": 37,
+      "golesContra": 25,
       "diferencia": 12,
       "forma": [
-        "W",
         "D",
         "W",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 41,
-      "jugados": 24,
+      "puntos": 42,
+      "jugados": 25,
       "ganados": 11,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 5,
-      "golesFavor": 36,
-      "golesContra": 29,
+      "golesFavor": 39,
+      "golesContra": 32,
       "diferencia": 7,
       "forma": [
         "D",
         "D",
-        "D",
         "W",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
