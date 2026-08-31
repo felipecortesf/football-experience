@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 25,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-08-30T23:04:41.903Z",
+  "actualizadoEn": "2026-08-31T03:07:59.252Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -10,20 +10,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 51,
+      "puntos": 52,
       "jugados": 25,
       "ganados": 15,
-      "empatados": 6,
-      "perdidos": 4,
-      "golesFavor": 44,
+      "empatados": 7,
+      "perdidos": 3,
+      "golesFavor": 45,
       "golesContra": 21,
-      "diferencia": 23,
+      "diferencia": 24,
       "forma": [
         "W",
         "D",
         "L",
         "W",
-        "L"
+        "D"
       ]
     },
     {
@@ -91,6 +91,27 @@
     },
     {
       "posicion": 5,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 40,
+      "jugados": 25,
+      "ganados": 10,
+      "empatados": 10,
+      "perdidos": 5,
+      "golesFavor": 37,
+      "golesContra": 30,
+      "diferencia": 7,
+      "forma": [
+        "D",
+        "D",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 6,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
@@ -108,27 +129,6 @@
         "W",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 6,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 38,
-      "jugados": 25,
-      "ganados": 9,
-      "empatados": 11,
-      "perdidos": 5,
-      "golesFavor": 35,
-      "golesContra": 29,
-      "diferencia": 6,
-      "forma": [
-        "D",
-        "D",
-        "D",
-        "W",
-        "D"
       ]
     },
     {
@@ -325,45 +325,24 @@
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 27,
+      "puntos": 25,
       "jugados": 24,
-      "ganados": 7,
-      "empatados": 6,
+      "ganados": 6,
+      "empatados": 7,
       "perdidos": 11,
       "golesFavor": 27,
-      "golesContra": 36,
-      "diferencia": -9,
+      "golesContra": 37,
+      "diferencia": -10,
       "forma": [
         "W",
         "L",
         "L",
         "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 17,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 26,
-      "jugados": 25,
-      "ganados": 5,
-      "empatados": 11,
-      "perdidos": 9,
-      "golesFavor": 25,
-      "golesContra": 29,
-      "diferencia": -4,
-      "forma": [
-        "D",
-        "D",
-        "D",
-        "D",
         "D"
       ]
     },
     {
-      "posicion": 18,
+      "posicion": 17,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
@@ -381,6 +360,27 @@
         "L",
         "L",
         "W"
+      ]
+    },
+    {
+      "posicion": 18,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 25,
+      "jugados": 25,
+      "ganados": 5,
+      "empatados": 10,
+      "perdidos": 10,
+      "golesFavor": 26,
+      "golesContra": 31,
+      "diferencia": -5,
+      "forma": [
+        "D",
+        "D",
+        "D",
+        "D",
+        "L"
       ]
     },
     {
