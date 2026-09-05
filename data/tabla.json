@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-05T20:54:39.484Z",
+  "actualizadoEn": "2026-09-05T22:36:37.395Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 37,
+      "jugados": 25,
+      "ganados": 10,
+      "empatados": 7,
+      "perdidos": 8,
+      "golesFavor": 32,
+      "golesContra": 28,
+      "diferencia": 4,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -149,27 +170,6 @@
         "W",
         "D",
         "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 8,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 36,
-      "jugados": 24,
-      "ganados": 10,
-      "empatados": 6,
-      "perdidos": 8,
-      "golesFavor": 32,
-      "golesContra": 28,
-      "diferencia": 4,
-      "forma": [
-        "W",
-        "D",
-        "W",
-        "D",
         "W"
       ]
     },
@@ -220,20 +220,20 @@
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 30,
-      "jugados": 24,
+      "puntos": 31,
+      "jugados": 25,
       "ganados": 8,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 10,
       "golesFavor": 29,
       "golesContra": 28,
       "diferencia": 1,
       "forma": [
-        "D",
         "L",
         "D",
         "L",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
