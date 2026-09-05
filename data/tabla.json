@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-05T18:45:17.522Z",
+  "actualizadoEn": "2026-09-05T20:54:39.484Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -70,6 +70,27 @@
     },
     {
       "posicion": 4,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 43,
+      "jugados": 26,
+      "ganados": 11,
+      "empatados": 10,
+      "perdidos": 5,
+      "golesFavor": 40,
+      "golesContra": 32,
+      "diferencia": 8,
+      "forma": [
+        "D",
+        "D",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 5,
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
@@ -87,27 +108,6 @@
         "W",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 5,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 40,
-      "jugados": 25,
-      "ganados": 10,
-      "empatados": 10,
-      "perdidos": 5,
-      "golesFavor": 37,
-      "golesContra": 30,
-      "diferencia": 7,
-      "forma": [
-        "D",
-        "D",
-        "D",
-        "W",
-        "W"
       ]
     },
     {
@@ -179,18 +179,18 @@
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
       "puntos": 35,
-      "jugados": 24,
+      "jugados": 25,
       "ganados": 10,
       "empatados": 5,
-      "perdidos": 9,
-      "golesFavor": 29,
-      "golesContra": 25,
-      "diferencia": 4,
+      "perdidos": 10,
+      "golesFavor": 31,
+      "golesContra": 28,
+      "diferencia": 3,
       "forma": [
-        "D",
         "L",
         "D",
         "W",
+        "L",
         "L"
       ]
     },
