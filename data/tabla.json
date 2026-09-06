@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-06T21:01:00.905Z",
+  "actualizadoEn": "2026-09-06T23:25:16.914Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -31,19 +31,19 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 52,
-      "jugados": 25,
+      "puntos": 53,
+      "jugados": 26,
       "ganados": 15,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 3,
       "golesFavor": 45,
       "golesContra": 21,
       "diferencia": 24,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
+        "D",
         "D"
       ]
     },
@@ -220,20 +220,20 @@
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 32,
-      "jugados": 25,
+      "puntos": 33,
+      "jugados": 26,
       "ganados": 8,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 9,
-      "golesFavor": 26,
-      "golesContra": 25,
+      "golesFavor": 27,
+      "golesContra": 26,
       "diferencia": 1,
       "forma": [
-        "D",
         "W",
         "L",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -262,20 +262,20 @@
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 30,
-      "jugados": 24,
+      "puntos": 31,
+      "jugados": 25,
       "ganados": 8,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 10,
       "golesFavor": 37,
       "golesContra": 40,
       "diferencia": -3,
       "forma": [
-        "W",
         "D",
         "L",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 14,
-      "jugados": 24,
+      "puntos": 15,
+      "jugados": 25,
       "ganados": 2,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 14,
-      "golesFavor": 25,
-      "golesContra": 49,
+      "golesFavor": 26,
+      "golesContra": 50,
       "diferencia": -24,
       "forma": [
-        "D",
         "L",
         "D",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     }
   ]
