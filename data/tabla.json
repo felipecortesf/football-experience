@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-06T13:54:31.057Z",
+  "actualizadoEn": "2026-09-06T16:40:23.193Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -137,19 +137,19 @@
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
       "puntos": 37,
-      "jugados": 25,
+      "jugados": 26,
       "ganados": 10,
       "empatados": 7,
-      "perdidos": 8,
-      "golesFavor": 33,
-      "golesContra": 33,
-      "diferencia": 0,
+      "perdidos": 9,
+      "golesFavor": 34,
+      "golesContra": 35,
+      "diferencia": -1,
       "forma": [
-        "L",
         "W",
         "D",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -325,20 +325,20 @@
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 25,
-      "jugados": 25,
-      "ganados": 6,
+      "puntos": 28,
+      "jugados": 26,
+      "ganados": 7,
       "empatados": 7,
       "perdidos": 12,
-      "golesFavor": 27,
-      "golesContra": 39,
-      "diferencia": -12,
+      "golesFavor": 29,
+      "golesContra": 40,
+      "diferencia": -11,
       "forma": [
-        "W",
         "L",
         "L",
         "D",
-        "D"
+        "D",
+        "W"
       ]
     },
     {
