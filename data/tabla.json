@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-05T22:36:37.395Z",
+  "actualizadoEn": "2026-09-06T00:31:36.613Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -94,19 +94,19 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 42,
-      "jugados": 25,
+      "puntos": 43,
+      "jugados": 26,
       "ganados": 11,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 5,
       "golesFavor": 39,
       "golesContra": 32,
       "diferencia": 7,
       "forma": [
         "D",
+        "W",
+        "W",
         "D",
-        "W",
-        "W",
         "D"
       ]
     },
@@ -133,27 +133,6 @@
     },
     {
       "posicion": 7,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 37,
-      "jugados": 25,
-      "ganados": 10,
-      "empatados": 7,
-      "perdidos": 8,
-      "golesFavor": 32,
-      "golesContra": 28,
-      "diferencia": 4,
-      "forma": [
-        "D",
-        "W",
-        "D",
-        "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 8,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -171,6 +150,27 @@
         "D",
         "W",
         "W"
+      ]
+    },
+    {
+      "posicion": 8,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 36,
+      "jugados": 25,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 9,
+      "golesFavor": 32,
+      "golesContra": 30,
+      "diferencia": 2,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "W",
+        "L"
       ]
     },
     {
@@ -196,6 +196,27 @@
     },
     {
       "posicion": 10,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 33,
+      "jugados": 25,
+      "ganados": 9,
+      "empatados": 6,
+      "perdidos": 10,
+      "golesFavor": 31,
+      "golesContra": 28,
+      "diferencia": 3,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -213,27 +234,6 @@
         "L",
         "L",
         "L"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "São Paulo",
-      "sigla": "SAO",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 31,
-      "jugados": 25,
-      "ganados": 8,
-      "empatados": 7,
-      "perdidos": 10,
-      "golesFavor": 29,
-      "golesContra": 28,
-      "diferencia": 1,
-      "forma": [
-        "L",
-        "D",
-        "L",
-        "W",
-        "D"
       ]
     },
     {
@@ -322,6 +322,27 @@
     },
     {
       "posicion": 16,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 26,
+      "jugados": 25,
+      "ganados": 6,
+      "empatados": 8,
+      "perdidos": 11,
+      "golesFavor": 27,
+      "golesContra": 39,
+      "diferencia": -12,
+      "forma": [
+        "D",
+        "L",
+        "L",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 17,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -339,27 +360,6 @@
         "L",
         "D",
         "D"
-      ]
-    },
-    {
-      "posicion": 17,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 25,
-      "jugados": 24,
-      "ganados": 6,
-      "empatados": 7,
-      "perdidos": 11,
-      "golesFavor": 27,
-      "golesContra": 39,
-      "diferencia": -12,
-      "forma": [
-        "D",
-        "D",
-        "L",
-        "L",
-        "W"
       ]
     },
     {
