@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-06T00:31:36.613Z",
+  "actualizadoEn": "2026-09-06T05:26:53.918Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -70,6 +70,27 @@
     },
     {
       "posicion": 4,
+      "equipo": "Fluminense",
+      "sigla": "FLU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
+      "puntos": 45,
+      "jugados": 26,
+      "ganados": 12,
+      "empatados": 9,
+      "perdidos": 5,
+      "golesFavor": 40,
+      "golesContra": 32,
+      "diferencia": 8,
+      "forma": [
+        "D",
+        "W",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 5,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -87,27 +108,6 @@
         "W",
         "W",
         "W"
-      ]
-    },
-    {
-      "posicion": 5,
-      "equipo": "Fluminense",
-      "sigla": "FLU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 43,
-      "jugados": 26,
-      "ganados": 11,
-      "empatados": 10,
-      "perdidos": 5,
-      "golesFavor": 39,
-      "golesContra": 32,
-      "diferencia": 7,
-      "forma": [
-        "D",
-        "W",
-        "W",
-        "D",
-        "D"
       ]
     },
     {
@@ -322,27 +322,6 @@
     },
     {
       "posicion": 16,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 26,
-      "jugados": 25,
-      "ganados": 6,
-      "empatados": 8,
-      "perdidos": 11,
-      "golesFavor": 27,
-      "golesContra": 39,
-      "diferencia": -12,
-      "forma": [
-        "D",
-        "L",
-        "L",
-        "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 17,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -360,6 +339,27 @@
         "L",
         "D",
         "D"
+      ]
+    },
+    {
+      "posicion": 17,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 25,
+      "jugados": 25,
+      "ganados": 6,
+      "empatados": 7,
+      "perdidos": 12,
+      "golesFavor": 27,
+      "golesContra": 40,
+      "diferencia": -13,
+      "forma": [
+        "D",
+        "L",
+        "L",
+        "W",
+        "L"
       ]
     },
     {
