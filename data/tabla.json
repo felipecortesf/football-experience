@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-06T23:25:16.914Z",
+  "actualizadoEn": "2026-09-07T02:31:06.395Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -220,20 +220,20 @@
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 33,
+      "puntos": 32,
       "jugados": 26,
       "ganados": 8,
-      "empatados": 9,
-      "perdidos": 9,
+      "empatados": 8,
+      "perdidos": 10,
       "golesFavor": 27,
-      "golesContra": 26,
-      "diferencia": 1,
+      "golesContra": 27,
+      "diferencia": 0,
       "forma": [
         "W",
         "L",
         "L",
         "L",
-        "D"
+        "L"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 15,
+      "puntos": 17,
       "jugados": 25,
-      "ganados": 2,
-      "empatados": 9,
+      "ganados": 3,
+      "empatados": 8,
       "perdidos": 14,
-      "golesFavor": 26,
+      "golesFavor": 27,
       "golesContra": 50,
-      "diferencia": -24,
+      "diferencia": -23,
       "forma": [
         "L",
         "D",
         "W",
         "L",
-        "D"
+        "W"
       ]
     }
   ]
