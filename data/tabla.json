@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 26,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-07T23:54:58.218Z",
+  "actualizadoEn": "2026-09-08T02:44:05.213Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -217,6 +217,27 @@
     },
     {
       "posicion": 11,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 32,
+      "jugados": 26,
+      "ganados": 9,
+      "empatados": 5,
+      "perdidos": 12,
+      "golesFavor": 25,
+      "golesContra": 37,
+      "diferencia": -12,
+      "forma": [
+        "L",
+        "W",
+        "L",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -237,7 +258,7 @@
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 13,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -258,7 +279,7 @@
       ]
     },
     {
-      "posicion": 13,
+      "posicion": 14,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -279,45 +300,24 @@
       ]
     },
     {
-      "posicion": 14,
-      "equipo": "Vitória",
-      "sigla": "VIT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 30,
-      "jugados": 26,
-      "ganados": 8,
-      "empatados": 6,
-      "perdidos": 12,
-      "golesFavor": 24,
-      "golesContra": 37,
-      "diferencia": -13,
-      "forma": [
-        "L",
-        "W",
-        "L",
-        "L",
-        "D"
-      ]
-    },
-    {
       "posicion": 15,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 29,
+      "puntos": 28,
       "jugados": 25,
       "ganados": 7,
-      "empatados": 8,
-      "perdidos": 10,
+      "empatados": 7,
+      "perdidos": 11,
       "golesFavor": 27,
-      "golesContra": 32,
-      "diferencia": -5,
+      "golesContra": 33,
+      "diferencia": -6,
       "forma": [
         "W",
         "L",
         "L",
         "W",
-        "D"
+        "L"
       ]
     },
     {
