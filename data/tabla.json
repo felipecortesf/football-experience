@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-12T17:39:23.105Z",
+  "actualizadoEn": "2026-09-12T20:04:44.811Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 45,
-      "jugados": 26,
+      "puntos": 46,
+      "jugados": 27,
       "ganados": 12,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 5,
       "golesFavor": 40,
       "golesContra": 32,
       "diferencia": 8,
       "forma": [
-        "D",
         "W",
         "W",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -157,20 +157,20 @@
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 36,
-      "jugados": 25,
+      "puntos": 37,
+      "jugados": 26,
       "ganados": 10,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 9,
       "golesFavor": 32,
       "golesContra": 30,
       "diferencia": 2,
       "forma": [
-        "D",
         "W",
         "D",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -304,20 +304,20 @@
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 28,
-      "jugados": 25,
-      "ganados": 7,
+      "puntos": 31,
+      "jugados": 26,
+      "ganados": 8,
       "empatados": 7,
       "perdidos": 11,
-      "golesFavor": 27,
+      "golesFavor": 28,
       "golesContra": 33,
-      "diferencia": -6,
+      "diferencia": -5,
       "forma": [
-        "W",
         "L",
         "L",
         "W",
-        "L"
+        "L",
+        "W"
       ]
     },
     {
@@ -343,34 +343,13 @@
     },
     {
       "posicion": 17,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 25,
-      "jugados": 25,
-      "ganados": 6,
-      "empatados": 7,
-      "perdidos": 12,
-      "golesFavor": 27,
-      "golesContra": 40,
-      "diferencia": -13,
-      "forma": [
-        "D",
-        "L",
-        "L",
-        "W",
-        "L"
-      ]
-    },
-    {
-      "posicion": 18,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 25,
-      "jugados": 26,
+      "puntos": 26,
+      "jugados": 27,
       "ganados": 5,
-      "empatados": 10,
+      "empatados": 11,
       "perdidos": 11,
       "golesFavor": 28,
       "golesContra": 34,
@@ -378,7 +357,28 @@
       "forma": [
         "D",
         "D",
-        "D",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 18,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 25,
+      "jugados": 26,
+      "ganados": 6,
+      "empatados": 7,
+      "perdidos": 13,
+      "golesFavor": 27,
+      "golesContra": 41,
+      "diferencia": -14,
+      "forma": [
+        "L",
+        "L",
+        "W",
         "L",
         "L"
       ]
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 17,
-      "jugados": 25,
+      "puntos": 18,
+      "jugados": 26,
       "ganados": 3,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 14,
       "golesFavor": 27,
       "golesContra": 50,
       "diferencia": -23,
       "forma": [
-        "L",
         "D",
         "W",
         "L",
-        "W"
+        "W",
+        "D"
       ]
     }
   ]
