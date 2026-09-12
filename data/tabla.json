@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-11T23:49:35.409Z",
+  "actualizadoEn": "2026-09-12T02:48:38.226Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 45,
-      "jugados": 26,
+      "puntos": 46,
+      "jugados": 27,
       "ganados": 13,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 7,
-      "golesFavor": 38,
-      "golesContra": 28,
+      "golesFavor": 41,
+      "golesContra": 31,
       "diferencia": 10,
       "forma": [
-        "W",
         "D",
         "W",
         "D",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -136,20 +136,20 @@
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 37,
-      "jugados": 26,
+      "puntos": 38,
+      "jugados": 27,
       "ganados": 10,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 9,
-      "golesFavor": 34,
-      "golesContra": 35,
+      "golesFavor": 37,
+      "golesContra": 38,
       "diferencia": -1,
       "forma": [
-        "W",
         "D",
         "W",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
