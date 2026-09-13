@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-12T22:47:14.834Z",
+  "actualizadoEn": "2026-09-13T00:34:15.790Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -116,19 +116,19 @@
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
       "puntos": 42,
-      "jugados": 26,
+      "jugados": 27,
       "ganados": 12,
       "empatados": 6,
-      "perdidos": 8,
+      "perdidos": 9,
       "golesFavor": 38,
-      "golesContra": 37,
-      "diferencia": 1,
+      "golesContra": 38,
+      "diferencia": 0,
       "forma": [
         "W",
         "W",
-        "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -154,6 +154,27 @@
     },
     {
       "posicion": 8,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 38,
+      "jugados": 26,
+      "ganados": 11,
+      "empatados": 5,
+      "perdidos": 10,
+      "golesFavor": 32,
+      "golesContra": 28,
+      "diferencia": 4,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 9,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -174,28 +195,28 @@
       ]
     },
     {
-      "posicion": 9,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "posicion": 10,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
       "puntos": 35,
-      "jugados": 25,
-      "ganados": 10,
-      "empatados": 5,
-      "perdidos": 10,
-      "golesFavor": 31,
-      "golesContra": 28,
-      "diferencia": 3,
+      "jugados": 26,
+      "ganados": 9,
+      "empatados": 8,
+      "perdidos": 9,
+      "golesFavor": 38,
+      "golesContra": 38,
+      "diferencia": 0,
       "forma": [
-        "L",
+        "W",
         "D",
         "W",
-        "L",
-        "L"
+        "W",
+        "W"
       ]
     },
     {
-      "posicion": 10,
+      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -216,7 +237,7 @@
       ]
     },
     {
-      "posicion": 11,
+      "posicion": 12,
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
@@ -237,7 +258,7 @@
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 13,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -258,45 +279,24 @@
       ]
     },
     {
-      "posicion": 13,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 32,
-      "jugados": 25,
-      "ganados": 8,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 37,
-      "golesContra": 38,
-      "diferencia": -1,
-      "forma": [
-        "L",
-        "W",
-        "D",
-        "W",
-        "W"
-      ]
-    },
-    {
       "posicion": 14,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
       "puntos": 31,
-      "jugados": 25,
+      "jugados": 26,
       "ganados": 8,
       "empatados": 7,
-      "perdidos": 10,
+      "perdidos": 11,
       "golesFavor": 37,
-      "golesContra": 40,
-      "diferencia": -3,
+      "golesContra": 41,
+      "diferencia": -4,
       "forma": [
+        "L",
+        "L",
+        "L",
         "D",
-        "L",
-        "L",
-        "L",
-        "D"
+        "L"
       ]
     },
     {
