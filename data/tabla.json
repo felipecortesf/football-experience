@@ -2,11 +2,32 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-13T20:11:11.343Z",
+  "actualizadoEn": "2026-09-13T22:48:18.110Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
       "posicion": 1,
+      "equipo": "Flamengo",
+      "sigla": "FLA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
+      "puntos": 57,
+      "jugados": 27,
+      "ganados": 17,
+      "empatados": 6,
+      "perdidos": 4,
+      "golesFavor": 53,
+      "golesContra": 22,
+      "diferencia": 31,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 2,
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
@@ -23,27 +44,6 @@
         "W",
         "D",
         "D",
-        "W"
-      ]
-    },
-    {
-      "posicion": 2,
-      "equipo": "Flamengo",
-      "sigla": "FLA",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
-      "puntos": 54,
-      "jugados": 26,
-      "ganados": 16,
-      "empatados": 6,
-      "perdidos": 4,
-      "golesFavor": 51,
-      "golesContra": 21,
-      "diferencia": 30,
-      "forma": [
-        "W",
-        "W",
-        "L",
-        "W",
         "W"
       ]
     },
@@ -196,27 +196,6 @@
     },
     {
       "posicion": 10,
-      "equipo": "Vitória",
-      "sigla": "VIT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 35,
-      "jugados": 27,
-      "ganados": 10,
-      "empatados": 5,
-      "perdidos": 12,
-      "golesFavor": 27,
-      "golesContra": 37,
-      "diferencia": -10,
-      "forma": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 11,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -237,7 +216,7 @@
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -258,20 +237,41 @@
       ]
     },
     {
+      "posicion": 12,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 33,
+      "jugados": 27,
+      "ganados": 9,
+      "empatados": 6,
+      "perdidos": 12,
+      "golesFavor": 27,
+      "golesContra": 39,
+      "diferencia": -12,
+      "forma": [
+        "W",
+        "L",
+        "L",
+        "W",
+        "D"
+      ]
+    },
+    {
       "posicion": 13,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
       "puntos": 32,
-      "jugados": 26,
+      "jugados": 27,
       "ganados": 8,
       "empatados": 8,
-      "perdidos": 10,
-      "golesFavor": 27,
-      "golesContra": 27,
-      "diferencia": 0,
+      "perdidos": 11,
+      "golesFavor": 28,
+      "golesContra": 29,
+      "diferencia": -1,
       "forma": [
-        "W",
+        "L",
         "L",
         "L",
         "L",
@@ -301,6 +301,27 @@
     },
     {
       "posicion": 15,
+      "equipo": "Mirassol",
+      "sigla": "MIR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
+      "puntos": 29,
+      "jugados": 27,
+      "ganados": 7,
+      "empatados": 8,
+      "perdidos": 12,
+      "golesFavor": 31,
+      "golesContra": 42,
+      "diferencia": -11,
+      "forma": [
+        "L",
+        "D",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 16,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
@@ -339,27 +360,6 @@
         "W",
         "L",
         "W"
-      ]
-    },
-    {
-      "posicion": 17,
-      "equipo": "Mirassol",
-      "sigla": "MIR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 28,
-      "jugados": 27,
-      "ganados": 7,
-      "empatados": 7,
-      "perdidos": 13,
-      "golesFavor": 29,
-      "golesContra": 42,
-      "diferencia": -13,
-      "forma": [
-        "L",
-        "D",
-        "D",
-        "W",
-        "L"
       ]
     },
     {
