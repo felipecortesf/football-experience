@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-13T00:34:15.790Z",
+  "actualizadoEn": "2026-09-13T05:36:15.458Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -120,8 +120,8 @@
       "ganados": 12,
       "empatados": 6,
       "perdidos": 9,
-      "golesFavor": 38,
-      "golesContra": 38,
+      "golesFavor": 39,
+      "golesContra": 39,
       "diferencia": 0,
       "forma": [
         "W",
@@ -154,27 +154,6 @@
     },
     {
       "posicion": 8,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 38,
-      "jugados": 26,
-      "ganados": 11,
-      "empatados": 5,
-      "perdidos": 10,
-      "golesFavor": 32,
-      "golesContra": 28,
-      "diferencia": 4,
-      "forma": [
-        "D",
-        "W",
-        "L",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 9,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -195,6 +174,27 @@
       ]
     },
     {
+      "posicion": 9,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 36,
+      "jugados": 26,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 10,
+      "golesFavor": 32,
+      "golesContra": 29,
+      "diferencia": 3,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
       "posicion": 10,
       "equipo": "Santos",
       "sigla": "SAN",
@@ -204,8 +204,8 @@
       "ganados": 9,
       "empatados": 8,
       "perdidos": 9,
-      "golesFavor": 38,
-      "golesContra": 38,
+      "golesFavor": 39,
+      "golesContra": 39,
       "diferencia": 0,
       "forma": [
         "W",
@@ -283,20 +283,20 @@
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 31,
+      "puntos": 32,
       "jugados": 26,
       "ganados": 8,
-      "empatados": 7,
-      "perdidos": 11,
-      "golesFavor": 37,
+      "empatados": 8,
+      "perdidos": 10,
+      "golesFavor": 38,
       "golesContra": 41,
-      "diferencia": -4,
+      "diferencia": -3,
       "forma": [
         "L",
         "L",
         "L",
         "D",
-        "L"
+        "D"
       ]
     },
     {
