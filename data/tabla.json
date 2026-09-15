@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 27,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-14T21:20:24.272Z",
+  "actualizadoEn": "2026-09-15T00:11:07.574Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -70,6 +70,27 @@
     },
     {
       "posicion": 4,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 46,
+      "jugados": 27,
+      "ganados": 12,
+      "empatados": 10,
+      "perdidos": 5,
+      "golesFavor": 41,
+      "golesContra": 32,
+      "diferencia": 9,
+      "forma": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 5,
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
@@ -87,27 +108,6 @@
         "D",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 5,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 43,
-      "jugados": 26,
-      "ganados": 11,
-      "empatados": 10,
-      "perdidos": 5,
-      "golesFavor": 40,
-      "golesContra": 32,
-      "diferencia": 8,
-      "forma": [
-        "D",
-        "D",
-        "W",
-        "W",
-        "W"
       ]
     },
     {
@@ -389,16 +389,16 @@
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
       "puntos": 23,
-      "jugados": 26,
+      "jugados": 27,
       "ganados": 5,
       "empatados": 8,
-      "perdidos": 13,
+      "perdidos": 14,
       "golesFavor": 30,
-      "golesContra": 43,
-      "diferencia": -13,
+      "golesContra": 44,
+      "diferencia": -14,
       "forma": [
         "D",
-        "D",
+        "L",
         "L",
         "L",
         "L"
