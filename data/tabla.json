@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-16T19:19:45.248Z",
+  "actualizadoEn": "2026-09-16T22:35:42.840Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -259,6 +259,27 @@
     },
     {
       "posicion": 13,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 33,
+      "jugados": 27,
+      "ganados": 8,
+      "empatados": 9,
+      "perdidos": 10,
+      "golesFavor": 38,
+      "golesContra": 41,
+      "diferencia": -3,
+      "forma": [
+        "L",
+        "L",
+        "L",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 14,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -279,28 +300,28 @@
       ]
     },
     {
-      "posicion": 14,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 32,
-      "jugados": 26,
-      "ganados": 8,
+      "posicion": 15,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 29,
+      "jugados": 27,
+      "ganados": 7,
       "empatados": 8,
-      "perdidos": 10,
-      "golesFavor": 38,
-      "golesContra": 41,
-      "diferencia": -3,
+      "perdidos": 12,
+      "golesFavor": 28,
+      "golesContra": 35,
+      "diferencia": -7,
       "forma": [
         "L",
         "L",
+        "W",
         "L",
-        "D",
-        "D"
+        "L"
       ]
     },
     {
-      "posicion": 15,
+      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -318,27 +339,6 @@
         "D",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 16,
-      "equipo": "Grêmio",
-      "sigla": "GRE",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 28,
-      "jugados": 26,
-      "ganados": 7,
-      "empatados": 7,
-      "perdidos": 12,
-      "golesFavor": 28,
-      "golesContra": 35,
-      "diferencia": -7,
-      "forma": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "L"
       ]
     },
     {
