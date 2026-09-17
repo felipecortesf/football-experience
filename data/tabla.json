@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-16T22:35:42.840Z",
+  "actualizadoEn": "2026-09-17T01:02:52.455Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -217,6 +217,27 @@
     },
     {
       "posicion": 11,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
+      "puntos": 35,
+      "jugados": 27,
+      "ganados": 9,
+      "empatados": 8,
+      "perdidos": 10,
+      "golesFavor": 41,
+      "golesContra": 43,
+      "diferencia": -2,
+      "forma": [
+        "L",
+        "L",
+        "L",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -237,7 +258,7 @@
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 13,
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
@@ -254,27 +275,6 @@
         "L",
         "L",
         "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 13,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 33,
-      "jugados": 27,
-      "ganados": 8,
-      "empatados": 9,
-      "perdidos": 10,
-      "golesFavor": 38,
-      "golesContra": 41,
-      "diferencia": -3,
-      "forma": [
-        "L",
-        "L",
-        "L",
-        "D",
         "D"
       ]
     },
@@ -301,27 +301,6 @@
     },
     {
       "posicion": 15,
-      "equipo": "Grêmio",
-      "sigla": "GRE",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 29,
-      "jugados": 27,
-      "ganados": 7,
-      "empatados": 8,
-      "perdidos": 12,
-      "golesFavor": 28,
-      "golesContra": 35,
-      "diferencia": -7,
-      "forma": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -339,6 +318,27 @@
         "D",
         "W",
         "D"
+      ]
+    },
+    {
+      "posicion": 16,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 28,
+      "jugados": 27,
+      "ganados": 7,
+      "empatados": 7,
+      "perdidos": 13,
+      "golesFavor": 30,
+      "golesContra": 38,
+      "diferencia": -8,
+      "forma": [
+        "L",
+        "L",
+        "W",
+        "L",
+        "L"
       ]
     },
     {
