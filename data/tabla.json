@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 28,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-19T17:42:32.362Z",
+  "actualizadoEn": "2026-09-19T19:56:24.148Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -137,19 +137,19 @@
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
       "puntos": 39,
-      "jugados": 26,
+      "jugados": 27,
       "ganados": 11,
       "empatados": 6,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 35,
-      "golesContra": 31,
-      "diferencia": 4,
+      "golesContra": 32,
+      "diferencia": 3,
       "forma": [
-        "W",
         "D",
         "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 17,
-      "jugados": 26,
-      "ganados": 3,
+      "puntos": 20,
+      "jugados": 27,
+      "ganados": 4,
       "empatados": 8,
       "perdidos": 15,
-      "golesFavor": 28,
+      "golesFavor": 29,
       "golesContra": 52,
-      "diferencia": -24,
+      "diferencia": -23,
       "forma": [
-        "D",
         "W",
         "L",
         "W",
-        "L"
+        "L",
+        "W"
       ]
     }
   ]
