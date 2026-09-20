@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 28,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-20T10:29:52.288Z",
+  "actualizadoEn": "2026-09-20T14:26:26.119Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -31,20 +31,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 56,
-      "jugados": 27,
+      "puntos": 57,
+      "jugados": 28,
       "ganados": 16,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 3,
       "golesFavor": 47,
       "golesContra": 21,
       "diferencia": 26,
       "forma": [
-        "L",
         "W",
         "D",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -346,20 +346,20 @@
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 28,
-      "jugados": 27,
+      "puntos": 29,
+      "jugados": 28,
       "ganados": 7,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 13,
       "golesFavor": 30,
       "golesContra": 38,
       "diferencia": -8,
       "forma": [
         "L",
-        "L",
         "W",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
