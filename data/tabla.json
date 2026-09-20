@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 28,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-20T17:53:41.144Z",
+  "actualizadoEn": "2026-09-20T20:11:51.466Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -49,6 +49,27 @@
     },
     {
       "posicion": 3,
+      "equipo": "Fluminense",
+      "sigla": "FLU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
+      "puntos": 48,
+      "jugados": 28,
+      "ganados": 13,
+      "empatados": 9,
+      "perdidos": 6,
+      "golesFavor": 42,
+      "golesContra": 35,
+      "diferencia": 7,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 4,
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
@@ -69,7 +90,7 @@
       ]
     },
     {
-      "posicion": 4,
+      "posicion": 5,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -90,44 +111,23 @@
       ]
     },
     {
-      "posicion": 5,
-      "equipo": "Fluminense",
-      "sigla": "FLU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 45,
-      "jugados": 27,
-      "ganados": 12,
-      "empatados": 9,
-      "perdidos": 6,
-      "golesFavor": 41,
-      "golesContra": 35,
-      "diferencia": 6,
-      "forma": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "L"
-      ]
-    },
-    {
       "posicion": 6,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
       "puntos": 42,
-      "jugados": 27,
+      "jugados": 28,
       "ganados": 12,
       "empatados": 6,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 39,
-      "golesContra": 39,
-      "diferencia": 0,
+      "golesContra": 40,
+      "diferencia": -1,
       "forma": [
-        "W",
         "W",
         "L",
         "W",
+        "L",
         "L"
       ]
     },
@@ -238,6 +238,27 @@
     },
     {
       "posicion": 12,
+      "equipo": "Vitória",
+      "sigla": "VIT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
+      "puntos": 36,
+      "jugados": 28,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 12,
+      "golesFavor": 28,
+      "golesContra": 39,
+      "diferencia": -11,
+      "forma": [
+        "L",
+        "L",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 13,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -258,39 +279,18 @@
       ]
     },
     {
-      "posicion": 13,
-      "equipo": "Vitória",
-      "sigla": "VIT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 33,
-      "jugados": 27,
-      "ganados": 9,
-      "empatados": 6,
-      "perdidos": 12,
-      "golesFavor": 27,
-      "golesContra": 39,
-      "diferencia": -12,
-      "forma": [
-        "W",
-        "L",
-        "L",
-        "W",
-        "D"
-      ]
-    },
-    {
       "posicion": 14,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
       "puntos": 32,
-      "jugados": 27,
+      "jugados": 28,
       "ganados": 8,
       "empatados": 8,
-      "perdidos": 11,
+      "perdidos": 12,
       "golesFavor": 28,
-      "golesContra": 29,
-      "diferencia": -1,
+      "golesContra": 30,
+      "diferencia": -2,
       "forma": [
         "L",
         "L",
