@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 28,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-09-20T22:54:51.274Z",
+  "actualizadoEn": "2026-09-21T00:47:02.871Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -15,8 +15,8 @@
       "ganados": 18,
       "empatados": 6,
       "perdidos": 4,
-      "golesFavor": 54,
-      "golesContra": 22,
+      "golesFavor": 55,
+      "golesContra": 23,
       "diferencia": 32,
       "forma": [
         "L",
@@ -57,8 +57,8 @@
       "ganados": 14,
       "empatados": 7,
       "perdidos": 7,
-      "golesFavor": 42,
-      "golesContra": 31,
+      "golesFavor": 43,
+      "golesContra": 32,
       "diferencia": 11,
       "forma": [
         "W",
@@ -99,8 +99,8 @@
       "ganados": 12,
       "empatados": 10,
       "perdidos": 6,
-      "golesFavor": 42,
-      "golesContra": 34,
+      "golesFavor": 43,
+      "golesContra": 35,
       "diferencia": 8,
       "forma": [
         "W",
@@ -196,6 +196,27 @@
     },
     {
       "posicion": 10,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 36,
+      "jugados": 27,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 11,
+      "golesFavor": 33,
+      "golesContra": 31,
+      "diferencia": 2,
+      "forma": [
+        "W",
+        "L",
+        "L",
+        "D",
+        "L"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -213,27 +234,6 @@
         "W",
         "L",
         "W"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 36,
-      "jugados": 27,
-      "ganados": 10,
-      "empatados": 6,
-      "perdidos": 11,
-      "golesFavor": 32,
-      "golesContra": 30,
-      "diferencia": 2,
-      "forma": [
-        "W",
-        "L",
-        "L",
-        "D",
-        "L"
       ]
     },
     {
