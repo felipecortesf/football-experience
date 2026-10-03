@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-03T20:30:37.506Z",
+  "actualizadoEn": "2026-10-03T23:28:44.070Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 43,
+      "jugados": 28,
+      "ganados": 12,
+      "empatados": 7,
+      "perdidos": 9,
+      "golesFavor": 37,
+      "golesContra": 32,
+      "diferencia": 5,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -150,27 +171,6 @@
         "W",
         "W",
         "W"
-      ]
-    },
-    {
-      "posicion": 8,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 40,
-      "jugados": 27,
-      "ganados": 11,
-      "empatados": 7,
-      "perdidos": 9,
-      "golesFavor": 36,
-      "golesContra": 32,
-      "diferencia": 4,
-      "forma": [
-        "D",
-        "W",
-        "L",
-        "W",
-        "D"
       ]
     },
     {
@@ -196,27 +196,6 @@
     },
     {
       "posicion": 10,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 36,
-      "jugados": 27,
-      "ganados": 10,
-      "empatados": 6,
-      "perdidos": 11,
-      "golesFavor": 33,
-      "golesContra": 31,
-      "diferencia": 2,
-      "forma": [
-        "W",
-        "L",
-        "L",
-        "D",
-        "L"
-      ]
-    },
-    {
-      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -234,6 +213,27 @@
         "W",
         "L",
         "W"
+      ]
+    },
+    {
+      "posicion": 11,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 36,
+      "jugados": 28,
+      "ganados": 10,
+      "empatados": 6,
+      "perdidos": 12,
+      "golesFavor": 33,
+      "golesContra": 32,
+      "diferencia": 1,
+      "forma": [
+        "W",
+        "L",
+        "L",
+        "D",
+        "L"
       ]
     },
     {
