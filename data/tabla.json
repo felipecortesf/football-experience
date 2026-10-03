@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 21,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-02T22:47:05.600Z",
+  "actualizadoEn": "2026-10-03T01:40:22.449Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -133,6 +133,27 @@
     },
     {
       "posicion": 7,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "puntos": 41,
+      "jugados": 28,
+      "ganados": 11,
+      "empatados": 8,
+      "perdidos": 9,
+      "golesFavor": 43,
+      "golesContra": 41,
+      "diferencia": 2,
+      "forma": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 8,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -150,27 +171,6 @@
         "L",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 8,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 38,
-      "jugados": 27,
-      "ganados": 10,
-      "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 41,
-      "golesContra": 40,
-      "diferencia": 1,
-      "forma": [
-        "D",
-        "W",
-        "W",
-        "W",
-        "W"
       ]
     },
     {
@@ -221,13 +221,13 @@
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
       "puntos": 36,
-      "jugados": 27,
+      "jugados": 28,
       "ganados": 10,
       "empatados": 6,
-      "perdidos": 11,
-      "golesFavor": 32,
-      "golesContra": 30,
-      "diferencia": 2,
+      "perdidos": 12,
+      "golesFavor": 33,
+      "golesContra": 32,
+      "diferencia": 1,
       "forma": [
         "L",
         "W",
