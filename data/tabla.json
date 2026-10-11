@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 30,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-11T01:30:39.983Z",
+  "actualizadoEn": "2026-10-11T08:12:00.895Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -175,6 +175,27 @@
     },
     {
       "posicion": 9,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 39,
+      "jugados": 30,
+      "ganados": 11,
+      "empatados": 6,
+      "perdidos": 13,
+      "golesFavor": 35,
+      "golesContra": 35,
+      "diferencia": 0,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -195,7 +216,7 @@
       ]
     },
     {
-      "posicion": 10,
+      "posicion": 11,
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
@@ -216,45 +237,24 @@
       ]
     },
     {
-      "posicion": 11,
-      "equipo": "São Paulo",
-      "sigla": "SAO",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 37,
-      "jugados": 30,
-      "ganados": 10,
-      "empatados": 7,
-      "perdidos": 13,
-      "golesFavor": 34,
-      "golesContra": 35,
-      "diferencia": -1,
-      "forma": [
-        "W",
-        "L",
-        "W",
-        "L",
-        "D"
-      ]
-    },
-    {
       "posicion": 12,
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 37,
+      "puntos": 36,
       "jugados": 30,
       "ganados": 10,
-      "empatados": 7,
-      "perdidos": 13,
+      "empatados": 6,
+      "perdidos": 14,
       "golesFavor": 33,
-      "golesContra": 43,
-      "diferencia": -10,
+      "golesContra": 44,
+      "diferencia": -11,
       "forma": [
         "W",
         "D",
         "L",
         "W",
-        "D"
+        "L"
       ]
     },
     {
