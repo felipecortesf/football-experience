@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 30,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-11T15:17:26.905Z",
+  "actualizadoEn": "2026-10-11T19:53:05.127Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -136,18 +136,18 @@
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 44,
-      "jugados": 29,
+      "puntos": 45,
+      "jugados": 30,
       "ganados": 12,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 9,
       "golesFavor": 39,
       "golesContra": 34,
       "diferencia": 5,
       "forma": [
-        "W",
         "L",
         "W",
+        "D",
         "D",
         "D"
       ]
@@ -157,10 +157,10 @@
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 42,
-      "jugados": 29,
+      "puntos": 43,
+      "jugados": 30,
       "ganados": 11,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 9,
       "golesFavor": 45,
       "golesContra": 43,
@@ -169,7 +169,7 @@
         "W",
         "W",
         "W",
-        "W",
+        "D",
         "D"
       ]
     },
