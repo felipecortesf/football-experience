@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 30,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-10T22:10:33.277Z",
+  "actualizadoEn": "2026-10-11T01:30:39.983Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -220,20 +220,20 @@
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 36,
-      "jugados": 29,
+      "puntos": 37,
+      "jugados": 30,
       "ganados": 10,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 13,
-      "golesFavor": 33,
-      "golesContra": 34,
+      "golesFavor": 34,
+      "golesContra": 35,
       "diferencia": -1,
       "forma": [
         "W",
-        "W",
         "L",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -241,20 +241,20 @@
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 36,
-      "jugados": 29,
+      "puntos": 37,
+      "jugados": 30,
       "ganados": 10,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 13,
-      "golesFavor": 32,
-      "golesContra": 42,
+      "golesFavor": 33,
+      "golesContra": 43,
       "diferencia": -10,
       "forma": [
-        "L",
         "W",
         "D",
         "L",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
