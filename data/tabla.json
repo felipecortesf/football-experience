@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 30,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-12T11:45:46.275Z",
+  "actualizadoEn": "2026-10-12T20:48:15.300Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -199,20 +199,20 @@
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 38,
-      "jugados": 29,
+      "puntos": 39,
+      "jugados": 30,
       "ganados": 10,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 11,
-      "golesFavor": 37,
-      "golesContra": 47,
+      "golesFavor": 38,
+      "golesContra": 48,
       "diferencia": -10,
       "forma": [
-        "W",
         "L",
         "D",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -262,20 +262,20 @@
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 35,
-      "jugados": 29,
+      "puntos": 36,
+      "jugados": 30,
       "ganados": 9,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 12,
-      "golesFavor": 42,
-      "golesContra": 47,
+      "golesFavor": 43,
+      "golesContra": 48,
       "diferencia": -5,
       "forma": [
-        "L",
         "D",
         "D",
         "L",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
