@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 30,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-12T20:48:15.300Z",
+  "actualizadoEn": "2026-10-13T02:23:00.882Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -49,6 +49,27 @@
     },
     {
       "posicion": 3,
+      "equipo": "Athletico-PR",
+      "sigla": "CAP",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
+      "puntos": 53,
+      "jugados": 30,
+      "ganados": 15,
+      "empatados": 8,
+      "perdidos": 7,
+      "golesFavor": 49,
+      "golesContra": 35,
+      "diferencia": 14,
+      "forma": [
+        "L",
+        "D",
+        "W",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 4,
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
@@ -66,27 +87,6 @@
         "W",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 4,
-      "equipo": "Athletico-PR",
-      "sigla": "CAP",
-      "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 50,
-      "jugados": 29,
-      "ganados": 14,
-      "empatados": 8,
-      "perdidos": 7,
-      "golesFavor": 45,
-      "golesContra": 34,
-      "diferencia": 11,
-      "forma": [
-        "D",
-        "L",
-        "D",
-        "W",
-        "D"
       ]
     },
     {
@@ -116,19 +116,19 @@
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
       "puntos": 48,
-      "jugados": 29,
+      "jugados": 30,
       "ganados": 14,
       "empatados": 6,
-      "perdidos": 9,
-      "golesFavor": 44,
-      "golesContra": 40,
-      "diferencia": 4,
+      "perdidos": 10,
+      "golesFavor": 46,
+      "golesContra": 44,
+      "diferencia": 2,
       "forma": [
-        "L",
         "W",
         "L",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -175,6 +175,27 @@
     },
     {
       "posicion": 9,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 40,
+      "jugados": 30,
+      "ganados": 11,
+      "empatados": 7,
+      "perdidos": 12,
+      "golesFavor": 38,
+      "golesContra": 35,
+      "diferencia": 3,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -195,7 +216,7 @@
       ]
     },
     {
-      "posicion": 10,
+      "posicion": 11,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -211,27 +232,6 @@
         "L",
         "D",
         "L",
-        "L",
-        "D"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 37,
-      "jugados": 29,
-      "ganados": 10,
-      "empatados": 7,
-      "perdidos": 12,
-      "golesFavor": 34,
-      "golesContra": 33,
-      "diferencia": 1,
-      "forma": [
-        "L",
-        "L",
-        "D",
         "L",
         "D"
       ]
@@ -410,18 +410,18 @@
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
       "puntos": 18,
-      "jugados": 28,
+      "jugados": 29,
       "ganados": 3,
       "empatados": 9,
-      "perdidos": 16,
-      "golesFavor": 29,
-      "golesContra": 57,
-      "diferencia": -28,
+      "perdidos": 17,
+      "golesFavor": 30,
+      "golesContra": 61,
+      "diferencia": -31,
       "forma": [
-        "L",
         "W",
         "L",
         "D",
+        "L",
         "L"
       ]
     }
