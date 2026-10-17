@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 31,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-17T19:59:32.622Z",
+  "actualizadoEn": "2026-10-17T22:08:06.821Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -136,20 +136,20 @@
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 47,
-      "jugados": 30,
+      "puntos": 48,
+      "jugados": 31,
       "ganados": 13,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 9,
       "golesFavor": 41,
       "golesContra": 35,
       "diferencia": 6,
       "forma": [
-        "L",
         "W",
         "D",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -196,6 +196,27 @@
     },
     {
       "posicion": 10,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 40,
+      "jugados": 31,
+      "ganados": 10,
+      "empatados": 10,
+      "perdidos": 11,
+      "golesFavor": 38,
+      "golesContra": 48,
+      "diferencia": -10,
+      "forma": [
+        "D",
+        "L",
+        "L",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -216,28 +237,28 @@
       ]
     },
     {
-      "posicion": 11,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "posicion": 12,
+      "equipo": "Botafogo",
+      "sigla": "BOT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
       "puntos": 39,
-      "jugados": 30,
+      "jugados": 31,
       "ganados": 10,
       "empatados": 9,
-      "perdidos": 11,
-      "golesFavor": 38,
+      "perdidos": 12,
+      "golesFavor": 44,
       "golesContra": 48,
-      "diferencia": -10,
+      "diferencia": -4,
       "forma": [
-        "L",
         "D",
         "L",
         "L",
-        "D"
+        "D",
+        "W"
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 13,
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
@@ -255,27 +276,6 @@
         "L",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 13,
-      "equipo": "Botafogo",
-      "sigla": "BOT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 36,
-      "jugados": 30,
-      "ganados": 9,
-      "empatados": 9,
-      "perdidos": 12,
-      "golesFavor": 43,
-      "golesContra": 48,
-      "diferencia": -5,
-      "forma": [
-        "D",
-        "D",
-        "L",
-        "L",
-        "D"
       ]
     },
     {
@@ -410,17 +410,17 @@
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
       "puntos": 18,
-      "jugados": 29,
+      "jugados": 30,
       "ganados": 3,
       "empatados": 9,
-      "perdidos": 17,
+      "perdidos": 18,
       "golesFavor": 30,
-      "golesContra": 61,
-      "diferencia": -31,
+      "golesContra": 62,
+      "diferencia": -32,
       "forma": [
-        "W",
         "L",
         "D",
+        "L",
         "L",
         "L"
       ]
