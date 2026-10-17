@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 31,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-16T23:12:57.142Z",
+  "actualizadoEn": "2026-10-17T02:42:15.606Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -280,6 +280,27 @@
     },
     {
       "posicion": 14,
+      "equipo": "Mirassol",
+      "sigla": "MIR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
+      "puntos": 36,
+      "jugados": 31,
+      "ganados": 9,
+      "empatados": 9,
+      "perdidos": 13,
+      "golesFavor": 36,
+      "golesContra": 44,
+      "diferencia": -8,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
@@ -300,49 +321,7 @@
       ]
     },
     {
-      "posicion": 15,
-      "equipo": "Mirassol",
-      "sigla": "MIR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 34,
-      "jugados": 31,
-      "ganados": 8,
-      "empatados": 10,
-      "perdidos": 13,
-      "golesFavor": 34,
-      "golesContra": 44,
-      "diferencia": -10,
-      "forma": [
-        "W",
-        "D",
-        "W",
-        "D",
-        "L"
-      ]
-    },
-    {
       "posicion": 16,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 33,
-      "jugados": 31,
-      "ganados": 7,
-      "empatados": 12,
-      "perdidos": 12,
-      "golesFavor": 33,
-      "golesContra": 38,
-      "diferencia": -5,
-      "forma": [
-        "L",
-        "W",
-        "L",
-        "W",
-        "D"
-      ]
-    },
-    {
-      "posicion": 17,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -359,6 +338,27 @@
         "L",
         "L",
         "L",
+        "L"
+      ]
+    },
+    {
+      "posicion": 17,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 32,
+      "jugados": 31,
+      "ganados": 7,
+      "empatados": 11,
+      "perdidos": 13,
+      "golesFavor": 33,
+      "golesContra": 40,
+      "diferencia": -7,
+      "forma": [
+        "W",
+        "L",
+        "W",
+        "D",
         "L"
       ]
     },
