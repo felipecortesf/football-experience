@@ -2,11 +2,32 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 31,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-17T22:08:06.821Z",
+  "actualizadoEn": "2026-10-18T00:34:20.679Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
       "posicion": 1,
+      "equipo": "Palmeiras",
+      "sigla": "PAL",
+      "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
+      "puntos": 66,
+      "jugados": 31,
+      "ganados": 19,
+      "empatados": 9,
+      "perdidos": 3,
+      "golesFavor": 54,
+      "golesContra": 22,
+      "diferencia": 32,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 2,
       "equipo": "Flamengo",
       "sigla": "FLA",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
@@ -27,45 +48,24 @@
       ]
     },
     {
-      "posicion": 2,
-      "equipo": "Palmeiras",
-      "sigla": "PAL",
-      "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 63,
-      "jugados": 30,
-      "ganados": 18,
-      "empatados": 9,
-      "perdidos": 3,
-      "golesFavor": 52,
-      "golesContra": 22,
-      "diferencia": 30,
-      "forma": [
-        "D",
-        "W",
-        "D",
-        "W",
-        "W"
-      ]
-    },
-    {
       "posicion": 3,
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
       "puntos": 53,
-      "jugados": 30,
+      "jugados": 31,
       "ganados": 15,
       "empatados": 8,
-      "perdidos": 7,
+      "perdidos": 8,
       "golesFavor": 49,
-      "golesContra": 35,
-      "diferencia": 14,
+      "golesContra": 37,
+      "diferencia": 12,
       "forma": [
-        "L",
         "D",
         "W",
         "D",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -91,6 +91,27 @@
     },
     {
       "posicion": 5,
+      "equipo": "Atlético-MG",
+      "sigla": "CAM",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
+      "puntos": 50,
+      "jugados": 31,
+      "ganados": 14,
+      "empatados": 8,
+      "perdidos": 9,
+      "golesFavor": 42,
+      "golesContra": 35,
+      "diferencia": 7,
+      "forma": [
+        "W",
+        "D",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 6,
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
@@ -111,7 +132,7 @@
       ]
     },
     {
-      "posicion": 6,
+      "posicion": 7,
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
@@ -129,27 +150,6 @@
         "W",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 7,
-      "equipo": "Atlético-MG",
-      "sigla": "CAM",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 48,
-      "jugados": 31,
-      "ganados": 13,
-      "empatados": 9,
-      "perdidos": 9,
-      "golesFavor": 41,
-      "golesContra": 35,
-      "diferencia": 6,
-      "forma": [
-        "W",
-        "D",
-        "D",
-        "W",
-        "D"
       ]
     },
     {
@@ -196,48 +196,27 @@
     },
     {
       "posicion": 10,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 40,
-      "jugados": 31,
-      "ganados": 10,
-      "empatados": 10,
-      "perdidos": 11,
-      "golesFavor": 38,
-      "golesContra": 48,
-      "diferencia": -10,
-      "forma": [
-        "D",
-        "L",
-        "L",
-        "D",
-        "D"
-      ]
-    },
-    {
-      "posicion": 11,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 39,
-      "jugados": 30,
+      "puntos": 40,
+      "jugados": 31,
       "ganados": 11,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 13,
       "golesFavor": 35,
       "golesContra": 35,
       "diferencia": 0,
       "forma": [
-        "W",
         "L",
         "W",
         "L",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
-      "posicion": 12,
+      "posicion": 11,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -255,6 +234,27 @@
         "L",
         "D",
         "W"
+      ]
+    },
+    {
+      "posicion": 12,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 39,
+      "jugados": 31,
+      "ganados": 10,
+      "empatados": 9,
+      "perdidos": 12,
+      "golesFavor": 38,
+      "golesContra": 49,
+      "diferencia": -11,
+      "forma": [
+        "D",
+        "L",
+        "L",
+        "D",
+        "L"
       ]
     },
     {
@@ -280,6 +280,27 @@
     },
     {
       "posicion": 14,
+      "equipo": "Vasco",
+      "sigla": "VAS",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
+      "puntos": 36,
+      "jugados": 30,
+      "ganados": 9,
+      "empatados": 9,
+      "perdidos": 12,
+      "golesFavor": 36,
+      "golesContra": 42,
+      "diferencia": -6,
+      "forma": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 15,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -297,27 +318,6 @@
         "D",
         "L",
         "W"
-      ]
-    },
-    {
-      "posicion": 15,
-      "equipo": "Vasco",
-      "sigla": "VAS",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
-      "puntos": 35,
-      "jugados": 29,
-      "ganados": 9,
-      "empatados": 8,
-      "perdidos": 12,
-      "golesFavor": 36,
-      "golesContra": 42,
-      "diferencia": -6,
-      "forma": [
-        "L",
-        "W",
-        "W",
-        "W",
-        "D"
       ]
     },
     {
