@@ -2,11 +2,32 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 31,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-18T22:19:19.959Z",
+  "actualizadoEn": "2026-10-19T00:43:21.190Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
       "posicion": 1,
+      "equipo": "Flamengo",
+      "sigla": "FLA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
+      "puntos": 67,
+      "jugados": 31,
+      "ganados": 20,
+      "empatados": 7,
+      "perdidos": 4,
+      "golesFavor": 61,
+      "golesContra": 25,
+      "diferencia": 36,
+      "forma": [
+        "W",
+        "W",
+        "D",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 2,
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
@@ -24,27 +45,6 @@
         "W",
         "W",
         "W"
-      ]
-    },
-    {
-      "posicion": 2,
-      "equipo": "Flamengo",
-      "sigla": "FLA",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
-      "puntos": 65,
-      "jugados": 31,
-      "ganados": 19,
-      "empatados": 8,
-      "perdidos": 4,
-      "golesFavor": 58,
-      "golesContra": 25,
-      "diferencia": 33,
-      "forma": [
-        "W",
-        "W",
-        "D",
-        "W",
-        "D"
       ]
     },
     {
@@ -136,20 +136,20 @@
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 50,
+      "puntos": 49,
       "jugados": 31,
       "ganados": 13,
-      "empatados": 11,
-      "perdidos": 7,
+      "empatados": 10,
+      "perdidos": 8,
       "golesFavor": 44,
-      "golesContra": 36,
-      "diferencia": 8,
+      "golesContra": 39,
+      "diferencia": 5,
       "forma": [
         "W",
         "L",
         "L",
         "W",
-        "D"
+        "L"
       ]
     },
     {
@@ -199,20 +199,20 @@
       "equipo": "Bragantino",
       "sigla": "RBB",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 40,
-      "jugados": 30,
+      "puntos": 41,
+      "jugados": 31,
       "ganados": 11,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 12,
-      "golesFavor": 38,
-      "golesContra": 35,
+      "golesFavor": 39,
+      "golesContra": 36,
       "diferencia": 3,
       "forma": [
-        "L",
         "D",
         "L",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -388,18 +388,18 @@
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 25,
-      "jugados": 30,
+      "puntos": 26,
+      "jugados": 31,
       "ganados": 5,
-      "empatados": 10,
+      "empatados": 11,
       "perdidos": 15,
-      "golesFavor": 33,
-      "golesContra": 48,
+      "golesFavor": 34,
+      "golesContra": 49,
       "diferencia": -15,
       "forma": [
         "L",
         "L",
-        "L",
+        "D",
         "D",
         "D"
       ]
