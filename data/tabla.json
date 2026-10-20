@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 31,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-19T22:46:08.203Z",
+  "actualizadoEn": "2026-10-20T01:28:44.409Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -262,20 +262,20 @@
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 36,
-      "jugados": 30,
+      "puntos": 37,
+      "jugados": 31,
       "ganados": 10,
-      "empatados": 6,
+      "empatados": 7,
       "perdidos": 14,
-      "golesFavor": 33,
-      "golesContra": 44,
+      "golesFavor": 34,
+      "golesContra": 45,
       "diferencia": -11,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -325,20 +325,20 @@
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 32,
-      "jugados": 30,
+      "puntos": 33,
+      "jugados": 31,
       "ganados": 8,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 14,
-      "golesFavor": 31,
-      "golesContra": 38,
+      "golesFavor": 32,
+      "golesContra": 39,
       "diferencia": -7,
       "forma": [
         "L",
         "L",
         "L",
         "L",
-        "L"
+        "D"
       ]
     },
     {
