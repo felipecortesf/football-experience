@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 32,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-24T17:46:10.984Z",
+  "actualizadoEn": "2026-10-24T20:05:49.429Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,20 +73,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 53,
-      "jugados": 31,
+      "puntos": 54,
+      "jugados": 32,
       "ganados": 15,
-      "empatados": 8,
+      "empatados": 9,
       "perdidos": 8,
-      "golesFavor": 49,
-      "golesContra": 37,
+      "golesFavor": 50,
+      "golesContra": 38,
       "diferencia": 12,
       "forma": [
-        "D",
         "W",
         "D",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
@@ -179,19 +179,19 @@
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
       "puntos": 42,
-      "jugados": 31,
+      "jugados": 32,
       "ganados": 12,
       "empatados": 6,
-      "perdidos": 13,
+      "perdidos": 14,
       "golesFavor": 36,
-      "golesContra": 35,
-      "diferencia": 1,
+      "golesContra": 36,
+      "diferencia": 0,
       "forma": [
-        "L",
         "W",
         "L",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -220,24 +220,45 @@
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
-      "puntos": 39,
-      "jugados": 31,
+      "puntos": 40,
+      "jugados": 32,
       "ganados": 10,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 12,
       "golesFavor": 44,
       "golesContra": 48,
       "diferencia": -4,
       "forma": [
-        "D",
         "L",
         "L",
         "D",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
       "posicion": 12,
+      "equipo": "Mirassol",
+      "sigla": "MIR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
+      "puntos": 39,
+      "jugados": 32,
+      "ganados": 10,
+      "empatados": 9,
+      "perdidos": 13,
+      "golesFavor": 37,
+      "golesContra": 44,
+      "diferencia": -7,
+      "forma": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 13,
       "equipo": "Coritiba",
       "sigla": "CFC",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
@@ -258,45 +279,24 @@
       ]
     },
     {
-      "posicion": 13,
+      "posicion": 14,
       "equipo": "Vitória",
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
-      "puntos": 37,
-      "jugados": 31,
+      "puntos": 38,
+      "jugados": 32,
       "ganados": 10,
-      "empatados": 7,
+      "empatados": 8,
       "perdidos": 14,
-      "golesFavor": 34,
-      "golesContra": 45,
+      "golesFavor": 35,
+      "golesContra": 46,
       "diferencia": -11,
       "forma": [
-        "D",
         "L",
         "W",
         "L",
+        "D",
         "D"
-      ]
-    },
-    {
-      "posicion": 14,
-      "equipo": "Mirassol",
-      "sigla": "MIR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
-      "puntos": 36,
-      "jugados": 31,
-      "ganados": 9,
-      "empatados": 9,
-      "perdidos": 13,
-      "golesFavor": 36,
-      "golesContra": 44,
-      "diferencia": -8,
-      "forma": [
-        "D",
-        "W",
-        "D",
-        "L",
-        "W"
       ]
     },
     {
@@ -346,20 +346,20 @@
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 32,
-      "jugados": 31,
+      "puntos": 33,
+      "jugados": 32,
       "ganados": 7,
-      "empatados": 11,
+      "empatados": 12,
       "perdidos": 13,
       "golesFavor": 33,
       "golesContra": 40,
       "diferencia": -7,
       "forma": [
-        "W",
         "L",
         "W",
         "D",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
