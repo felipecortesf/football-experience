@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 32,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-23T21:47:43.542Z",
+  "actualizadoEn": "2026-10-24T00:11:41.009Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -49,6 +49,27 @@
     },
     {
       "posicion": 3,
+      "equipo": "Cruzeiro",
+      "sigla": "CRU",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
+      "puntos": 54,
+      "jugados": 32,
+      "ganados": 16,
+      "empatados": 6,
+      "perdidos": 10,
+      "golesFavor": 51,
+      "golesContra": 46,
+      "diferencia": 5,
+      "forma": [
+        "W",
+        "W",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 4,
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
@@ -66,27 +87,6 @@
         "D",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 4,
-      "equipo": "Cruzeiro",
-      "sigla": "CRU",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 51,
-      "jugados": 31,
-      "ganados": 15,
-      "empatados": 6,
-      "perdidos": 10,
-      "golesFavor": 50,
-      "golesContra": 46,
-      "diferencia": 4,
-      "forma": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "W"
       ]
     },
     {
@@ -389,19 +389,19 @@
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
       "puntos": 26,
-      "jugados": 31,
+      "jugados": 32,
       "ganados": 5,
       "empatados": 11,
-      "perdidos": 15,
+      "perdidos": 16,
       "golesFavor": 34,
-      "golesContra": 49,
-      "diferencia": -15,
+      "golesContra": 50,
+      "diferencia": -16,
       "forma": [
         "L",
-        "L",
         "D",
         "D",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
