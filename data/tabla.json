@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 32,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-25T00:45:02.566Z",
+  "actualizadoEn": "2026-10-25T05:35:37.142Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -91,27 +91,6 @@
     },
     {
       "posicion": 5,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 52,
-      "jugados": 32,
-      "ganados": 14,
-      "empatados": 10,
-      "perdidos": 8,
-      "golesFavor": 45,
-      "golesContra": 39,
-      "diferencia": 6,
-      "forma": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "W"
-      ]
-    },
-    {
-      "posicion": 6,
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
@@ -132,7 +111,7 @@
       ]
     },
     {
-      "posicion": 7,
+      "posicion": 6,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -153,24 +132,45 @@
       ]
     },
     {
+      "posicion": 7,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 50,
+      "jugados": 32,
+      "ganados": 13,
+      "empatados": 11,
+      "perdidos": 8,
+      "golesFavor": 45,
+      "golesContra": 40,
+      "diferencia": 5,
+      "forma": [
+        "L",
+        "L",
+        "W",
+        "L",
+        "D"
+      ]
+    },
+    {
       "posicion": 8,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 45,
+      "puntos": 46,
       "jugados": 32,
       "ganados": 12,
-      "empatados": 9,
-      "perdidos": 11,
-      "golesFavor": 48,
+      "empatados": 10,
+      "perdidos": 10,
+      "golesFavor": 49,
       "golesContra": 47,
-      "diferencia": 1,
+      "diferencia": 2,
       "forma": [
         "W",
         "D",
         "L",
         "W",
-        "L"
+        "D"
       ]
     },
     {
