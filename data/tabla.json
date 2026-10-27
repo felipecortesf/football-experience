@@ -2,11 +2,32 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 32,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-26T20:51:04.717Z",
+  "actualizadoEn": "2026-10-27T00:11:39.956Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
       "posicion": 1,
+      "equipo": "Flamengo",
+      "sigla": "FLA",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
+      "puntos": 70,
+      "jugados": 32,
+      "ganados": 21,
+      "empatados": 7,
+      "perdidos": 4,
+      "golesFavor": 63,
+      "golesContra": 26,
+      "diferencia": 37,
+      "forma": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 2,
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
@@ -22,27 +43,6 @@
         "D",
         "W",
         "W",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 2,
-      "equipo": "Flamengo",
-      "sigla": "FLA",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
-      "puntos": 67,
-      "jugados": 31,
-      "ganados": 20,
-      "empatados": 7,
-      "perdidos": 4,
-      "golesFavor": 61,
-      "golesContra": 25,
-      "diferencia": 36,
-      "forma": [
-        "W",
-        "W",
-        "D",
         "W",
         "W"
       ]
@@ -116,19 +116,19 @@
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
       "puntos": 50,
-      "jugados": 31,
+      "jugados": 32,
       "ganados": 14,
       "empatados": 8,
-      "perdidos": 9,
-      "golesFavor": 42,
-      "golesContra": 35,
-      "diferencia": 7,
+      "perdidos": 10,
+      "golesFavor": 43,
+      "golesContra": 37,
+      "diferencia": 6,
       "forma": [
-        "W",
         "D",
         "D",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -217,6 +217,27 @@
     },
     {
       "posicion": 11,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 40,
+      "jugados": 32,
+      "ganados": 10,
+      "empatados": 10,
+      "perdidos": 12,
+      "golesFavor": 38,
+      "golesContra": 49,
+      "diferencia": -11,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -233,27 +254,6 @@
         "L",
         "D",
         "W",
-        "L"
-      ]
-    },
-    {
-      "posicion": 12,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 39,
-      "jugados": 31,
-      "ganados": 10,
-      "empatados": 9,
-      "perdidos": 12,
-      "golesFavor": 38,
-      "golesContra": 49,
-      "diferencia": -11,
-      "forma": [
-        "D",
-        "L",
-        "L",
-        "D",
         "L"
       ]
     },
@@ -367,20 +367,20 @@
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 31,
-      "jugados": 31,
+      "puntos": 32,
+      "jugados": 32,
       "ganados": 7,
-      "empatados": 10,
+      "empatados": 11,
       "perdidos": 14,
       "golesFavor": 34,
       "golesContra": 44,
       "diferencia": -10,
       "forma": [
+        "D",
+        "D",
+        "D",
         "L",
-        "D",
-        "D",
-        "D",
-        "L"
+        "D"
       ]
     },
     {
