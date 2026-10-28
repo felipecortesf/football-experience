@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 33,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-28T19:16:48.406Z",
+  "actualizadoEn": "2026-10-28T23:49:33.726Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -31,20 +31,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 69,
-      "jugados": 32,
+      "puntos": 70,
+      "jugados": 33,
       "ganados": 20,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 3,
       "golesFavor": 56,
       "golesContra": 22,
       "diferencia": 34,
       "forma": [
-        "D",
         "W",
         "W",
         "W",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -95,16 +95,16 @@
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
       "puntos": 51,
-      "jugados": 32,
+      "jugados": 33,
       "ganados": 14,
       "empatados": 9,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 50,
-      "golesContra": 41,
-      "diferencia": 9,
+      "golesContra": 42,
+      "diferencia": 8,
       "forma": [
         "W",
-        "W",
+        "L",
         "L",
         "L",
         "L"
@@ -157,24 +157,45 @@
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
-      "puntos": 46,
-      "jugados": 32,
+      "puntos": 47,
+      "jugados": 33,
       "ganados": 12,
-      "empatados": 10,
+      "empatados": 11,
       "perdidos": 10,
       "golesFavor": 49,
       "golesContra": 47,
       "diferencia": 2,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
+        "D",
         "D"
       ]
     },
     {
       "posicion": 9,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 44,
+      "jugados": 33,
+      "ganados": 12,
+      "empatados": 8,
+      "perdidos": 13,
+      "golesFavor": 41,
+      "golesContra": 38,
+      "diferencia": 3,
+      "forma": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 10,
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
@@ -192,27 +213,6 @@
         "W",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 10,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 41,
-      "jugados": 32,
-      "ganados": 11,
-      "empatados": 8,
-      "perdidos": 13,
-      "golesFavor": 39,
-      "golesContra": 38,
-      "diferencia": 1,
-      "forma": [
-        "L",
-        "D",
-        "W",
-        "D",
-        "L"
       ]
     },
     {
@@ -301,6 +301,27 @@
     },
     {
       "posicion": 15,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 38,
+      "jugados": 33,
+      "ganados": 9,
+      "empatados": 11,
+      "perdidos": 13,
+      "golesFavor": 37,
+      "golesContra": 40,
+      "diferencia": -3,
+      "forma": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -318,27 +339,6 @@
         "L",
         "W",
         "D"
-      ]
-    },
-    {
-      "posicion": 16,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 35,
-      "jugados": 32,
-      "ganados": 8,
-      "empatados": 11,
-      "perdidos": 13,
-      "golesFavor": 36,
-      "golesContra": 40,
-      "diferencia": -4,
-      "forma": [
-        "L",
-        "W",
-        "D",
-        "L",
-        "W"
       ]
     },
     {
@@ -410,19 +410,19 @@
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
       "puntos": 21,
-      "jugados": 31,
+      "jugados": 32,
       "ganados": 4,
       "empatados": 9,
-      "perdidos": 18,
+      "perdidos": 19,
       "golesFavor": 32,
-      "golesContra": 63,
-      "diferencia": -31,
+      "golesContra": 65,
+      "diferencia": -33,
       "forma": [
-        "D",
         "L",
         "L",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     }
   ]
