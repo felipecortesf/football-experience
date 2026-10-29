@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 33,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-28T23:49:33.726Z",
+  "actualizadoEn": "2026-10-29T04:01:47.483Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -94,24 +94,45 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 51,
+      "puntos": 54,
       "jugados": 33,
-      "ganados": 14,
+      "ganados": 15,
       "empatados": 9,
-      "perdidos": 10,
-      "golesFavor": 50,
+      "perdidos": 9,
+      "golesFavor": 52,
       "golesContra": 42,
-      "diferencia": 8,
+      "diferencia": 10,
       "forma": [
         "W",
         "L",
         "L",
         "L",
-        "L"
+        "W"
       ]
     },
     {
       "posicion": 6,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 53,
+      "jugados": 33,
+      "ganados": 14,
+      "empatados": 11,
+      "perdidos": 8,
+      "golesFavor": 48,
+      "golesContra": 42,
+      "diferencia": 6,
+      "forma": [
+        "L",
+        "W",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 7,
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
@@ -129,27 +150,6 @@
         "W",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 7,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 50,
-      "jugados": 32,
-      "ganados": 13,
-      "empatados": 11,
-      "perdidos": 8,
-      "golesFavor": 45,
-      "golesContra": 40,
-      "diferencia": 5,
-      "forma": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "D"
       ]
     },
     {
@@ -183,9 +183,9 @@
       "ganados": 12,
       "empatados": 8,
       "perdidos": 13,
-      "golesFavor": 41,
+      "golesFavor": 42,
       "golesContra": 38,
-      "diferencia": 3,
+      "diferencia": 4,
       "forma": [
         "D",
         "W",
@@ -200,19 +200,19 @@
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
       "puntos": 43,
-      "jugados": 32,
+      "jugados": 33,
       "ganados": 12,
       "empatados": 7,
-      "perdidos": 13,
-      "golesFavor": 37,
-      "golesContra": 36,
-      "diferencia": 1,
+      "perdidos": 14,
+      "golesFavor": 39,
+      "golesContra": 39,
+      "diferencia": 0,
       "forma": [
-        "W",
         "L",
         "W",
         "W",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
@@ -221,18 +221,18 @@
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
       "puntos": 39,
-      "jugados": 32,
+      "jugados": 33,
       "ganados": 10,
       "empatados": 9,
-      "perdidos": 13,
-      "golesFavor": 44,
-      "golesContra": 51,
-      "diferencia": -7,
+      "perdidos": 14,
+      "golesFavor": 45,
+      "golesContra": 53,
+      "diferencia": -8,
       "forma": [
-        "L",
         "L",
         "D",
         "W",
+        "L",
         "L"
       ]
     },
@@ -301,27 +301,6 @@
     },
     {
       "posicion": 15,
-      "equipo": "Internacional",
-      "sigla": "INT",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
-      "puntos": 38,
-      "jugados": 33,
-      "ganados": 9,
-      "empatados": 11,
-      "perdidos": 13,
-      "golesFavor": 37,
-      "golesContra": 40,
-      "diferencia": -3,
-      "forma": [
-        "W",
-        "D",
-        "L",
-        "W",
-        "W"
-      ]
-    },
-    {
-      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -339,6 +318,27 @@
         "L",
         "W",
         "D"
+      ]
+    },
+    {
+      "posicion": 16,
+      "equipo": "Internacional",
+      "sigla": "INT",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
+      "puntos": 35,
+      "jugados": 33,
+      "ganados": 8,
+      "empatados": 11,
+      "perdidos": 14,
+      "golesFavor": 37,
+      "golesContra": 42,
+      "diferencia": -5,
+      "forma": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "L"
       ]
     },
     {
@@ -388,20 +388,20 @@
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 26,
-      "jugados": 32,
-      "ganados": 5,
+      "puntos": 29,
+      "jugados": 33,
+      "ganados": 6,
       "empatados": 11,
       "perdidos": 16,
-      "golesFavor": 34,
-      "golesContra": 50,
-      "diferencia": -16,
+      "golesFavor": 36,
+      "golesContra": 51,
+      "diferencia": -15,
       "forma": [
+        "D",
+        "D",
+        "D",
         "L",
-        "D",
-        "D",
-        "D",
-        "L"
+        "W"
       ]
     },
     {
@@ -415,8 +415,8 @@
       "empatados": 9,
       "perdidos": 19,
       "golesFavor": 32,
-      "golesContra": 65,
-      "diferencia": -33,
+      "golesContra": 66,
+      "diferencia": -34,
       "forma": [
         "L",
         "L",
