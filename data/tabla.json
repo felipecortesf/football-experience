@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 33,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-30T21:20:06.573Z",
+  "actualizadoEn": "2026-10-31T01:22:43.121Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -326,23 +326,44 @@
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
       "puntos": 37,
-      "jugados": 32,
+      "jugados": 33,
       "ganados": 9,
       "empatados": 10,
-      "perdidos": 13,
+      "perdidos": 14,
       "golesFavor": 37,
-      "golesContra": 45,
-      "diferencia": -8,
+      "golesContra": 47,
+      "diferencia": -10,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
       "posicion": 17,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 36,
+      "jugados": 33,
+      "ganados": 9,
+      "empatados": 9,
+      "perdidos": 15,
+      "golesFavor": 36,
+      "golesContra": 42,
+      "diferencia": -6,
+      "forma": [
+        "L",
+        "L",
+        "D",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 18,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -359,27 +380,6 @@
         "D",
         "L",
         "W",
-        "L"
-      ]
-    },
-    {
-      "posicion": 18,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 33,
-      "jugados": 32,
-      "ganados": 8,
-      "empatados": 9,
-      "perdidos": 15,
-      "golesFavor": 34,
-      "golesContra": 42,
-      "diferencia": -8,
-      "forma": [
-        "L",
-        "L",
-        "L",
-        "D",
         "L"
       ]
     },
