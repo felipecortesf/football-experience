@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 33,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-10-31T19:01:06.947Z",
+  "actualizadoEn": "2026-10-31T22:59:18.378Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -217,6 +217,27 @@
     },
     {
       "posicion": 11,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 42,
+      "jugados": 33,
+      "ganados": 11,
+      "empatados": 9,
+      "perdidos": 13,
+      "golesFavor": 40,
+      "golesContra": 50,
+      "diferencia": -10,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 12,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -232,27 +253,6 @@
         "L",
         "D",
         "W",
-        "L",
-        "L"
-      ]
-    },
-    {
-      "posicion": 12,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 39,
-      "jugados": 32,
-      "ganados": 10,
-      "empatados": 9,
-      "perdidos": 13,
-      "golesFavor": 38,
-      "golesContra": 50,
-      "diferencia": -12,
-      "forma": [
-        "L",
-        "L",
-        "D",
         "L",
         "L"
       ]
@@ -284,19 +284,19 @@
       "sigla": "VIT",
       "escudo": "https://s.sde.globo.com/media/organizations/2025/12/18/Vitoria_2025.svg",
       "puntos": 38,
-      "jugados": 32,
+      "jugados": 33,
       "ganados": 10,
       "empatados": 8,
-      "perdidos": 14,
+      "perdidos": 15,
       "golesFavor": 35,
-      "golesContra": 46,
-      "diferencia": -11,
+      "golesContra": 48,
+      "diferencia": -13,
       "forma": [
-        "L",
         "W",
         "L",
         "D",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
