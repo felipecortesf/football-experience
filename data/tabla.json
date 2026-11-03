@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 34,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-02T17:43:08.984Z",
+  "actualizadoEn": "2026-11-03T00:23:34.438Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -154,44 +154,44 @@
     },
     {
       "posicion": 8,
-      "equipo": "Santos",
-      "sigla": "SAN",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
       "puntos": 47,
-      "jugados": 33,
-      "ganados": 12,
-      "empatados": 11,
-      "perdidos": 10,
-      "golesFavor": 49,
-      "golesContra": 47,
-      "diferencia": 2,
+      "jugados": 34,
+      "ganados": 13,
+      "empatados": 8,
+      "perdidos": 13,
+      "golesFavor": 44,
+      "golesContra": 39,
+      "diferencia": 5,
       "forma": [
+        "W",
         "D",
         "L",
         "W",
-        "D",
-        "D"
+        "W"
       ]
     },
     {
       "posicion": 9,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 44,
-      "jugados": 33,
+      "equipo": "Santos",
+      "sigla": "SAN",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
+      "puntos": 47,
+      "jugados": 34,
       "ganados": 12,
-      "empatados": 8,
-      "perdidos": 13,
-      "golesFavor": 42,
-      "golesContra": 38,
-      "diferencia": 4,
+      "empatados": 11,
+      "perdidos": 11,
+      "golesFavor": 50,
+      "golesContra": 49,
+      "diferencia": 1,
       "forma": [
-        "D",
+        "L",
         "W",
         "D",
-        "L",
-        "W"
+        "D",
+        "L"
       ]
     },
     {
