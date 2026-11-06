@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 34,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-06T00:41:01.551Z",
+  "actualizadoEn": "2026-11-06T07:35:28.703Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 58,
+      "puntos": 60,
       "jugados": 34,
-      "ganados": 17,
-      "empatados": 7,
+      "ganados": 18,
+      "empatados": 6,
       "perdidos": 10,
-      "golesFavor": 52,
-      "golesContra": 46,
-      "diferencia": 6,
+      "golesFavor": 54,
+      "golesContra": 47,
+      "diferencia": 7,
       "forma": [
         "L",
         "W",
         "W",
         "W",
-        "D"
+        "W"
       ]
     },
     {
@@ -115,20 +115,20 @@
       "equipo": "Bahia",
       "sigla": "BAH",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 54,
+      "puntos": 53,
       "jugados": 34,
       "ganados": 14,
-      "empatados": 12,
-      "perdidos": 8,
-      "golesFavor": 48,
-      "golesContra": 42,
-      "diferencia": 6,
+      "empatados": 11,
+      "perdidos": 9,
+      "golesFavor": 49,
+      "golesContra": 44,
+      "diferencia": 5,
       "forma": [
         "W",
         "L",
         "D",
         "W",
-        "D"
+        "L"
       ]
     },
     {
