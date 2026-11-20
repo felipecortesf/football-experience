@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 35,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-20T00:59:07.055Z",
+  "actualizadoEn": "2026-11-20T08:15:48.305Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 58,
+      "puntos": 60,
       "jugados": 35,
-      "ganados": 16,
-      "empatados": 10,
+      "ganados": 17,
+      "empatados": 9,
       "perdidos": 9,
-      "golesFavor": 55,
+      "golesFavor": 56,
       "golesContra": 42,
-      "diferencia": 13,
+      "diferencia": 14,
       "forma": [
         "L",
         "L",
         "W",
         "W",
-        "D"
+        "W"
       ]
     },
     {
@@ -220,20 +220,20 @@
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 45,
+      "puntos": 44,
       "jugados": 35,
       "ganados": 12,
-      "empatados": 9,
-      "perdidos": 14,
+      "empatados": 8,
+      "perdidos": 15,
       "golesFavor": 39,
-      "golesContra": 39,
-      "diferencia": 0,
+      "golesContra": 40,
+      "diferencia": -1,
       "forma": [
         "W",
         "D",
         "L",
         "D",
-        "D"
+        "L"
       ]
     },
     {
