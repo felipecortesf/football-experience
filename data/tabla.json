@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-21T14:03:20.754Z",
+  "actualizadoEn": "2026-11-21T20:44:04.341Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -11,19 +11,19 @@
       "sigla": "FLA",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/04/10/Flamengo-2018.svg",
       "puntos": 79,
-      "jugados": 35,
+      "jugados": 36,
       "ganados": 24,
       "empatados": 7,
-      "perdidos": 4,
+      "perdidos": 5,
       "golesFavor": 73,
-      "golesContra": 30,
-      "diferencia": 43,
+      "golesContra": 31,
+      "diferencia": 42,
       "forma": [
         "W",
         "W",
         "W",
         "W",
-        "W"
+        "L"
       ]
     },
     {
@@ -31,20 +31,20 @@
       "equipo": "Palmeiras",
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
-      "puntos": 73,
-      "jugados": 35,
-      "ganados": 21,
+      "puntos": 76,
+      "jugados": 36,
+      "ganados": 22,
       "empatados": 10,
       "perdidos": 4,
-      "golesFavor": 63,
+      "golesFavor": 64,
       "golesContra": 25,
-      "diferencia": 38,
+      "diferencia": 39,
       "forma": [
-        "W",
         "W",
         "D",
         "W",
-        "L"
+        "L",
+        "W"
       ]
     },
     {
@@ -91,6 +91,27 @@
     },
     {
       "posicion": 5,
+      "equipo": "Bahia",
+      "sigla": "BAH",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
+      "puntos": 55,
+      "jugados": 36,
+      "ganados": 14,
+      "empatados": 13,
+      "perdidos": 9,
+      "golesFavor": 50,
+      "golesContra": 45,
+      "diferencia": 5,
+      "forma": [
+        "D",
+        "W",
+        "L",
+        "D",
+        "D"
+      ]
+    },
+    {
+      "posicion": 6,
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
@@ -108,27 +129,6 @@
         "L",
         "L",
         "L"
-      ]
-    },
-    {
-      "posicion": 6,
-      "equipo": "Bahia",
-      "sigla": "BAH",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/bahia.svg",
-      "puntos": 54,
-      "jugados": 35,
-      "ganados": 14,
-      "empatados": 12,
-      "perdidos": 9,
-      "golesFavor": 50,
-      "golesContra": 45,
-      "diferencia": 5,
-      "forma": [
-        "L",
-        "D",
-        "W",
-        "L",
-        "D"
       ]
     },
     {
@@ -238,6 +238,27 @@
     },
     {
       "posicion": 12,
+      "equipo": "Coritiba",
+      "sigla": "CFC",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
+      "puntos": 43,
+      "jugados": 36,
+      "ganados": 11,
+      "empatados": 10,
+      "perdidos": 15,
+      "golesFavor": 40,
+      "golesContra": 52,
+      "diferencia": -12,
+      "forma": [
+        "L",
+        "W",
+        "L",
+        "L",
+        "D"
+      ]
+    },
+    {
+      "posicion": 13,
       "equipo": "Botafogo",
       "sigla": "BOT",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/02/04/botafogo-svg.svg",
@@ -254,27 +275,6 @@
         "L",
         "L",
         "W",
-        "L"
-      ]
-    },
-    {
-      "posicion": 13,
-      "equipo": "Coritiba",
-      "sigla": "CFC",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/coritiba.svg",
-      "puntos": 42,
-      "jugados": 35,
-      "ganados": 11,
-      "empatados": 9,
-      "perdidos": 15,
-      "golesFavor": 40,
-      "golesContra": 52,
-      "diferencia": -12,
-      "forma": [
-        "L",
-        "L",
-        "W",
-        "L",
         "L"
       ]
     },
