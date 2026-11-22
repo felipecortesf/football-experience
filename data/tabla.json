@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-22T00:52:07.384Z",
+  "actualizadoEn": "2026-11-22T07:41:45.205Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,20 +52,20 @@
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 64,
+      "puntos": 66,
       "jugados": 36,
-      "ganados": 19,
-      "empatados": 7,
+      "ganados": 20,
+      "empatados": 6,
       "perdidos": 10,
-      "golesFavor": 57,
-      "golesContra": 49,
-      "diferencia": 8,
+      "golesFavor": 59,
+      "golesContra": 50,
+      "diferencia": 9,
       "forma": [
         "W",
         "W",
         "W",
         "W",
-        "D"
+        "W"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 22,
+      "puntos": 21,
       "jugados": 36,
       "ganados": 4,
-      "empatados": 10,
-      "perdidos": 22,
-      "golesFavor": 33,
-      "golesContra": 72,
-      "diferencia": -39,
+      "empatados": 9,
+      "perdidos": 23,
+      "golesFavor": 34,
+      "golesContra": 74,
+      "diferencia": -40,
       "forma": [
         "W",
         "L",
         "L",
         "L",
-        "D"
+        "L"
       ]
     }
   ]
