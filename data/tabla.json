@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-22T15:51:17.011Z",
+  "actualizadoEn": "2026-11-22T21:27:42.101Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -83,10 +83,10 @@
       "diferencia": 14,
       "forma": [
         "L",
-        "L",
         "W",
         "W",
-        "W"
+        "W",
+        "D"
       ]
     },
     {
@@ -94,20 +94,20 @@
       "equipo": "Athletico-PR",
       "sigla": "CAP",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/01/07/Athletico-PR.svg",
-      "puntos": 54,
-      "jugados": 35,
-      "ganados": 15,
+      "puntos": 57,
+      "jugados": 36,
+      "ganados": 16,
       "empatados": 9,
       "perdidos": 11,
-      "golesFavor": 52,
-      "golesContra": 45,
-      "diferencia": 7,
+      "golesFavor": 56,
+      "golesContra": 47,
+      "diferencia": 9,
       "forma": [
-        "L",
         "D",
         "L",
         "L",
-        "L"
+        "L",
+        "W"
       ]
     },
     {
@@ -313,10 +313,10 @@
       "golesContra": 48,
       "diferencia": -9,
       "forma": [
-        "W",
         "D",
         "L",
         "W",
+        "D",
         "D"
       ]
     },
@@ -389,19 +389,19 @@
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
       "puntos": 32,
-      "jugados": 35,
+      "jugados": 36,
       "ganados": 7,
       "empatados": 11,
-      "perdidos": 17,
-      "golesFavor": 39,
-      "golesContra": 57,
-      "diferencia": -18,
+      "perdidos": 18,
+      "golesFavor": 41,
+      "golesContra": 61,
+      "diferencia": -20,
       "forma": [
-        "D",
         "L",
         "W",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
