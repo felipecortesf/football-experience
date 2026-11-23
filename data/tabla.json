@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-22T21:27:42.101Z",
+  "actualizadoEn": "2026-11-23T02:08:30.238Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -73,20 +73,20 @@
       "equipo": "Fluminense",
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
-      "puntos": 60,
-      "jugados": 35,
-      "ganados": 17,
+      "puntos": 63,
+      "jugados": 36,
+      "ganados": 18,
       "empatados": 9,
       "perdidos": 9,
-      "golesFavor": 56,
+      "golesFavor": 57,
       "golesContra": 42,
-      "diferencia": 14,
+      "diferencia": 15,
       "forma": [
         "L",
         "W",
         "W",
         "W",
-        "D"
+        "W"
       ]
     },
     {
@@ -154,6 +154,27 @@
     },
     {
       "posicion": 8,
+      "equipo": "Bragantino",
+      "sigla": "RBB",
+      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
+      "puntos": 50,
+      "jugados": 36,
+      "ganados": 14,
+      "empatados": 8,
+      "perdidos": 14,
+      "golesFavor": 46,
+      "golesContra": 41,
+      "diferencia": 5,
+      "forma": [
+        "L",
+        "W",
+        "W",
+        "L",
+        "W"
+      ]
+    },
+    {
+      "posicion": 9,
       "equipo": "Santos",
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
@@ -174,45 +195,24 @@
       ]
     },
     {
-      "posicion": 9,
-      "equipo": "Bragantino",
-      "sigla": "RBB",
-      "escudo": "https://s.sde.globo.com/media/organizations/2021/06/28/bragantino.svg",
-      "puntos": 47,
-      "jugados": 35,
-      "ganados": 13,
-      "empatados": 8,
-      "perdidos": 14,
-      "golesFavor": 45,
-      "golesContra": 41,
-      "diferencia": 4,
-      "forma": [
-        "D",
-        "L",
-        "W",
-        "W",
-        "L"
-      ]
-    },
-    {
       "posicion": 10,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
       "puntos": 47,
-      "jugados": 35,
+      "jugados": 36,
       "ganados": 13,
       "empatados": 8,
-      "perdidos": 14,
+      "perdidos": 15,
       "golesFavor": 47,
-      "golesContra": 51,
-      "diferencia": -4,
+      "golesContra": 52,
+      "diferencia": -5,
       "forma": [
-        "L",
         "W",
         "L",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -305,19 +305,19 @@
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
       "puntos": 41,
-      "jugados": 35,
+      "jugados": 36,
       "ganados": 10,
       "empatados": 11,
-      "perdidos": 14,
+      "perdidos": 15,
       "golesFavor": 39,
-      "golesContra": 48,
-      "diferencia": -9,
+      "golesContra": 49,
+      "diferencia": -10,
       "forma": [
         "D",
         "L",
         "W",
         "D",
-        "D"
+        "L"
       ]
     },
     {
