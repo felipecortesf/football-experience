@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-23T23:16:00.072Z",
+  "actualizadoEn": "2026-11-24T08:01:49.774Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -179,19 +179,19 @@
       "sigla": "SAN",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/santos.svg",
       "puntos": 50,
-      "jugados": 35,
+      "jugados": 36,
       "ganados": 13,
       "empatados": 11,
-      "perdidos": 11,
+      "perdidos": 12,
       "golesFavor": 51,
-      "golesContra": 49,
-      "diferencia": 2,
+      "golesContra": 51,
+      "diferencia": 0,
       "forma": [
-        "W",
         "D",
         "D",
         "L",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
@@ -225,8 +225,8 @@
       "ganados": 12,
       "empatados": 9,
       "perdidos": 15,
-      "golesFavor": 39,
-      "golesContra": 40,
+      "golesFavor": 40,
+      "golesContra": 41,
       "diferencia": -1,
       "forma": [
         "D",
@@ -267,9 +267,9 @@
       "ganados": 12,
       "empatados": 8,
       "perdidos": 16,
-      "golesFavor": 39,
-      "golesContra": 52,
-      "diferencia": -13,
+      "golesFavor": 42,
+      "golesContra": 54,
+      "diferencia": -12,
       "forma": [
         "D",
         "L",
@@ -288,8 +288,8 @@
       "ganados": 11,
       "empatados": 10,
       "perdidos": 15,
-      "golesFavor": 46,
-      "golesContra": 57,
+      "golesFavor": 47,
+      "golesContra": 58,
       "diferencia": -11,
       "forma": [
         "L",
@@ -301,6 +301,27 @@
     },
     {
       "posicion": 15,
+      "equipo": "Grêmio",
+      "sigla": "GRE",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
+      "puntos": 41,
+      "jugados": 36,
+      "ganados": 10,
+      "empatados": 11,
+      "perdidos": 15,
+      "golesFavor": 40,
+      "golesContra": 47,
+      "diferencia": -7,
+      "forma": [
+        "W",
+        "W",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 16,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Corinthians",
       "sigla": "COR",
       "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
@@ -342,7 +363,7 @@
       ]
     },
     {
-      "posicion": 17,
+      "posicion": 18,
       "equipo": "Internacional",
       "sigla": "INT",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/internacional.svg",
@@ -351,36 +372,15 @@
       "ganados": 9,
       "empatados": 11,
       "perdidos": 16,
-      "golesFavor": 39,
-      "golesContra": 46,
-      "diferencia": -7,
+      "golesFavor": 41,
+      "golesContra": 49,
+      "diferencia": -8,
       "forma": [
         "W",
         "L",
         "W",
         "L",
         "L"
-      ]
-    },
-    {
-      "posicion": 18,
-      "equipo": "Grêmio",
-      "sigla": "GRE",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
-      "puntos": 38,
-      "jugados": 35,
-      "ganados": 9,
-      "empatados": 11,
-      "perdidos": 15,
-      "golesFavor": 38,
-      "golesContra": 47,
-      "diferencia": -9,
-      "forma": [
-        "L",
-        "W",
-        "W",
-        "L",
-        "D"
       ]
     },
     {
