@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-24T19:52:20.084Z",
+  "actualizadoEn": "2026-11-25T03:17:57.701Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -32,19 +32,19 @@
       "sigla": "PAL",
       "escudo": "https://s.sde.globo.com/media/organizations/2019/07/06/Palmeiras.svg",
       "puntos": 74,
-      "jugados": 36,
+      "jugados": 37,
       "ganados": 21,
       "empatados": 11,
-      "perdidos": 4,
+      "perdidos": 5,
       "golesFavor": 64,
-      "golesContra": 26,
-      "diferencia": 38,
+      "golesContra": 29,
+      "diferencia": 35,
       "forma": [
-        "W",
         "D",
         "W",
         "L",
-        "D"
+        "D",
+        "L"
       ]
     },
     {
@@ -409,20 +409,20 @@
       "equipo": "Chapecoense",
       "sigla": "CHA",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/06/21/CHAPECOENSE-2018.svg",
-      "puntos": 21,
-      "jugados": 36,
-      "ganados": 4,
+      "puntos": 24,
+      "jugados": 37,
+      "ganados": 5,
       "empatados": 9,
       "perdidos": 23,
-      "golesFavor": 34,
+      "golesFavor": 37,
       "golesContra": 74,
-      "diferencia": -40,
+      "diferencia": -37,
       "forma": [
-        "W",
         "L",
         "L",
         "L",
-        "L"
+        "L",
+        "W"
       ]
     }
   ]
