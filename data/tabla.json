@@ -1,8 +1,8 @@
 {
   "competencia": "Brasileirao Serie A",
-  "rodada": 36,
+  "rodada": 37,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-26T14:39:43.671Z",
+  "actualizadoEn": "2026-11-26T23:26:39.955Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -220,19 +220,19 @@
       "equipo": "São Paulo",
       "sigla": "SAO",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 45,
-      "jugados": 36,
+      "puntos": 46,
+      "jugados": 37,
       "ganados": 12,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 15,
       "golesFavor": 40,
       "golesContra": 41,
       "diferencia": -1,
       "forma": [
-        "D",
         "L",
         "D",
         "L",
+        "D",
         "D"
       ]
     },
@@ -388,20 +388,20 @@
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 32,
-      "jugados": 36,
+      "puntos": 33,
+      "jugados": 37,
       "ganados": 7,
-      "empatados": 11,
+      "empatados": 12,
       "perdidos": 18,
       "golesFavor": 41,
       "golesContra": 61,
       "diferencia": -20,
       "forma": [
-        "L",
         "W",
         "L",
         "W",
-        "L"
+        "L",
+        "D"
       ]
     },
     {
