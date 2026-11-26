@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 36,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-25T22:53:56.379Z",
+  "actualizadoEn": "2026-11-26T04:39:41.413Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -136,19 +136,19 @@
       "equipo": "Atlético-MG",
       "sigla": "CAM",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/10/atletico-mg.svg",
-      "puntos": 51,
-      "jugados": 35,
+      "puntos": 52,
+      "jugados": 36,
       "ganados": 14,
-      "empatados": 9,
+      "empatados": 10,
       "perdidos": 12,
-      "golesFavor": 44,
-      "golesContra": 40,
+      "golesFavor": 45,
+      "golesContra": 41,
       "diferencia": 4,
       "forma": [
-        "W",
         "L",
         "L",
         "L",
+        "D",
         "D"
       ]
     },
@@ -301,6 +301,27 @@
     },
     {
       "posicion": 15,
+      "equipo": "Corinthians",
+      "sigla": "COR",
+      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
+      "puntos": 41,
+      "jugados": 36,
+      "ganados": 10,
+      "empatados": 11,
+      "perdidos": 15,
+      "golesFavor": 41,
+      "golesContra": 43,
+      "diferencia": -2,
+      "forma": [
+        "L",
+        "W",
+        "D",
+        "W",
+        "D"
+      ]
+    },
+    {
+      "posicion": 16,
       "equipo": "Grêmio",
       "sigla": "GRE",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/12/gremio.svg",
@@ -321,7 +342,7 @@
       ]
     },
     {
-      "posicion": 16,
+      "posicion": 17,
       "equipo": "Mirassol",
       "sigla": "MIR",
       "escudo": "https://s.sde.globo.com/media/organizations/2026/07/17/MIrassol.svg",
@@ -339,27 +360,6 @@
         "W",
         "D",
         "L"
-      ]
-    },
-    {
-      "posicion": 17,
-      "equipo": "Corinthians",
-      "sigla": "COR",
-      "escudo": "https://s.sde.globo.com/media/organizations/2024/10/09/Corinthians_2024_Q4ahot4.svg",
-      "puntos": 40,
-      "jugados": 35,
-      "ganados": 10,
-      "empatados": 10,
-      "perdidos": 15,
-      "golesFavor": 40,
-      "golesContra": 42,
-      "diferencia": -2,
-      "forma": [
-        "D",
-        "L",
-        "W",
-        "D",
-        "W"
       ]
     },
     {
