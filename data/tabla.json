@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 37,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-26T23:26:39.955Z",
+  "actualizadoEn": "2026-11-27T06:22:09.012Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -196,6 +196,27 @@
     },
     {
       "posicion": 10,
+      "equipo": "São Paulo",
+      "sigla": "SAO",
+      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
+      "puntos": 48,
+      "jugados": 37,
+      "ganados": 13,
+      "empatados": 9,
+      "perdidos": 15,
+      "golesFavor": 43,
+      "golesContra": 42,
+      "diferencia": 1,
+      "forma": [
+        "L",
+        "D",
+        "L",
+        "D",
+        "W"
+      ]
+    },
+    {
+      "posicion": 11,
       "equipo": "Vasco",
       "sigla": "VAS",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/09/04/vasco_SVG.svg",
@@ -213,27 +234,6 @@
         "W",
         "W",
         "L"
-      ]
-    },
-    {
-      "posicion": 11,
-      "equipo": "São Paulo",
-      "sigla": "SAO",
-      "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/sao-paulo.svg",
-      "puntos": 46,
-      "jugados": 37,
-      "ganados": 12,
-      "empatados": 10,
-      "perdidos": 15,
-      "golesFavor": 40,
-      "golesContra": 41,
-      "diferencia": -1,
-      "forma": [
-        "L",
-        "D",
-        "L",
-        "D",
-        "D"
       ]
     },
     {
@@ -388,20 +388,20 @@
       "equipo": "Remo",
       "sigla": "REM",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/25/Remo-PA.svg",
-      "puntos": 33,
+      "puntos": 32,
       "jugados": 37,
       "ganados": 7,
-      "empatados": 12,
-      "perdidos": 18,
-      "golesFavor": 41,
-      "golesContra": 61,
-      "diferencia": -20,
+      "empatados": 11,
+      "perdidos": 19,
+      "golesFavor": 42,
+      "golesContra": 64,
+      "diferencia": -22,
       "forma": [
         "W",
         "L",
         "W",
         "L",
-        "D"
+        "L"
       ]
     },
     {
