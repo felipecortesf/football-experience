@@ -2,7 +2,7 @@
   "competencia": "Brasileirao Serie A",
   "rodada": 37,
   "rodadaTotal": 38,
-  "actualizadoEn": "2026-11-27T17:09:12.099Z",
+  "actualizadoEn": "2026-11-28T00:58:35.251Z",
   "fuente": "ge.globo.com (via campeonato-brasileiro-api)",
   "equipos": [
     {
@@ -52,14 +52,14 @@
       "equipo": "Cruzeiro",
       "sigla": "CRU",
       "escudo": "https://s.sde.globo.com/media/organizations/2021/02/13/cruzeiro_2021.svg",
-      "puntos": 66,
-      "jugados": 36,
-      "ganados": 20,
+      "puntos": 69,
+      "jugados": 37,
+      "ganados": 21,
       "empatados": 6,
       "perdidos": 10,
-      "golesFavor": 59,
+      "golesFavor": 60,
       "golesContra": 50,
-      "diferencia": 9,
+      "diferencia": 10,
       "forma": [
         "W",
         "W",
@@ -74,19 +74,19 @@
       "sigla": "FLU",
       "escudo": "https://s.sde.globo.com/media/organizations/2018/03/11/fluminense.svg",
       "puntos": 63,
-      "jugados": 36,
+      "jugados": 37,
       "ganados": 18,
       "empatados": 9,
-      "perdidos": 9,
+      "perdidos": 10,
       "golesFavor": 57,
-      "golesContra": 42,
-      "diferencia": 15,
+      "golesContra": 43,
+      "diferencia": 14,
       "forma": [
-        "L",
         "W",
         "W",
         "W",
-        "W"
+        "W",
+        "L"
       ]
     },
     {
